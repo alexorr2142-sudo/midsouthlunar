@@ -15,23 +15,33 @@ const NAV = [
 function Wordmark() {
   const { t, lang } = useLang()
   return (
-    <NavLink to="/" className="flex items-center gap-3 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60 rounded-lg" aria-label={t('site.name')}>
+    <NavLink to="/" className="flex min-w-0 flex-1 items-center gap-3 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60 rounded-lg" aria-label={t('site.name')}>
       <span className="lantern" aria-hidden="true" />
-      <span className="leading-tight">
-        <span className="block font-display font-bold text-base sm:text-lg md:text-xl text-white whitespace-nowrap">{t('site.name')}</span>
-        <span className="hidden sm:block text-xs text-gold-light tracking-widest uppercase">{lang === 'zh' ? 'Mid-South Lunar New Year' : '中南农历新年'} · {event.year}</span>
+      <span className="min-w-0 leading-tight">
+        <span className="block truncate font-display font-bold text-base sm:text-lg md:text-xl text-white">{t('site.name')}</span>
+        <span className="hidden sm:block text-xs text-gold-light tracking-widest uppercase">{lang === 'en' ? '中南农历新年' : 'Mid-South Lunar New Year'} · {event.year}</span>
       </span>
     </NavLink>
   )
 }
 
+/**
+ * Language switcher: a native <select> styled as a gold pill. A select works
+ * with keyboard, screen readers, and phones without any custom menu code,
+ * and scales to five languages where a toggle could not.
+ */
 export function LangToggle({ className = '' }) {
-  const { t, toggle, lang } = useLang()
+  const { t, lang, setLang, langs } = useLang()
   return (
-    <button type="button" onClick={toggle} aria-label={`${t('lang.switch')}: ${t('lang.label')}`} data-testid="lang-toggle" data-lang={lang}
-      className={`btn-gold !py-1.5 !px-4 text-sm whitespace-nowrap ${className}`}>
-      <span aria-hidden="true">🌐</span> {t('lang.switch')}
-    </button>
+    <label className={`relative inline-flex items-center ${className}`}>
+      <span className="sr-only">{t('lang.label')}</span>
+      <span className="pointer-events-none absolute left-3" aria-hidden="true">🌐</span>
+      <select value={lang} onChange={(e) => setLang(e.target.value)} data-testid="lang-select" data-lang={lang}
+        className="max-w-[8.5rem] sm:max-w-none truncate appearance-none rounded-full bg-gold pl-9 pr-8 py-1.5 text-sm font-semibold text-ink hover:bg-gold-light focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60 cursor-pointer whitespace-nowrap">
+        {langs.map((l) => <option key={l.code} value={l.code} lang={l.htmlLang}>{l.label}</option>)}
+      </select>
+      <span className="pointer-events-none absolute right-3 text-xs" aria-hidden="true">▼</span>
+    </label>
   )
 }
 
@@ -51,7 +61,7 @@ export default function Layout() {
             {NAV.map(([to, key]) => <NavLink key={to} to={to} end={to === '/'} className={linkClass}>{t(key)}</NavLink>)}
             <LangToggle className="ml-2" />
           </nav>
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex shrink-0 items-center gap-2 lg:hidden">
             <LangToggle />
             <button type="button" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? t('nav.close') : t('nav.menu')}
               onClick={() => setOpen((o) => !o)} className="rounded-lg p-2 hover:bg-white/15 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60">

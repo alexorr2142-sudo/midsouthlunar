@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-const toggle = (page) => page.locator('[data-testid=lang-toggle]:visible')
+const pickLang = (page, code) => page.locator('[data-testid=lang-select]:visible').selectOption(code)
 
 // Test case IT-1 (evaluation task "find event date and location", FR-1, FR-3):
 // a visitor landing on Home sees dates, venue, and a countdown, and can reach
@@ -77,14 +77,21 @@ test.describe('IT-2 schedule filters, vendor search, language persistence', () =
 
   test('language choice persists across pages and reload', async ({ page }) => {
     await page.goto('/')
-    await toggle(page).click()
+    await pickLang(page, 'zh')
     await expect(page.getByRole('heading', { level: 1 })).toContainText('中南农历新年')
     await page.goto('/vendors')
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('商户')
     await expect(page.locator('html')).toHaveAttribute('lang', 'zh-CN')
     await page.reload()
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('商户')
-    await toggle(page).click()
+    await pickLang(page, 'vi')
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Gian hàng')
+    await expect(page.locator('html')).toHaveAttribute('lang', 'vi')
+    await pickLang(page, 'ko')
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('참여 업체')
+    await pickLang(page, 'ja')
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('出店')
+    await pickLang(page, 'en')
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Vendors')
   })
 

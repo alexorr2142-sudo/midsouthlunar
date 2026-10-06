@@ -1,15 +1,27 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import en from './en.json'
 import zh from './zh.json'
+import vi from './vi.json'
+import ko from './ko.json'
+import ja from './ja.json'
 
-const DICT = { en, zh }
+/** Supported languages. Order is the order shown in the switcher. */
+export const LANGS = [
+  { code: 'en', label: 'English', htmlLang: 'en' },
+  { code: 'zh', label: '中文', htmlLang: 'zh-CN' },
+  { code: 'vi', label: 'Tiếng Việt', htmlLang: 'vi' },
+  { code: 'ko', label: '한국어', htmlLang: 'ko' },
+  { code: 'ja', label: '日本語', htmlLang: 'ja' },
+]
+export const LANG_CODES = LANGS.map((l) => l.code)
+const DICT = { en, zh, vi, ko, ja }
 const STORAGE_KEY = 'msl-lang'
 const LanguageContext = createContext(null)
 
 function readStoredLang() {
   try {
     const v = window.localStorage.getItem(STORAGE_KEY)
-    if (v === 'en' || v === 'zh') return v
+    if (LANG_CODES.includes(v)) return v
   } catch { /* storage unavailable */ }
   return 'en'
 }
@@ -20,14 +32,16 @@ export function lookup(dict, key) {
 }
 
 export function LanguageProvider({ children, initial }) {
-  const [lang, setLang] = useState(() => initial || readStoredLang())
+  const [lang, setLangState] = useState(() => (LANG_CODES.includes(initial) ? initial : readStoredLang()))
 
   useEffect(() => {
-    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en'
+    document.documentElement.lang = LANGS.find((l) => l.code === lang)?.htmlLang ?? 'en'
     try { window.localStorage.setItem(STORAGE_KEY, lang) } catch { /* ignore */ }
   }, [lang])
 
-  const toggle = useCallback(() => setLang((l) => (l === 'en' ? 'zh' : 'en')), [])
+  const setLang = useCallback((code) => { if (LANG_CODES.includes(code)) setLangState(code) }, [])
+  /** Cycle to the next language (kept for keyboard users and tests). */
+  const toggle = useCallback(() => setLangState((l) => LANG_CODES[(LANG_CODES.indexOf(l) + 1) % LANG_CODES.length]), [])
 
   const value = useMemo(() => {
     const dict = DICT[lang]
@@ -41,9 +55,9 @@ export function LanguageProvider({ children, initial }) {
       }
       return s
     }
-    /** Pick the current language from a bilingual {en, zh} data object. */
+    /** Pick the current language from a multilingual {en, zh, vi, ko, ja} data object. */
     const pick = (obj) => (obj && typeof obj === 'object' ? obj[lang] ?? obj.en ?? '' : obj ?? '')
-    return { lang, setLang, toggle, t, pick }
+    return { lang, setLang, toggle, t, pick, langs: LANGS }
   }, [lang])
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>

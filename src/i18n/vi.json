@@ -1,0 +1,121 @@
+{
+  "_meta": { "status": "AI draft, pending review by a Vietnamese-reading reviewer" },
+  "site": { "name": "Tết Trung Nam Hoa Kỳ", "tagline": "Đón Tết Nguyên Đán, sẻ chia văn hóa", "org": "Do Phòng Thương mại Hoa kiều Trung Nam tổ chức" },
+  "nav": { "home": "Trang chủ", "schedule": "Lịch trình", "vendors": "Gian hàng", "visit": "Vé & Đường đi", "involved": "Tham gia", "about": "Giới thiệu", "menu": "Menu", "close": "Đóng menu", "skip": "Đến nội dung chính" },
+  "lang": { "switch": "Tiếng Việt", "label": "Chọn ngôn ngữ" },
+  "home": {
+    "dates": "5 & 6 tháng 2, 2027",
+    "hours": "10 giờ sáng đến 9 giờ tối mỗi ngày",
+    "venue": "Agricenter International, Memphis",
+    "tickets": "Mua vé",
+    "schedule": "Xem lịch trình",
+    "calendar": "Thêm vào lịch",
+    "preliminary": "Chương trình dự kiến. Giờ và gian hàng có thể thay đổi.",
+    "highlightsTitle": "Hai ngày lễ hội",
+    "highlights": [
+      { "title": "Múa rồng & múa lân", "text": "Biểu diễn truyền thống mở đầu năm mới với may mắn và rộn ràng." },
+      { "title": "Khu ẩm thực", "text": "Sủi cảo, lẩu, kẹo hồ lô và các món tất niên kinh điển." },
+      { "title": "Chợ văn hóa", "text": "Tranh cắt giấy, gốm sứ, thư pháp, đèn lồng và thêu." },
+      { "title": "Vườn gia đình", "text": "Trò chơi, thủ công, lì xì và đường hoa đăng về đêm." }
+    ],
+    "cultureTitle": "Vì sao chúng ta đón Tết",
+    "cultureText": "Tết Nguyên Đán là lễ hội truyền thống quan trọng nhất của nhiều nền văn hóa châu Á. Năm 2027 là năm Mùi, biểu tượng của hòa bình, nhân hậu và sáng tạo. Lễ hội mang những truyền thống này đến với mọi người ở vùng Trung Nam.",
+    "cultureLink": "Tìm hiểu thêm về phong tục",
+    "sponsorsTitle": "Cảm ơn các nhà tài trợ",
+    "sponsorsText": "Logo nhà tài trợ sẽ xuất hiện tại đây. Muốn tài trợ?",
+    "sponsorsLink": "Trở thành nhà tài trợ"
+  },
+  "countdown": {
+    "until": "Lễ hội bắt đầu sau",
+    "days": "ngày", "hours": "giờ", "minutes": "phút", "seconds": "giây",
+    "now": "Đang diễn ra!",
+    "nowText": "Mở cửa đến 9 giờ tối. Xem những gì đang diễn ra.",
+    "between": "Hẹn gặp lại ngày mai!",
+    "betweenText": "Ngày 2 mở cửa lúc 10 giờ sáng ngày 6 tháng 2.",
+    "after": "Cảm ơn Memphis!",
+    "afterText": "Lễ hội 2027 đã kết thúc. Hẹn gặp lại Tết năm sau."
+  },
+  "schedule": {
+    "title": "Lịch trình",
+    "intro": "Biểu diễn, ẩm thực, văn hóa và hoạt động gia đình trong hai ngày. Lọc theo ngày, khu vực hoặc loại.",
+    "day": "Ngày", "stage": "Khu vực", "type": "Loại", "all": "Tất cả",
+    "results": "{count} hoạt động", "resultsOne": "1 hoạt động",
+    "empty": "Không có hoạt động nào phù hợp.",
+    "clear": "Xóa bộ lọc",
+    "addItem": "Thêm vào lịch"
+  },
+  "vendors": {
+    "title": "Gian hàng",
+    "intro": "Hơn 100 doanh nghiệp và nghệ nhân địa phương sẽ có mặt. Đây là danh sách dự kiến.",
+    "search": "Tìm gian hàng",
+    "searchPlaceholder": "Tìm theo tên hoặc sản phẩm",
+    "category": "Danh mục", "all": "Tất cả",
+    "results": "{count} gian hàng", "resultsOne": "1 gian hàng",
+    "empty": "Không có gian hàng nào phù hợp.",
+    "clear": "Xóa tìm kiếm",
+    "booth": "Gian"
+  },
+  "visit": {
+    "title": "Vé & Đường đi",
+    "ticketsTitle": "Vé",
+    "ticketsText": "Vé được bán qua Eventbrite. Giá vé sẽ sớm được công bố.",
+    "ticketsButton": "Mua vé trên Eventbrite",
+    "mapTitle": "Đường đi",
+    "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
+    "directions": "Mở trong Google Maps",
+    "parkingTitle": "Bãi đậu xe và lối vào",
+    "parking": [
+      "Đậu xe miễn phí tại bãi chính của Agricenter, lối vào từ Walnut Grove Road.",
+      "Chỗ đậu xe dành cho người khuyết tật và khu thả khách gần lối vào chính.",
+      "Điểm đón xe công nghệ ở bãi phía bắc. Đi theo biển chỉ dẫn."
+    ],
+    "accessTitle": "Tiếp cận cho mọi người",
+    "access": [
+      "Toàn bộ khu lễ hội nằm trên một tầng, xe lăn đi lại được.",
+      "Nhà vệ sinh dành cho người khuyết tật có ở mọi khu nhà.",
+      "Chào đón chó dịch vụ. Có phòng yên tĩnh theo yêu cầu tại quầy thông tin."
+    ],
+    "faqTitle": "Câu hỏi thường gặp",
+    "faq": [
+      { "q": "Giờ mở cửa?", "a": "10 giờ sáng đến 9 giờ tối, thứ Sáu 5/2 và thứ Bảy 6/2/2027." },
+      { "q": "Có thu phí vào cửa không?", "a": "Giá vé sẽ được công bố. Có giá vé trẻ em." },
+      { "q": "Lễ hội diễn ra trong nhà?", "a": "Hầu hết hoạt động diễn ra trong nhà tại Agricenter International. Đường hoa đăng ở ngoài trời, hãy mặc ấm." },
+      { "q": "Có thể trả tiền mặt không?", "a": "Hầu hết gian hàng nhận thẻ và thanh toán di động. Một số nhận tiền mặt. Có máy ATM tại chỗ." },
+      { "q": "Có hoạt động cho trẻ em không?", "a": "Có. Vườn gia đình có trò chơi, thủ công, vẽ mặt và lì xì cả ngày." },
+      { "q": "Nếu thời tiết xấu thì sao?", "a": "Lễ hội diễn ra bất kể mưa nắng. Theo dõi trang này và mạng xã hội để biết thay đổi." }
+    ]
+  },
+  "involved": {
+    "title": "Tham gia",
+    "vendorTitle": "Đăng ký gian hàng",
+    "vendorText": "Chào đón quầy ẩm thực, thủ công và các tổ chức văn hóa. Sắp mở đăng ký.",
+    "vendorButton": "Đăng ký gian hàng",
+    "volunteerTitle": "Tình nguyện viên",
+    "volunteerText": "Hỗ trợ dựng sân khấu, quầy thông tin, hoạt động trẻ em và phiên dịch. Chào đón sinh viên.",
+    "volunteerButton": "Đăng ký tình nguyện",
+    "sponsorTitle": "Tài trợ lễ hội",
+    "sponsorText": "Tiếp cận 20.000 người tham dự từ khắp vùng Trung Nam. Có các gói tài trợ cho mọi quy mô doanh nghiệp.",
+    "sponsorButton": "Liên hệ về tài trợ"
+  },
+  "about": {
+    "title": "Về lễ hội",
+    "missionTitle": "Sứ mệnh",
+    "mission": "Lễ hội Tết Trung Nam giới thiệu nguồn gốc lịch sử và ý nghĩa văn hóa của Tết Nguyên Đán đến cư dân mọi nguồn gốc ở vùng Memphis qua biểu diễn, ẩm thực, chợ phiên và hoạt động tương tác, nhằm thúc đẩy sự hiểu biết và tình hữu nghị giữa các cộng đồng và tôn vinh tinh thần sôi động của cộng đồng người Hoa tại Memphis.",
+    "orgTitle": "Đơn vị tổ chức",
+    "org": "Phòng Thương mại Hoa kiều Trung Nam (MCCC) là tổ chức phi lợi nhuận phục vụ cộng đồng doanh nghiệp người Hoa ở vùng Memphis mở rộng. MCCC hỗ trợ doanh nghiệp người Hoa phát triển và thúc đẩy giao lưu giữa cộng đồng người Hoa và xã hội.",
+    "cultureTitle": "Phong tục Tết",
+    "culture": [
+      { "title": "Bữa cơm tất niên", "text": "Gia đình sum họp đêm giao thừa. Sủi cảo và cá tượng trưng cho giàu có và dư dả." },
+      { "title": "Đỏ và vàng", "text": "Màu đỏ xua đuổi vận xui, màu vàng tượng trưng cho thịnh vượng. Nhà cửa treo câu đối và đèn lồng." },
+      { "title": "Lì xì", "text": "Người lớn mừng tuổi trẻ em bằng phong bao đỏ như lời chúc cho năm mới." },
+      { "title": "Năm Mùi", "text": "2027 là năm Mùi, gắn với sự hiền hòa, sáng tạo và bình an." },
+      { "title": "Tết Nguyên Tiêu", "text": "Lễ hội khép lại vào ngày rằm tháng Giêng với đèn lồng, câu đố và bánh trôi." },
+      { "title": "Múa lân và múa rồng", "text": "Tiếng trống và linh vật nhảy múa mang lại may mắn, xua đuổi tà ma." }
+    ],
+    "contactTitle": "Liên hệ",
+    "contactText": "Có câu hỏi về lễ hội, gian hàng hay tài trợ?",
+    "contactButton": "Gửi email cho ban tổ chức"
+  },
+  "footer": { "rights": "Phòng Thương mại Hoa kiều Trung Nam", "note": "Trang web này là dự án sinh viên môn MIS 7623 tại Đại học Memphis." },
+  "notFound": { "title": "Không tìm thấy trang", "text": "Trang này không tồn tại.", "home": "Về trang chủ" }
+}

@@ -1,35 +1,575 @@
 {
   "status": "preliminary",
   "items": [
-    { "id": "v01", "name": { "en": "Golden Wok Dumpling House", "zh": "金锅饺子馆" }, "category": "food", "booth": "F1", "description": { "en": "Handmade pork and chive dumplings, vegetable buns.", "zh": "手工猪肉韭菜饺子、素包子。" } },
-    { "id": "v02", "name": { "en": "Sichuan Spice Kitchen", "zh": "川味厨房" }, "category": "food", "booth": "F2", "description": { "en": "Dan dan noodles, mapo tofu, spicy wontons.", "zh": "担担面、麻婆豆腐、红油抄手。" } },
-    { "id": "v03", "name": { "en": "Lucky Bao Street Food", "zh": "好运包子铺" }, "category": "food", "booth": "F3", "description": { "en": "Steamed bao, scallion pancakes, soy milk.", "zh": "蒸包、葱油饼、豆浆。" } },
-    { "id": "v04", "name": { "en": "Mid-South Tea House", "zh": "中南茶楼" }, "category": "food", "booth": "F4", "description": { "en": "Bubble tea, oolong, jasmine, hot ginger tea.", "zh": "珍珠奶茶、乌龙、茉莉花茶、热姜茶。" } },
-    { "id": "v05", "name": { "en": "Sweet Rice Cake Co.", "zh": "甜年糕坊" }, "category": "food", "booth": "F5", "description": { "en": "Nian gao, tang yuan, sesame balls.", "zh": "年糕、汤圆、麻团。" } },
-    { "id": "v06", "name": { "en": "Candied Hawthorn Cart", "zh": "糖葫芦小车" }, "category": "food", "booth": "F6", "description": { "en": "Tanghulu, candied fruit skewers.", "zh": "糖葫芦、水果糖串。" } },
-    { "id": "v07", "name": { "en": "Memphis Hot Pot", "zh": "孟菲斯火锅" }, "category": "food", "booth": "F7", "description": { "en": "Mini hot pot cups and skewers.", "zh": "迷你火锅杯与串串。" } },
-    { "id": "v08", "name": { "en": "Peking Duck Express", "zh": "北京烤鸭快餐" }, "category": "food", "booth": "F8", "description": { "en": "Duck wraps and crispy duck buns.", "zh": "鸭肉卷饼与脆皮鸭包。" } },
-    { "id": "v09", "name": { "en": "Taiwan Night Market Bites", "zh": "台湾夜市小吃" }, "category": "food", "booth": "F9", "description": { "en": "Popcorn chicken, oyster omelet, shaved ice.", "zh": "盐酥鸡、蚵仔煎、刨冰。" } },
-    { "id": "v10", "name": { "en": "Dim Sum Garden", "zh": "点心园" }, "category": "food", "booth": "F10", "description": { "en": "Har gow, siu mai, egg tarts.", "zh": "虾饺、烧卖、蛋挞。" } },
-    { "id": "v11", "name": { "en": "Red Thread Paper-Cuts", "zh": "红线剪纸" }, "category": "crafts", "booth": "M1", "description": { "en": "Traditional paper-cut art, window decorations, custom names.", "zh": "传统剪纸艺术、窗花、定制姓名剪纸。" } },
-    { "id": "v12", "name": { "en": "Jingdezhen Ceramics Studio", "zh": "景德镇陶瓷工作室" }, "category": "crafts", "booth": "M2", "description": { "en": "Hand-painted porcelain cups and bowls.", "zh": "手绘瓷杯瓷碗。" } },
-    { "id": "v13", "name": { "en": "Silk and Needle Embroidery", "zh": "丝针绣坊" }, "category": "crafts", "booth": "M3", "description": { "en": "Suzhou-style embroidery, scarves, framed pieces.", "zh": "苏绣、丝巾、装裱绣品。" } },
-    { "id": "v14", "name": { "en": "Lantern Lane", "zh": "灯笼巷" }, "category": "crafts", "booth": "M4", "description": { "en": "Silk and paper lanterns in all sizes.", "zh": "各种尺寸的丝绸与纸灯笼。" } },
-    { "id": "v15", "name": { "en": "Spring Couplets Calligraphy", "zh": "春联书法" }, "category": "crafts", "booth": "M5", "description": { "en": "Custom couplets and fu characters written on the spot.", "zh": "现场书写定制春联与福字。" } },
-    { "id": "v16", "name": { "en": "New Year Prints Gallery", "zh": "年画画廊" }, "category": "crafts", "booth": "M6", "description": { "en": "Woodblock New Year paintings and posters.", "zh": "木版年画与海报。" } },
-    { "id": "v17", "name": { "en": "Jade and Knot Jewelry", "zh": "玉与结饰品" }, "category": "crafts", "booth": "M7", "description": { "en": "Chinese knot bracelets, jade pendants, zodiac charms.", "zh": "中国结手链、玉坠、生肖吊饰。" } },
-    { "id": "v18", "name": { "en": "Goat Year Plush and Toys", "zh": "羊年玩偶" }, "category": "crafts", "booth": "M8", "description": { "en": "Zodiac plush toys and children's gifts.", "zh": "生肖毛绒玩具与儿童礼品。" } },
-    { "id": "v19", "name": { "en": "Bamboo and Fan Workshop", "zh": "竹扇工坊" }, "category": "crafts", "booth": "M9", "description": { "en": "Hand-painted folding fans and bamboo crafts.", "zh": "手绘折扇与竹编工艺品。" } },
-    { "id": "v20", "name": { "en": "Qipao Tailor", "zh": "旗袍裁缝" }, "category": "crafts", "booth": "M10", "description": { "en": "Ready-made qipao and custom fittings.", "zh": "成衣旗袍与定制。" } },
-    { "id": "v21", "name": { "en": "Mid-South Chinese Chamber of Commerce", "zh": "中南华人商会" }, "category": "cultural", "booth": "C1", "description": { "en": "Festival organizer. Information, membership, lost and found.", "zh": "庆典主办方。咨询、会员、失物招领。" } },
-    { "id": "v22", "name": { "en": "Memphis Chinese School", "zh": "孟菲斯中文学校" }, "category": "cultural", "booth": "C2", "description": { "en": "Chinese language classes for children and adults.", "zh": "面向儿童和成人的中文课程。" } },
-    { "id": "v23", "name": { "en": "Confucius Institute Outreach", "zh": "孔子学院" }, "category": "cultural", "booth": "C3", "description": { "en": "Cultural programs, try-it calligraphy table.", "zh": "文化项目，书法体验桌。" } },
-    { "id": "v24", "name": { "en": "Tai Chi Memphis", "zh": "孟菲斯太极" }, "category": "cultural", "booth": "C4", "description": { "en": "Free mini lessons every hour.", "zh": "每小时免费迷你课程。" } },
-    { "id": "v25", "name": { "en": "Traditional Chinese Medicine Clinic", "zh": "中医诊所" }, "category": "cultural", "booth": "C5", "description": { "en": "Information on acupuncture and herbal wellness.", "zh": "针灸与草本养生咨询。" } },
-    { "id": "v26", "name": { "en": "Lunar New Year Customs Exhibition", "zh": "新年习俗图片展" }, "category": "cultural", "booth": "C6", "description": { "en": "Pictorial exhibition of New Year customs and their meaning.", "zh": "年俗及其寓意的图片展览。" } },
-    { "id": "v27", "name": { "en": "Chinese Music Ensemble", "zh": "民乐团" }, "category": "cultural", "booth": "C7", "description": { "en": "Try the guzheng and erhu, meet the musicians.", "zh": "体验古筝与二胡，与乐手交流。" } },
-    { "id": "v28", "name": { "en": "Asian American Heritage Society", "zh": "亚裔文化遗产协会" }, "category": "cultural", "booth": "C8", "description": { "en": "Community history displays and oral history recording.", "zh": "社区历史展示与口述历史记录。" } },
-    { "id": "v29", "name": { "en": "Memphis Public Library", "zh": "孟菲斯公共图书馆" }, "category": "cultural", "booth": "C9", "description": { "en": "Bilingual story time and library cards.", "zh": "双语故事时间与办理借书证。" } },
-    { "id": "v30", "name": { "en": "Zodiac Face Painting", "zh": "生肖脸绘" }, "category": "cultural", "booth": "C10", "description": { "en": "Free face painting for kids, goat designs for 2027.", "zh": "儿童免费脸绘，2027羊年图案。" } }
+    {
+      "id": "v01",
+      "name": {
+        "en": "Golden Wok Dumpling House",
+        "zh": "金锅饺子馆",
+        "vi": "Tiệm sủi cảo Golden Wok",
+        "ko": "골든 웍 만두집",
+        "ja": "ゴールデンウォック餃子館"
+      },
+      "category": "food",
+      "booth": "F1",
+      "description": {
+        "en": "Handmade pork and chive dumplings, vegetable buns.",
+        "zh": "手工猪肉韭菜饺子、素包子。",
+        "vi": "Sủi cảo thịt heo hẹ làm tay, bánh bao chay.",
+        "ko": "수제 돼지고기 부추 만두, 야채 찐빵.",
+        "ja": "手作りの豚肉ニラ餃子、野菜まん。"
+      }
+    },
+    {
+      "id": "v02",
+      "name": {
+        "en": "Sichuan Spice Kitchen",
+        "zh": "川味厨房",
+        "vi": "Bếp cay Tứ Xuyên",
+        "ko": "쓰촨 스파이스 키친",
+        "ja": "四川スパイスキッチン"
+      },
+      "category": "food",
+      "booth": "F2",
+      "description": {
+        "en": "Dan dan noodles, mapo tofu, spicy wontons.",
+        "zh": "担担面、麻婆豆腐、红油抄手。",
+        "vi": "Mì đản đản, đậu hũ Ma Bà, hoành thánh cay.",
+        "ko": "탄탄면, 마파두부, 매운 완탕.",
+        "ja": "担々麺、麻婆豆腐、紅油ワンタン。"
+      }
+    },
+    {
+      "id": "v03",
+      "name": {
+        "en": "Lucky Bao Street Food",
+        "zh": "好运包子铺",
+        "vi": "Bánh bao Lucky Bao",
+        "ko": "럭키 바오 길거리 음식",
+        "ja": "ラッキーバオ屋台"
+      },
+      "category": "food",
+      "booth": "F3",
+      "description": {
+        "en": "Steamed bao, scallion pancakes, soy milk.",
+        "zh": "蒸包、葱油饼、豆浆。",
+        "vi": "Bánh bao hấp, bánh hành, sữa đậu nành.",
+        "ko": "찐빵, 파전병, 두유.",
+        "ja": "蒸しまん、ネギ餅、豆乳。"
+      }
+    },
+    {
+      "id": "v04",
+      "name": {
+        "en": "Mid-South Tea House",
+        "zh": "中南茶楼",
+        "vi": "Trà quán Trung Nam",
+        "ko": "미드사우스 찻집",
+        "ja": "ミッドサウス茶館"
+      },
+      "category": "food",
+      "booth": "F4",
+      "description": {
+        "en": "Bubble tea, oolong, jasmine, hot ginger tea.",
+        "zh": "珍珠奶茶、乌龙、茉莉花茶、热姜茶。",
+        "vi": "Trà sữa trân châu, ô long, nhài, trà gừng nóng.",
+        "ko": "버블티, 우롱차, 재스민, 생강차.",
+        "ja": "タピオカティー、烏龍茶、ジャスミン茶、生姜茶。"
+      }
+    },
+    {
+      "id": "v05",
+      "name": {
+        "en": "Sweet Rice Cake Co.",
+        "zh": "甜年糕坊",
+        "vi": "Bánh tổ Sweet Rice Cake",
+        "ko": "스위트 라이스 케이크",
+        "ja": "スイート年糕"
+      },
+      "category": "food",
+      "booth": "F5",
+      "description": {
+        "en": "Nian gao, tang yuan, sesame balls.",
+        "zh": "年糕、汤圆、麻团。",
+        "vi": "Bánh tổ, bánh trôi, bánh mè.",
+        "ko": "녠가오, 탕위안, 참깨볼.",
+        "ja": "年糕、白玉団子、ごま団子。"
+      }
+    },
+    {
+      "id": "v06",
+      "name": {
+        "en": "Candied Hawthorn Cart",
+        "zh": "糖葫芦小车",
+        "vi": "Xe kẹo hồ lô",
+        "ko": "탕후루 카트",
+        "ja": "糖葫蘆カート"
+      },
+      "category": "food",
+      "booth": "F6",
+      "description": {
+        "en": "Tanghulu, candied fruit skewers.",
+        "zh": "糖葫芦、水果糖串。",
+        "vi": "Kẹo hồ lô, xiên trái cây bọc đường.",
+        "ko": "탕후루, 과일 설탕 꼬치.",
+        "ja": "糖葫蘆、フルーツの飴串。"
+      }
+    },
+    {
+      "id": "v07",
+      "name": {
+        "en": "Memphis Hot Pot",
+        "zh": "孟菲斯火锅",
+        "vi": "Lẩu Memphis",
+        "ko": "멤피스 훠궈",
+        "ja": "メンフィス火鍋"
+      },
+      "category": "food",
+      "booth": "F7",
+      "description": {
+        "en": "Mini hot pot cups and skewers.",
+        "zh": "迷你火锅杯与串串。",
+        "vi": "Lẩu ly mini và xiên que.",
+        "ko": "미니 훠궈 컵과 꼬치.",
+        "ja": "ミニ火鍋カップと串。"
+      }
+    },
+    {
+      "id": "v08",
+      "name": {
+        "en": "Peking Duck Express",
+        "zh": "北京烤鸭快餐",
+        "vi": "Vịt quay Bắc Kinh Express",
+        "ko": "베이징 덕 익스프레스",
+        "ja": "北京ダックエクスプレス"
+      },
+      "category": "food",
+      "booth": "F8",
+      "description": {
+        "en": "Duck wraps and crispy duck buns.",
+        "zh": "鸭肉卷饼与脆皮鸭包。",
+        "vi": "Bánh cuốn vịt và bánh bao vịt giòn.",
+        "ko": "오리 랩과 바삭한 오리 번.",
+        "ja": "ダックラップとクリスピーダックバン。"
+      }
+    },
+    {
+      "id": "v09",
+      "name": {
+        "en": "Taiwan Night Market Bites",
+        "zh": "台湾夜市小吃",
+        "vi": "Ẩm thực chợ đêm Đài Loan",
+        "ko": "타이완 야시장 간식",
+        "ja": "台湾夜市グルメ"
+      },
+      "category": "food",
+      "booth": "F9",
+      "description": {
+        "en": "Popcorn chicken, oyster omelet, shaved ice.",
+        "zh": "盐酥鸡、蚵仔煎、刨冰。",
+        "vi": "Gà chiên giòn, trứng chiên hàu, đá bào.",
+        "ko": "지파이, 굴전, 빙수.",
+        "ja": "鶏の唐揚げ、牡蠣オムレツ、かき氷。"
+      }
+    },
+    {
+      "id": "v10",
+      "name": {
+        "en": "Dim Sum Garden",
+        "zh": "点心园",
+        "vi": "Vườn điểm tâm",
+        "ko": "딤섬 가든",
+        "ja": "点心ガーデン"
+      },
+      "category": "food",
+      "booth": "F10",
+      "description": {
+        "en": "Har gow, siu mai, egg tarts.",
+        "zh": "虾饺、烧卖、蛋挞。",
+        "vi": "Há cảo, xíu mại, bánh trứng.",
+        "ko": "하가우, 슈마이, 에그타르트.",
+        "ja": "エビ餃子、焼売、エッグタルト。"
+      }
+    },
+    {
+      "id": "v11",
+      "name": {
+        "en": "Red Thread Paper-Cuts",
+        "zh": "红线剪纸",
+        "vi": "Cắt giấy Chỉ Đỏ",
+        "ko": "붉은 실 전지공예",
+        "ja": "紅線切り紙"
+      },
+      "category": "crafts",
+      "booth": "M1",
+      "description": {
+        "en": "Traditional paper-cut art, window decorations, custom names.",
+        "zh": "传统剪纸艺术、窗花、定制姓名剪纸。",
+        "vi": "Tranh cắt giấy truyền thống, hoa cửa sổ, cắt tên theo yêu cầu.",
+        "ko": "전통 전지공예, 창문 장식, 이름 맞춤 작품.",
+        "ja": "伝統の切り紙、窓飾り、名前入りオーダー。"
+      }
+    },
+    {
+      "id": "v12",
+      "name": {
+        "en": "Jingdezhen Ceramics Studio",
+        "zh": "景德镇陶瓷工作室",
+        "vi": "Xưởng gốm Cảnh Đức Trấn",
+        "ko": "징더전 도자기 공방",
+        "ja": "景徳鎮陶磁器工房"
+      },
+      "category": "crafts",
+      "booth": "M2",
+      "description": {
+        "en": "Hand-painted porcelain cups and bowls.",
+        "zh": "手绘瓷杯瓷碗。",
+        "vi": "Chén bát sứ vẽ tay.",
+        "ko": "손으로 그린 자기 잔과 그릇.",
+        "ja": "手描きの磁器カップと茶碗。"
+      }
+    },
+    {
+      "id": "v13",
+      "name": {
+        "en": "Silk and Needle Embroidery",
+        "zh": "丝针绣坊",
+        "vi": "Thêu Tơ và Kim",
+        "ko": "실과 바늘 자수",
+        "ja": "絲と針の刺繍"
+      },
+      "category": "crafts",
+      "booth": "M3",
+      "description": {
+        "en": "Suzhou-style embroidery, scarves, framed pieces.",
+        "zh": "苏绣、丝巾、装裱绣品。",
+        "vi": "Thêu kiểu Tô Châu, khăn, tranh thêu đóng khung.",
+        "ko": "쑤저우식 자수, 스카프, 액자 작품.",
+        "ja": "蘇州刺繍、スカーフ、額装作品。"
+      }
+    },
+    {
+      "id": "v14",
+      "name": {
+        "en": "Lantern Lane",
+        "zh": "灯笼巷",
+        "vi": "Ngõ Đèn Lồng",
+        "ko": "등불 골목",
+        "ja": "提灯横丁"
+      },
+      "category": "crafts",
+      "booth": "M4",
+      "description": {
+        "en": "Silk and paper lanterns in all sizes.",
+        "zh": "各种尺寸的丝绸与纸灯笼。",
+        "vi": "Đèn lồng lụa và giấy đủ kích cỡ.",
+        "ko": "다양한 크기의 비단 등불과 종이 등불.",
+        "ja": "あらゆるサイズの絹と紙の提灯。"
+      }
+    },
+    {
+      "id": "v15",
+      "name": {
+        "en": "Spring Couplets Calligraphy",
+        "zh": "春联书法",
+        "vi": "Thư pháp câu đối Tết",
+        "ko": "춘련 서예",
+        "ja": "春聯書道"
+      },
+      "category": "crafts",
+      "booth": "M5",
+      "description": {
+        "en": "Custom couplets and fu characters written on the spot.",
+        "zh": "现场书写定制春联与福字。",
+        "vi": "Câu đối và chữ Phúc viết tay tại chỗ theo yêu cầu.",
+        "ko": "즉석에서 써 드리는 맞춤 춘련과 복(福) 자.",
+        "ja": "春聯と「福」の字をその場で揮毫。"
+      }
+    },
+    {
+      "id": "v16",
+      "name": {
+        "en": "New Year Prints Gallery",
+        "zh": "年画画廊",
+        "vi": "Phòng tranh Tết",
+        "ko": "새해 그림 갤러리",
+        "ja": "年画ギャラリー"
+      },
+      "category": "crafts",
+      "booth": "M6",
+      "description": {
+        "en": "Woodblock New Year paintings and posters.",
+        "zh": "木版年画与海报。",
+        "vi": "Tranh Tết khắc gỗ và áp phích.",
+        "ko": "목판 연화와 포스터.",
+        "ja": "木版年画とポスター。"
+      }
+    },
+    {
+      "id": "v17",
+      "name": {
+        "en": "Jade and Knot Jewelry",
+        "zh": "玉与结饰品",
+        "vi": "Trang sức Ngọc và Nút thắt",
+        "ko": "옥과 매듭 장신구",
+        "ja": "翡翠と結びのアクセサリー"
+      },
+      "category": "crafts",
+      "booth": "M7",
+      "description": {
+        "en": "Chinese knot bracelets, jade pendants, zodiac charms.",
+        "zh": "中国结手链、玉坠、生肖吊饰。",
+        "vi": "Vòng tay nút thắt Trung Hoa, mặt dây ngọc, bùa con giáp.",
+        "ko": "중국 매듭 팔찌, 옥 펜던트, 띠 참.",
+        "ja": "中国結びブレスレット、翡翠ペンダント、干支チャーム。"
+      }
+    },
+    {
+      "id": "v18",
+      "name": {
+        "en": "Goat Year Plush and Toys",
+        "zh": "羊年玩偶",
+        "vi": "Thú bông năm Mùi",
+        "ko": "양의 해 인형과 장난감",
+        "ja": "未年のぬいぐるみとおもちゃ"
+      },
+      "category": "crafts",
+      "booth": "M8",
+      "description": {
+        "en": "Zodiac plush toys and children's gifts.",
+        "zh": "生肖毛绒玩具与儿童礼品。",
+        "vi": "Thú bông con giáp và quà trẻ em.",
+        "ko": "띠 인형과 어린이 선물.",
+        "ja": "干支のぬいぐるみと子ども向けギフト。"
+      }
+    },
+    {
+      "id": "v19",
+      "name": {
+        "en": "Bamboo and Fan Workshop",
+        "zh": "竹扇工坊",
+        "vi": "Xưởng quạt và tre",
+        "ko": "대나무와 부채 공방",
+        "ja": "竹と扇の工房"
+      },
+      "category": "crafts",
+      "booth": "M9",
+      "description": {
+        "en": "Hand-painted folding fans and bamboo crafts.",
+        "zh": "手绘折扇与竹编工艺品。",
+        "vi": "Quạt xếp vẽ tay và đồ thủ công tre.",
+        "ko": "손으로 그린 접부채와 대나무 공예.",
+        "ja": "手描きの扇子と竹細工。"
+      }
+    },
+    {
+      "id": "v20",
+      "name": {
+        "en": "Qipao Tailor",
+        "zh": "旗袍裁缝",
+        "vi": "Tiệm may sườn xám",
+        "ko": "치파오 양장점",
+        "ja": "チャイナドレス仕立て"
+      },
+      "category": "crafts",
+      "booth": "M10",
+      "description": {
+        "en": "Ready-made qipao and custom fittings.",
+        "zh": "成衣旗袍与定制。",
+        "vi": "Sườn xám may sẵn và may đo.",
+        "ko": "기성 치파오와 맞춤 제작.",
+        "ja": "既製と注文仕立てのチャイナドレス。"
+      }
+    },
+    {
+      "id": "v21",
+      "name": {
+        "en": "Mid-South Chinese Chamber of Commerce",
+        "zh": "中南华人商会",
+        "vi": "Phòng Thương mại Hoa kiều Trung Nam",
+        "ko": "미드사우스 중국상공회의소",
+        "ja": "ミッドサウス中国商工会議所"
+      },
+      "category": "cultural",
+      "booth": "C1",
+      "description": {
+        "en": "Festival organizer. Information, membership, lost and found.",
+        "zh": "庆典主办方。咨询、会员、失物招领。",
+        "vi": "Ban tổ chức. Thông tin, hội viên, đồ thất lạc.",
+        "ko": "축제 주최. 안내, 회원, 분실물.",
+        "ja": "主催者。案内、会員、落とし物。"
+      }
+    },
+    {
+      "id": "v22",
+      "name": {
+        "en": "Memphis Chinese School",
+        "zh": "孟菲斯中文学校",
+        "vi": "Trường Hoa ngữ Memphis",
+        "ko": "멤피스 중국어 학교",
+        "ja": "メンフィス中国語学校"
+      },
+      "category": "cultural",
+      "booth": "C2",
+      "description": {
+        "en": "Chinese language classes for children and adults.",
+        "zh": "面向儿童和成人的中文课程。",
+        "vi": "Lớp tiếng Hoa cho trẻ em và người lớn.",
+        "ko": "어린이와 성인 중국어 수업.",
+        "ja": "子どもと大人向けの中国語クラス。"
+      }
+    },
+    {
+      "id": "v23",
+      "name": {
+        "en": "Confucius Institute Outreach",
+        "zh": "孔子学院",
+        "vi": "Viện Khổng Tử",
+        "ko": "공자학원",
+        "ja": "孔子学院"
+      },
+      "category": "cultural",
+      "booth": "C3",
+      "description": {
+        "en": "Cultural programs, try-it calligraphy table.",
+        "zh": "文化项目，书法体验桌。",
+        "vi": "Chương trình văn hóa, bàn thử thư pháp.",
+        "ko": "문화 프로그램, 서예 체험 테이블.",
+        "ja": "文化プログラム、書道体験テーブル。"
+      }
+    },
+    {
+      "id": "v24",
+      "name": {
+        "en": "Tai Chi Memphis",
+        "zh": "孟菲斯太极",
+        "vi": "Thái Cực Memphis",
+        "ko": "태극권 멤피스",
+        "ja": "太極拳メンフィス"
+      },
+      "category": "cultural",
+      "booth": "C4",
+      "description": {
+        "en": "Free mini lessons every hour.",
+        "zh": "每小时免费迷你课程。",
+        "vi": "Lớp học ngắn miễn phí mỗi giờ.",
+        "ko": "매시간 무료 미니 레슨.",
+        "ja": "毎時無料のミニレッスン。"
+      }
+    },
+    {
+      "id": "v25",
+      "name": {
+        "en": "Traditional Chinese Medicine Clinic",
+        "zh": "中医诊所",
+        "vi": "Phòng khám Đông y",
+        "ko": "한의원",
+        "ja": "中医クリニック"
+      },
+      "category": "cultural",
+      "booth": "C5",
+      "description": {
+        "en": "Information on acupuncture and herbal wellness.",
+        "zh": "针灸与草本养生咨询。",
+        "vi": "Thông tin châm cứu và dưỡng sinh thảo dược.",
+        "ko": "침술과 약초 건강 상담.",
+        "ja": "鍼灸と薬草養生の案内。"
+      }
+    },
+    {
+      "id": "v26",
+      "name": {
+        "en": "Lunar New Year Customs Exhibition",
+        "zh": "新年习俗图片展",
+        "vi": "Triển lãm phong tục Tết",
+        "ko": "설날 풍습 전시",
+        "ja": "旧正月の風習展"
+      },
+      "category": "cultural",
+      "booth": "C6",
+      "description": {
+        "en": "Pictorial exhibition of New Year customs and their meaning.",
+        "zh": "年俗及其寓意的图片展览。",
+        "vi": "Triển lãm tranh ảnh về phong tục Tết và ý nghĩa.",
+        "ko": "설 풍습과 그 의미를 담은 사진 전시.",
+        "ja": "正月の風習とその意味の写真展。"
+      }
+    },
+    {
+      "id": "v27",
+      "name": {
+        "en": "Chinese Music Ensemble",
+        "zh": "民乐团",
+        "vi": "Dàn nhạc dân tộc Trung Hoa",
+        "ko": "중국 전통 음악 앙상블",
+        "ja": "中国民族楽器アンサンブル"
+      },
+      "category": "cultural",
+      "booth": "C7",
+      "description": {
+        "en": "Try the guzheng and erhu, meet the musicians.",
+        "zh": "体验古筝与二胡，与乐手交流。",
+        "vi": "Thử đàn tranh và nhị hồ, gặp gỡ nghệ sĩ.",
+        "ko": "고쟁과 얼후를 체험하고 연주자를 만나 보세요.",
+        "ja": "古箏と二胡を体験し、奏者と交流。"
+      }
+    },
+    {
+      "id": "v28",
+      "name": {
+        "en": "Asian American Heritage Society",
+        "zh": "亚裔文化遗产协会",
+        "vi": "Hội Di sản Người Mỹ gốc Á",
+        "ko": "아시아계 미국인 유산 협회",
+        "ja": "アジア系アメリカ人遺産協会"
+      },
+      "category": "cultural",
+      "booth": "C8",
+      "description": {
+        "en": "Community history displays and oral history recording.",
+        "zh": "社区历史展示与口述历史记录。",
+        "vi": "Trưng bày lịch sử cộng đồng và ghi âm lịch sử truyền miệng.",
+        "ko": "지역 역사 전시와 구술사 기록.",
+        "ja": "地域史の展示と口述史の記録。"
+      }
+    },
+    {
+      "id": "v29",
+      "name": {
+        "en": "Memphis Public Library",
+        "zh": "孟菲斯公共图书馆",
+        "vi": "Thư viện công cộng Memphis",
+        "ko": "멤피스 공공도서관",
+        "ja": "メンフィス公共図書館"
+      },
+      "category": "cultural",
+      "booth": "C9",
+      "description": {
+        "en": "Bilingual story time and library cards.",
+        "zh": "双语故事时间与办理借书证。",
+        "vi": "Kể chuyện song ngữ và làm thẻ thư viện.",
+        "ko": "이중 언어 스토리타임과 도서관 카드 발급.",
+        "ja": "バイリンガルの読み聞かせと図書館カード発行。"
+      }
+    },
+    {
+      "id": "v30",
+      "name": {
+        "en": "Zodiac Face Painting",
+        "zh": "生肖脸绘",
+        "vi": "Vẽ mặt con giáp",
+        "ko": "띠 페이스 페인팅",
+        "ja": "干支フェイスペイント"
+      },
+      "category": "cultural",
+      "booth": "C10",
+      "description": {
+        "en": "Free face painting for kids, goat designs for 2027.",
+        "zh": "儿童免费脸绘，2027羊年图案。",
+        "vi": "Vẽ mặt miễn phí cho trẻ em, họa tiết dê 2027.",
+        "ko": "어린이 무료 페이스 페인팅, 2027 양 디자인.",
+        "ja": "子ども向け無料フェイスペイント、2027年は羊のデザイン。"
+      }
+    }
   ]
 }

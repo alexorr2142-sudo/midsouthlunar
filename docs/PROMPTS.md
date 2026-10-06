@@ -105,3 +105,19 @@ One structured prompt per module, following the Role / Context / Task / Constrai
 **Prompt:** Write a Playwright script that opens every page at phone and desktop widths, exercises the filters, the search, the language toggle, the empty states, and the "happening now" countdown state, and saves full-page screenshots as evidence.
 
 **Result:** scripts/screenshots.mjs, output in docs/screenshots/. **Human fix:** the script found two language toggles in the DOM (desktop nav plus mobile header) and had to target the visible one. The screenshots revealed the phone header wrapping, fixed in Module 1.
+
+---
+
+## Module 6: Vietnamese, Korean, and Japanese (extends FR-2)
+
+**Role:** You are extending the site's internationalization from two languages to five.
+
+**Context:** The site already has English and Simplified Chinese with a toggle. The team wants Vietnamese, Korean, and Japanese added so the festival reaches more of the Mid-South's Asian communities. UI strings live in dictionaries; data items carry per-language objects.
+
+**Task:** Add vi.json, ko.json, ja.json mirroring en.json exactly; add vi/ko/ja values to every schedule item, vendor, stage, type, category, and event label; replace the two-way toggle with a five-language switcher; set the right `<html lang>` and fonts per language; extend the tests so a missing key in any language fails the build.
+
+**Constraints:** No i18n library. The switcher must work by keyboard and screen reader and fit a phone header. Mark every new dictionary as an AI draft pending review.
+
+**Output:** src/i18n/{vi,ko,ja}.json, updated data files, LanguageContext.jsx with a LANGS table, LangToggle as a native `<select>`, updated unit and integration tests.
+
+**Result:** Produced as specified; 26 unit tests and 14 integration tests pass. **Defect found by the integration test:** on a 390 px phone the wider switcher pushed the menu button off-screen in Vietnamese. **Human fix:** the wordmark now truncates and the switcher has a max width on small screens. Note on culture: the Japanese dictionary says 旧正月 (old new year) rather than 正月, since Japan celebrates the solar New Year; the Vietnamese uses Tết; the Korean uses 설날. All three remain pending review by native readers.

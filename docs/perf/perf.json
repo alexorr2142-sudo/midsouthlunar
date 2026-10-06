@@ -23,14 +23,14 @@
   {
     "id": "PT-1",
     "name": "Home: LCP on throttled 4G (ms)",
-    "actual": 1403,
+    "actual": 1405,
     "threshold": "< 3000",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Home: FCP on throttled 4G (ms)",
-    "actual": 1403,
+    "actual": 1405,
     "threshold": "info",
     "pass": true
   },
@@ -58,14 +58,14 @@
   {
     "id": "PT-1",
     "name": "Schedule: LCP on throttled 4G (ms)",
-    "actual": 1605,
+    "actual": 1688,
     "threshold": "< 3000",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Schedule: FCP on throttled 4G (ms)",
-    "actual": 1482,
+    "actual": 1553,
     "threshold": "info",
     "pass": true
   },
@@ -93,28 +93,28 @@
   {
     "id": "PT-1",
     "name": "Vendors: LCP on throttled 4G (ms)",
-    "actual": 1601,
+    "actual": 1654,
     "threshold": "< 3000",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Vendors: FCP on throttled 4G (ms)",
-    "actual": 1478,
+    "actual": 1536,
     "threshold": "info",
     "pass": true
   },
   {
     "id": "PT-2",
     "name": "Main JS bundle raw (kB)",
-    "actual": 284.8,
+    "actual": 308.7,
     "threshold": "< 350",
     "pass": true
   },
   {
     "id": "PT-2",
     "name": "Main JS bundle gzip (kB)",
-    "actual": 92,
+    "actual": 101.9,
     "threshold": "< 110",
     "pass": true
   },
@@ -128,7 +128,7 @@
   {
     "id": "PT-2",
     "name": "filterVendors over 600 rows, worst case (ms)",
-    "actual": 1.4,
+    "actual": 1.6,
     "threshold": "< 100",
     "pass": true
   }

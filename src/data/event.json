@@ -1,17 +1,65 @@
 {
-  "name": { "en": "Mid-South Lunar New Year Festival", "zh": "中南农历新年庆典" },
-  "organizer": { "en": "Mid-South Chinese Chamber of Commerce (MCCC)", "zh": "中南华人商会 (MCCC)" },
+  "name": {
+    "en": "Mid-South Lunar New Year Festival",
+    "zh": "中南农历新年庆典",
+    "vi": "Lễ hội Tết Trung Nam",
+    "ko": "미드사우스 설날 축제",
+    "ja": "ミッドサウス旧正月祭"
+  },
+  "organizer": {
+    "en": "Mid-South Chinese Chamber of Commerce (MCCC)",
+    "zh": "中南华人商会 (MCCC)",
+    "vi": "Phòng Thương mại Hoa kiều Trung Nam (MCCC)",
+    "ko": "미드사우스 중국상공회의소(MCCC)",
+    "ja": "ミッドサウス中国商工会議所（MCCC）"
+  },
   "year": 2027,
-  "zodiac": { "en": "Year of the Goat", "zh": "羊年" },
+  "zodiac": {
+    "en": "Year of the Goat",
+    "zh": "羊年",
+    "vi": "Năm Mùi",
+    "ko": "양의 해",
+    "ja": "未年"
+  },
   "start": "2027-02-05T10:00:00-06:00",
   "end": "2027-02-06T21:00:00-06:00",
   "days": [
-    { "id": "day1", "date": "2027-02-05", "open": "10:00", "close": "21:00", "label": { "en": "Fri, Feb 5 (New Year's Eve)", "zh": "2月5日 周五（除夕）" } },
-    { "id": "day2", "date": "2027-02-06", "open": "10:00", "close": "21:00", "label": { "en": "Sat, Feb 6 (New Year's Day)", "zh": "2月6日 周六（大年初一）" } }
+    {
+      "id": "day1",
+      "date": "2027-02-05",
+      "open": "10:00",
+      "close": "21:00",
+      "label": {
+        "en": "Fri, Feb 5 (New Year's Eve)",
+        "zh": "2月5日 周五（除夕）",
+        "vi": "Thứ Sáu 5/2 (Giao thừa)",
+        "ko": "2월 5일 금 (섣달그믐)",
+        "ja": "2月5日（金）大晦日"
+      }
+    },
+    {
+      "id": "day2",
+      "date": "2027-02-06",
+      "open": "10:00",
+      "close": "21:00",
+      "label": {
+        "en": "Sat, Feb 6 (New Year's Day)",
+        "zh": "2月6日 周六（大年初一）",
+        "vi": "Thứ Bảy 6/2 (Mùng 1 Tết)",
+        "ko": "2월 6일 토 (설날)",
+        "ja": "2月6日（土）元日"
+      }
+    }
   ],
   "timezone": "America/Chicago",
   "venue": {
-    "name": { "en": "Agricenter International", "zh": "Agricenter 国际会展中心" },
+    "name": {
+      "en": "Agricenter International",
+      "zh": "Agricenter 国际会展中心",
+      "vi": "Agricenter International",
+      "ko": "Agricenter International",
+      "ja": "Agricenter International"
+    },
     "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
     "mapQuery": "Agricenter International, 7777 Walnut Grove Rd, Memphis, TN 38120"
   },
@@ -23,21 +71,93 @@
     "contactEmail": "mailto:info@midsouthlunar.org"
   },
   "stages": {
-    "main": { "en": "Main Stage", "zh": "主舞台" },
-    "pavilion": { "en": "Cultural Pavilion", "zh": "文化馆" },
-    "food": { "en": "Food Hall", "zh": "美食区" },
-    "garden": { "en": "Family Garden", "zh": "亲子园" },
-    "market": { "en": "New Year Market", "zh": "年货市集" }
+    "main": {
+      "en": "Main Stage",
+      "zh": "主舞台",
+      "vi": "Sân khấu chính",
+      "ko": "메인 무대",
+      "ja": "メインステージ"
+    },
+    "pavilion": {
+      "en": "Cultural Pavilion",
+      "zh": "文化馆",
+      "vi": "Nhà văn hóa",
+      "ko": "문화관",
+      "ja": "文化パビリオン"
+    },
+    "food": {
+      "en": "Food Hall",
+      "zh": "美食区",
+      "vi": "Khu ẩm thực",
+      "ko": "푸드홀",
+      "ja": "フードホール"
+    },
+    "garden": {
+      "en": "Family Garden",
+      "zh": "亲子园",
+      "vi": "Vườn gia đình",
+      "ko": "가족 정원",
+      "ja": "ファミリーガーデン"
+    },
+    "market": {
+      "en": "New Year Market",
+      "zh": "年货市集",
+      "vi": "Chợ Tết",
+      "ko": "설 장터",
+      "ja": "正月マーケット"
+    }
   },
   "types": {
-    "performance": { "en": "Performance", "zh": "演出" },
-    "food": { "en": "Food", "zh": "美食" },
-    "culture": { "en": "Culture", "zh": "文化" },
-    "family": { "en": "Family", "zh": "亲子" }
+    "performance": {
+      "en": "Performance",
+      "zh": "演出",
+      "vi": "Biểu diễn",
+      "ko": "공연",
+      "ja": "公演"
+    },
+    "food": {
+      "en": "Food",
+      "zh": "美食",
+      "vi": "Ẩm thực",
+      "ko": "음식",
+      "ja": "食"
+    },
+    "culture": {
+      "en": "Culture",
+      "zh": "文化",
+      "vi": "Văn hóa",
+      "ko": "문화",
+      "ja": "文化"
+    },
+    "family": {
+      "en": "Family",
+      "zh": "亲子",
+      "vi": "Gia đình",
+      "ko": "가족",
+      "ja": "ファミリー"
+    }
   },
   "vendorCategories": {
-    "food": { "en": "Food", "zh": "美食" },
-    "crafts": { "en": "Crafts", "zh": "手工艺" },
-    "cultural": { "en": "Cultural", "zh": "文化" }
+    "food": {
+      "en": "Food",
+      "zh": "美食",
+      "vi": "Ẩm thực",
+      "ko": "음식",
+      "ja": "食"
+    },
+    "crafts": {
+      "en": "Crafts",
+      "zh": "手工艺",
+      "vi": "Thủ công",
+      "ko": "공예",
+      "ja": "工芸"
+    },
+    "cultural": {
+      "en": "Cultural",
+      "zh": "文化",
+      "vi": "Văn hóa",
+      "ko": "문화",
+      "ja": "文化"
+    }
   }
 }

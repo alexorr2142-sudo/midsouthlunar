@@ -28,7 +28,17 @@ export default function Visit() {
           <ul className="mt-2 list-disc pl-5 space-y-1">{t('visit.access').map((p) => <li key={p}>{p}</li>)}</ul>
         </div>
         <div className="card p-0 overflow-hidden min-h-80">
-          <iframe title={pick(event.venue.name)} src={mapSrc} className="h-full w-full min-h-80" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+          {import.meta.env.VITE_HASH_ROUTER ? (
+            // The claude.ai preview host blocks outside iframes, so the preview
+            // build shows a labeled stand-in. The live site embeds the real map.
+            <div className="flex h-full min-h-80 flex-col items-center justify-center gap-2 bg-gold-light/40 p-6 text-center text-ink/75">
+              <span className="text-5xl" aria-hidden="true">🗺️</span>
+              <p className="font-semibold">{pick(event.venue.name)}</p>
+              <p className="text-sm">Google Map loads here on the live site. Use the button to open directions.</p>
+            </div>
+          ) : (
+            <iframe title={pick(event.venue.name)} src={mapSrc} className="h-full w-full min-h-80" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+          )}
         </div>
       </section>
 

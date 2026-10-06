@@ -8,13 +8,13 @@ Built as the group project for MIS 7623 (AI-Assisted Application Development for
 
 ## What it is
 
-A fully static, bilingual (English / 简体中文) site with six pages: Home, Schedule, Vendors, Tickets & Visit, Get Involved, and About. There is no backend, database, sign-in, or analytics. Tickets link to Eventbrite and applications link to Google Forms. See `docs/requirements` for the full requirements document.
+A fully static site in five languages (English, 简体中文, Tiếng Việt, 한국어, 日本語) with six pages: Home, Schedule, Vendors, Tickets & Visit, Get Involved, and About. There is no backend, database, sign-in, or analytics. Tickets link to Eventbrite and applications link to Google Forms. See `docs/requirements` for the full requirements document.
 
 ## Stack
 
 - React 19 + Vite 8 + Tailwind CSS 4
 - React Router (client-side routing with a `404.html` redirect for GitHub Pages)
-- Content lives in JSON under `src/data/` (event facts, schedule, vendors) and `src/i18n/` (all UI strings in both languages)
+- Content lives in JSON under `src/data/` (event facts, schedule, vendors) and `src/i18n/` (all UI strings, one file per language)
 - Deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`
 - Tests: Vitest (unit), Playwright (integration), Lighthouse (performance). See `docs/TEST_REPORT.md`.
 
@@ -37,8 +37,9 @@ npm test           # unit + integration tests
 | Vendors | `src/data/vendors.json` |
 | English text | `src/i18n/en.json` |
 | Chinese text | `src/i18n/zh.json` |
+| Vietnamese, Korean, Japanese text | `src/i18n/vi.json`, `ko.json`, `ja.json` |
 
-Every item in the data files has an `en` and a `zh` value. Edit the file in GitHub's web editor, commit to `main`, and the site redeploys in about a minute.
+Every item in the data files has `en`, `zh`, `vi`, `ko`, and `ja` values. The unit tests fail if any language is missing, so run `npm run test:unit` after editing. Edit the file in GitHub's web editor, commit to `main`, and the site redeploys in about a minute.
 
 The schedule and vendor lists are currently **preliminary demo data** drawn from the MCCC festival application. They will be replaced when MCCC provides the real lineup.
 

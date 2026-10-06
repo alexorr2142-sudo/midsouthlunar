@@ -1,29 +1,533 @@
 {
   "status": "preliminary",
   "items": [
-    { "id": "d1-opening", "day": "day1", "start": "10:00", "end": "10:30", "stage": "main", "type": "performance", "title": { "en": "Opening Ceremony and Dragon Dance", "zh": "开幕式与舞龙表演" }, "description": { "en": "Welcome from MCCC and the City of Memphis, followed by a dragon dance to open the festival.", "zh": "中南华人商会及孟菲斯市政府致辞，随后以舞龙表演拉开庆典序幕。" } },
-    { "id": "d1-lion", "day": "day1", "start": "11:00", "end": "11:30", "stage": "main", "type": "performance", "title": { "en": "Lion Dance", "zh": "舞狮表演" }, "description": { "en": "A traditional folk performance, lively and festive, suitable for all ages.", "zh": "传统民俗表演，热闹喜庆，老少皆宜。" } },
-    { "id": "d1-calligraphy", "day": "day1", "start": "11:00", "end": "13:00", "stage": "pavilion", "type": "culture", "title": { "en": "Calligraphy and Chinese Painting Demonstration", "zh": "书法与国画现场创作" }, "description": { "en": "Watch artists create spring couplets and ink paintings live, and take one home.", "zh": "现场观看艺术家书写春联、创作水墨画，并可带走作品。" } },
-    { "id": "d1-dumpling", "day": "day1", "start": "12:00", "end": "13:00", "stage": "food", "type": "food", "title": { "en": "Dumpling-Making Workshop", "zh": "包饺子工作坊" }, "description": { "en": "Hands-on session where you fold, fill, and taste your own dumplings.", "zh": "亲手擀皮、包馅、品尝自己包的饺子。" } },
-    { "id": "d1-games", "day": "day1", "start": "12:00", "end": "17:00", "stage": "garden", "type": "family", "title": { "en": "Traditional Games: Ring Toss, Spinning Tops, Lantern Riddles", "zh": "传统游戏：套圈、陀螺、猜灯谜" }, "description": { "en": "Drop-in games for kids and adults. Win small prizes.", "zh": "随到随玩的亲子游戏，赢取小礼品。" } },
-    { "id": "d1-dance", "day": "day1", "start": "13:00", "end": "13:45", "stage": "main", "type": "performance", "title": { "en": "Chinese Classical and Folk Dance", "zh": "中国古典舞与民族舞" }, "description": { "en": "Performances by local dance schools.", "zh": "本地舞蹈学校献演。" } },
-    { "id": "d1-tea", "day": "day1", "start": "14:00", "end": "15:00", "stage": "pavilion", "type": "culture", "title": { "en": "Tea Ceremony", "zh": "茶艺表演" }, "description": { "en": "An introduction to Chinese tea culture with tastings.", "zh": "中国茶文化介绍与品茗。" } },
-    { "id": "d1-martial", "day": "day1", "start": "14:30", "end": "15:00", "stage": "main", "type": "performance", "title": { "en": "Martial Arts Showcase", "zh": "武术表演" }, "description": { "en": "Traditional Chinese martial arts from Memphis-area schools.", "zh": "孟菲斯地区武馆展示传统中国武术。" } },
-    { "id": "d1-crafts", "day": "day1", "start": "15:00", "end": "17:00", "stage": "garden", "type": "family", "title": { "en": "Children's Craft Area: New Year Cards and Origami", "zh": "儿童手工区：新年贺卡与折纸" }, "description": { "en": "Make a card, fold a paper goat, and string a fairy light.", "zh": "制作贺卡、折纸羊、串彩灯。" } },
-    { "id": "d1-cooking", "day": "day1", "start": "16:00", "end": "17:00", "stage": "food", "type": "food", "title": { "en": "Live Cooking: New Year's Eve Dinner Classics", "zh": "现场烹饪：年夜饭经典菜" }, "description": { "en": "Local chefs cook famous reunion dinner dishes and explain their meaning.", "zh": "本地名厨现场烹制年夜饭名菜并讲解寓意。" } },
-    { "id": "d1-opera", "day": "day1", "start": "17:00", "end": "17:45", "stage": "main", "type": "performance", "title": { "en": "Peking Opera Excerpts", "zh": "京剧选段" }, "description": { "en": "Experience the charm of this quintessential Chinese art form.", "zh": "领略国粹京剧的魅力。" } },
-    { "id": "d1-hanfu", "day": "day1", "start": "18:30", "end": "19:15", "stage": "main", "type": "performance", "title": { "en": "Hanfu Fashion Show", "zh": "汉服秀" }, "description": { "en": "Traditional Chinese clothing through the dynasties.", "zh": "展示历朝历代的传统服饰。" } },
-    { "id": "d1-lanterns", "day": "day1", "start": "19:30", "end": "21:00", "stage": "garden", "type": "family", "title": { "en": "Lantern Display and Lantern Making", "zh": "花灯展示与制作" }, "description": { "en": "Walk the lantern path and make your own lantern to take home.", "zh": "漫步花灯小径，亲手制作花灯带回家。" } },
-    { "id": "d2-lion", "day": "day2", "start": "10:00", "end": "10:30", "stage": "main", "type": "performance", "title": { "en": "New Year's Day Lion Dance and Blessings", "zh": "大年初一舞狮与祝福" }, "description": { "en": "Lion dance and a New Year blessing from community elders.", "zh": "舞狮表演及社区长者新年祝福。" } },
-    { "id": "d2-redenvelope", "day": "day2", "start": "10:00", "end": "18:00", "stage": "garden", "type": "family", "title": { "en": "Red Envelope Blessing Station", "zh": "红包祝福站" }, "description": { "en": "Receive a New Year blessing and a lucky red envelope (while supplies last).", "zh": "领取新年祝福和幸运红包（数量有限）。" } },
-    { "id": "d2-papercut", "day": "day2", "start": "11:00", "end": "13:00", "stage": "pavilion", "type": "culture", "title": { "en": "Paper-Cutting Workshop", "zh": "剪纸工作坊" }, "description": { "en": "Learn to cut the character for luck and a goat for the new year.", "zh": "学习剪“福”字和新年羊。" } },
-    { "id": "d2-youth", "day": "day2", "start": "11:00", "end": "12:30", "stage": "main", "type": "performance", "title": { "en": "Chinese American Youth Talent Showcase", "zh": "华裔青少年才艺展示" }, "description": { "en": "Singing, instrumental music, and dance by Memphis-area students.", "zh": "孟菲斯地区学生的歌唱、器乐和舞蹈表演。" } },
-    { "id": "d2-pastries", "day": "day2", "start": "12:00", "end": "14:00", "stage": "food", "type": "food", "title": { "en": "New Year Pastries and Desserts Tasting", "zh": "年味糕点与甜品品尝" }, "description": { "en": "Glutinous rice balls, rice cakes, candied hawthorn, and more.", "zh": "汤圆、年糕、糖葫芦等传统小吃。" } },
-    { "id": "d2-customs", "day": "day2", "start": "13:00", "end": "14:00", "stage": "pavilion", "type": "culture", "title": { "en": "Lunar New Year Customs Talk", "zh": "新年习俗讲座" }, "description": { "en": "Stories behind the customs, with the pictorial exhibition.", "zh": "结合图片展讲述年俗背后的故事。" } },
-    { "id": "d2-dance", "day": "day2", "start": "14:00", "end": "14:45", "stage": "main", "type": "performance", "title": { "en": "Folk Dance Medley", "zh": "民族舞联演" }, "description": { "en": "Dances from several regions of China.", "zh": "中国各地区民族舞蹈。" } },
-    { "id": "d2-photo", "day": "day2", "start": "14:00", "end": "18:00", "stage": "garden", "type": "family", "title": { "en": "Photo Spot and Costume Rental", "zh": "拍照打卡与服饰租赁" }, "description": { "en": "New Year installation art and traditional costume rental for photos.", "zh": "新年艺术装置与传统服饰租赁拍照。" } },
-    { "id": "d2-martial", "day": "day2", "start": "15:30", "end": "16:00", "stage": "main", "type": "performance", "title": { "en": "Martial Arts Showcase", "zh": "武术表演" }, "description": { "en": "Traditional Chinese martial arts from Memphis-area schools.", "zh": "孟菲斯地区武馆展示传统中国武术。" } },
-    { "id": "d2-dumpling", "day": "day2", "start": "16:00", "end": "17:00", "stage": "food", "type": "food", "title": { "en": "Dumpling-Making Workshop", "zh": "包饺子工作坊" }, "description": { "en": "Hands-on session where you fold, fill, and taste your own dumplings.", "zh": "亲手擀皮、包馅、品尝自己包的饺子。" } },
-    { "id": "d2-finale", "day": "day2", "start": "19:00", "end": "20:30", "stage": "main", "type": "performance", "title": { "en": "Closing Gala: Dragon Dance and Community Chorus", "zh": "闭幕晚会：舞龙与社区合唱" }, "description": { "en": "The festival closes with a dragon dance and a chorus of New Year songs.", "zh": "以舞龙和新年歌曲合唱为庆典画上句号。" } }
+    {
+      "id": "d1-opening",
+      "day": "day1",
+      "start": "10:00",
+      "end": "10:30",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Opening Ceremony and Dragon Dance",
+        "zh": "开幕式与舞龙表演",
+        "vi": "Lễ khai mạc và múa rồng",
+        "ko": "개막식과 용춤",
+        "ja": "開会式と龍舞"
+      },
+      "description": {
+        "en": "Welcome from MCCC and the City of Memphis, followed by a dragon dance to open the festival.",
+        "zh": "中南华人商会及孟菲斯市政府致辞，随后以舞龙表演拉开庆典序幕。",
+        "vi": "Phát biểu của MCCC và Thành phố Memphis, tiếp theo là múa rồng khai hội.",
+        "ko": "MCCC와 멤피스시의 환영 인사에 이어 용춤으로 축제를 엽니다.",
+        "ja": "MCCCとメンフィス市の挨拶に続き、龍舞で祭りが開幕します。"
+      }
+    },
+    {
+      "id": "d1-lion",
+      "day": "day1",
+      "start": "11:00",
+      "end": "11:30",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Lion Dance",
+        "zh": "舞狮表演",
+        "vi": "Múa lân",
+        "ko": "사자춤",
+        "ja": "獅子舞"
+      },
+      "description": {
+        "en": "A traditional folk performance, lively and festive, suitable for all ages.",
+        "zh": "传统民俗表演，热闹喜庆，老少皆宜。",
+        "vi": "Biểu diễn dân gian truyền thống, rộn ràng, phù hợp mọi lứa tuổi.",
+        "ko": "흥겹고 경사스러운 전통 민속 공연. 모든 연령에 적합합니다.",
+        "ja": "伝統的な民俗芸能。にぎやかで、あらゆる年代が楽しめます。"
+      }
+    },
+    {
+      "id": "d1-calligraphy",
+      "day": "day1",
+      "start": "11:00",
+      "end": "13:00",
+      "stage": "pavilion",
+      "type": "culture",
+      "title": {
+        "en": "Calligraphy and Chinese Painting Demonstration",
+        "zh": "书法与国画现场创作",
+        "vi": "Trình diễn thư pháp và tranh thủy mặc",
+        "ko": "서예와 중국화 시연",
+        "ja": "書道と水墨画の実演"
+      },
+      "description": {
+        "en": "Watch artists create spring couplets and ink paintings live, and take one home.",
+        "zh": "现场观看艺术家书写春联、创作水墨画，并可带走作品。",
+        "vi": "Xem nghệ nhân viết câu đối và vẽ tranh mực tại chỗ, mang một bức về nhà.",
+        "ko": "작가들이 춘련과 수묵화를 즉석에서 그립니다. 작품을 가져가세요.",
+        "ja": "春聯や水墨画の制作を間近で見て、一枚持ち帰れます。"
+      }
+    },
+    {
+      "id": "d1-dumpling",
+      "day": "day1",
+      "start": "12:00",
+      "end": "13:00",
+      "stage": "food",
+      "type": "food",
+      "title": {
+        "en": "Dumpling-Making Workshop",
+        "zh": "包饺子工作坊",
+        "vi": "Lớp làm sủi cảo",
+        "ko": "만두 빚기 워크숍",
+        "ja": "餃子づくり教室"
+      },
+      "description": {
+        "en": "Hands-on session where you fold, fill, and taste your own dumplings.",
+        "zh": "亲手擀皮、包馅、品尝自己包的饺子。",
+        "vi": "Tự tay gói, nhồi nhân và thưởng thức sủi cảo của mình.",
+        "ko": "직접 빚고 속을 채우고 맛보는 체험.",
+        "ja": "自分で包んで、具を詰めて、味わう体験。"
+      }
+    },
+    {
+      "id": "d1-games",
+      "day": "day1",
+      "start": "12:00",
+      "end": "17:00",
+      "stage": "garden",
+      "type": "family",
+      "title": {
+        "en": "Traditional Games: Ring Toss, Spinning Tops, Lantern Riddles",
+        "zh": "传统游戏：套圈、陀螺、猜灯谜",
+        "vi": "Trò chơi truyền thống: ném vòng, con quay, đố đèn",
+        "ko": "전통 놀이: 고리 던지기, 팽이, 등불 수수께끼",
+        "ja": "伝統遊び：輪投げ、こま、灯謎"
+      },
+      "description": {
+        "en": "Drop-in games for kids and adults. Win small prizes.",
+        "zh": "随到随玩的亲子游戏，赢取小礼品。",
+        "vi": "Trò chơi tự do cho trẻ em và người lớn. Có quà nhỏ.",
+        "ko": "어린이와 어른 모두 자유롭게 참여. 작은 상품이 있습니다.",
+        "ja": "子どもも大人も自由参加。小さな景品あり。"
+      }
+    },
+    {
+      "id": "d1-dance",
+      "day": "day1",
+      "start": "13:00",
+      "end": "13:45",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Chinese Classical and Folk Dance",
+        "zh": "中国古典舞与民族舞",
+        "vi": "Múa cổ điển và múa dân gian Trung Hoa",
+        "ko": "중국 고전무용과 민속무용",
+        "ja": "中国古典舞踊と民族舞踊"
+      },
+      "description": {
+        "en": "Performances by local dance schools.",
+        "zh": "本地舞蹈学校献演。",
+        "vi": "Biểu diễn của các trường múa địa phương.",
+        "ko": "지역 무용 학교의 공연.",
+        "ja": "地元のダンススクールによる公演。"
+      }
+    },
+    {
+      "id": "d1-tea",
+      "day": "day1",
+      "start": "14:00",
+      "end": "15:00",
+      "stage": "pavilion",
+      "type": "culture",
+      "title": {
+        "en": "Tea Ceremony",
+        "zh": "茶艺表演",
+        "vi": "Trà đạo",
+        "ko": "다도 시연",
+        "ja": "茶芸"
+      },
+      "description": {
+        "en": "An introduction to Chinese tea culture with tastings.",
+        "zh": "中国茶文化介绍与品茗。",
+        "vi": "Giới thiệu văn hóa trà Trung Hoa kèm thưởng trà.",
+        "ko": "시음과 함께 중국 차 문화를 소개합니다.",
+        "ja": "試飲つきで中国茶文化を紹介します。"
+      }
+    },
+    {
+      "id": "d1-martial",
+      "day": "day1",
+      "start": "14:30",
+      "end": "15:00",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Martial Arts Showcase",
+        "zh": "武术表演",
+        "vi": "Trình diễn võ thuật",
+        "ko": "무술 시범",
+        "ja": "武術演武"
+      },
+      "description": {
+        "en": "Traditional Chinese martial arts from Memphis-area schools.",
+        "zh": "孟菲斯地区武馆展示传统中国武术。",
+        "vi": "Võ thuật Trung Hoa truyền thống từ các võ đường vùng Memphis.",
+        "ko": "멤피스 지역 도장의 전통 중국 무술.",
+        "ja": "メンフィス地域の道場による伝統中国武術。"
+      }
+    },
+    {
+      "id": "d1-crafts",
+      "day": "day1",
+      "start": "15:00",
+      "end": "17:00",
+      "stage": "garden",
+      "type": "family",
+      "title": {
+        "en": "Children's Craft Area: New Year Cards and Origami",
+        "zh": "儿童手工区：新年贺卡与折纸",
+        "vi": "Khu thủ công trẻ em: thiệp Tết và gấp giấy",
+        "ko": "어린이 만들기: 새해 카드와 종이접기",
+        "ja": "子ども工作：年賀カードと折り紙"
+      },
+      "description": {
+        "en": "Make a card, fold a paper goat, and string a fairy light.",
+        "zh": "制作贺卡、折纸羊、串彩灯。",
+        "vi": "Làm thiệp, gấp con dê giấy và xâu đèn.",
+        "ko": "카드를 만들고 종이 양을 접고 꼬마전구를 꿰어 보세요.",
+        "ja": "カードを作り、紙の羊を折り、小さなライトを飾ります。"
+      }
+    },
+    {
+      "id": "d1-cooking",
+      "day": "day1",
+      "start": "16:00",
+      "end": "17:00",
+      "stage": "food",
+      "type": "food",
+      "title": {
+        "en": "Live Cooking: New Year's Eve Dinner Classics",
+        "zh": "现场烹饪：年夜饭经典菜",
+        "vi": "Nấu ăn trực tiếp: món tất niên kinh điển",
+        "ko": "라이브 쿠킹: 섣달그믐 대표 요리",
+        "ja": "ライブクッキング：年越し料理の定番"
+      },
+      "description": {
+        "en": "Local chefs cook famous reunion dinner dishes and explain their meaning.",
+        "zh": "本地名厨现场烹制年夜饭名菜并讲解寓意。",
+        "vi": "Đầu bếp địa phương nấu các món sum họp nổi tiếng và giải thích ý nghĩa.",
+        "ko": "지역 셰프가 유명한 명절 요리를 만들며 그 의미를 설명합니다.",
+        "ja": "地元のシェフが団らんの名物料理を作り、その意味を解説します。"
+      }
+    },
+    {
+      "id": "d1-opera",
+      "day": "day1",
+      "start": "17:00",
+      "end": "17:45",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Peking Opera Excerpts",
+        "zh": "京剧选段",
+        "vi": "Trích đoạn Kinh kịch",
+        "ko": "경극 발췌 공연",
+        "ja": "京劇の名場面"
+      },
+      "description": {
+        "en": "Experience the charm of this quintessential Chinese art form.",
+        "zh": "领略国粹京剧的魅力。",
+        "vi": "Cảm nhận nét quyến rũ của loại hình nghệ thuật tinh hoa Trung Hoa.",
+        "ko": "중국 대표 예술의 매력을 느껴 보세요.",
+        "ja": "中国を代表する芸術の魅力を体感。"
+      }
+    },
+    {
+      "id": "d1-hanfu",
+      "day": "day1",
+      "start": "18:30",
+      "end": "19:15",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Hanfu Fashion Show",
+        "zh": "汉服秀",
+        "vi": "Trình diễn Hán phục",
+        "ko": "한푸 패션쇼",
+        "ja": "漢服ファッションショー"
+      },
+      "description": {
+        "en": "Traditional Chinese clothing through the dynasties.",
+        "zh": "展示历朝历代的传统服饰。",
+        "vi": "Trang phục truyền thống Trung Hoa qua các triều đại.",
+        "ko": "왕조별 중국 전통 의상.",
+        "ja": "王朝ごとの中国伝統衣装。"
+      }
+    },
+    {
+      "id": "d1-lanterns",
+      "day": "day1",
+      "start": "19:30",
+      "end": "21:00",
+      "stage": "garden",
+      "type": "family",
+      "title": {
+        "en": "Lantern Display and Lantern Making",
+        "zh": "花灯展示与制作",
+        "vi": "Trưng bày và làm đèn lồng",
+        "ko": "등불 전시와 등불 만들기",
+        "ja": "提灯の展示と提灯づくり"
+      },
+      "description": {
+        "en": "Walk the lantern path and make your own lantern to take home.",
+        "zh": "漫步花灯小径，亲手制作花灯带回家。",
+        "vi": "Dạo đường hoa đăng và tự làm đèn lồng mang về.",
+        "ko": "등불 길을 걷고 직접 등불을 만들어 가져가세요.",
+        "ja": "提灯の小道を歩き、自分の提灯を作って持ち帰れます。"
+      }
+    },
+    {
+      "id": "d2-lion",
+      "day": "day2",
+      "start": "10:00",
+      "end": "10:30",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "New Year's Day Lion Dance and Blessings",
+        "zh": "大年初一舞狮与祝福",
+        "vi": "Múa lân và chúc Tết mùng 1",
+        "ko": "설날 사자춤과 덕담",
+        "ja": "元日の獅子舞と新年の祝福"
+      },
+      "description": {
+        "en": "Lion dance and a New Year blessing from community elders.",
+        "zh": "舞狮表演及社区长者新年祝福。",
+        "vi": "Múa lân và lời chúc năm mới từ các bậc cao niên.",
+        "ko": "사자춤과 지역 어르신들의 새해 덕담.",
+        "ja": "獅子舞と地域の長老からの新年の祝福。"
+      }
+    },
+    {
+      "id": "d2-redenvelope",
+      "day": "day2",
+      "start": "10:00",
+      "end": "18:00",
+      "stage": "garden",
+      "type": "family",
+      "title": {
+        "en": "Red Envelope Blessing Station",
+        "zh": "红包祝福站",
+        "vi": "Quầy lì xì chúc phúc",
+        "ko": "세뱃돈 봉투 덕담 부스",
+        "ja": "お年玉袋の祝福ブース"
+      },
+      "description": {
+        "en": "Receive a New Year blessing and a lucky red envelope (while supplies last).",
+        "zh": "领取新年祝福和幸运红包（数量有限）。",
+        "vi": "Nhận lời chúc năm mới và phong bao lì xì may mắn (số lượng có hạn).",
+        "ko": "새해 덕담과 행운의 붉은 봉투를 받으세요(소진 시 종료).",
+        "ja": "新年の祝福と幸運の赤い袋を受け取れます（なくなり次第終了）。"
+      }
+    },
+    {
+      "id": "d2-papercut",
+      "day": "day2",
+      "start": "11:00",
+      "end": "13:00",
+      "stage": "pavilion",
+      "type": "culture",
+      "title": {
+        "en": "Paper-Cutting Workshop",
+        "zh": "剪纸工作坊",
+        "vi": "Lớp cắt giấy",
+        "ko": "전지공예 워크숍",
+        "ja": "切り紙教室"
+      },
+      "description": {
+        "en": "Learn to cut the character for luck and a goat for the new year.",
+        "zh": "学习剪“福”字和新年羊。",
+        "vi": "Học cắt chữ Phúc và con dê cho năm mới.",
+        "ko": "복(福) 자와 새해 양 모양 오리기를 배웁니다.",
+        "ja": "「福」の字と新年の羊の切り方を学びます。"
+      }
+    },
+    {
+      "id": "d2-youth",
+      "day": "day2",
+      "start": "11:00",
+      "end": "12:30",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Chinese American Youth Talent Showcase",
+        "zh": "华裔青少年才艺展示",
+        "vi": "Tài năng thanh thiếu niên gốc Hoa",
+        "ko": "중국계 청소년 재능 무대",
+        "ja": "中国系ユースのタレントショー"
+      },
+      "description": {
+        "en": "Singing, instrumental music, and dance by Memphis-area students.",
+        "zh": "孟菲斯地区学生的歌唱、器乐和舞蹈表演。",
+        "vi": "Hát, nhạc cụ và múa của học sinh vùng Memphis.",
+        "ko": "멤피스 지역 학생들의 노래, 연주, 춤.",
+        "ja": "メンフィス地域の学生による歌、演奏、ダンス。"
+      }
+    },
+    {
+      "id": "d2-pastries",
+      "day": "day2",
+      "start": "12:00",
+      "end": "14:00",
+      "stage": "food",
+      "type": "food",
+      "title": {
+        "en": "New Year Pastries and Desserts Tasting",
+        "zh": "年味糕点与甜品品尝",
+        "vi": "Thưởng thức bánh và món ngọt Tết",
+        "ko": "설 떡과 디저트 시식",
+        "ja": "正月菓子とスイーツの試食"
+      },
+      "description": {
+        "en": "Glutinous rice balls, rice cakes, candied hawthorn, and more.",
+        "zh": "汤圆、年糕、糖葫芦等传统小吃。",
+        "vi": "Bánh trôi, bánh tổ, kẹo hồ lô và nhiều món khác.",
+        "ko": "찹쌀 경단, 떡, 탕후루 등.",
+        "ja": "白玉団子、年糕、糖葫蘆など。"
+      }
+    },
+    {
+      "id": "d2-customs",
+      "day": "day2",
+      "start": "13:00",
+      "end": "14:00",
+      "stage": "pavilion",
+      "type": "culture",
+      "title": {
+        "en": "Lunar New Year Customs Talk",
+        "zh": "新年习俗讲座",
+        "vi": "Nói chuyện về phong tục Tết",
+        "ko": "설날 풍습 이야기",
+        "ja": "旧正月の風習トーク"
+      },
+      "description": {
+        "en": "Stories behind the customs, with the pictorial exhibition.",
+        "zh": "结合图片展讲述年俗背后的故事。",
+        "vi": "Câu chuyện đằng sau các phong tục, kèm triển lãm tranh.",
+        "ko": "사진 전시와 함께 풍습에 담긴 이야기를 들려줍니다.",
+        "ja": "写真展とともに風習の由来を語ります。"
+      }
+    },
+    {
+      "id": "d2-dance",
+      "day": "day2",
+      "start": "14:00",
+      "end": "14:45",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Folk Dance Medley",
+        "zh": "民族舞联演",
+        "vi": "Liên khúc múa dân gian",
+        "ko": "민속무용 메들리",
+        "ja": "民族舞踊メドレー"
+      },
+      "description": {
+        "en": "Dances from several regions of China.",
+        "zh": "中国各地区民族舞蹈。",
+        "vi": "Các điệu múa từ nhiều vùng của Trung Quốc.",
+        "ko": "중국 여러 지역의 춤.",
+        "ja": "中国各地の踊り。"
+      }
+    },
+    {
+      "id": "d2-photo",
+      "day": "day2",
+      "start": "14:00",
+      "end": "18:00",
+      "stage": "garden",
+      "type": "family",
+      "title": {
+        "en": "Photo Spot and Costume Rental",
+        "zh": "拍照打卡与服饰租赁",
+        "vi": "Góc chụp ảnh và thuê trang phục",
+        "ko": "포토존과 의상 대여",
+        "ja": "フォトスポットと衣装レンタル"
+      },
+      "description": {
+        "en": "New Year installation art and traditional costume rental for photos.",
+        "zh": "新年艺术装置与传统服饰租赁拍照。",
+        "vi": "Nghệ thuật sắp đặt Tết và thuê trang phục truyền thống để chụp ảnh.",
+        "ko": "새해 설치 미술과 전통 의상 대여 촬영.",
+        "ja": "正月のインスタレーションと伝統衣装のレンタル撮影。"
+      }
+    },
+    {
+      "id": "d2-martial",
+      "day": "day2",
+      "start": "15:30",
+      "end": "16:00",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Martial Arts Showcase",
+        "zh": "武术表演",
+        "vi": "Trình diễn võ thuật",
+        "ko": "무술 시범",
+        "ja": "武術演武"
+      },
+      "description": {
+        "en": "Traditional Chinese martial arts from Memphis-area schools.",
+        "zh": "孟菲斯地区武馆展示传统中国武术。",
+        "vi": "Võ thuật Trung Hoa truyền thống từ các võ đường vùng Memphis.",
+        "ko": "멤피스 지역 도장의 전통 중국 무술.",
+        "ja": "メンフィス地域の道場による伝統中国武術。"
+      }
+    },
+    {
+      "id": "d2-dumpling",
+      "day": "day2",
+      "start": "16:00",
+      "end": "17:00",
+      "stage": "food",
+      "type": "food",
+      "title": {
+        "en": "Dumpling-Making Workshop",
+        "zh": "包饺子工作坊",
+        "vi": "Lớp làm sủi cảo",
+        "ko": "만두 빚기 워크숍",
+        "ja": "餃子づくり教室"
+      },
+      "description": {
+        "en": "Hands-on session where you fold, fill, and taste your own dumplings.",
+        "zh": "亲手擀皮、包馅、品尝自己包的饺子。",
+        "vi": "Tự tay gói, nhồi nhân và thưởng thức sủi cảo của mình.",
+        "ko": "직접 빚고 속을 채우고 맛보는 체험.",
+        "ja": "自分で包んで、具を詰めて、味わう体験。"
+      }
+    },
+    {
+      "id": "d2-finale",
+      "day": "day2",
+      "start": "19:00",
+      "end": "20:30",
+      "stage": "main",
+      "type": "performance",
+      "title": {
+        "en": "Closing Gala: Dragon Dance and Community Chorus",
+        "zh": "闭幕晚会：舞龙与社区合唱",
+        "vi": "Bế mạc: múa rồng và hợp xướng cộng đồng",
+        "ko": "폐막 갈라: 용춤과 커뮤니티 합창",
+        "ja": "閉幕ガラ：龍舞とコミュニティ合唱"
+      },
+      "description": {
+        "en": "The festival closes with a dragon dance and a chorus of New Year songs.",
+        "zh": "以舞龙和新年歌曲合唱为庆典画上句号。",
+        "vi": "Lễ hội khép lại với múa rồng và hợp xướng các bài hát Tết.",
+        "ko": "용춤과 새해 노래 합창으로 축제를 마무리합니다.",
+        "ja": "龍舞と新年の歌の合唱で祭りを締めくくります。"
+      }
+    }
   ]
 }
