@@ -1,0 +1,43 @@
+{
+  "name": { "en": "Mid-South Lunar New Year Festival", "zh": "中南农历新年庆典" },
+  "organizer": { "en": "Mid-South Chinese Chamber of Commerce (MCCC)", "zh": "中南华人商会 (MCCC)" },
+  "year": 2027,
+  "zodiac": { "en": "Year of the Goat", "zh": "羊年" },
+  "start": "2027-02-05T10:00:00-06:00",
+  "end": "2027-02-06T21:00:00-06:00",
+  "days": [
+    { "id": "day1", "date": "2027-02-05", "open": "10:00", "close": "21:00", "label": { "en": "Fri, Feb 5 (New Year's Eve)", "zh": "2月5日 周五（除夕）" } },
+    { "id": "day2", "date": "2027-02-06", "open": "10:00", "close": "21:00", "label": { "en": "Sat, Feb 6 (New Year's Day)", "zh": "2月6日 周六（大年初一）" } }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+    "name": { "en": "Agricenter International", "zh": "Agricenter 国际会展中心" },
+    "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
+    "mapQuery": "Agricenter International, 7777 Walnut Grove Rd, Memphis, TN 38120"
+  },
+  "links": {
+    "tickets": "https://www.eventbrite.com/",
+    "vendorForm": "https://forms.gle/",
+    "volunteerForm": "https://forms.gle/",
+    "sponsorEmail": "mailto:info@midsouthlunar.org",
+    "contactEmail": "mailto:info@midsouthlunar.org"
+  },
+  "stages": {
+    "main": { "en": "Main Stage", "zh": "主舞台" },
+    "pavilion": { "en": "Cultural Pavilion", "zh": "文化馆" },
+    "food": { "en": "Food Hall", "zh": "美食区" },
+    "garden": { "en": "Family Garden", "zh": "亲子园" },
+    "market": { "en": "New Year Market", "zh": "年货市集" }
+  },
+  "types": {
+    "performance": { "en": "Performance", "zh": "演出" },
+    "food": { "en": "Food", "zh": "美食" },
+    "culture": { "en": "Culture", "zh": "文化" },
+    "family": { "en": "Family", "zh": "亲子" }
+  },
+  "vendorCategories": {
+    "food": { "en": "Food", "zh": "美食" },
+    "crafts": { "en": "Crafts", "zh": "手工艺" },
+    "cultural": { "en": "Cultural", "zh": "文化" }
+  }
+}
