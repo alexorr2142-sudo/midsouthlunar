@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
 import { lazy, Suspense, useEffect } from 'react'
 import { LanguageProvider, useLang } from './i18n/LanguageContext'
 import Layout from './components/Layout'
@@ -11,6 +11,13 @@ const Vendors = lazy(() => import('./pages/Vendors'))
 const Visit = lazy(() => import('./pages/Visit'))
 const GetInvolved = lazy(() => import('./pages/GetInvolved'))
 const About = lazy(() => import('./pages/About'))
+
+// VITE_HASH_ROUTER=1 builds a copy that works from any folder with no server
+// redirect (used for the preview published from Claude). GitHub Pages uses
+// clean URLs via BrowserRouter plus public/404.html.
+const Router = import.meta.env.VITE_HASH_ROUTER
+  ? HashRouter
+  : ({ children }) => <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>{children}</BrowserRouter>
 
 function Loading() {
   return <div className="mx-auto max-w-6xl px-4 py-20 text-center text-ink/75" role="status">…</div>
@@ -43,7 +50,7 @@ function ScrollManager() {
 export default function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+      <Router>
         <ScrollManager />
         <Suspense fallback={<Loading />}>
         <Routes>
@@ -58,7 +65,7 @@ export default function App() {
           </Route>
         </Routes>
         </Suspense>
-      </BrowserRouter>
+      </Router>
     </LanguageProvider>
   )
 }
