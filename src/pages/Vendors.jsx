@@ -21,7 +21,7 @@ export default function Vendors() {
     <div className="mx-auto max-w-6xl px-4 py-10">
       <h1 className="h-section">{t('vendors.title')}</h1>
       <p className="mt-2 max-w-2xl text-ink/80">{t('vendors.intro')}</p>
-      <p className="mt-1 text-sm text-ink/60">{t('home.preliminary')}</p>
+      <p className="mt-1 text-sm text-ink/75">{t('home.preliminary')}</p>
 
       <div className="mt-6 card grid gap-4 md:grid-cols-2">
         <div>
@@ -52,7 +52,7 @@ export default function Vendors() {
                 <span className="shrink-0 rounded-full bg-gold-light/60 px-2 py-0.5 text-xs font-semibold">{t('vendors.booth')} {v.booth}</span>
               </div>
               <p className="mt-1 text-ink/80">{pick(v.description)}</p>
-              <p className="mt-2 text-xs uppercase tracking-wide text-ink/50">{pick(event.vendorCategories[v.category])}</p>
+              <p className="mt-2 text-xs uppercase tracking-wide text-ink/70">{pick(event.vendorCategories[v.category])}</p>
             </li>
           ))}
         </ul>

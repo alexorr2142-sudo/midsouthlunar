@@ -1,13 +1,20 @@
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { LanguageProvider, useLang } from './i18n/LanguageContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Schedule from './pages/Schedule'
-import Vendors from './pages/Vendors'
-import Visit from './pages/Visit'
-import GetInvolved from './pages/GetInvolved'
-import About from './pages/About'
+
+// Route-level code splitting: Home ships in the main bundle, every other
+// page loads on demand. See docs/ARCHITECTURE.md, finding 1.
+const Schedule = lazy(() => import('./pages/Schedule'))
+const Vendors = lazy(() => import('./pages/Vendors'))
+const Visit = lazy(() => import('./pages/Visit'))
+const GetInvolved = lazy(() => import('./pages/GetInvolved'))
+const About = lazy(() => import('./pages/About'))
+
+function Loading() {
+  return <div className="mx-auto max-w-6xl px-4 py-20 text-center text-ink/75" role="status">…</div>
+}
 
 function NotFound() {
   const { t } = useLang()
@@ -38,6 +45,7 @@ export default function App() {
     <LanguageProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
         <ScrollManager />
+        <Suspense fallback={<Loading />}>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Home />} />
@@ -49,6 +57,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </LanguageProvider>
   )

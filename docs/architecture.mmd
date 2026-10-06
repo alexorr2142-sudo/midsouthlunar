@@ -1,0 +1,29 @@
+flowchart TB
+  subgraph GH["GitHub (build and hosting, free)"]
+    direction LR
+    repo["Repository<br/>midsouthlunar"] -->|push to main| actions["GitHub Actions<br/>npm ci · unit tests · vite build"] -->|dist/| pages["GitHub Pages<br/>static files + 404.html redirect"]
+  end
+
+  pages ==>|HTML, CSS, JS over HTTPS| shell
+
+  subgraph Browser["Visitor's browser (everything runs here, no server of ours)"]
+    direction TB
+    shell["Main bundle, 291 kB<br/>React · Router · Layout · LangToggle · Home + Countdown"]
+    chunks["Lazy page chunks, 1 to 11 kB each, loaded on demand<br/>Schedule · Vendors · Tickets & Visit · Get Involved · About"]
+    logic["Pure logic (no React, unit tested)<br/>countdown.js getEventState, tz-aware · filter.js filterSchedule / filterVendors · calendar.js buildIcs / googleCalendarUrl"]
+    content["Content = JSON files in the repo, edited by non-developers<br/>event.json (dates, venue, links, stages) · schedule.json · vendors.json · en.json · zh.json"]
+    shell --> chunks
+    shell --> logic
+    chunks --> logic
+    shell --> content
+    chunks --> content
+  end
+
+  subgraph ext["External services: links and embeds only, we store no data"]
+    direction LR
+    eventbrite["Eventbrite<br/>tickets"]
+    forms["Google Forms<br/>vendor / volunteer"]
+    maps["Google Maps<br/>keyless embed"]
+    gcal["Google Calendar<br/>or .ics download"]
+  end
+  Browser -.-> ext

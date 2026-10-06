@@ -28,7 +28,7 @@ function Wordmark() {
 export function LangToggle({ className = '' }) {
   const { t, toggle, lang } = useLang()
   return (
-    <button type="button" onClick={toggle} aria-label={t('lang.label')} data-testid="lang-toggle" data-lang={lang}
+    <button type="button" onClick={toggle} aria-label={`${t('lang.switch')}: ${t('lang.label')}`} data-testid="lang-toggle" data-lang={lang}
       className={`btn-gold !py-1.5 !px-4 text-sm whitespace-nowrap ${className}`}>
       <span aria-hidden="true">🌐</span> {t('lang.switch')}
     </button>

@@ -9,17 +9,40 @@
  *   after   - festival is over
  */
 
-/** Build a Date for a local festival time. All festival times are US Central (UTC-6 in February). */
-export function festivalDate(dateStr, timeStr) {
-  return new Date(`${dateStr}T${timeStr}:00-06:00`)
+const DEFAULT_TZ = 'America/Chicago'
+
+/**
+ * Offset (minutes east of UTC) of `tz` at the given UTC instant, via Intl.
+ * Lets festival times be written as plain local times in event.json without
+ * caring whether the date falls in standard or daylight time.
+ */
+export function tzOffsetMinutes(utcDate, tz = DEFAULT_TZ) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: tz, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit',
+  }).formatToParts(utcDate)
+  const v = Object.fromEntries(parts.filter((p) => p.type !== 'literal').map((p) => [p.type, Number(p.value)]))
+  const asUtc = Date.UTC(v.year, v.month - 1, v.day, v.hour, v.minute, v.second)
+  return Math.round((asUtc - utcDate.getTime()) / 60000)
+}
+
+/** Build a Date for a local festival time ("2027-02-05", "10:00") in the festival's time zone. */
+export function festivalDate(dateStr, timeStr, tz = DEFAULT_TZ) {
+  const [y, m, d] = dateStr.split('-').map(Number)
+  const [hh, mm] = timeStr.split(':').map(Number)
+  const guess = Date.UTC(y, m - 1, d, hh, mm, 0)
+  // Two passes handle the rare case where the guess straddles a DST change.
+  let offset = tzOffsetMinutes(new Date(guess), tz)
+  offset = tzOffsetMinutes(new Date(guess - offset * 60000), tz)
+  return new Date(guess - offset * 60000)
 }
 
 export function getEventState(event, now = new Date()) {
   const t = now.getTime()
+  const tz = event.timezone || DEFAULT_TZ
   const days = event.days.map((d) => ({
     id: d.id,
-    open: festivalDate(d.date, d.open).getTime(),
-    close: festivalDate(d.date, d.close).getTime(),
+    open: festivalDate(d.date, d.open, tz).getTime(),
+    close: festivalDate(d.date, d.close, tz).getTime(),
   }))
   const first = days[0]
   const last = days[days.length - 1]

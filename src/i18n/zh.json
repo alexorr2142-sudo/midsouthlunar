@@ -39,7 +39,7 @@
     "title": "活动日程",
     "intro": "两天的演出、美食、文化与亲子活动。可按日期、区域或类型筛选。",
     "day": "日期", "stage": "区域", "type": "类型", "all": "全部",
-    "results": "{count} 项活动",
+    "results": "{count} 项活动", "resultsOne": "1 项活动",
     "empty": "没有符合筛选条件的活动。",
     "clear": "清除筛选",
     "addItem": "添加到日历"
@@ -50,7 +50,7 @@
     "search": "搜索商户",
     "searchPlaceholder": "按名称或商品搜索",
     "category": "类别", "all": "全部",
-    "results": "{count} 家商户",
+    "results": "{count} 家商户", "resultsOne": "1 家商户",
     "empty": "没有符合搜索条件的商户。",
     "clear": "清除搜索",
     "booth": "展位"

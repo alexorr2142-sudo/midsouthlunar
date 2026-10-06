@@ -24,7 +24,7 @@ export default function Schedule() {
     <div className="mx-auto max-w-6xl px-4 py-10">
       <h1 className="h-section">{t('schedule.title')}</h1>
       <p className="mt-2 max-w-2xl text-ink/80">{t('schedule.intro')}</p>
-      <p className="mt-1 text-sm text-ink/60">{t('home.preliminary')}</p>
+      <p className="mt-1 text-sm text-ink/75">{t('home.preliminary')}</p>
 
       <div className="mt-6 card grid gap-4 md:grid-cols-3">
         <ChipGroup name="day" label={t('schedule.day')} allLabel={t('schedule.all')} value={filters.day} onChange={set('day')} options={event.days.map((d) => [d.id, pick(d.label)])} />
@@ -54,7 +54,7 @@ export default function Schedule() {
                 <div className="flex-1 min-w-0">
                   <h3 className="font-display text-lg font-bold"><span aria-hidden="true">{TYPE_ICON[it.type]}</span> {pick(it.title)}</h3>
                   <p className="text-ink/80">{pick(it.description)}</p>
-                  <p className="mt-1 text-sm text-ink/60">
+                  <p className="mt-1 text-sm text-ink/75">
                     <span className="rounded-full bg-gold-light/60 px-2 py-0.5">{pick(event.stages[it.stage])}</span>
                     <span className="ml-2 rounded-full bg-red/10 px-2 py-0.5">{pick(event.types[it.type])}</span>
                   </p>

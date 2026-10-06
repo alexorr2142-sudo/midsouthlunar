@@ -44,7 +44,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-14">
         <h2 className="h-section">{t('home.highlightsTitle')}</h2>
-        <p className="mt-2 text-sm text-ink/60">{t('home.preliminary')}</p>
+        <p className="mt-2 text-sm text-ink/75">{t('home.preliminary')}</p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((h, i) => (
             <Link key={h.title} to={i === 2 ? '/vendors' : '/schedule'} className="card hover:ring-gold hover:-translate-y-0.5 transition">
@@ -74,7 +74,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-14 text-center">
         <h2 className="h-section">{t('home.sponsorsTitle')}</h2>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((n) => <div key={n} className="h-20 rounded-xl border-2 border-dashed border-gold/60 flex items-center justify-center text-ink/40 text-sm">Sponsor {n}</div>)}
+          {[1, 2, 3, 4].map((n) => <div key={n} className="h-20 rounded-xl border-2 border-dashed border-gold/60 flex items-center justify-center text-ink/70 text-sm">Sponsor {n}</div>)}
         </div>
         <p className="mt-6 text-ink/70">{t('home.sponsorsText')} <Link to="/get-involved#sponsor" className="font-semibold text-red underline">{t('home.sponsorsLink')}</Link></p>
       </section>

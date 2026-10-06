@@ -61,8 +61,8 @@ export function festivalCalendarEvent(event, lang = 'en') {
     title: event.name[lang] ?? event.name.en,
     description: `${event.venue.name[lang] ?? event.venue.name.en}. midsouthlunar.org`,
     location: event.venue.address,
-    start: festivalDate(first.date, first.open),
-    end: festivalDate(last.date, last.close),
+    start: festivalDate(first.date, first.open, event.timezone),
+    end: festivalDate(last.date, last.close, event.timezone),
   }
 }
 
@@ -75,8 +75,8 @@ export function itemCalendarEvent(event, item, lang = 'en') {
     title: item.title[lang] ?? item.title.en,
     description: `${item.description?.[lang] ?? item.description?.en ?? ''}\n${stage?.[lang] ?? stage?.en ?? ''}`.trim(),
     location: event.venue.address,
-    start: festivalDate(day.date, item.start),
-    end: festivalDate(day.date, item.end),
+    start: festivalDate(day.date, item.start, event.timezone),
+    end: festivalDate(day.date, item.end, event.timezone),
   }
 }
 

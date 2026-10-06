@@ -1,0 +1,55 @@
+flowchart TB
+  subgraph Visitor["Visitor's browser"]
+    direction TB
+    main["main.jsx<br/>App.jsx<br/>(one JavaScript bundle, ~316 kB)"]
+    subgraph UI["React UI"]
+      Layout["Layout<br/>nav, footer, LangToggle"]
+      Home["Home<br/>Countdown, AddToCalendar"]
+      Schedule["Schedule<br/>ChipGroup x3"]
+      Vendors["Vendors<br/>search + ChipGroup"]
+      Visit["Tickets & Visit<br/>FAQ"]
+      Involved["Get Involved"]
+      About["About"]
+    end
+    subgraph Lib["Pure logic (no React)"]
+      countdown["lib/countdown.js<br/>getEventState<br/>hard-coded -06:00 offset"]
+      filter["lib/filter.js<br/>filterSchedule, filterVendors"]
+      calendar["lib/calendar.js<br/>buildIcs, googleCalendarUrl"]
+    end
+    subgraph Data["Content (JSON in repo)"]
+      event["data/event.json<br/>dates, venue, links, stages"]
+      sched["data/schedule.json"]
+      vend["data/vendors.json"]
+      en["i18n/en.json"]
+      zh["i18n/zh.json"]
+    end
+    i18n["i18n/LanguageContext<br/>t(), pick(), localStorage"]
+    main --> Layout --> Home & Schedule & Vendors & Visit & Involved & About
+    Home --> countdown & calendar
+    Schedule --> filter & calendar
+    Vendors --> filter
+    Layout & Home & Schedule & Vendors & Visit & Involved & About --> i18n
+    i18n --> en & zh
+    Home & Schedule & Vendors & Visit & Involved & About --> event
+    Schedule --> sched
+    Vendors --> vend
+  end
+
+  subgraph Hosting["GitHub"]
+    repo["Repository<br/>alexorr2142-sudo/midsouthlunar"]
+    actions["GitHub Actions<br/>npm ci, test, build"]
+    pages["GitHub Pages<br/>static files + 404.html redirect"]
+    repo -->|push to main| actions -->|dist/| pages
+  end
+  pages -->|HTML, CSS, JS| main
+
+  subgraph External["External services (links only, no data stored by us)"]
+    eventbrite["Eventbrite<br/>tickets"]
+    forms["Google Forms<br/>vendor / volunteer"]
+    maps["Google Maps<br/>keyless embed"]
+    gcal["Google Calendar / .ics"]
+  end
+  Home & Visit -.->|link| eventbrite
+  Involved -.->|link| forms
+  Visit -.->|iframe| maps
+  calendar -.-> gcal
