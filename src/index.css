@@ -31,11 +31,11 @@ body { @apply bg-cream text-ink font-body antialiased; }
 .lantern::before { content: ""; position: absolute; left: 9px; top: -7px; width: 10px; height: 6px; background: var(--color-gold); border-radius: 2px; }
 .lantern::after { content: ""; position: absolute; left: 11px; bottom: -12px; width: 6px; height: 12px; background: var(--color-gold); border-radius: 0 0 3px 3px; }
 
-.btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60; }
-.btn-primary { @apply btn bg-red text-white hover:bg-red-dark; }
-.btn-gold { @apply btn bg-gold text-ink hover:bg-gold-light; }
-.btn-outline { @apply btn border-2 border-red text-red hover:bg-red hover:text-white; }
-.chip { @apply rounded-full border border-red/30 px-3 py-1 text-sm font-medium transition focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60; }
-.chip-on { @apply bg-red text-white border-red; }
-.card { @apply rounded-2xl bg-white shadow-sm ring-1 ring-red/10 p-5; }
-.h-section { @apply font-display text-3xl md:text-4xl text-red-dark font-bold; }
+@utility btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60; }
+@utility btn-primary { @apply btn bg-red text-white hover:bg-red-dark; }
+@utility btn-gold { @apply btn bg-gold text-ink hover:bg-gold-light; }
+@utility btn-outline { @apply btn border-2 border-red text-red hover:bg-red hover:text-white; }
+@utility chip { @apply rounded-full border border-red/30 px-3 py-1 text-sm font-medium transition focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60; }
+@utility chip-on { @apply bg-red text-white border-red; }
+@utility card { @apply rounded-2xl bg-white shadow-sm ring-1 ring-red/10 p-5; }
+@utility h-section { @apply font-display text-3xl md:text-4xl text-red-dark font-bold; }

@@ -1,0 +1,121 @@
+{
+  "_meta": { "status": "source language" },
+  "site": { "name": "Mid-South Lunar New Year", "tagline": "Celebrating the Lunar New Year and Sharing Culture", "org": "Presented by the Mid-South Chinese Chamber of Commerce" },
+  "nav": { "home": "Home", "schedule": "Schedule", "vendors": "Vendors", "visit": "Tickets & Visit", "involved": "Get Involved", "about": "About", "menu": "Menu", "close": "Close menu", "skip": "Skip to content" },
+  "lang": { "switch": "中文", "label": "Switch language to Chinese" },
+  "home": {
+    "dates": "February 5 & 6, 2027",
+    "hours": "10 AM to 9 PM daily",
+    "venue": "Agricenter International, Memphis",
+    "tickets": "Get Tickets",
+    "schedule": "See the Schedule",
+    "calendar": "Add to Calendar",
+    "preliminary": "Preliminary lineup. Times and vendors are subject to change.",
+    "highlightsTitle": "Two days of celebration",
+    "highlights": [
+      { "title": "Dragon & Lion Dances", "text": "Traditional performances to open the year with luck and noise." },
+      { "title": "Food Hall", "text": "Dumplings, hot pot, tanghulu, and the reunion dinner classics." },
+      { "title": "Cultural Market", "text": "Paper-cuts, ceramics, calligraphy, lanterns, and embroidery." },
+      { "title": "Family Garden", "text": "Games, crafts, red envelopes, and a lantern walk at night." }
+    ],
+    "cultureTitle": "Why we celebrate",
+    "cultureText": "Lunar New Year is the most important traditional festival across many Asian cultures. 2027 welcomes the Year of the Goat, a sign of peace, kindness, and creativity. The festival brings these traditions to everyone in the Mid-South.",
+    "cultureLink": "Learn more about the traditions",
+    "sponsorsTitle": "Thank you to our sponsors",
+    "sponsorsText": "Sponsor logos will appear here. Interested in sponsoring?",
+    "sponsorsLink": "Become a sponsor"
+  },
+  "countdown": {
+    "until": "Festival begins in",
+    "days": "days", "hours": "hours", "minutes": "minutes", "seconds": "seconds",
+    "now": "Happening now!",
+    "nowText": "Doors are open until 9 PM. See what's on right now.",
+    "between": "See you tomorrow!",
+    "betweenText": "Day 2 opens at 10 AM on February 6.",
+    "after": "Thank you, Memphis!",
+    "afterText": "The 2027 festival has ended. See you next Lunar New Year."
+  },
+  "schedule": {
+    "title": "Schedule",
+    "intro": "Performances, food, culture, and family activities across two days. Filter by day, area, or type.",
+    "day": "Day", "stage": "Area", "type": "Type", "all": "All",
+    "results": "{count} events", "resultsOne": "1 event",
+    "empty": "No events match these filters.",
+    "clear": "Clear filters",
+    "addItem": "Add to calendar"
+  },
+  "vendors": {
+    "title": "Vendors",
+    "intro": "Over 100 local businesses and artists will be at the festival. Here is the preliminary list.",
+    "search": "Search vendors",
+    "searchPlaceholder": "Search by name or product",
+    "category": "Category", "all": "All",
+    "results": "{count} vendors", "resultsOne": "1 vendor",
+    "empty": "No vendors match your search.",
+    "clear": "Clear search",
+    "booth": "Booth"
+  },
+  "visit": {
+    "title": "Tickets & Visit",
+    "ticketsTitle": "Tickets",
+    "ticketsText": "Tickets are sold through Eventbrite. Pricing will be announced soon.",
+    "ticketsButton": "Buy tickets on Eventbrite",
+    "mapTitle": "Getting there",
+    "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
+    "directions": "Open in Google Maps",
+    "parkingTitle": "Parking and entrances",
+    "parking": [
+      "Free parking in the main Agricenter lots off Walnut Grove Road.",
+      "Accessible parking and a drop-off zone are near the main entrance.",
+      "Rideshare pick-up is at the north lot. Follow the signs."
+    ],
+    "accessTitle": "Accessibility",
+    "access": [
+      "All festival areas are on one level and wheelchair accessible.",
+      "Accessible restrooms are located in every hall.",
+      "Service animals are welcome. A quiet room is available on request at the information booth."
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      { "q": "What are the hours?", "a": "10 AM to 9 PM on both Friday, February 5 and Saturday, February 6, 2027." },
+      { "q": "Is there an admission fee?", "a": "Ticket pricing will be announced. Children's pricing will be available." },
+      { "q": "Is the festival indoors?", "a": "Most activities are indoors at Agricenter International. The lantern walk is outdoors, so dress for February weather." },
+      { "q": "Can I pay with cash?", "a": "Most vendors accept cards and mobile payments. Some accept cash. An ATM is on site." },
+      { "q": "Are there activities for kids?", "a": "Yes. The Family Garden has games, crafts, face painting, and red envelopes all day." },
+      { "q": "What if the weather is bad?", "a": "The festival runs rain or shine. Check this site and our social media for any changes." }
+    ]
+  },
+  "involved": {
+    "title": "Get Involved",
+    "vendorTitle": "Become a vendor",
+    "vendorText": "Food stalls, crafts, and cultural organizations are welcome. Applications open soon.",
+    "vendorButton": "Apply as a vendor",
+    "volunteerTitle": "Volunteer",
+    "volunteerText": "Help with setup, information booths, kids' activities, and translation. Students welcome.",
+    "volunteerButton": "Sign up to volunteer",
+    "sponsorTitle": "Sponsor the festival",
+    "sponsorText": "Reach 20,000 attendees from across the Mid-South. Sponsorship tiers are available for businesses of every size.",
+    "sponsorButton": "Contact us about sponsoring"
+  },
+  "about": {
+    "title": "About the Festival",
+    "missionTitle": "Our mission",
+    "mission": "The Mid-South Lunar New Year Festival showcases the historical origins and cultural significance of the Lunar New Year to residents of all backgrounds in the Memphis area through performances, food, markets, and interactive activities. It aims to promote understanding and friendship among citizens from different cultures and to celebrate the vibrant spirit of the Memphis Chinese community.",
+    "orgTitle": "The organizer",
+    "org": "The Mid-South Chinese Chamber of Commerce (MCCC) is a non-profit organization serving the Chinese business community in the Greater Memphis area. MCCC supports the development of Chinese businesses and promotes exchange between the Chinese community and the wider society.",
+    "cultureTitle": "Lunar New Year traditions",
+    "culture": [
+      { "title": "Reunion dinner", "text": "Families gather on New Year's Eve for a feast. Dumplings and fish are served for wealth and abundance." },
+      { "title": "Red and gold", "text": "Red scares away bad luck and gold stands for prosperity. Homes are decorated with couplets and lanterns." },
+      { "title": "Red envelopes", "text": "Elders give money in red envelopes to children as a blessing for the year ahead." },
+      { "title": "Year of the Goat", "text": "2027 is the Year of the Goat, associated with gentleness, creativity, and peace." },
+      { "title": "Lantern Festival", "text": "The celebration ends on the fifteenth day with lanterns, riddles, and sweet rice balls." },
+      { "title": "Lion and dragon dances", "text": "Drums and dancing creatures bring good fortune and drive away evil spirits." }
+    ],
+    "contactTitle": "Contact",
+    "contactText": "Questions about the festival, vendors, or sponsorship?",
+    "contactButton": "Email the festival team"
+  },
+  "footer": { "rights": "Mid-South Chinese Chamber of Commerce", "note": "This site is a student project built for MIS 7623 at the University of Memphis." },
+  "notFound": { "title": "Page not found", "text": "That page does not exist.", "home": "Back to home" }
+}

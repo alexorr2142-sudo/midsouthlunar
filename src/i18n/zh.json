@@ -1,0 +1,121 @@
+{
+  "_meta": { "status": "AI draft, pending review by a Chinese-reading teammate" },
+  "site": { "name": "中南农历新年", "tagline": "欢庆新春，共享文化", "org": "中南华人商会主办" },
+  "nav": { "home": "首页", "schedule": "活动日程", "vendors": "商户", "visit": "门票与交通", "involved": "参与我们", "about": "关于", "menu": "菜单", "close": "关闭菜单", "skip": "跳至正文" },
+  "lang": { "switch": "English", "label": "切换为英文" },
+  "home": {
+    "dates": "2027年2月5日至6日",
+    "hours": "每日上午10点至晚上9点",
+    "venue": "孟菲斯 Agricenter 国际会展中心",
+    "tickets": "购买门票",
+    "schedule": "查看日程",
+    "calendar": "添加到日历",
+    "preliminary": "初步安排，时间和商户可能调整。",
+    "highlightsTitle": "两天精彩庆典",
+    "highlights": [
+      { "title": "舞龙舞狮", "text": "以传统表演开启吉祥热闹的新年。" },
+      { "title": "美食区", "text": "饺子、火锅、糖葫芦，以及年夜饭经典菜。" },
+      { "title": "文化市集", "text": "剪纸、陶瓷、书法、灯笼与刺绣。" },
+      { "title": "亲子园", "text": "游戏、手工、红包，夜晚还有花灯小径。" }
+    ],
+    "cultureTitle": "为何庆祝",
+    "cultureText": "农历新年是许多亚洲文化中最重要的传统节日。2027年迎来羊年，象征和平、善良与创造力。本庆典将这些传统带给中南地区的每一个人。",
+    "cultureLink": "了解更多年俗",
+    "sponsorsTitle": "感谢赞助商",
+    "sponsorsText": "赞助商标志将展示于此。有意赞助？",
+    "sponsorsLink": "成为赞助商"
+  },
+  "countdown": {
+    "until": "距庆典开幕还有",
+    "days": "天", "hours": "小时", "minutes": "分钟", "seconds": "秒",
+    "now": "庆典进行中！",
+    "nowText": "开放至晚上9点。看看现在有什么活动。",
+    "between": "明天见！",
+    "betweenText": "第二天于2月6日上午10点开放。",
+    "after": "感谢孟菲斯！",
+    "afterText": "2027年庆典已圆满结束。明年新春再见。"
+  },
+  "schedule": {
+    "title": "活动日程",
+    "intro": "两天的演出、美食、文化与亲子活动。可按日期、区域或类型筛选。",
+    "day": "日期", "stage": "区域", "type": "类型", "all": "全部",
+    "results": "{count} 项活动",
+    "empty": "没有符合筛选条件的活动。",
+    "clear": "清除筛选",
+    "addItem": "添加到日历"
+  },
+  "vendors": {
+    "title": "商户",
+    "intro": "100多家本地商家和艺术家将参展。以下为初步名单。",
+    "search": "搜索商户",
+    "searchPlaceholder": "按名称或商品搜索",
+    "category": "类别", "all": "全部",
+    "results": "{count} 家商户",
+    "empty": "没有符合搜索条件的商户。",
+    "clear": "清除搜索",
+    "booth": "展位"
+  },
+  "visit": {
+    "title": "门票与交通",
+    "ticketsTitle": "门票",
+    "ticketsText": "门票通过 Eventbrite 销售。票价即将公布。",
+    "ticketsButton": "在 Eventbrite 购票",
+    "mapTitle": "如何到达",
+    "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
+    "directions": "在谷歌地图中打开",
+    "parkingTitle": "停车与入口",
+    "parking": [
+      "Walnut Grove Road 旁的 Agricenter 主停车场免费停车。",
+      "无障碍车位和下客区位于主入口附近。",
+      "网约车上车点在北停车场，请按指示牌前往。"
+    ],
+    "accessTitle": "无障碍设施",
+    "access": [
+      "所有活动区域均在同一层，轮椅可通行。",
+      "每个展馆均设有无障碍洗手间。",
+      "欢迎服务犬。可在咨询台申请使用安静室。"
+    ],
+    "faqTitle": "常见问题",
+    "faq": [
+      { "q": "开放时间是？", "a": "2027年2月5日（周五）和2月6日（周六）上午10点至晚上9点。" },
+      { "q": "需要门票吗？", "a": "票价即将公布，将提供儿童票。" },
+      { "q": "庆典在室内吗？", "a": "大部分活动在 Agricenter 室内举行。花灯小径在室外，请注意二月天气保暖。" },
+      { "q": "可以用现金吗？", "a": "大多数商户接受银行卡和移动支付，部分接受现金。现场设有 ATM。" },
+      { "q": "有儿童活动吗？", "a": "有。亲子园全天有游戏、手工、脸绘和红包活动。" },
+      { "q": "天气不好怎么办？", "a": "庆典风雨无阻。如有变动，请关注本网站和社交媒体。" }
+    ]
+  },
+  "involved": {
+    "title": "参与我们",
+    "vendorTitle": "成为商户",
+    "vendorText": "欢迎美食摊位、手工艺和文化机构。申请即将开放。",
+    "vendorButton": "申请商户",
+    "volunteerTitle": "志愿者",
+    "volunteerText": "协助布置、咨询台、儿童活动和翻译。欢迎学生参加。",
+    "volunteerButton": "报名志愿者",
+    "sponsorTitle": "赞助庆典",
+    "sponsorText": "触达来自中南地区的两万名参与者。提供适合各种规模企业的赞助方案。",
+    "sponsorButton": "联系我们了解赞助"
+  },
+  "about": {
+    "title": "关于庆典",
+    "missionTitle": "我们的使命",
+    "mission": "中南农历新年庆典通过演出、美食、市集和互动活动，向孟菲斯地区各族裔居民展示农历新年的历史渊源和文化意义，旨在促进不同文化背景市民之间的理解与友谊，展现孟菲斯华人社区的蓬勃风采。",
+    "orgTitle": "主办方",
+    "org": "中南华人商会 (MCCC) 是服务大孟菲斯地区华人商界的非营利组织。商会致力于支持华人企业发展，促进华人社区与主流社会的交流融合。",
+    "cultureTitle": "农历新年传统",
+    "culture": [
+      { "title": "年夜饭", "text": "除夕夜全家团聚共享盛宴。饺子和鱼寓意财富与年年有余。" },
+      { "title": "红与金", "text": "红色驱邪避灾，金色象征富贵。家家张贴春联、挂起灯笼。" },
+      { "title": "红包", "text": "长辈给孩子压岁钱，祝福来年平安。" },
+      { "title": "羊年", "text": "2027年是羊年，象征温和、创造力与和平。" },
+      { "title": "元宵节", "text": "正月十五赏花灯、猜灯谜、吃汤圆，庆典圆满结束。" },
+      { "title": "舞龙舞狮", "text": "锣鼓声中的龙狮舞动带来好运，驱走邪祟。" }
+    ],
+    "contactTitle": "联系我们",
+    "contactText": "有关庆典、商户或赞助的问题？",
+    "contactButton": "发邮件给庆典团队"
+  },
+  "footer": { "rights": "中南华人商会", "note": "本网站为孟菲斯大学 MIS 7623 课程学生项目。" },
+  "notFound": { "title": "页面不存在", "text": "找不到该页面。", "home": "返回首页" }
+}
