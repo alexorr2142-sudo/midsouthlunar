@@ -8,7 +8,7 @@
  *       and the vendor filter over 500+ rows responds under 100 ms.
  *
  * Usage: node scripts/perf.mjs            (expects `vite preview` on :4173, or starts one)
- * Writes test-results/perf.json and prints a pass/fail table.
+ * Writes docs/perf/perf.json and Lighthouse reports and prints a pass/fail table.
  */
 import { spawn, execSync } from 'node:child_process'
 import { readdirSync, statSync, mkdirSync, writeFileSync } from 'node:fs'
@@ -23,7 +23,7 @@ import vendors from '../src/data/vendors.json' with { type: 'json' }
 const BASE = process.env.PERF_BASE || 'http://localhost:4173'
 const CHROME = process.env.CHROME_PATH || undefined
 const THRESH = { performance: 90, accessibility: 90, 'best-practices': 90, lcpMs: 3000, bundleKb: 350, bundleGzipKb: 110, filterMs: 100 }
-mkdirSync('test-results', { recursive: true })
+mkdirSync('docs/perf', { recursive: true })
 const results = []
 const record = (id, name, actual, threshold, pass) => results.push({ id, name, actual, threshold, pass })
 
@@ -48,8 +48,8 @@ for (const [label, path] of [['Home', '/'], ['Schedule', '/schedule'], ['Vendors
   const fcp = Math.round(r.lhr.audits['first-contentful-paint'].numericValue)
   record('PT-1', `${label}: LCP on throttled 4G (ms)`, lcp, `< ${THRESH.lcpMs}`, lcp < THRESH.lcpMs)
   record('PT-1', `${label}: FCP on throttled 4G (ms)`, fcp, 'info', true)
-  writeFileSync(`test-results/lighthouse-${label.toLowerCase()}.json`, JSON.stringify(r.lhr))
-  writeFileSync(`test-results/lighthouse-${label.toLowerCase()}.html`, r.report?.[0] ?? (await import('lighthouse')).generateReport(r.lhr, 'html'))
+  writeFileSync(`docs/perf/lighthouse-${label.toLowerCase()}.json`, JSON.stringify(r.lhr))
+  writeFileSync(`docs/perf/lighthouse-${label.toLowerCase()}.html`, r.report?.[0] ?? (await import('lighthouse')).generateReport(r.lhr, 'html'))
 }
 await chrome.kill()
 
@@ -79,7 +79,7 @@ for (const q of queries) {
 }
 record('PT-2', `filterVendors over ${big.length} rows, worst case (ms)`, +worst.toFixed(2), `< ${THRESH.filterMs}`, worst < THRESH.filterMs)
 
-writeFileSync('test-results/perf.json', JSON.stringify(results, null, 2))
+writeFileSync('docs/perf/perf.json', JSON.stringify(results, null, 2))
 const w = Math.max(...results.map((r) => r.name.length))
 for (const r of results) console.log(`${r.pass ? 'PASS' : 'FAIL'}  ${r.id}  ${r.name.padEnd(w)}  ${String(r.actual).padStart(8)}  (${r.threshold})`)
 server?.kill()

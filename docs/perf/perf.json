@@ -1,0 +1,135 @@
+[
+  {
+    "id": "PT-1",
+    "name": "Home: Lighthouse performance",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Home: Lighthouse accessibility",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Home: Lighthouse best-practices",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Home: LCP on throttled 4G (ms)",
+    "actual": 1403,
+    "threshold": "< 3000",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Home: FCP on throttled 4G (ms)",
+    "actual": 1403,
+    "threshold": "info",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Schedule: Lighthouse performance",
+    "actual": 99,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Schedule: Lighthouse accessibility",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Schedule: Lighthouse best-practices",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Schedule: LCP on throttled 4G (ms)",
+    "actual": 1605,
+    "threshold": "< 3000",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Schedule: FCP on throttled 4G (ms)",
+    "actual": 1482,
+    "threshold": "info",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Vendors: Lighthouse performance",
+    "actual": 99,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Vendors: Lighthouse accessibility",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Vendors: Lighthouse best-practices",
+    "actual": 100,
+    "threshold": ">= 90",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Vendors: LCP on throttled 4G (ms)",
+    "actual": 1601,
+    "threshold": "< 3000",
+    "pass": true
+  },
+  {
+    "id": "PT-1",
+    "name": "Vendors: FCP on throttled 4G (ms)",
+    "actual": 1478,
+    "threshold": "info",
+    "pass": true
+  },
+  {
+    "id": "PT-2",
+    "name": "Main JS bundle raw (kB)",
+    "actual": 284.8,
+    "threshold": "< 350",
+    "pass": true
+  },
+  {
+    "id": "PT-2",
+    "name": "Main JS bundle gzip (kB)",
+    "actual": 92,
+    "threshold": "< 110",
+    "pass": true
+  },
+  {
+    "id": "PT-2",
+    "name": "Page chunks (count)",
+    "actual": 6,
+    "threshold": "info",
+    "pass": true
+  },
+  {
+    "id": "PT-2",
+    "name": "filterVendors over 600 rows, worst case (ms)",
+    "actual": 1.4,
+    "threshold": "< 100",
+    "pass": true
+  }
+]
