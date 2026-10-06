@@ -11,7 +11,7 @@
 | Integration | Playwright, iPhone 13 and Desktop Chrome profiles, against the production build | IT-1, IT-2 | 7 x 2 devices = 14 | 14 pass |
 | Performance | Lighthouse (mobile, throttled 4G), bundle budget, filter benchmark | PT-1, PT-2 | 19 checks | 19 pass |
 
-Five defects were found during testing and fixed before this final run. Two AI-drafted test cases were wrong and were corrected during validation. Details in Sections 4 and 5.
+Six defects were found during testing and fixed before this final run. Two AI-drafted test cases were wrong and were corrected during validation. Details in Sections 4 and 5.
 
 Run everything with `npm test` (unit + integration) and `npm run test:perf`. Raw outputs are in `test-results/` (Lighthouse HTML reports, Playwright traces, `perf.json`).
 
@@ -76,6 +76,7 @@ The filter benchmark says search will stay instant even if MCCC's vendor list gr
 | D-1 | UT-6 | Singular result strings (`resultsOne`) were added to `en.json` during the Tuesday walkthrough but not to `zh.json`, so the Chinese site would have shown an English fallback for "1 event" / "1 vendor" | Added both strings to `zh.json` | fix(i18n) |
 | D-2 | IT-2 | After the architecture review moved Schedule into a lazy chunk, the test counted items before the chunk had loaded and got 0 | Test corrected to wait for the first item (a test defect, not a site defect, but caused by a real behavior change) | test(e2e) |
 | D-3 | PT-1 | Accessibility scored 96: three muted-text styles (`text-ink/40`, `/50`, `/60`) fell below the 4.5:1 WCAG AA contrast ratio on the cream background (measured 2.45 and 4.36) | Raised to `/70` and `/75`; now 7.1:1 and 5.9:1 | fix(a11y) |
+| D-6 | Live-site check | On GitHub Pages, a shared filtered link such as `/schedule?day=day2&type=performance` opened the Schedule page but dropped the filters: the `404.html` redirect carried the query string, but the decoder in `index.html` discarded everything after the path | Decoder rewritten to restore the query string (standard spa-github-pages pattern) | fix(pages) |
 | D-5 | IT-1 (phone) | After the switcher grew to five languages, its width pushed the menu button off a 390 px screen in Vietnamese, so the mobile navigation could not be opened | Wordmark truncates and the switcher has a max width on small screens | fix(layout) |
 | D-4 | PT-1 | The language button's `aria-label` ("Switch language to Chinese") did not contain its visible text ("中文"), which confuses voice-control users who say what they see | `aria-label` now reads "中文: Switch language to Chinese" | fix(a11y) |
 
@@ -93,7 +94,7 @@ D-3 and D-4 passed the 90 threshold but violate NFR-3 (WCAG AA is a Must), so th
 - **Real devices and real network.** All phone results are emulated. The peer team round (Section 7) is where real phones come in.
 - **Translation accuracy.** Tests prove every string exists in all five languages, not that the Chinese, Vietnamese, Korean, or Japanese is good. Chinese review is Dee Dee or Wang; the other three need native readers the team has not yet found.
 - **External services.** Eventbrite and Google Forms links are placeholders until MCCC supplies real ones; tests check the link shape only.
-- **The GitHub Pages redirect (`404.html`).** Only testable on the live site; verified by hand after deploy.
+- **The GitHub Pages redirect (`404.html`).** Only testable on the live site. Verified after deploy, which found D-6.
 
 ## 7. Peer feedback on the testing (Thursday item 3)
 
