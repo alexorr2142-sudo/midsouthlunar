@@ -1,5 +1,6 @@
 import { useLang } from '../i18n/LanguageContext'
 import event from '../data/event.json'
+import Icon from '../components/Icon'
 
 export default function Visit() {
   const { t, pick } = useLang()
@@ -32,7 +33,7 @@ export default function Visit() {
             // The claude.ai preview host blocks outside iframes, so the preview
             // build shows a labeled stand-in. The live site embeds the real map.
             <div className="flex h-full min-h-80 flex-col items-center justify-center gap-2 bg-gold-light/40 p-6 text-center text-ink/75">
-              <span className="text-5xl" aria-hidden="true">🗺️</span>
+              <Icon name="map" className="h-14 w-14 text-red" />
               <p className="font-semibold">{pick(event.venue.name)}</p>
               <p className="text-sm">Google Map loads here on the live site. Use the button to open directions.</p>
             </div>

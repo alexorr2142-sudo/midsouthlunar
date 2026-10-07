@@ -33,6 +33,11 @@ jobs:
       # On the github.io project site the app lives under /midsouthlunar/.
       # When a custom domain (CNAME) is present, serve from the root instead.
       - name: Build
+        env:
+          # Optional AI mode for the chatbot. Leave the secret unset to ship the
+          # built-in engine only. See README, "Chatbot".
+          VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VITE_GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           if [ -f public/CNAME ]; then export BASE_PATH=/; else export BASE_PATH=/midsouthlunar/; fi
           echo "BASE_PATH=$BASE_PATH"

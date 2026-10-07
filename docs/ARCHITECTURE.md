@@ -6,6 +6,14 @@ The AI agent generated the diagram below from the code after the first build. We
 
 Source: `architecture.mmd` (Mermaid, renders on GitHub). The pre-review version is in `architecture-before.mmd` / `architecture-before.png`.
 
+## Update: artwork and chatbot (October 7)
+
+Two additions after the labs. Both respect the no-backend rule.
+
+- **Artwork is code.** The icon set, the goat mascot, and the background patterns are SVG inside React components and a CSS data URI, so there are no image files to host, license, or lose. The patterns cost about 6 kB of CSS.
+- **The chatbot runs in the browser.** `ChatWidget` is a small launcher in the main bundle; the panel, the intent engine, and the five-language knowledge base live in two lazy chunks (ChatPanel ~6 kB, chat ~70 kB) that load the first time someone opens the chat. Answers come from the same JSON data the pages use, so an edit to `schedule.json` updates the bot too. Optional AI mode: when a `VITE_GEMINI_API_KEY` is present at build time, `lib/gemini.js` asks Gemini first, grounded on the same data, and falls back to the engine on any error. Without the key, the Gemini module tree-shakes to a 0.2 kB stub.
+- **Bundle after the change:** main 328 kB raw / 107 kB gzip, inside the 350 / 110 budget. Lighthouse performance 98 to 99, accessibility 100.
+
 ## What the diagram shows
 
 - **GitHub does everything on the server side.** A push to `main` runs the unit tests, builds the site, and publishes `dist/` to GitHub Pages. There is no server of ours, no database, no keys, and no paid account, which is what the handoff rules (HO-1 to HO-9) require.

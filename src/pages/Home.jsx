@@ -4,8 +4,10 @@ import Countdown from '../components/Countdown'
 import AddToCalendar from '../components/AddToCalendar'
 import { festivalCalendarEvent } from '../lib/calendar'
 import event from '../data/event.json'
+import Icon from '../components/Icon'
+import Goat from '../components/Goat'
 
-const ICONS = ['🐉', '🥟', '🏮', '🧧']
+const ICONS = ['dragon', 'dumpling', 'lantern', 'envelope']
 
 export default function Home() {
   const { t, lang, pick } = useLang()
@@ -18,8 +20,7 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-red text-white">
-        <div className="absolute inset-0 opacity-15" aria-hidden="true"
-          style={{ backgroundImage: 'radial-gradient(circle at 20% 30%, #F3D27A 0 2px, transparent 3px), radial-gradient(circle at 70% 60%, #F3D27A 0 2px, transparent 3px), radial-gradient(circle at 45% 85%, #F3D27A 0 1.5px, transparent 2.5px)', backgroundSize: '160px 160px, 220px 220px, 120px 120px' }} />
+        <div className="absolute inset-0 bg-pattern-dark" aria-hidden="true" />
         <div className="absolute right-4 top-4 hidden md:flex gap-6" aria-hidden="true">
           <span className="lantern scale-150 mt-4" /><span className="lantern scale-125" /><span className="lantern scale-150 mt-6" />
         </div>
@@ -29,8 +30,8 @@ export default function Home() {
             <h1 className="mt-2 font-display text-4xl md:text-6xl font-bold leading-tight">{pick(event.name)}</h1>
             <p className="mt-3 text-xl md:text-2xl text-gold-light font-display">{t('site.tagline')}</p>
             <dl className="mt-6 grid gap-2 text-lg">
-              <div className="flex gap-3"><dt aria-hidden="true">📆</dt><dd data-testid="hero-dates">{t('home.dates')} · {t('home.hours')}</dd></div>
-              <div className="flex gap-3"><dt aria-hidden="true">📍</dt><dd data-testid="hero-venue">{t('home.venue')}</dd></div>
+              <div className="flex gap-3"><dt className="text-gold-light"><Icon name="calendar" className="h-6 w-6" /></dt><dd data-testid="hero-dates">{t('home.dates')} · {t('home.hours')}</dd></div>
+              <div className="flex gap-3"><dt className="text-gold-light"><Icon name="pin" className="h-6 w-6" /></dt><dd data-testid="hero-venue">{t('home.venue')}</dd></div>
             </dl>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={event.links.tickets} target="_blank" rel="noreferrer" className="btn-gold text-lg">{t('home.tickets')}</a>
@@ -48,7 +49,7 @@ export default function Home() {
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((h, i) => (
             <Link key={h.title} to={i === 2 ? '/vendors' : '/schedule'} className="card hover:ring-gold hover:-translate-y-0.5 transition">
-              <div className="text-4xl" aria-hidden="true">{ICONS[i]}</div>
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red text-white ring-4 ring-gold/40"><Icon name={ICONS[i]} className="h-8 w-8" /></div>
               <h3 className="mt-3 font-display text-xl font-bold text-red-dark">{h.title}</h3>
               <p className="mt-1 text-ink/80">{h.text}</p>
             </Link>
@@ -64,8 +65,9 @@ export default function Home() {
             <Link to="/about#traditions" className="btn-primary mt-6">{t('home.cultureLink')}</Link>
           </div>
           <div className="flex justify-center">
-            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full bg-red ring-8 ring-gold flex items-center justify-center shadow-xl" aria-hidden="true">
-              <span className="font-display text-[7rem] md:text-[9rem] text-gold-light leading-none">羊</span>
+            <div className="relative">
+              <Goat className="h-60 w-60 md:h-80 md:w-80 drop-shadow-xl" label={pick(event.zodiac)} />
+              <span className="absolute -right-2 bottom-6 rounded-full bg-red px-4 py-1 font-display text-3xl text-gold-light shadow-lg" aria-hidden="true">羊</span>
             </div>
           </div>
         </div>

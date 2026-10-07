@@ -5,8 +5,9 @@ import ChipGroup from '../components/ChipGroup'
 import { filterVendors } from '../lib/filter'
 import event from '../data/event.json'
 import vendors from '../data/vendors.json'
+import Icon from '../components/Icon'
 
-const CAT_ICON = { food: '🥟', crafts: '🏮', cultural: '📜' }
+const CAT_ICON = { food: 'dumpling', crafts: 'lantern', cultural: 'scroll' }
 
 export default function Vendors() {
   const { t, pick } = useLang()
@@ -48,7 +49,7 @@ export default function Vendors() {
           {items.map((v) => (
             <li key={v.id} className="card" data-testid="vendor-card" data-category={v.category}>
               <div className="flex items-start justify-between gap-2">
-                <h2 className="font-display text-lg font-bold text-red-dark"><span aria-hidden="true">{CAT_ICON[v.category]}</span> {pick(v.name)}</h2>
+                <h2 className="flex items-start gap-2 font-display text-lg font-bold text-red-dark"><Icon name={CAT_ICON[v.category]} className="mt-1 h-5 w-5 text-red" /> <span>{pick(v.name)}</span></h2>
                 <span className="shrink-0 rounded-full bg-gold-light/60 px-2 py-0.5 text-xs font-semibold">{t('vendors.booth')} {v.booth}</span>
               </div>
               <p className="mt-1 text-ink/80">{pick(v.description)}</p>

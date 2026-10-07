@@ -18,6 +18,10 @@ body { @apply bg-cream text-ink font-body antialiased; }
 :lang(ko) { font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif; }
 :lang(vi) { font-family: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
 
+/* Festive background patterns (data URIs set as CSS vars in Layout.jsx) */
+.bg-pattern-light { background-image: var(--pattern-light); background-size: 260px 260px; }
+.bg-pattern-dark { background-image: var(--pattern-dark); background-size: 260px 260px; }
+
 /* Paper-cut style top border used on section headers */
 .papercut {
   background-image: radial-gradient(circle at 10px 0, transparent 7px, var(--color-gold) 8px, var(--color-gold) 9px, transparent 10px);

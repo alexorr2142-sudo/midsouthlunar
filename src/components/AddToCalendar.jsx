@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { buildIcs, downloadIcs, googleCalendarUrl } from '../lib/calendar'
+import Icon from './Icon'
 
 /**
  * Small menu with two choices: Google Calendar (link) and .ics download
@@ -23,7 +24,7 @@ export default function AddToCalendar({ calEvent, label, className = 'btn-outlin
   return (
     <div ref={ref} className="relative inline-block">
       <button type="button" className={`${className} ${small}`} aria-haspopup="menu" aria-expanded={open} onClick={() => setOpen((o) => !o)} data-testid="add-to-calendar">
-        <span aria-hidden="true">📅</span> {label}
+        <Icon name="calendar" className="h-4 w-4" /> {label}
       </button>
       {open && (
         <div role="menu" className="absolute z-30 mt-2 min-w-48 rounded-xl bg-white p-1 text-ink shadow-lg ring-1 ring-red/15">

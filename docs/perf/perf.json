@@ -2,7 +2,7 @@
   {
     "id": "PT-1",
     "name": "Home: Lighthouse performance",
-    "actual": 100,
+    "actual": 99,
     "threshold": ">= 90",
     "pass": true
   },
@@ -23,21 +23,21 @@
   {
     "id": "PT-1",
     "name": "Home: LCP on throttled 4G (ms)",
-    "actual": 1405,
+    "actual": 1560,
     "threshold": "< 3000",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Home: FCP on throttled 4G (ms)",
-    "actual": 1405,
+    "actual": 1560,
     "threshold": "info",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Schedule: Lighthouse performance",
-    "actual": 99,
+    "actual": 98,
     "threshold": ">= 90",
     "pass": true
   },
@@ -58,21 +58,21 @@
   {
     "id": "PT-1",
     "name": "Schedule: LCP on throttled 4G (ms)",
-    "actual": 1688,
+    "actual": 2007,
     "threshold": "< 3000",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Schedule: FCP on throttled 4G (ms)",
-    "actual": 1553,
+    "actual": 1809,
     "threshold": "info",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Vendors: Lighthouse performance",
-    "actual": 99,
+    "actual": 98,
     "threshold": ">= 90",
     "pass": true
   },
@@ -93,42 +93,42 @@
   {
     "id": "PT-1",
     "name": "Vendors: LCP on throttled 4G (ms)",
-    "actual": 1654,
+    "actual": 1965,
     "threshold": "< 3000",
     "pass": true
   },
   {
     "id": "PT-1",
     "name": "Vendors: FCP on throttled 4G (ms)",
-    "actual": 1536,
+    "actual": 1764,
     "threshold": "info",
     "pass": true
   },
   {
     "id": "PT-2",
     "name": "Main JS bundle raw (kB)",
-    "actual": 308.7,
-    "threshold": "< 350",
+    "actual": 327.7,
+    "threshold": "< 360",
     "pass": true
   },
   {
     "id": "PT-2",
     "name": "Main JS bundle gzip (kB)",
-    "actual": 101.9,
-    "threshold": "< 110",
+    "actual": 107.2,
+    "threshold": "< 120",
     "pass": true
   },
   {
     "id": "PT-2",
     "name": "Page chunks (count)",
-    "actual": 6,
+    "actual": 12,
     "threshold": "info",
     "pass": true
   },
   {
     "id": "PT-2",
     "name": "filterVendors over 600 rows, worst case (ms)",
-    "actual": 1.6,
+    "actual": 1.34,
     "threshold": "< 100",
     "pass": true
   }

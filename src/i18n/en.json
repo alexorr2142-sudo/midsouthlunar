@@ -1,8 +1,27 @@
 {
-  "_meta": { "status": "source language" },
-  "site": { "name": "Mid-South Lunar New Year", "tagline": "Celebrating the Lunar New Year and Sharing Culture", "org": "Presented by the Mid-South Chinese Chamber of Commerce" },
-  "nav": { "home": "Home", "schedule": "Schedule", "vendors": "Vendors", "visit": "Tickets & Visit", "involved": "Get Involved", "about": "About", "menu": "Menu", "close": "Close menu", "skip": "Skip to content" },
-  "lang": { "switch": "中文", "label": "Switch language to Chinese" },
+  "_meta": {
+    "status": "source language"
+  },
+  "site": {
+    "name": "Mid-South Lunar New Year",
+    "tagline": "Celebrating the Lunar New Year and Sharing Culture",
+    "org": "Presented by the Mid-South Chinese Chamber of Commerce"
+  },
+  "nav": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "vendors": "Vendors",
+    "visit": "Tickets & Visit",
+    "involved": "Get Involved",
+    "about": "About",
+    "menu": "Menu",
+    "close": "Close menu",
+    "skip": "Skip to content"
+  },
+  "lang": {
+    "switch": "中文",
+    "label": "Switch language to Chinese"
+  },
   "home": {
     "dates": "February 5 & 6, 2027",
     "hours": "10 AM to 9 PM daily",
@@ -13,10 +32,22 @@
     "preliminary": "Preliminary lineup. Times and vendors are subject to change.",
     "highlightsTitle": "Two days of celebration",
     "highlights": [
-      { "title": "Dragon & Lion Dances", "text": "Traditional performances to open the year with luck and noise." },
-      { "title": "Food Hall", "text": "Dumplings, hot pot, tanghulu, and the reunion dinner classics." },
-      { "title": "Cultural Market", "text": "Paper-cuts, ceramics, calligraphy, lanterns, and embroidery." },
-      { "title": "Family Garden", "text": "Games, crafts, red envelopes, and a lantern walk at night." }
+      {
+        "title": "Dragon & Lion Dances",
+        "text": "Traditional performances to open the year with luck and noise."
+      },
+      {
+        "title": "Food Hall",
+        "text": "Dumplings, hot pot, tanghulu, and the reunion dinner classics."
+      },
+      {
+        "title": "Cultural Market",
+        "text": "Paper-cuts, ceramics, calligraphy, lanterns, and embroidery."
+      },
+      {
+        "title": "Family Garden",
+        "text": "Games, crafts, red envelopes, and a lantern walk at night."
+      }
     ],
     "cultureTitle": "Why we celebrate",
     "cultureText": "Lunar New Year is the most important traditional festival across many Asian cultures. 2027 welcomes the Year of the Goat, a sign of peace, kindness, and creativity. The festival brings these traditions to everyone in the Mid-South.",
@@ -27,7 +58,10 @@
   },
   "countdown": {
     "until": "Festival begins in",
-    "days": "days", "hours": "hours", "minutes": "minutes", "seconds": "seconds",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
     "now": "Happening now!",
     "nowText": "Doors are open until 9 PM. See what's on right now.",
     "between": "See you tomorrow!",
@@ -38,8 +72,12 @@
   "schedule": {
     "title": "Schedule",
     "intro": "Performances, food, culture, and family activities across two days. Filter by day, area, or type.",
-    "day": "Day", "stage": "Area", "type": "Type", "all": "All",
-    "results": "{count} events", "resultsOne": "1 event",
+    "day": "Day",
+    "stage": "Area",
+    "type": "Type",
+    "all": "All",
+    "results": "{count} events",
+    "resultsOne": "1 event",
     "empty": "No events match these filters.",
     "clear": "Clear filters",
     "addItem": "Add to calendar"
@@ -49,8 +87,10 @@
     "intro": "Over 100 local businesses and artists will be at the festival. Here is the preliminary list.",
     "search": "Search vendors",
     "searchPlaceholder": "Search by name or product",
-    "category": "Category", "all": "All",
-    "results": "{count} vendors", "resultsOne": "1 vendor",
+    "category": "Category",
+    "all": "All",
+    "results": "{count} vendors",
+    "resultsOne": "1 vendor",
     "empty": "No vendors match your search.",
     "clear": "Clear search",
     "booth": "Booth"
@@ -77,12 +117,30 @@
     ],
     "faqTitle": "Frequently asked questions",
     "faq": [
-      { "q": "What are the hours?", "a": "10 AM to 9 PM on both Friday, February 5 and Saturday, February 6, 2027." },
-      { "q": "Is there an admission fee?", "a": "Ticket pricing will be announced. Children's pricing will be available." },
-      { "q": "Is the festival indoors?", "a": "Most activities are indoors at Agricenter International. The lantern walk is outdoors, so dress for February weather." },
-      { "q": "Can I pay with cash?", "a": "Most vendors accept cards and mobile payments. Some accept cash. An ATM is on site." },
-      { "q": "Are there activities for kids?", "a": "Yes. The Family Garden has games, crafts, face painting, and red envelopes all day." },
-      { "q": "What if the weather is bad?", "a": "The festival runs rain or shine. Check this site and our social media for any changes." }
+      {
+        "q": "What are the hours?",
+        "a": "10 AM to 9 PM on both Friday, February 5 and Saturday, February 6, 2027."
+      },
+      {
+        "q": "Is there an admission fee?",
+        "a": "Ticket pricing will be announced. Children's pricing will be available."
+      },
+      {
+        "q": "Is the festival indoors?",
+        "a": "Most activities are indoors at Agricenter International. The lantern walk is outdoors, so dress for February weather."
+      },
+      {
+        "q": "Can I pay with cash?",
+        "a": "Most vendors accept cards and mobile payments. Some accept cash. An ATM is on site."
+      },
+      {
+        "q": "Are there activities for kids?",
+        "a": "Yes. The Family Garden has games, crafts, face painting, and red envelopes all day."
+      },
+      {
+        "q": "What if the weather is bad?",
+        "a": "The festival runs rain or shine. Check this site and our social media for any changes."
+      }
     ]
   },
   "involved": {
@@ -105,17 +163,56 @@
     "org": "The Mid-South Chinese Chamber of Commerce (MCCC) is a non-profit organization serving the Chinese business community in the Greater Memphis area. MCCC supports the development of Chinese businesses and promotes exchange between the Chinese community and the wider society.",
     "cultureTitle": "Lunar New Year traditions",
     "culture": [
-      { "title": "Reunion dinner", "text": "Families gather on New Year's Eve for a feast. Dumplings and fish are served for wealth and abundance." },
-      { "title": "Red and gold", "text": "Red scares away bad luck and gold stands for prosperity. Homes are decorated with couplets and lanterns." },
-      { "title": "Red envelopes", "text": "Elders give money in red envelopes to children as a blessing for the year ahead." },
-      { "title": "Year of the Goat", "text": "2027 is the Year of the Goat, associated with gentleness, creativity, and peace." },
-      { "title": "Lantern Festival", "text": "The celebration ends on the fifteenth day with lanterns, riddles, and sweet rice balls." },
-      { "title": "Lion and dragon dances", "text": "Drums and dancing creatures bring good fortune and drive away evil spirits." }
+      {
+        "title": "Reunion dinner",
+        "text": "Families gather on New Year's Eve for a feast. Dumplings and fish are served for wealth and abundance."
+      },
+      {
+        "title": "Red and gold",
+        "text": "Red scares away bad luck and gold stands for prosperity. Homes are decorated with couplets and lanterns."
+      },
+      {
+        "title": "Red envelopes",
+        "text": "Elders give money in red envelopes to children as a blessing for the year ahead."
+      },
+      {
+        "title": "Year of the Goat",
+        "text": "2027 is the Year of the Goat, associated with gentleness, creativity, and peace."
+      },
+      {
+        "title": "Lantern Festival",
+        "text": "The celebration ends on the fifteenth day with lanterns, riddles, and sweet rice balls."
+      },
+      {
+        "title": "Lion and dragon dances",
+        "text": "Drums and dancing creatures bring good fortune and drive away evil spirits."
+      }
     ],
     "contactTitle": "Contact",
     "contactText": "Questions about the festival, vendors, or sponsorship?",
     "contactButton": "Email the festival team"
   },
-  "footer": { "rights": "Mid-South Chinese Chamber of Commerce", "note": "This site is a student project built for MIS 7623 at the University of Memphis." },
-  "notFound": { "title": "Page not found", "text": "That page does not exist.", "home": "Back to home" }
+  "footer": {
+    "rights": "Mid-South Chinese Chamber of Commerce",
+    "note": "This site is a student project built for MIS 7623 at the University of Memphis."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "That page does not exist.",
+    "home": "Back to home"
+  },
+  "chat": {
+    "title": "Yang Yang",
+    "subtitle": "Festival guide",
+    "open": "Ask Yang Yang",
+    "close": "Close chat",
+    "placeholder": "Ask about events, vendors, or traditions",
+    "send": "Send",
+    "thinking": "Thinking…",
+    "localNote": "Answers come from this site's own schedule, vendor list, and a curated guide to Lunar New Year. No data leaves your browser.",
+    "aiNote": "Answers are generated by Gemini from this site's data and may contain mistakes. Check the Schedule and Vendors pages for the latest.",
+    "clear": "Start over",
+    "you": "You",
+    "langs": "English · 中文 · Tiếng Việt · 한국어 · 日本語"
+  }
 }

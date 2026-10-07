@@ -1,8 +1,27 @@
 {
-  "_meta": { "status": "AI draft, pending review by a Vietnamese-reading reviewer" },
-  "site": { "name": "Tết Trung Nam Hoa Kỳ", "tagline": "Đón Tết Nguyên Đán, sẻ chia văn hóa", "org": "Do Phòng Thương mại Hoa kiều Trung Nam tổ chức" },
-  "nav": { "home": "Trang chủ", "schedule": "Lịch trình", "vendors": "Gian hàng", "visit": "Vé & Đường đi", "involved": "Tham gia", "about": "Giới thiệu", "menu": "Menu", "close": "Đóng menu", "skip": "Đến nội dung chính" },
-  "lang": { "switch": "Tiếng Việt", "label": "Chọn ngôn ngữ" },
+  "_meta": {
+    "status": "AI draft, pending review by a Vietnamese-reading reviewer"
+  },
+  "site": {
+    "name": "Tết Trung Nam Hoa Kỳ",
+    "tagline": "Đón Tết Nguyên Đán, sẻ chia văn hóa",
+    "org": "Do Phòng Thương mại Hoa kiều Trung Nam tổ chức"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "schedule": "Lịch trình",
+    "vendors": "Gian hàng",
+    "visit": "Vé & Đường đi",
+    "involved": "Tham gia",
+    "about": "Giới thiệu",
+    "menu": "Menu",
+    "close": "Đóng menu",
+    "skip": "Đến nội dung chính"
+  },
+  "lang": {
+    "switch": "Tiếng Việt",
+    "label": "Chọn ngôn ngữ"
+  },
   "home": {
     "dates": "5 & 6 tháng 2, 2027",
     "hours": "10 giờ sáng đến 9 giờ tối mỗi ngày",
@@ -13,10 +32,22 @@
     "preliminary": "Chương trình dự kiến. Giờ và gian hàng có thể thay đổi.",
     "highlightsTitle": "Hai ngày lễ hội",
     "highlights": [
-      { "title": "Múa rồng & múa lân", "text": "Biểu diễn truyền thống mở đầu năm mới với may mắn và rộn ràng." },
-      { "title": "Khu ẩm thực", "text": "Sủi cảo, lẩu, kẹo hồ lô và các món tất niên kinh điển." },
-      { "title": "Chợ văn hóa", "text": "Tranh cắt giấy, gốm sứ, thư pháp, đèn lồng và thêu." },
-      { "title": "Vườn gia đình", "text": "Trò chơi, thủ công, lì xì và đường hoa đăng về đêm." }
+      {
+        "title": "Múa rồng & múa lân",
+        "text": "Biểu diễn truyền thống mở đầu năm mới với may mắn và rộn ràng."
+      },
+      {
+        "title": "Khu ẩm thực",
+        "text": "Sủi cảo, lẩu, kẹo hồ lô và các món tất niên kinh điển."
+      },
+      {
+        "title": "Chợ văn hóa",
+        "text": "Tranh cắt giấy, gốm sứ, thư pháp, đèn lồng và thêu."
+      },
+      {
+        "title": "Vườn gia đình",
+        "text": "Trò chơi, thủ công, lì xì và đường hoa đăng về đêm."
+      }
     ],
     "cultureTitle": "Vì sao chúng ta đón Tết",
     "cultureText": "Tết Nguyên Đán là lễ hội truyền thống quan trọng nhất của nhiều nền văn hóa châu Á. Năm 2027 là năm Mùi, biểu tượng của hòa bình, nhân hậu và sáng tạo. Lễ hội mang những truyền thống này đến với mọi người ở vùng Trung Nam.",
@@ -27,7 +58,10 @@
   },
   "countdown": {
     "until": "Lễ hội bắt đầu sau",
-    "days": "ngày", "hours": "giờ", "minutes": "phút", "seconds": "giây",
+    "days": "ngày",
+    "hours": "giờ",
+    "minutes": "phút",
+    "seconds": "giây",
     "now": "Đang diễn ra!",
     "nowText": "Mở cửa đến 9 giờ tối. Xem những gì đang diễn ra.",
     "between": "Hẹn gặp lại ngày mai!",
@@ -38,8 +72,12 @@
   "schedule": {
     "title": "Lịch trình",
     "intro": "Biểu diễn, ẩm thực, văn hóa và hoạt động gia đình trong hai ngày. Lọc theo ngày, khu vực hoặc loại.",
-    "day": "Ngày", "stage": "Khu vực", "type": "Loại", "all": "Tất cả",
-    "results": "{count} hoạt động", "resultsOne": "1 hoạt động",
+    "day": "Ngày",
+    "stage": "Khu vực",
+    "type": "Loại",
+    "all": "Tất cả",
+    "results": "{count} hoạt động",
+    "resultsOne": "1 hoạt động",
     "empty": "Không có hoạt động nào phù hợp.",
     "clear": "Xóa bộ lọc",
     "addItem": "Thêm vào lịch"
@@ -49,8 +87,10 @@
     "intro": "Hơn 100 doanh nghiệp và nghệ nhân địa phương sẽ có mặt. Đây là danh sách dự kiến.",
     "search": "Tìm gian hàng",
     "searchPlaceholder": "Tìm theo tên hoặc sản phẩm",
-    "category": "Danh mục", "all": "Tất cả",
-    "results": "{count} gian hàng", "resultsOne": "1 gian hàng",
+    "category": "Danh mục",
+    "all": "Tất cả",
+    "results": "{count} gian hàng",
+    "resultsOne": "1 gian hàng",
     "empty": "Không có gian hàng nào phù hợp.",
     "clear": "Xóa tìm kiếm",
     "booth": "Gian"
@@ -77,12 +117,30 @@
     ],
     "faqTitle": "Câu hỏi thường gặp",
     "faq": [
-      { "q": "Giờ mở cửa?", "a": "10 giờ sáng đến 9 giờ tối, thứ Sáu 5/2 và thứ Bảy 6/2/2027." },
-      { "q": "Có thu phí vào cửa không?", "a": "Giá vé sẽ được công bố. Có giá vé trẻ em." },
-      { "q": "Lễ hội diễn ra trong nhà?", "a": "Hầu hết hoạt động diễn ra trong nhà tại Agricenter International. Đường hoa đăng ở ngoài trời, hãy mặc ấm." },
-      { "q": "Có thể trả tiền mặt không?", "a": "Hầu hết gian hàng nhận thẻ và thanh toán di động. Một số nhận tiền mặt. Có máy ATM tại chỗ." },
-      { "q": "Có hoạt động cho trẻ em không?", "a": "Có. Vườn gia đình có trò chơi, thủ công, vẽ mặt và lì xì cả ngày." },
-      { "q": "Nếu thời tiết xấu thì sao?", "a": "Lễ hội diễn ra bất kể mưa nắng. Theo dõi trang này và mạng xã hội để biết thay đổi." }
+      {
+        "q": "Giờ mở cửa?",
+        "a": "10 giờ sáng đến 9 giờ tối, thứ Sáu 5/2 và thứ Bảy 6/2/2027."
+      },
+      {
+        "q": "Có thu phí vào cửa không?",
+        "a": "Giá vé sẽ được công bố. Có giá vé trẻ em."
+      },
+      {
+        "q": "Lễ hội diễn ra trong nhà?",
+        "a": "Hầu hết hoạt động diễn ra trong nhà tại Agricenter International. Đường hoa đăng ở ngoài trời, hãy mặc ấm."
+      },
+      {
+        "q": "Có thể trả tiền mặt không?",
+        "a": "Hầu hết gian hàng nhận thẻ và thanh toán di động. Một số nhận tiền mặt. Có máy ATM tại chỗ."
+      },
+      {
+        "q": "Có hoạt động cho trẻ em không?",
+        "a": "Có. Vườn gia đình có trò chơi, thủ công, vẽ mặt và lì xì cả ngày."
+      },
+      {
+        "q": "Nếu thời tiết xấu thì sao?",
+        "a": "Lễ hội diễn ra bất kể mưa nắng. Theo dõi trang này và mạng xã hội để biết thay đổi."
+      }
     ]
   },
   "involved": {
@@ -105,17 +163,56 @@
     "org": "Phòng Thương mại Hoa kiều Trung Nam (MCCC) là tổ chức phi lợi nhuận phục vụ cộng đồng doanh nghiệp người Hoa ở vùng Memphis mở rộng. MCCC hỗ trợ doanh nghiệp người Hoa phát triển và thúc đẩy giao lưu giữa cộng đồng người Hoa và xã hội.",
     "cultureTitle": "Phong tục Tết",
     "culture": [
-      { "title": "Bữa cơm tất niên", "text": "Gia đình sum họp đêm giao thừa. Sủi cảo và cá tượng trưng cho giàu có và dư dả." },
-      { "title": "Đỏ và vàng", "text": "Màu đỏ xua đuổi vận xui, màu vàng tượng trưng cho thịnh vượng. Nhà cửa treo câu đối và đèn lồng." },
-      { "title": "Lì xì", "text": "Người lớn mừng tuổi trẻ em bằng phong bao đỏ như lời chúc cho năm mới." },
-      { "title": "Năm Mùi", "text": "2027 là năm Mùi, gắn với sự hiền hòa, sáng tạo và bình an." },
-      { "title": "Tết Nguyên Tiêu", "text": "Lễ hội khép lại vào ngày rằm tháng Giêng với đèn lồng, câu đố và bánh trôi." },
-      { "title": "Múa lân và múa rồng", "text": "Tiếng trống và linh vật nhảy múa mang lại may mắn, xua đuổi tà ma." }
+      {
+        "title": "Bữa cơm tất niên",
+        "text": "Gia đình sum họp đêm giao thừa. Sủi cảo và cá tượng trưng cho giàu có và dư dả."
+      },
+      {
+        "title": "Đỏ và vàng",
+        "text": "Màu đỏ xua đuổi vận xui, màu vàng tượng trưng cho thịnh vượng. Nhà cửa treo câu đối và đèn lồng."
+      },
+      {
+        "title": "Lì xì",
+        "text": "Người lớn mừng tuổi trẻ em bằng phong bao đỏ như lời chúc cho năm mới."
+      },
+      {
+        "title": "Năm Mùi",
+        "text": "2027 là năm Mùi, gắn với sự hiền hòa, sáng tạo và bình an."
+      },
+      {
+        "title": "Tết Nguyên Tiêu",
+        "text": "Lễ hội khép lại vào ngày rằm tháng Giêng với đèn lồng, câu đố và bánh trôi."
+      },
+      {
+        "title": "Múa lân và múa rồng",
+        "text": "Tiếng trống và linh vật nhảy múa mang lại may mắn, xua đuổi tà ma."
+      }
     ],
     "contactTitle": "Liên hệ",
     "contactText": "Có câu hỏi về lễ hội, gian hàng hay tài trợ?",
     "contactButton": "Gửi email cho ban tổ chức"
   },
-  "footer": { "rights": "Phòng Thương mại Hoa kiều Trung Nam", "note": "Trang web này là dự án sinh viên môn MIS 7623 tại Đại học Memphis." },
-  "notFound": { "title": "Không tìm thấy trang", "text": "Trang này không tồn tại.", "home": "Về trang chủ" }
+  "footer": {
+    "rights": "Phòng Thương mại Hoa kiều Trung Nam",
+    "note": "Trang web này là dự án sinh viên môn MIS 7623 tại Đại học Memphis."
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "text": "Trang này không tồn tại.",
+    "home": "Về trang chủ"
+  },
+  "chat": {
+    "title": "Yang Yang",
+    "subtitle": "Hướng dẫn lễ hội",
+    "open": "Hỏi Yang Yang",
+    "close": "Đóng trò chuyện",
+    "placeholder": "Hỏi về hoạt động, gian hàng hoặc phong tục",
+    "send": "Gửi",
+    "thinking": "Đang nghĩ…",
+    "localNote": "Câu trả lời lấy từ lịch trình, danh sách gian hàng của trang này và cẩm nang Tết được biên soạn. Dữ liệu không rời khỏi trình duyệt của bạn.",
+    "aiNote": "Câu trả lời do Gemini tạo từ dữ liệu của trang và có thể sai. Hãy xem trang Lịch trình và Gian hàng để có thông tin mới nhất.",
+    "clear": "Bắt đầu lại",
+    "you": "Bạn",
+    "langs": "Tiếng Việt · English · 中文 · 한국어 · 日本語"
+  }
 }

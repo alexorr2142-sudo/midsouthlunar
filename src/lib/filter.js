@@ -16,7 +16,7 @@ export function filterSchedule(items, { day = 'all', stage = 'all', type = 'all'
 
 /** Lower-case, trim, and collapse whitespace so "  Golden   Wok " matches "golden wok". */
 export function normalize(s) {
-  return String(s ?? '').toLowerCase().trim().replace(/\s+/g, ' ')
+  return String(s ?? '').normalize('NFC').toLowerCase().trim().replace(/\s+/g, ' ')
 }
 
 /**

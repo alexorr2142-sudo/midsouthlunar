@@ -121,3 +121,35 @@ One structured prompt per module, following the Role / Context / Task / Constrai
 **Output:** src/i18n/{vi,ko,ja}.json, updated data files, LanguageContext.jsx with a LANGS table, LangToggle as a native `<select>`, updated unit and integration tests.
 
 **Result:** Produced as specified; 26 unit tests and 14 integration tests pass. **Defect found by the integration test:** on a 390 px phone the wider switcher pushed the menu button off-screen in Vietnamese. **Human fix:** the wordmark now truncates and the switcher has a max width on small screens. Note on culture: the Japanese dictionary says 旧正月 (old new year) rather than 正月, since Japan celebrates the solar New Year; the Vietnamese uses Tết; the Korean uses 설날. All three remain pending review by native readers.
+
+---
+
+## Module 7: Lunar New Year artwork (replaces every emoji)
+
+**Role:** You are an illustrator and front-end developer producing original vector art for a festival website.
+
+**Context:** The site used emoji for icons and a plain red field in the hero. The team wants real Lunar New Year imagery, a goat mascot for the 2027 zodiac year, and festive backgrounds. Everything must stay in the repo as small files with no licensing questions (handoff rule HO-8), and no emoji may remain.
+
+**Task:** Draw an original 30-icon SVG set (lantern, dumpling, dragon, lion, red envelope, brush, drum, tea, firecracker, coin, blossom, cloud, goat, calendar, ticket, pin, globe, chat, send, close, menu, search, fan, knot, scroll, hand, handshake, shop, map, sparkle, hourglass), a paper-cut goat mascot named Yang Yang with two expressions, and a repeating background pattern (auspicious clouds, plum blossoms, small goats, coins) as a data URI with light and dark tints. Replace every emoji in the components and pages.
+
+**Constraints:** Icons use currentColor with a gold accent so they recolor anywhere. Patterns must stay faint enough to keep WCAG AA contrast. No new network requests.
+
+**Output:** src/components/Icon.jsx, src/components/Goat.jsx (mascot + patternDataUri), CSS classes bg-pattern-light / bg-pattern-dark, edits to Layout, Home, Schedule, Vendors, Visit, GetInvolved, About, AddToCalendar.
+
+**Result:** Produced and reviewed on an icon contact sheet (dev-only route /dev/icons). **Human fixes:** the first dragon read as a worm and was redrawn with a head, horn, and whisker; the goat's horns were reshaped to read as horns rather than ears; the body pattern was lightened from 9% to 6% because it competed with text. Lighthouse accessibility stayed at 100 on every page.
+
+---
+
+## Module 8: Yang Yang, the festival chatbot (FR-13, new)
+
+**Role:** You are building a multilingual assistant for a static website with no backend.
+
+**Context:** Visitors should be able to ask about the schedule, vendors, tickets, parking, and accessibility, and about Lunar New Year traditions (Chinese customs, Tết, Seollal, Japan and other countries, the Year of the Goat, greetings). Questions may arrive in English, Chinese, Vietnamese, Korean, or Japanese and must be answered in the language of the question. The site has no server and no API keys (NFR-5, NFR-6). The team chose a hybrid: a built-in engine now, with an optional free-tier Gemini mode that MCCC can switch on later.
+
+**Task:** Write a pure intent engine over the site's own data plus a curated knowledge base in five languages; detect the question's language from its script; build a floating chat panel with the goat mascot; add a Gemini adapter that grounds the model on the same data and falls back to the engine on any error; keep all of it out of the main bundle until opened; write unit and integration tests.
+
+**Constraints:** No new dependencies. No data leaves the browser in built-in mode. The Gemini key, if used, is restricted to the site's domains and documented as public. Nothing may invent events, vendors, or prices.
+
+**Output:** src/lib/chat.js, src/lib/chatStrings.js, src/lib/gemini.js, src/data/knowledge.json (12 topics x 5 languages), src/components/ChatWidget.jsx + ChatPanel.jsx, chat strings in all five dictionaries, tests/unit/chat.test.js, tests/e2e/chat.spec.js, workflow secret wiring.
+
+**Result:** Works in all five languages; 38 unit and 20 integration tests pass. **Human review of the first version found four routing bugs**, each fixed with a test: (1) Chinese "为什么要发红包" went to the generic "what is Lunar New Year" topic because the keyword 为什么 (why) was too broad; (2) Vietnamese "Mua sủi cảo ở đâu" went to tickets because "mua" (buy) matched the tickets intent before the vendor was recognized; (3) Korean "만두는 어디서 사요" did not match the vendor 만두집 because Korean particles glue onto nouns, so matching moved to hangul 2-grams; (4) Japanese "土曜日は何がありますか" matched events whose descriptions ended in ます, so hiragana is now excluded from matching. One more: the Japanese word 今 ("now") inside 今年 ("this year") hijacked a zodiac question. All five are documented as D-7 to D-11 in the test report. Translations of the knowledge base remain pending native review.

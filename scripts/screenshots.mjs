@@ -19,7 +19,7 @@ async function shot(ctxName, viewport, name, path, actions) {
   if (actions) await actions(page)
   await page.waitForTimeout(300)
   const file = `${out}/${name}.png`
-  await page.screenshot({ path: file, fullPage: true })
+  await page.screenshot({ path: file, fullPage: !name.startsWith('2') || name.startsWith('19') })
   shots.push(file)
   await ctx.close()
 }
@@ -46,6 +46,10 @@ await shot('p', phone, '16-mobile-menu-open', '/', async (p) => p.getByRole('but
 await shot('p', phone, '17-home-phone-vi', '/', async (p) => p.locator('[data-testid=lang-select]:visible').selectOption('vi'))
 await shot('p', phone, '18-schedule-phone-ko', '/schedule?day=day2', async (p) => p.locator('[data-testid=lang-select]:visible').selectOption('ko'))
 await shot('d', desktop, '19-vendors-desktop-ja', '/vendors?cat=food', async (p) => p.locator('[data-testid=lang-select]:visible').selectOption('ja'))
+
+await shot('d', desktop, '20-chat-desktop-vendors', '/', async (p) => { await p.getByTestId('chat-open').click(); await p.getByTestId('chat-input').fill('Where can I get dumplings?'); await p.getByTestId('chat-send').click(); await p.getByTestId('chat-bot').nth(1).waitFor() })
+await shot('p', phone, '21-chat-phone-zh-tradition', '/about', async (p) => { await p.locator('[data-testid=lang-select]:visible').selectOption('zh'); await p.getByTestId('chat-open').click(); await p.getByTestId('chat-input').fill('为什么要发红包？'); await p.getByTestId('chat-send').click(); await p.getByTestId('chat-bot').nth(1).waitFor() })
+await shot('p', phone, '22-chat-phone-ja-schedule', '/schedule', async (p) => { await p.getByTestId('chat-open').click(); await p.getByTestId('chat-input').fill('土曜日は何がありますか？'); await p.getByTestId('chat-send').click(); await p.getByTestId('chat-bot').nth(1).waitFor() })
 
 await browser.close()
 console.log(shots.join('\n'))

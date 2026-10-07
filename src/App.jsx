@@ -11,6 +11,7 @@ const Vendors = lazy(() => import('./pages/Vendors'))
 const Visit = lazy(() => import('./pages/Visit'))
 const GetInvolved = lazy(() => import('./pages/GetInvolved'))
 const About = lazy(() => import('./pages/About'))
+const IconSheet = import.meta.env.DEV ? lazy(() => import('./dev/IconSheet')) : null
 
 // VITE_HASH_ROUTER=1 builds a copy that works from any folder with no server
 // redirect (used for the preview published from Claude). GitHub Pages uses
@@ -61,6 +62,7 @@ export default function App() {
             <Route path="visit" element={<Visit />} />
             <Route path="get-involved" element={<GetInvolved />} />
             <Route path="about" element={<About />} />
+            {IconSheet && <Route path="dev/icons" element={<IconSheet />} />}
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

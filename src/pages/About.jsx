@@ -1,7 +1,8 @@
 import { useLang } from '../i18n/LanguageContext'
 import event from '../data/event.json'
+import Icon from '../components/Icon'
 
-const ICONS = ['🍲', '🏮', '🧧', '🐐', '🎑', '🐉']
+const ICONS = ['dumpling', 'lantern', 'envelope', 'goat', 'blossom', 'dragon']
 
 export default function About() {
   const { t } = useLang()
@@ -25,7 +26,7 @@ export default function About() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t('about.culture').map((c, i) => (
             <article key={c.title} className="card border-t-4 border-gold">
-              <div className="text-3xl" aria-hidden="true">{ICONS[i]}</div>
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red/10 text-red"><Icon name={ICONS[i]} className="h-7 w-7" /></div>
               <h3 className="mt-2 font-display text-xl font-bold">{c.title}</h3>
               <p className="mt-1 text-ink/80">{c.text}</p>
             </article>

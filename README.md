@@ -43,6 +43,14 @@ Every item in the data files has `en`, `zh`, `vi`, `ko`, and `ja` values. The un
 
 The schedule and vendor lists are currently **preliminary demo data** drawn from the MCCC festival application. They will be replaced when MCCC provides the real lineup.
 
+## Chatbot: Yang Yang (羊羊)
+
+The goat button in the corner opens a chat that answers questions about the schedule, vendors, tickets, parking, accessibility, and Lunar New Year traditions, in whichever of the five languages the visitor writes in.
+
+**Built-in mode (default).** Everything runs in the browser: a small intent engine (`src/lib/chat.js`) over the same JSON data the pages use, plus a curated knowledge base (`src/data/knowledge.json`, 12 topics in five languages). No key, no cost, no data leaves the browser. Edit the knowledge base like any other content file; the unit tests check that every topic has all five languages.
+
+**Optional AI mode (Gemini, free tier).** Set a `GEMINI_API_KEY` repository secret and the deploy workflow passes it to the build as `VITE_GEMINI_API_KEY`. The chat then asks Gemini first, grounded on the site's data, and falls back to the built-in engine if the call fails. Because the site is static, the key is compiled into the public bundle, so create a key just for this site in Google AI Studio and restrict it to the site's HTTP referrers (`midsouthlunar.org`, `alexorr2142-sudo.github.io`). The free tier has no bill to run up. The model defaults to `gemini-2.5-flash`; override with a `GEMINI_MODEL` repository variable. Remove the secret to go back to built-in mode.
+
 ## Previewing countdown states
 
 The Home page countdown changes with the date. To preview a state, add `?now=` with an ISO timestamp:

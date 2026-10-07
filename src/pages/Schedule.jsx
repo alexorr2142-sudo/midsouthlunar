@@ -7,8 +7,9 @@ import { filterSchedule } from '../lib/filter'
 import { itemCalendarEvent } from '../lib/calendar'
 import event from '../data/event.json'
 import schedule from '../data/schedule.json'
+import Icon from '../components/Icon'
 
-const TYPE_ICON = { performance: '🎭', food: '🥟', culture: '🖌️', family: '🧧' }
+const TYPE_ICON = { performance: 'drum', food: 'dumpling', culture: 'brush', family: 'envelope' }
 
 export default function Schedule() {
   const { t, lang, pick } = useLang()
@@ -52,7 +53,7 @@ export default function Schedule() {
               <li key={it.id} className="card flex flex-col sm:flex-row gap-3 sm:items-start" data-testid="schedule-item" data-day={it.day} data-stage={it.stage} data-type={it.type}>
                 <div className="sm:w-32 shrink-0 font-semibold tabular-nums text-red-dark">{it.start} – {it.end}</div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-lg font-bold"><span aria-hidden="true">{TYPE_ICON[it.type]}</span> {pick(it.title)}</h3>
+                  <h3 className="flex items-start gap-2 font-display text-lg font-bold"><Icon name={TYPE_ICON[it.type]} className="mt-1 h-5 w-5 text-red" /> <span>{pick(it.title)}</span></h3>
                   <p className="text-ink/80">{pick(it.description)}</p>
                   <p className="mt-1 text-sm text-ink/75">
                     <span className="rounded-full bg-gold-light/60 px-2 py-0.5">{pick(event.stages[it.stage])}</span>

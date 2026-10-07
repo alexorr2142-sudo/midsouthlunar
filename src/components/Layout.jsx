@@ -2,6 +2,15 @@ import { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext'
 import event from '../data/event.json'
+import Icon from './Icon'
+import { patternDataUri } from './Goat'
+import ChatWidget from './ChatWidget'
+
+// Two pattern tints: red-on-cream for the page body, gold-on-red for dark bands.
+const PATTERN_VARS = {
+  '--pattern-light': patternDataUri({ stroke: '#B5121B', fill: '#D4A017', alpha: 0.06 }),
+  '--pattern-dark': patternDataUri({ stroke: '#F3D27A', fill: '#F3D27A', alpha: 0.14 }),
+}
 
 const NAV = [
   ['/', 'nav.home'],
@@ -35,12 +44,12 @@ export function LangToggle({ className = '' }) {
   return (
     <label className={`relative inline-flex items-center ${className}`}>
       <span className="sr-only">{t('lang.label')}</span>
-      <span className="pointer-events-none absolute left-3" aria-hidden="true">🌐</span>
+      <span className="pointer-events-none absolute left-3 text-ink" aria-hidden="true"><Icon name="globe" className="h-4 w-4" /></span>
       <select value={lang} onChange={(e) => setLang(e.target.value)} data-testid="lang-select" data-lang={lang}
         className="max-w-[8.5rem] sm:max-w-none truncate appearance-none rounded-full bg-gold pl-9 pr-8 py-1.5 text-sm font-semibold text-ink hover:bg-gold-light focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60 cursor-pointer whitespace-nowrap">
         {langs.map((l) => <option key={l.code} value={l.code} lang={l.htmlLang}>{l.label}</option>)}
       </select>
-      <span className="pointer-events-none absolute right-3 text-xs" aria-hidden="true">▼</span>
+      <span className="pointer-events-none absolute right-3 text-[10px]" aria-hidden="true">▾</span>
     </label>
   )
 }
@@ -52,9 +61,9 @@ export default function Layout() {
     `block rounded-full px-4 py-2 font-medium transition focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60 ${isActive ? 'bg-gold text-ink' : 'text-white hover:bg-white/15'}`
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-pattern-light" style={PATTERN_VARS}>
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-2 focus:rounded focus:bg-gold focus:px-3 focus:py-2">{t('nav.skip')}</a>
-      <header className="sticky top-0 z-40 bg-red-dark text-white shadow-md">
+      <header className="sticky top-0 z-40 bg-red-dark bg-pattern-dark text-white shadow-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
           <Wordmark />
           <nav aria-label="Main" className="hidden lg:flex items-center gap-1">
@@ -65,9 +74,7 @@ export default function Layout() {
             <LangToggle />
             <button type="button" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? t('nav.close') : t('nav.menu')}
               onClick={() => setOpen((o) => !o)} className="rounded-lg p-2 hover:bg-white/15 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
-                {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-              </svg>
+              <Icon name={open ? 'close' : 'menu'} className="h-7 w-7" />
             </button>
           </div>
         </div>
@@ -83,7 +90,7 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="mt-16 bg-ink text-cream">
+      <footer className="mt-16 bg-ink bg-pattern-dark text-cream">
         <div className="papercut rotate-180" aria-hidden="true" />
         <div className="mx-auto max-w-6xl px-4 py-10 grid gap-6 md:grid-cols-3 text-sm">
           <div>
@@ -100,6 +107,7 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+      <ChatWidget />
     </div>
   )
 }

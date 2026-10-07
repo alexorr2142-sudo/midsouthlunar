@@ -1,0 +1,755 @@
+{
+  "_meta": {
+    "status": "Curated by the team with AI-drafted translations; zh/vi/ko/ja pending native review. Each topic: keywords per language (lowercase), answer per language."
+  },
+  "topics": [
+    {
+      "id": "what-is-lny",
+      "keywords": {
+        "en": [
+          "what is lunar new year",
+          "lunar new year",
+          "chinese new year",
+          "spring festival",
+          "what is the festival about",
+          "why do people celebrate",
+          "where does it come from",
+          "origin of lunar new year",
+          "history of lunar new year"
+        ],
+        "zh": [
+          "春节",
+          "农历新年",
+          "来历",
+          "起源",
+          "什么是春节",
+          "什么是农历新年",
+          "春节的由来"
+        ],
+        "vi": [
+          "tết là gì",
+          "tết nguyên đán",
+          "nguồn gốc",
+          "tết là gì",
+          "lịch sử tết"
+        ],
+        "ko": [
+          "설날이란",
+          "설날",
+          "음력 설",
+          "유래",
+          "설날이 뭐",
+          "설날의 유래"
+        ],
+        "ja": [
+          "旧正月とは",
+          "旧正月",
+          "春節",
+          "由来",
+          "旧正月って何",
+          "旧正月の由来"
+        ]
+      },
+      "answer": {
+        "en": "Lunar New Year marks the first new moon of the lunisolar calendar, usually between late January and mid-February. It is the most important holiday across Chinese, Vietnamese, Korean, and many other Asian cultures, a time to gather with family, honor ancestors, clear away the old year's bad luck, and welcome good fortune. In 2027 it falls on February 6, the start of the Year of the Goat.",
+        "zh": "农历新年（春节）是农历正月初一，通常在1月下旬到2月中旬之间。它是华人、越南人、韩国人以及许多亚洲文化中最重要的节日：阖家团圆、祭祖、辞旧迎新、祈求来年好运。2027年春节是2月6日，羊年开始。",
+        "vi": "Tết Nguyên Đán là ngày đầu tiên của năm âm lịch, thường rơi vào cuối tháng 1 đến giữa tháng 2. Đây là lễ hội quan trọng nhất của người Hoa, người Việt, người Hàn và nhiều nền văn hóa châu Á khác: sum họp gia đình, tưởng nhớ tổ tiên, xua đi vận xui và đón may mắn. Năm 2027, Tết rơi vào ngày 6 tháng 2, bắt đầu năm Mùi.",
+        "ko": "설날은 음력 1월 1일로, 보통 1월 말에서 2월 중순 사이입니다. 중국, 베트남, 한국 등 많은 아시아 문화권에서 가장 중요한 명절로, 가족이 모이고 조상을 기리며 묵은해의 액운을 보내고 복을 맞이합니다. 2027년 설날은 2월 6일이며 양의 해가 시작됩니다.",
+        "ja": "旧正月は太陰太陽暦の1月1日で、たいてい1月下旬から2月中旬にあたります。中国、ベトナム、韓国など多くのアジア文化圏で最も大切な祝日で、家族が集まり、先祖を敬い、古い年の厄を払って福を迎えます。2027年は2月6日が旧正月で、未年が始まります。"
+      }
+    },
+    {
+      "id": "goat-year",
+      "keywords": {
+        "en": [
+          "goat",
+          "sheep",
+          "ram",
+          "year of the goat",
+          "zodiac",
+          "what animal",
+          "which year",
+          "born in",
+          "personality",
+          "lucky",
+          "compatible"
+        ],
+        "zh": [
+          "羊年",
+          "生肖",
+          "属羊",
+          "属相",
+          "幸运",
+          "性格",
+          "什么年",
+          "属什么",
+          "今年是什么年",
+          "什么生肖"
+        ],
+        "vi": [
+          "năm mùi",
+          "con giáp",
+          "tuổi mùi",
+          "con dê",
+          "cầm tinh",
+          "may mắn",
+          "tính cách",
+          "năm nay là năm",
+          "năm con gì"
+        ],
+        "ko": [
+          "양의 해",
+          "양띠",
+          "띠",
+          "십이지",
+          "운세",
+          "성격",
+          "무슨 해",
+          "무슨 띠",
+          "올해는 무슨"
+        ],
+        "ja": [
+          "未年",
+          "羊年",
+          "ひつじ",
+          "干支",
+          "十二支",
+          "運勢",
+          "性格",
+          "何年",
+          "今年は何",
+          "何の年"
+        ]
+      },
+      "answer": {
+        "en": "2027 is the Year of the Goat (also called Sheep or Ram), the eighth of the twelve zodiac animals. Goat years include 1955, 1967, 1979, 1991, 2003, 2015, and 2027. People born in Goat years are said to be gentle, creative, kind, and artistic. 2027 is a Fire Goat year, which adds warmth and energy. Lucky colors are red, green, and purple; lucky numbers are 2 and 7. The Goat gets along best with the Rabbit, Horse, and Pig.",
+        "zh": "2027年是羊年，羊是十二生肖中的第八位。羊年包括1955、1967、1979、1991、2003、2015和2027年。属羊的人被认为温和、有创造力、善良、有艺术气质。2027年是火羊年，更添热情与活力。幸运色是红、绿、紫；幸运数字是2和7。羊与兔、马、猪最合得来。",
+        "vi": "2027 là năm Mùi (con dê), con giáp thứ tám trong mười hai con giáp. Các năm Mùi gồm 1955, 1967, 1979, 1991, 2003, 2015 và 2027. Người tuổi Mùi được cho là hiền hòa, sáng tạo, tốt bụng và có khiếu nghệ thuật. 2027 là năm Đinh Mùi (Hỏa), thêm phần ấm áp và năng lượng. Màu may mắn: đỏ, xanh lá, tím; số may mắn: 2 và 7. Tuổi Mùi hợp nhất với tuổi Mão, Ngọ và Hợi.",
+        "ko": "2027년은 양의 해로, 양은 십이지 중 여덟 번째 동물입니다. 양띠 해는 1955, 1967, 1979, 1991, 2003, 2015, 2027년입니다. 양띠는 온화하고 창의적이며 친절하고 예술적이라고 합니다. 2027년은 불의 기운을 지닌 정미년으로 따뜻함과 활력을 더합니다. 행운의 색은 빨강, 초록, 보라, 행운의 숫자는 2와 7. 양은 토끼, 말, 돼지와 가장 잘 맞습니다.",
+        "ja": "2027年は未年（ひつじ年）で、十二支の8番目です。未年は1955、1967、1979、1991、2003、2015、2027年。未年生まれは穏やかで創造的、優しく芸術的と言われます。2027年は火の未年で、温かさと活力が加わります。ラッキーカラーは赤、緑、紫、ラッキーナンバーは2と7。相性が良いのは卯、午、亥です。"
+      }
+    },
+    {
+      "id": "red-envelope",
+      "keywords": {
+        "en": [
+          "red envelope",
+          "hongbao",
+          "lucky money",
+          "red packet",
+          "li xi",
+          "sebaetdon",
+          "otoshidama",
+          "money gift"
+        ],
+        "zh": [
+          "红包",
+          "压岁钱",
+          "利是"
+        ],
+        "vi": [
+          "lì xì",
+          "bao lì xì",
+          "mừng tuổi",
+          "phong bao"
+        ],
+        "ko": [
+          "세뱃돈",
+          "붉은 봉투",
+          "복주머니",
+          "용돈"
+        ],
+        "ja": [
+          "お年玉",
+          "赤い袋",
+          "紅包"
+        ]
+      },
+      "answer": {
+        "en": "Red envelopes (hongbao in Mandarin, lì xì in Vietnamese, sebaetdon in Korean) hold money given by elders to children and by married couples to unmarried relatives. The red paper matters more than the amount: red drives away bad luck. Even amounts are preferred and the number 8 is lucky, while 4 is avoided because it sounds like 'death'. At the festival, the Red Envelope Blessing Station in the Family Garden hands out lucky envelopes on Saturday while supplies last.",
+        "zh": "红包（压岁钱）由长辈送给孩子，也由已婚者送给未婚晚辈。红纸比金额更重要：红色能驱邪。金额偏好双数，8最吉利，4因谐音“死”而避免。庆典期间，亲子园的红包祝福站在周六发放幸运红包，数量有限。",
+        "vi": "Bao lì xì (hồng bao) đựng tiền do người lớn mừng tuổi trẻ em, và người đã lập gia đình mừng người chưa lập gia đình. Màu đỏ quan trọng hơn số tiền vì đỏ xua đuổi vận xui. Người ta thích số chẵn, số 8 may mắn, tránh số 4 vì đồng âm với 'tử'. Tại lễ hội, Quầy lì xì chúc phúc ở Vườn gia đình phát bao lì xì may mắn vào thứ Bảy, số lượng có hạn.",
+        "ko": "붉은 봉투(세뱃돈)는 어른이 아이에게, 기혼자가 미혼 친척에게 주는 돈입니다. 금액보다 붉은 종이가 중요한데, 붉은색이 액운을 쫓기 때문입니다. 짝수 금액을 선호하고 8은 행운, 4는 '죽음'과 발음이 비슷해 피합니다. 축제에서는 가족 정원의 세뱃돈 봉투 덕담 부스가 토요일에 행운의 봉투를 나눠 드립니다(소진 시 종료).",
+        "ja": "赤い袋（紅包、お年玉）は年長者から子どもへ、既婚者から未婚の親族へ贈るお金です。金額より赤い紙が大切で、赤は厄を払うとされます。偶数が好まれ、8は縁起が良く、4は「死」と音が似るため避けます。祭りでは土曜日にファミリーガーデンのお年玉袋ブースで幸運の袋を配ります（なくなり次第終了）。"
+      }
+    },
+    {
+      "id": "food",
+      "keywords": {
+        "en": [
+          "reunion dinner",
+          "what do people eat",
+          "traditional food",
+          "dumpling",
+          "dumplings",
+          "fish",
+          "noodles",
+          "nian gao",
+          "rice cake",
+          "tangyuan",
+          "food meaning",
+          "why dumplings",
+          "banh chung",
+          "tteokguk"
+        ],
+        "zh": [
+          "年夜饭",
+          "吃什么",
+          "饺子",
+          "鱼",
+          "年糕",
+          "汤圆",
+          "长寿面",
+          "寓意"
+        ],
+        "vi": [
+          "bữa cơm tất niên",
+          "ăn gì",
+          "bánh chưng",
+          "bánh tét",
+          "sủi cảo",
+          "cá",
+          "món ăn",
+          "ý nghĩa món"
+        ],
+        "ko": [
+          "떡국",
+          "뭐 먹",
+          "음식",
+          "만두",
+          "생선",
+          "녠가오",
+          "탕위안",
+          "명절 음식"
+        ],
+        "ja": [
+          "年越し料理",
+          "何を食べ",
+          "餃子",
+          "魚",
+          "年糕",
+          "白玉",
+          "料理",
+          "縁起"
+        ]
+      },
+      "answer": {
+        "en": "The New Year's Eve reunion dinner is the most important meal of the year. Many dishes are chosen for their lucky meanings: dumplings look like gold ingots (wealth), a whole fish means surplus (the word 'fish' sounds like 'abundance'), long noodles mean long life, sticky rice cake (nian gao) means rising higher each year, and sweet rice balls (tangyuan) mean family togetherness. In Vietnam, bánh chưng (sticky rice cake with pork and mung bean) is essential; in Korea, a bowl of tteokguk (rice cake soup) is eaten to turn a year older. At the festival, the Food Hall has dumpling workshops and a tasting of New Year pastries.",
+        "zh": "除夕的年夜饭是一年中最重要的一餐。许多菜肴都有吉祥寓意：饺子形似元宝（财富），整鱼寓意“年年有余”，长寿面寓意长寿，年糕寓意“年年高”，汤圆寓意团团圆圆。越南人必吃粽子（bánh chưng），韩国人吃年糕汤（떡국）长一岁。庆典的美食区有包饺子工作坊和新年糕点品尝。",
+        "vi": "Bữa cơm tất niên đêm giao thừa là bữa ăn quan trọng nhất trong năm. Nhiều món được chọn vì ý nghĩa may mắn: sủi cảo giống thỏi vàng (giàu có), cá nguyên con nghĩa là dư dả, mì dài nghĩa là trường thọ, bánh tổ nghĩa là năm sau cao hơn năm trước, bánh trôi nghĩa là sum vầy. Ở Việt Nam không thể thiếu bánh chưng, bánh tét; ở Hàn Quốc ăn tteokguk để thêm một tuổi. Tại lễ hội, Khu ẩm thực có lớp làm sủi cảo và thưởng thức bánh Tết.",
+        "ko": "섣달그믐 밥상은 한 해 가장 중요한 식사입니다. 많은 음식에 길한 뜻이 있습니다. 만두는 금 덩이 모양(부), 생선 한 마리는 '남음'(풍요), 긴 국수는 장수, 녠가오(찰떡)는 해마다 높이 오름, 탕위안은 가족의 화합을 뜻합니다. 베트남에서는 반쯩이 필수이고, 한국에서는 떡국을 먹어야 한 살을 먹습니다. 축제 푸드홀에서는 만두 빚기 워크숍과 설 떡 시식이 열립니다.",
+        "ja": "大晦日の団らんの食事は一年で最も大切な食事です。多くの料理に縁起が込められています。餃子は金の延べ棒の形（富）、魚一尾は「余る」（豊かさ）、長い麺は長寿、年糕（餅）は年々高く、白玉団子は家族の団らんを表します。ベトナムではバインチュン、韓国ではトックッを食べて一つ年を取ります。祭りのフードホールでは餃子づくり教室と正月菓子の試食があります。"
+      }
+    },
+    {
+      "id": "decorations",
+      "keywords": {
+        "en": [
+          "red",
+          "gold",
+          "why red",
+          "decorations",
+          "couplets",
+          "fu character",
+          "upside down",
+          "lantern meaning",
+          "lanterns",
+          "colors",
+          "taboo",
+          "superstition",
+          "bad luck",
+          "should not",
+          "cleaning",
+          "haircut"
+        ],
+        "zh": [
+          "为什么红色",
+          "装饰",
+          "春联",
+          "福字",
+          "倒福",
+          "灯笼",
+          "禁忌",
+          "不能",
+          "扫除",
+          "理发"
+        ],
+        "vi": [
+          "màu đỏ",
+          "trang trí",
+          "câu đối",
+          "chữ phúc",
+          "đèn lồng",
+          "kiêng",
+          "điều kiêng kỵ",
+          "không nên",
+          "dọn nhà"
+        ],
+        "ko": [
+          "빨간색",
+          "붉은색",
+          "장식",
+          "춘련",
+          "복 자",
+          "등불",
+          "금기",
+          "하면 안",
+          "청소"
+        ],
+        "ja": [
+          "赤",
+          "金色",
+          "飾り",
+          "春聯",
+          "福の字",
+          "提灯",
+          "タブー",
+          "してはいけない",
+          "掃除"
+        ]
+      },
+      "answer": {
+        "en": "Red is everywhere because, in legend, the monster Nian feared the color red, loud noises, and fire. Gold stands for wealth. Homes hang red couplets with wishes on both sides of the door and paste the character 福 (fú, good fortune), often upside down because 'upside down' sounds like 'arrives'. Lanterns light the way for good luck. Common customs: clean the house before New Year's Eve but not on New Year's Day (you would sweep the luck away), avoid haircuts and breaking things in the first days, settle debts, and wear something new.",
+        "zh": "传说怪兽“年”害怕红色、巨响和火光，所以春节处处是红色。金色象征财富。家门两侧贴春联，贴“福”字常倒贴，取“福到”之意。灯笼为好运照亮道路。常见习俗：除夕前大扫除，但大年初一不扫地（以免扫走好运）；头几天不理发、不打破东西；年前还清债务；穿新衣。",
+        "vi": "Màu đỏ có mặt khắp nơi vì theo truyền thuyết, quái thú Niên sợ màu đỏ, tiếng ồn và lửa. Màu vàng tượng trưng cho giàu có. Nhà treo câu đối đỏ hai bên cửa và dán chữ Phúc, thường dán ngược vì 'ngược' đồng âm với 'đến'. Đèn lồng soi đường cho may mắn. Phong tục: dọn nhà trước giao thừa nhưng không quét nhà mùng 1 (sợ quét mất lộc), kiêng cắt tóc và làm vỡ đồ trong những ngày đầu năm, trả hết nợ, mặc đồ mới.",
+        "ko": "전설 속 괴물 '녠'이 붉은색, 큰 소리, 불을 두려워했기에 붉은색이 가득합니다. 금색은 부를 뜻합니다. 문 양옆에 붉은 춘련을 걸고 福 자를 붙이는데, '거꾸로'가 '온다'와 발음이 같아 거꾸로 붙이기도 합니다. 등불은 복이 오는 길을 밝힙니다. 풍습으로는 섣달그믐 전에 대청소를 하되 설날 당일에는 쓸지 않고(복을 쓸어낼까 봐), 연초에는 머리를 자르거나 물건을 깨지 않으며, 빚을 갚고, 새 옷을 입습니다.",
+        "ja": "伝説の怪物「年（ニェン）」が赤、大きな音、火を恐れたことから、赤が至る所に使われます。金色は富の象徴。玄関の両側に赤い春聯を飾り、「福」の字を貼ります。「逆さ」と「来る」の音が同じなので逆さに貼ることも。提灯は福の道を照らします。習慣としては、大晦日前に大掃除をしますが元日には掃かず（福を掃き出さないため）、年初は散髪や物を壊すことを避け、借金を返し、新しい服を着ます。"
+      }
+    },
+    {
+      "id": "lion-dragon",
+      "keywords": {
+        "en": [
+          "lion dance",
+          "dragon dance",
+          "why lion",
+          "drums",
+          "firecrackers",
+          "fireworks",
+          "noise",
+          "nian",
+          "monster"
+        ],
+        "zh": [
+          "舞狮",
+          "舞龙",
+          "为什么舞狮",
+          "鞭炮",
+          "烟花",
+          "年兽"
+        ],
+        "vi": [
+          "múa lân",
+          "múa rồng",
+          "pháo",
+          "tiếng trống",
+          "quái thú"
+        ],
+        "ko": [
+          "사자춤",
+          "용춤",
+          "폭죽",
+          "북소리",
+          "괴물"
+        ],
+        "ja": [
+          "獅子舞",
+          "龍舞",
+          "爆竹",
+          "太鼓",
+          "怪物"
+        ]
+      },
+      "answer": {
+        "en": "Lion and dragon dances bring good fortune and chase away evil spirits. The lion is danced by two performers and 'eats' lettuce hung at doorways for luck; the dragon is carried on poles by a whole team and follows a pearl of wisdom. Drums, gongs, and firecrackers all come from the legend of Nian, a beast scared off by noise and red. At the festival, the Opening Ceremony on Friday at 10 AM begins with a dragon dance, the lion dances on both days, and the Closing Gala on Saturday evening ends with a dragon dance.",
+        "zh": "舞狮舞龙带来好运、驱走邪祟。狮子由两人舞动，会“采青”（吃挂在门口的生菜）讨吉利；龙由一队人撑杆舞动，追逐宝珠。锣鼓和鞭炮都源于“年兽”怕声响和红色的传说。庆典中，周五上午10点的开幕式以舞龙开场，两天都有舞狮，周六晚的闭幕晚会以舞龙结束。",
+        "vi": "Múa lân và múa rồng mang lại may mắn và xua đuổi tà ma. Lân do hai người múa và 'ăn' rau xà lách treo trước cửa để lấy lộc; rồng do cả đội cầm gậy múa, đuổi theo viên ngọc. Trống, chiêng và pháo đều bắt nguồn từ truyền thuyết quái thú Niên sợ tiếng ồn và màu đỏ. Tại lễ hội, Lễ khai mạc thứ Sáu 10 giờ sáng mở đầu bằng múa rồng, múa lân cả hai ngày, và Lễ bế mạc tối thứ Bảy kết thúc bằng múa rồng.",
+        "ko": "사자춤과 용춤은 복을 부르고 악귀를 쫓습니다. 사자는 두 사람이 추며 문 앞에 매단 상추를 '먹어' 복을 빌고, 용은 팀 전체가 장대로 들고 여의주를 따라갑니다. 북, 징, 폭죽은 모두 소리와 붉은색을 무서워한 괴물 '녠' 전설에서 왔습니다. 축제에서는 금요일 오전 10시 개막식이 용춤으로 시작하고, 사자춤은 양일 모두, 토요일 저녁 폐막 갈라는 용춤으로 끝납니다.",
+        "ja": "獅子舞と龍舞は福を呼び、邪気を払います。獅子は二人で舞い、門前に吊るしたレタスを「食べて」福を授けます。龍はチーム全員が棒で支え、宝珠を追います。太鼓、銅鑼、爆竹はすべて、音と赤を恐れた怪物「年」の伝説に由来します。祭りでは金曜午前10時の開会式が龍舞で始まり、獅子舞は両日、土曜夜の閉幕ガラは龍舞で締めくくります。"
+      }
+    },
+    {
+      "id": "calendar-15",
+      "keywords": {
+        "en": [
+          "how long",
+          "15 days",
+          "fifteen days",
+          "lantern festival",
+          "when does it end",
+          "new year's eve",
+          "first day",
+          "days of celebration",
+          "how many days"
+        ],
+        "zh": [
+          "几天",
+          "十五天",
+          "元宵节",
+          "什么时候结束",
+          "除夕",
+          "正月初一",
+          "初几"
+        ],
+        "vi": [
+          "bao lâu",
+          "15 ngày",
+          "tết nguyên tiêu",
+          "kết thúc",
+          "giao thừa",
+          "mùng 1",
+          "mấy ngày"
+        ],
+        "ko": [
+          "며칠",
+          "15일",
+          "정월 대보름",
+          "언제 끝",
+          "섣달그믐",
+          "설날 당일"
+        ],
+        "ja": [
+          "何日間",
+          "15日",
+          "元宵節",
+          "いつ終わ",
+          "大晦日",
+          "元日"
+        ]
+      },
+      "answer": {
+        "en": "Traditionally the celebration lasts fifteen days. It begins with New Year's Eve (reunion dinner, staying up late to 'guard the year') and New Year's Day (visiting elders, red envelopes). Day 2 is for visiting the wife's family, day 5 welcomes the God of Wealth, day 7 is everyone's birthday, and day 15 is the Lantern Festival, when people walk under lanterns, solve lantern riddles, and eat sweet rice balls. In 2027, New Year's Eve is February 5, New Year's Day is February 6, and the Lantern Festival is February 20.",
+        "zh": "传统上春节庆祝十五天。从除夕（年夜饭、守岁）和大年初一（拜年、红包）开始，初二回娘家，初五迎财神，初七是“人日”，十五元宵节赏花灯、猜灯谜、吃汤圆。2027年除夕是2月5日，初一是2月6日，元宵节是2月20日。",
+        "vi": "Theo truyền thống, Tết kéo dài mười lăm ngày. Bắt đầu từ đêm giao thừa (cơm tất niên, thức đón năm mới) và mùng 1 (chúc Tết người lớn, lì xì). Mùng 2 về nhà ngoại, mùng 5 đón Thần Tài, mùng 7 là sinh nhật của mọi người, và ngày rằm là Tết Nguyên Tiêu với đèn lồng, câu đố và bánh trôi. Năm 2027, giao thừa là 5/2, mùng 1 là 6/2, Nguyên Tiêu là 20/2.",
+        "ko": "전통적으로 명절은 보름 동안 이어집니다. 섣달그믐(가족 식사, 밤을 새워 해를 지킴)과 설날 당일(어른께 세배, 세뱃돈)로 시작해, 2일은 처가 방문, 5일은 재물신 맞이, 7일은 모든 사람의 생일, 15일은 정월 대보름으로 등불 아래를 걷고 등불 수수께끼를 풀며 찹쌀 경단을 먹습니다. 2027년에는 섣달그믐이 2월 5일, 설날이 2월 6일, 대보름이 2월 20일입니다.",
+        "ja": "伝統的に祝いは15日間続きます。大晦日（団らんの食事、夜更かしして年を守る）と元日（年長者を訪ね、お年玉）で始まり、2日は妻の実家へ、5日は財神を迎え、7日は皆の誕生日、15日は元宵節で提灯の下を歩き、灯謎を解き、白玉団子を食べます。2027年は大晦日が2月5日、元日が2月6日、元宵節が2月20日です。"
+      }
+    },
+    {
+      "id": "tet",
+      "keywords": {
+        "en": [
+          "vietnam",
+          "tet",
+          "tết",
+          "how does vietnam celebrate",
+          "banh chung",
+          "kumquat",
+          "apricot blossom",
+          "peach blossom",
+          "vietnamese new year",
+          "in vietnam"
+        ],
+        "zh": [
+          "越南",
+          "越南新年",
+          "越南怎么过"
+        ],
+        "vi": [
+          "việt nam",
+          "người việt",
+          "tết việt",
+          "hoa mai",
+          "hoa đào",
+          "cây quất",
+          "ông táo",
+          "xông đất"
+        ],
+        "ko": [
+          "베트남",
+          "뗏"
+        ],
+        "ja": [
+          "ベトナム",
+          "テト"
+        ]
+      },
+      "answer": {
+        "en": "In Vietnam the holiday is Tết Nguyên Đán, usually just Tết. Families clean and decorate with kumquat trees, peach blossoms in the north, and yellow apricot blossoms in the south. The Kitchen God is sent to heaven a week before, bánh chưng and bánh tét (sticky rice cakes) are wrapped in banana leaves, and the first visitor of the year (xông đất) is believed to set the family's luck. Children receive lì xì in red envelopes, and people greet each other with 'Chúc mừng năm mới'.",
+        "zh": "在越南，这个节日叫Tết Nguyên Đán，简称Tết。家家打扫并用金桔树、北方的桃花和南方的黄梅花装饰。节前一周送灶神上天，用芭蕉叶包粽子（bánh chưng、bánh tét），新年第一位来访者（xông đất）被认为决定全家一年的运气。孩子收到红包，人们互道“Chúc mừng năm mới”。",
+        "vi": "Ở Việt Nam, Tết Nguyên Đán, gọi tắt là Tết. Gia đình dọn dẹp và trang trí bằng cây quất, hoa đào ở miền Bắc và hoa mai vàng ở miền Nam. Ông Táo được tiễn về trời trước một tuần, bánh chưng, bánh tét gói bằng lá chuối hoặc lá dong, và người xông đất đầu năm được tin là mang vận may cho cả nhà. Trẻ em nhận lì xì, mọi người chúc nhau 'Chúc mừng năm mới'.",
+        "ko": "베트남에서는 이 명절을 뗏(Tết Nguyên Đán)이라고 합니다. 가족들은 집을 청소하고 금귤나무, 북부는 복숭아꽃, 남부는 노란 살구꽃으로 장식합니다. 일주일 전 부엌신을 하늘로 보내고, 바나나잎에 싼 찹쌀떡 반쯩과 반뗏을 만들며, 새해 첫 방문객(쏭덧)이 집안의 운을 정한다고 믿습니다. 아이들은 붉은 봉투에 리씨를 받고, '쭉 믕 남 머이'라고 인사합니다.",
+        "ja": "ベトナムではこの祝日をテト（Tết Nguyên Đán）と呼びます。家々は掃除をして金柑の木、北部では桃の花、南部では黄色いアプリコットの花を飾ります。一週間前に台所の神を天へ送り、バナナの葉で包んだもち米のケーキ、バインチュンやバインテットを作り、新年最初の来客（ソンダット）が家族の運を決めると信じられています。子どもは赤い袋のリーシーをもらい、「チュック・ムン・ナム・モイ」と挨拶します。"
+      }
+    },
+    {
+      "id": "seollal",
+      "keywords": {
+        "en": [
+          "korea",
+          "seollal",
+          "how does korea celebrate",
+          "sebae",
+          "hanbok",
+          "tteokguk",
+          "yut",
+          "korean new year",
+          "korean people",
+          "in korea"
+        ],
+        "zh": [
+          "韩国",
+          "韩国新年",
+          "韩国怎么过"
+        ],
+        "vi": [
+          "hàn quốc",
+          "seollal",
+          "người hàn"
+        ],
+        "ko": [
+          "한국",
+          "세배",
+          "한복",
+          "윷놀이",
+          "차례",
+          "한국은 어떻게"
+        ],
+        "ja": [
+          "韓国",
+          "ソルラル",
+          "セベ",
+          "韓服"
+        ]
+      },
+      "answer": {
+        "en": "Korea celebrates Seollal over three days. Families travel to their hometowns, perform charye (an ancestral rite with a table of food), and children in hanbok perform sebae, a deep bow to elders, receiving blessings and sebaetdon money in return. Everyone eats tteokguk, rice cake soup, and is said to become a year older with it. Families play yut nori, a board game with four wooden sticks, and fly kites. The greeting is 'Saehae bok mani badeuseyo', 'receive lots of luck in the new year'.",
+        "zh": "韩国的설날（Seollal）庆祝三天。家人返乡，举行茶礼（祭祖），孩子穿韩服向长辈行大礼“岁拜”，收到祝福和压岁钱。全家吃年糕汤，吃了就“长一岁”。还会玩掷柶游戏（윷놀이）和放风筝。问候语是“새해 복 많이 받으세요”（新年多多纳福）。",
+        "vi": "Hàn Quốc đón Seollal trong ba ngày. Gia đình về quê, làm lễ charye cúng tổ tiên, trẻ em mặc hanbok lạy sebae trước người lớn và nhận lời chúc cùng tiền mừng tuổi sebaetdon. Mọi người ăn tteokguk (canh bánh gạo) và được coi là thêm một tuổi. Gia đình chơi yut nori và thả diều. Lời chúc là 'Saehae bok mani badeuseyo', 'nhận nhiều phúc trong năm mới'.",
+        "ko": "한국은 설날을 사흘간 쇱니다. 가족이 고향으로 가서 차례를 지내고, 한복을 입은 아이들이 어른께 세배를 올리고 덕담과 세뱃돈을 받습니다. 모두 떡국을 먹고 그로써 한 살을 더 먹는다고 합니다. 가족이 윷놀이를 하고 연을 날립니다. 인사말은 '새해 복 많이 받으세요'입니다.",
+        "ja": "韓国ではソルラルを3日間祝います。家族は故郷へ帰り、祖先への祭祀「茶礼」を行い、韓服を着た子どもが年長者に深いお辞儀「セベ」をして、祝福とお年玉「セベットン」をもらいます。皆がトックッ（餅のスープ）を食べ、それで一つ年を取るとされます。家族でユンノリ（木の棒を使う盤上遊戯）をしたり凧を揚げたりします。挨拶は「セヘ ボク マニ パドゥセヨ」（新年に福をたくさん受けてください）。"
+      }
+    },
+    {
+      "id": "japan-others",
+      "keywords": {
+        "en": [
+          "japan",
+          "does japan celebrate",
+          "oshogatsu",
+          "mongolia",
+          "tsagaan sar",
+          "tibet",
+          "losar",
+          "other countries",
+          "who celebrates",
+          "singapore",
+          "malaysia",
+          "philippines",
+          "in japan",
+          "japanese new year"
+        ],
+        "zh": [
+          "日本",
+          "日本过春节吗",
+          "蒙古",
+          "西藏",
+          "哪些国家",
+          "新加坡",
+          "马来西亚"
+        ],
+        "vi": [
+          "nhật bản",
+          "mông cổ",
+          "tây tạng",
+          "nước nào",
+          "singapore",
+          "malaysia"
+        ],
+        "ko": [
+          "일본",
+          "몽골",
+          "티베트",
+          "어느 나라",
+          "싱가포르",
+          "말레이시아"
+        ],
+        "ja": [
+          "日本では",
+          "日本は",
+          "正月",
+          "モンゴル",
+          "チベット",
+          "どの国",
+          "シンガポール",
+          "マレーシア"
+        ]
+      },
+      "answer": {
+        "en": "Japan switched to the solar calendar in 1873, so most of Japan celebrates New Year (Oshōgatsu) on January 1 with kadomatsu decorations, osechi food, and shrine visits; the lunar date is still observed in Okinawa and in Chinatowns like Yokohama and Nagasaki, with lantern festivals. Mongolia celebrates Tsagaan Sar (White Moon), Tibet celebrates Losar, and Singapore, Malaysia, Indonesia, the Philippines, and Chinese communities worldwide, including Memphis, mark the lunar date. The festival welcomes everyone from every one of these traditions.",
+        "zh": "日本自1873年改用公历，大部分地区在1月1日过正月（お正月），摆门松、吃御节料理、去神社参拜；冲绳以及横滨、长崎等地的中华街仍过农历新年并举办灯会。蒙古过白月节（Tsagaan Sar），西藏过藏历新年（Losar），新加坡、马来西亚、印尼、菲律宾以及包括孟菲斯在内的世界各地华人社区都庆祝农历新年。欢迎所有传统背景的朋友来参加庆典。",
+        "vi": "Nhật Bản chuyển sang dương lịch từ năm 1873 nên phần lớn đón năm mới (Oshōgatsu) vào ngày 1 tháng 1 với trang trí kadomatsu, ẩm thực osechi và đi lễ đền; ngày âm lịch vẫn được giữ ở Okinawa và các khu phố Hoa như Yokohama, Nagasaki với lễ hội đèn lồng. Mông Cổ đón Tsagaan Sar, Tây Tạng đón Losar, và Singapore, Malaysia, Indonesia, Philippines cùng cộng đồng người Hoa khắp thế giới, kể cả Memphis, đều đón Tết âm lịch. Lễ hội chào đón mọi người từ mọi truyền thống.",
+        "ko": "일본은 1873년에 양력으로 바꿔 대부분 1월 1일에 새해(오쇼가쓰)를 쇠며 가도마쓰 장식, 오세치 요리, 신사 참배를 합니다. 음력 설은 오키나와와 요코하마, 나가사키 같은 차이나타운에서 등불 축제로 이어집니다. 몽골은 차강사르, 티베트는 로사르를 쇠고, 싱가포르, 말레이시아, 인도네시아, 필리핀, 그리고 멤피스를 포함한 전 세계 중국계 공동체가 음력 설을 기념합니다. 축제는 이 모든 전통의 분들을 환영합니다.",
+        "ja": "日本は1873年に太陽暦へ移行したため、多くの地域で1月1日にお正月を祝い、門松、おせち、初詣が行われます。旧正月は沖縄や横浜・長崎の中華街で今も祝われ、ランタンフェスティバルが開かれます。モンゴルはツァガーンサル、チベットはロサルを祝い、シンガポール、マレーシア、インドネシア、フィリピン、そしてメンフィスを含む世界中の中国系コミュニティが旧正月を祝います。祭りはどの伝統の方も歓迎します。"
+      }
+    },
+    {
+      "id": "greetings",
+      "keywords": {
+        "en": [
+          "how to say",
+          "happy new year",
+          "greeting",
+          "greetings",
+          "gong xi fa cai",
+          "xin nian kuai le",
+          "say in chinese",
+          "say in vietnamese",
+          "say in korean",
+          "say in japanese",
+          "phrase",
+          "wish",
+          "how do you say",
+          "how do i say",
+          "how to wish",
+          "new year greeting",
+          "happy lunar new year"
+        ],
+        "zh": [
+          "怎么说",
+          "新年快乐",
+          "恭喜发财",
+          "祝福语",
+          "拜年",
+          "用越南语",
+          "用韩语",
+          "用日语",
+          "用英语",
+          "怎么祝福",
+          "用中文怎么说"
+        ],
+        "vi": [
+          "nói thế nào",
+          "chúc mừng năm mới",
+          "lời chúc",
+          "câu chúc",
+          "tiếng trung",
+          "tiếng hàn",
+          "tiếng nhật",
+          "tiếng anh"
+        ],
+        "ko": [
+          "어떻게 말",
+          "새해 복 많이",
+          "인사말",
+          "덕담",
+          "중국어로",
+          "베트남어로",
+          "일본어로",
+          "영어로"
+        ],
+        "ja": [
+          "何と言",
+          "あけまして",
+          "新年の挨拶",
+          "挨拶",
+          "中国語で",
+          "ベトナム語で",
+          "韓国語で",
+          "英語で"
+        ]
+      },
+      "answer": {
+        "en": "Happy New Year around the festival:\n• Mandarin: 新年快乐 Xīnnián kuàilè (shin-nyen kwai-luh) or 恭喜发财 Gōngxǐ fācái (gong-shee fah-tsai, 'wishing you prosperity')\n• Cantonese: 恭喜發財 Gung hei fat choi\n• Vietnamese: Chúc mừng năm mới (chook mung nam moy)\n• Korean: 새해 복 많이 받으세요 Saehae bok mani badeuseyo (seh-heh bok mah-nee bah-deu-seh-yo)\n• Japanese: 明けましておめでとうございます Akemashite omedetō gozaimasu\nTry one on a vendor at the festival; it always gets a smile.",
+        "zh": "各种语言的新年问候：\n• 普通话：新年快乐 / 恭喜发财\n• 粤语：恭喜發財 Gung hei fat choi\n• 越南语：Chúc mừng năm mới\n• 韩语：새해 복 많이 받으세요 Saehae bok mani badeuseyo\n• 日语：明けましておめでとうございます Akemashite omedetō gozaimasu\n• 英语：Happy Lunar New Year!\n在庆典上对摊主说一句，一定会收获笑容。",
+        "vi": "Chúc mừng năm mới bằng các thứ tiếng:\n• Tiếng Quan Thoại: 新年快乐 Xīnnián kuàilè hoặc 恭喜发财 Gōngxǐ fācái ('chúc phát tài')\n• Tiếng Quảng Đông: Gung hei fat choi\n• Tiếng Việt: Chúc mừng năm mới\n• Tiếng Hàn: 새해 복 많이 받으세요 Saehae bok mani badeuseyo\n• Tiếng Nhật: 明けましておめでとうございます Akemashite omedetō gozaimasu\n• Tiếng Anh: Happy Lunar New Year!\nThử nói với một chủ gian hàng tại lễ hội, chắc chắn sẽ nhận được nụ cười.",
+        "ko": "여러 언어의 새해 인사:\n• 중국어(표준): 新年快乐 신녠콰이러 또는 恭喜发财 궁시파차이('부자 되세요')\n• 광둥어: 恭喜發財 궁헤이팟초이\n• 베트남어: Chúc mừng năm mới 쭉 믕 남 머이\n• 한국어: 새해 복 많이 받으세요\n• 일본어: 明けましておめでとうございます 아케마시테 오메데토 고자이마스\n• 영어: Happy Lunar New Year!\n축제에서 업체 분께 한번 건네 보세요. 늘 웃음이 돌아옵니다.",
+        "ja": "各言語の新年の挨拶：\n• 中国語（普通話）：新年快乐 シンニェン クァイラ、恭喜发财 ゴンシー ファーツァイ（「金運に恵まれますように」）\n• 広東語：恭喜發財 ゴンヘイ ファッチョイ\n• ベトナム語：Chúc mừng năm mới チュック ムン ナム モイ\n• 韓国語：새해 복 많이 받으세요 セヘ ボク マニ パドゥセヨ\n• 日本語：明けましておめでとうございます\n• 英語：Happy Lunar New Year!\n祭りで出店の方に声をかけてみてください。きっと笑顔が返ってきます。"
+      }
+    },
+    {
+      "id": "zodiac-all",
+      "keywords": {
+        "en": [
+          "twelve animals",
+          "12 animals",
+          "all the zodiac",
+          "zodiac animals",
+          "which animal am i",
+          "rat ox tiger",
+          "my sign",
+          "what is my animal",
+          "born in 199",
+          "born in 200",
+          "born in 198"
+        ],
+        "zh": [
+          "十二生肖",
+          "我属什么",
+          "我的生肖",
+          "出生"
+        ],
+        "vi": [
+          "mười hai con giáp",
+          "12 con giáp",
+          "tôi tuổi gì",
+          "sinh năm"
+        ],
+        "ko": [
+          "열두 띠",
+          "12띠",
+          "내 띠",
+          "무슨 띠",
+          "태어난"
+        ],
+        "ja": [
+          "十二支",
+          "私の干支",
+          "何年生まれ",
+          "生まれ"
+        ]
+      },
+      "answer": {
+        "en": "The twelve zodiac animals cycle in this order: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, Pig. To find yours, take your birth year: 2020 and 2008 are Rat, 2021 and 2009 Ox, 2022 and 2010 Tiger, 2023 and 2011 Rabbit, 2024 and 2012 Dragon, 2025 and 2013 Snake, 2026 and 2014 Horse, 2027 and 2015 Goat, 2016 and 2004 Monkey, 2017 and 2005 Rooster, 2018 and 2006 Dog, 2019 and 2007 Pig. If you were born in January or early February, check whether your birthday fell before that year's Lunar New Year; if so, you belong to the previous animal. Vietnam swaps the Rabbit for the Cat.",
+        "zh": "十二生肖依次是：鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪。按出生年查找：2020、2008属鼠；2021、2009属牛；2022、2010属虎；2023、2011属兔；2024、2012属龙；2025、2013属蛇；2026、2014属马；2027、2015属羊；2016、2004属猴；2017、2005属鸡；2018、2006属狗；2019、2007属猪。若生于1月或2月初，需看生日是否在当年春节之前，如是则属上一个生肖。越南以猫代兔。",
+        "vi": "Mười hai con giáp theo thứ tự: Tý (chuột), Sửu (trâu), Dần (hổ), Mão (mèo), Thìn (rồng), Tỵ (rắn), Ngọ (ngựa), Mùi (dê), Thân (khỉ), Dậu (gà), Tuất (chó), Hợi (lợn). Theo năm sinh: 2020, 2008 Tý; 2021, 2009 Sửu; 2022, 2010 Dần; 2023, 2011 Mão; 2024, 2012 Thìn; 2025, 2013 Tỵ; 2026, 2014 Ngọ; 2027, 2015 Mùi; 2016, 2004 Thân; 2017, 2005 Dậu; 2018, 2006 Tuất; 2019, 2007 Hợi. Nếu sinh vào tháng 1 hoặc đầu tháng 2, hãy kiểm tra sinh nhật có trước Tết năm đó không; nếu có thì thuộc con giáp trước. Người Việt dùng Mèo thay cho Thỏ.",
+        "ko": "열두 띠의 순서는 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양, 원숭이, 닭, 개, 돼지입니다. 출생 연도로 찾으면 2020, 2008 쥐; 2021, 2009 소; 2022, 2010 호랑이; 2023, 2011 토끼; 2024, 2012 용; 2025, 2013 뱀; 2026, 2014 말; 2027, 2015 양; 2016, 2004 원숭이; 2017, 2005 닭; 2018, 2006 개; 2019, 2007 돼지입니다. 1월이나 2월 초에 태어났다면 생일이 그해 설날 전인지 확인하세요. 전이라면 앞 띠에 속합니다. 베트남은 토끼 대신 고양이를 씁니다.",
+        "ja": "十二支の順番は、子（ねずみ）、丑（うし）、寅（とら）、卯（うさぎ）、辰（たつ）、巳（へび）、午（うま）、未（ひつじ）、申（さる）、酉（とり）、戌（いぬ）、亥（いのしし）。生まれ年で探すと、2020・2008年は子、2021・2009年は丑、2022・2010年は寅、2023・2011年は卯、2024・2012年は辰、2025・2013年は巳、2026・2014年は午、2027・2015年は未、2016・2004年は申、2017・2005年は酉、2018・2006年は戌、2019・2007年は亥。1月か2月初めの生まれなら、その年の旧正月より前かどうかを確かめてください。前なら一つ前の干支です。ベトナムでは卯の代わりに猫です。"
+      }
+    },
+    {
+      "id": "lantern-festival",
+      "keywords": {
+        "en": [
+          "lantern riddles",
+          "lantern walk",
+          "yuanxiao",
+          "make a lantern",
+          "why lanterns"
+        ],
+        "zh": [
+          "元宵",
+          "灯谜",
+          "花灯",
+          "做灯笼",
+          "为什么挂灯笼"
+        ],
+        "vi": [
+          "đèn lồng",
+          "câu đố đèn",
+          "làm đèn lồng",
+          "nguyên tiêu"
+        ],
+        "ko": [
+          "등불 축제",
+          "등불 수수께끼",
+          "등불 만들기",
+          "원소절"
+        ],
+        "ja": [
+          "ランタン",
+          "灯謎",
+          "提灯づくり",
+          "元宵"
+        ]
+      },
+      "answer": {
+        "en": "Lanterns close out the season on the fifteenth night, the first full moon of the year. Families walk under rows of red lanterns, solve riddles written on paper tags, and eat round sweet rice balls that stand for a complete family. Lanterns originally guided wandering spirits home and signaled the return of light after winter. At the festival, the Lantern Display and Lantern Making runs Friday evening from 7:30 PM in the Family Garden, so you can make one to take home. Lantern Lane in the market sells silk and paper lanterns.",
+        "zh": "正月十五元宵节是春节的尾声，也是一年中第一个月圆之夜。人们在红灯笼下漫步、猜灯谜、吃象征团圆的汤圆。灯笼最初用来为游魂引路，也象征冬去春来、光明回归。庆典中，花灯展示与制作活动在周五晚7:30于亲子园举行，可以做一个带回家。市集的“灯笼巷”售卖丝绸和纸灯笼。",
+        "vi": "Đèn lồng khép lại mùa Tết vào đêm rằm, trăng tròn đầu tiên của năm. Gia đình dạo dưới những hàng đèn lồng đỏ, giải câu đố ghi trên thẻ giấy và ăn bánh trôi tròn tượng trưng cho gia đình trọn vẹn. Đèn lồng xưa dẫn đường cho linh hồn và báo hiệu ánh sáng trở lại sau mùa đông. Tại lễ hội, Trưng bày và làm đèn lồng diễn ra tối thứ Sáu từ 7:30 ở Vườn gia đình, bạn có thể tự làm một chiếc mang về. Ngõ Đèn Lồng trong chợ bán đèn lụa và đèn giấy.",
+        "ko": "등불은 보름째 밤, 그해 첫 보름달에 명절을 마무리합니다. 가족이 붉은 등불 아래를 걷고, 종이 꼬리표에 적힌 수수께끼를 풀며, 온전한 가족을 뜻하는 둥근 찹쌀 경단을 먹습니다. 등불은 본래 떠도는 영혼을 집으로 이끌고 겨울 뒤 빛의 귀환을 알렸습니다. 축제에서는 금요일 저녁 7시 30분부터 가족 정원에서 등불 전시와 등불 만들기가 열려 직접 만들어 가져갈 수 있습니다. 장터의 '등불 골목'에서 비단과 종이 등불을 판매합니다.",
+        "ja": "提灯は15日目の夜、その年最初の満月に祝いを締めくくります。家族は赤い提灯の列の下を歩き、紙札に書かれたなぞなぞを解き、家族の円満を表す丸い白玉団子を食べます。提灯はもともとさまよう魂を家へ導き、冬のあとの光の帰還を告げるものでした。祭りでは金曜夜7時半からファミリーガーデンで提灯の展示と提灯づくりがあり、作って持ち帰れます。マーケットの「提灯横丁」では絹と紙の提灯を販売しています。"
+      }
+    }
+  ]
+}
