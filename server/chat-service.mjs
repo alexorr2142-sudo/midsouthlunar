@@ -32,7 +32,7 @@ export function websiteGrounding(lang = 'en') {
   return { event, schedule, vendors, knowledge, websiteText: translated, englishWebsiteText: english }
 }
 
-export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', model = process.env.GEMINI_MODEL || 'gemini-2.5-flash', fetchImpl = globalThis.fetch, timeoutMs = 20_000, getGrounding = websiteGrounding } = {}) {
+export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', model = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite', fetchImpl = globalThis.fetch, timeoutMs = 20_000, getGrounding = websiteGrounding } = {}) {
   if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,80}$/.test(model)) throw new Error('Invalid GEMINI_MODEL')
   const enabled = Boolean(apiKey.trim())
   const ask = async (raw) => {
