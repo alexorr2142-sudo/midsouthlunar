@@ -18,7 +18,7 @@ import vendors from '../data/vendors.json'
 import knowledge from '../data/knowledge.json'
 
 export const GEMINI_KEY = import.meta.env.VITE_GEMINI_API_KEY || ''
-export const GEMINI_MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash-lite'
+export const GEMINI_MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-3.1-flash-lite'
 export const aiEnabled = () => Boolean(GEMINI_KEY)
 
 const LANG_NAMES = { en: 'English', zh: 'Simplified Chinese', vi: 'Vietnamese', ko: 'Korean', ja: 'Japanese' }
