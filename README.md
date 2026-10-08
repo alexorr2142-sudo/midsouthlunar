@@ -8,7 +8,9 @@ Built as the group project for MIS 7623 (AI-Assisted Application Development for
 
 ## What it is
 
-A fully static site in five languages (English, 简体中文, Tiếng Việt, 한국어, 日本語) with six pages: Home, Schedule, Vendors, Tickets & Visit, Get Involved, and About. There is no backend, database, sign-in, or analytics. Tickets link to Eventbrite and applications link to Google Forms. See `docs/requirements` for the full requirements document.
+A static website in seven languages (English, 简体中文, 繁體中文, 日本語, 한국어, ไทย, Tiếng Việt) with six pages: Home, Schedule, Vendors, Tickets & Visit, Get Involved, and About. English is the default; language choice persists. There is no database, sign-in, or analytics. Local chatbot mode needs no server. An optional protected AI service supports broader cultural questions. See `docs/requirements` for the original requirements and `docs/COMPARISON_REVIEW.md` for the comparison improvements.
+
+The confirmed 2027 Eventbrite listing and Google Forms URLs have not been supplied. Their fields are blank and the UI shows a pending message. Add specific event/form URLs in `event.json` when available; generic homepages are deliberately rejected.
 
 ## Stack
 
@@ -36,20 +38,21 @@ npm test           # unit + integration tests
 | Schedule items | `src/data/schedule.json` |
 | Vendors | `src/data/vendors.json` |
 | English text | `src/i18n/en.json` |
-| Chinese text | `src/i18n/zh.json` |
+| Simplified / Traditional Chinese text | `src/i18n/zh.json`, `zh-Hant.json` |
+| Thai text | `src/i18n/th.json` |
 | Vietnamese, Korean, Japanese text | `src/i18n/vi.json`, `ko.json`, `ja.json` |
 
-Every item in the data files has `en`, `zh`, `vi`, `ko`, and `ja` values. The unit tests fail if any language is missing, so run `npm run test:unit` after editing. Edit the file in GitHub's web editor, commit to `main`, and the site redeploys in about a minute.
+Every item in the data files has `en`, `zh`, `zh-Hant`, `th`, `vi`, `ko`, and `ja` values. The unit tests fail if a language is missing, so run `npm run test:unit` after editing. Changes merged into `main` trigger deployment. Translations are drafts pending native-speaker review.
 
 The schedule and vendor lists are currently **preliminary demo data** drawn from the MCCC festival application. They will be replaced when MCCC provides the real lineup.
 
 ## Chatbot: Yang Yang (羊羊)
 
-The goat button in the corner opens a chat that answers questions about the schedule, vendors, tickets, parking, accessibility, and Lunar New Year traditions, in whichever of the five languages the visitor writes in.
+The goat button in the corner opens a chat about the schedule, vendors, tickets, parking, accessibility and Lunar New Year traditions in all seven languages. Event-address questions always read `event.venue.name` and `event.venue.address`, including in AI mode; an activity's Food Hall is not the festival's street address.
 
-**Built-in mode (default).** Everything runs in the browser: a small intent engine (`src/lib/chat.js`) over the same JSON data the pages use, plus a curated knowledge base (`src/data/knowledge.json`, 12 topics in five languages). No key, no cost, no data leaves the browser. Edit the knowledge base like any other content file; the unit tests check that every topic has all five languages.
+**Built-in mode (default).** A local intent engine (`src/lib/chat.js`) uses the website's JSON data and curated knowledge (`src/data/knowledge.json`). Chat messages stay in the browser. It answers supported topics and gives a helpful fallback for other questions. Edit knowledge like other content; the tests check all seven languages.
 
-**Optional AI mode (Gemini, free tier).** Set a `GEMINI_API_KEY` repository secret and the deploy workflow passes it to the build as `VITE_GEMINI_API_KEY`. The chat then asks Gemini first, grounded on the site's data, and falls back to the built-in engine if the call fails. Because the site is static, the key is compiled into the public bundle, so create a key just for this site in Google AI Studio and restrict it to the site's HTTP referrers (`midsouthlunar.org`, `alexorr2142-sudo.github.io`). The free tier has no bill to run up. The model defaults to `gemini-2.5-flash`; override with a `GEMINI_MODEL` repository variable. Remove the secret to go back to built-in mode.
+**Optional protected AI mode.** Run `npm run chat` on a separate Node host with the server-only `GEMINI_API_KEY`. Configure `VITE_CHAT_API_URL` locally or the public GitHub Actions variable `CHAT_API_URL` with that host's HTTPS `/api/chat` URL. GitHub Pages cannot host the server. The API key never enters browser code. Festival answers use website facts; broader cultural answers can use model knowledge. Failures fall back locally, with a visible notice. See [setup, limits and privacy](docs/CHAT_SETUP.md). Model access, provider costs and a real account connection require the MCCC account owner; development tests make no billed calls.
 
 ## Previewing countdown states
 

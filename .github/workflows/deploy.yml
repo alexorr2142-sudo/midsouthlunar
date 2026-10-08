@@ -34,15 +34,13 @@ jobs:
       # When a custom domain (CNAME) is present, serve from the root instead.
       - name: Build
         env:
-          # Optional AI mode for the chatbot. Leave the secret unset to ship the
-          # built-in engine only. See README, "Chatbot".
-          VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          VITE_GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          # Public URL of the protected chat backend; never compile an API key.
+          VITE_CHAT_API_URL: ${{ vars.CHAT_API_URL }}
         run: |
           if [ -f public/CNAME ]; then export BASE_PATH=/; else export BASE_PATH=/midsouthlunar/; fi
           echo "BASE_PATH=$BASE_PATH"
           npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 

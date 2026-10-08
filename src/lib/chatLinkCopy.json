@@ -1,0 +1,44 @@
+{
+  "en": {
+    "tickets": "Tickets are sold through Eventbrite. Pricing will be announced soon.\n2027 ticket sales link will be announced.",
+    "volunteer": "Help with setup, information booths, kids' activities, and translation. Students welcome.\nVolunteer sign-up link coming soon.",
+    "vendorApply": "Food stalls, crafts, and cultural organizations are welcome. Applications open soon.\nVendor application link coming soon.",
+    "preliminary": "Preliminary lineup. Times and vendors are subject to change."
+  },
+  "zh": {
+    "tickets": "门票通过 Eventbrite 销售。票价即将公布。\n2027年售票链接将另行公布。",
+    "volunteer": "协助布置、咨询台、儿童活动和翻译。欢迎学生参加。\n志愿者报名链接即将公布。",
+    "vendorApply": "欢迎美食摊位、手工艺和文化机构。申请即将开放。\n商户申请链接即将公布。",
+    "preliminary": "初步安排，时间和商户可能调整。"
+  },
+  "zh-Hant": {
+    "tickets": "門票透過 Eventbrite 販售。票價即將公布。\n2027年購票連結即將公布。",
+    "volunteer": "協助布置、諮詢台、兒童活動與翻譯。歡迎學生參加。\n志工報名連結即將公布。",
+    "vendorApply": "歡迎美食攤位、手工藝與文化機構。申請即將開放。\n商戶申請連結即將公布。",
+    "preliminary": "初步安排，時間與商戶名單可能調整。"
+  },
+  "th": {
+    "tickets": "จำหน่ายบัตรผ่าน Eventbrite ราคาจะประกาศเร็ว ๆ นี้\nจะประกาศลิงก์ซื้อบัตรปี 2027 เร็ว ๆ นี้",
+    "volunteer": "ช่วยจัดสถานที่ ประจำบูธข้อมูล ดูแลกิจกรรมเด็ก และแปลภาษา ยินดีต้อนรับนักเรียนและนักศึกษา\nลิงก์สมัครอาสาสมัครจะเปิดเร็ว ๆ นี้",
+    "vendorApply": "ยินดีต้อนรับร้านอาหาร งานหัตถกรรม และองค์กรวัฒนธรรม จะเปิดรับสมัครเร็ว ๆ นี้\nลิงก์สมัครออกบูธจะเปิดเร็ว ๆ นี้",
+    "preliminary": "กำหนดการเบื้องต้น เวลาและรายชื่อร้านค้าอาจมีการเปลี่ยนแปลง"
+  },
+  "vi": {
+    "tickets": "Vé được bán qua Eventbrite. Giá vé sẽ sớm được công bố.\nLiên kết bán vé năm 2027 sẽ được công bố.",
+    "volunteer": "Hỗ trợ dựng sân khấu, quầy thông tin, hoạt động trẻ em và phiên dịch. Chào đón sinh viên.\nSắp có liên kết đăng ký tình nguyện.",
+    "vendorApply": "Chào đón quầy ẩm thực, thủ công và các tổ chức văn hóa. Sắp mở đăng ký.\nSắp có liên kết đăng ký gian hàng.",
+    "preliminary": "Chương trình dự kiến. Giờ và gian hàng có thể thay đổi."
+  },
+  "ko": {
+    "tickets": "티켓은 Eventbrite에서 판매합니다. 가격은 곧 공지됩니다.\n2027년 티켓 판매 링크는 추후 공지됩니다.",
+    "volunteer": "설치, 안내 부스, 어린이 활동, 통역을 도와주세요. 학생도 환영합니다.\n자원봉사 신청 링크가 곧 공개됩니다.",
+    "vendorApply": "음식 부스, 공예, 문화 단체를 환영합니다. 신청은 곧 시작됩니다.\n업체 신청 링크가 곧 공개됩니다.",
+    "preliminary": "예비 일정입니다. 시간과 업체는 변경될 수 있습니다."
+  },
+  "ja": {
+    "tickets": "チケットはEventbriteで販売します。料金は近日発表予定です。\n2027年のチケット販売リンクは後日公開します。",
+    "volunteer": "設営、案内所、子ども向け催し、通訳をお手伝いください。学生も歓迎です。\nボランティア登録リンクは近日公開します。",
+    "vendorApply": "飲食、工芸、文化団体の出店を歓迎します。申込受付は近日開始。\n出店申込リンクは近日公開します。",
+    "preliminary": "暫定プログラムです。時間や出店は変更になる場合があります。"
+  }
+}

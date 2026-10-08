@@ -38,3 +38,14 @@ test.describe('IT-3 Yang Yang chat widget', () => {
     await expect(page.getByTestId('chat-bot').nth(1)).toContainText('Thứ Bảy')
   })
 })
+
+ test('event address resolves to the venue rather than the Food Hall', async ({ page }) => {
+    await page.goto('/visit')
+    await page.getByTestId('chat-open').click()
+    await page.getByTestId('chat-input').fill('where is the address of the event')
+    await page.getByTestId('chat-send').click()
+    const reply = page.getByTestId('chat-bot').nth(1)
+    await expect(reply).toContainText('Agricenter International')
+    await expect(reply).toContainText('7777 Walnut Grove Rd, Memphis, TN 38120')
+    await expect(reply).not.toContainText('Food Hall')
+  })

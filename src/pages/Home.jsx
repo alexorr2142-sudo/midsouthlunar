@@ -6,6 +6,7 @@ import { festivalCalendarEvent } from '../lib/calendar'
 import event from '../data/event.json'
 import Icon from '../components/Icon'
 import Goat from '../components/Goat'
+import { externalLink } from '../lib/links'
 
 const ICONS = ['dragon', 'dumpling', 'lantern', 'envelope']
 
@@ -15,6 +16,7 @@ export default function Home() {
   // ?now=2027-02-05T15:00:00-06:00 lets reviewers preview the "happening now" state.
   const nowParam = params.get('now')
   const now = nowParam && !Number.isNaN(Date.parse(nowParam)) ? new Date(nowParam) : undefined
+  const tickets = externalLink(event.links.tickets, 'tickets')
   const highlights = t('home.highlights')
 
   return (
@@ -34,7 +36,7 @@ export default function Home() {
               <div className="flex gap-3"><dt className="text-gold-light"><Icon name="pin" className="h-6 w-6" /></dt><dd data-testid="hero-venue">{t('home.venue')}</dd></div>
             </dl>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href={event.links.tickets} target="_blank" rel="noreferrer" className="btn-gold text-lg">{t('home.tickets')}</a>
+              {tickets ? <a href={tickets} target="_blank" rel="noopener noreferrer" className="btn-gold text-lg">{t('home.tickets')}</a> : <Link to="/visit" className="btn-gold text-lg">{t('home.planVisit')}</Link>}
               <Link to="/schedule" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-red text-lg">{t('home.schedule')}</Link>
               <AddToCalendar calEvent={festivalCalendarEvent(event, lang)} label={t('home.calendar')} className="btn-outline !border-gold-light !text-gold-light hover:!bg-gold-light hover:!text-ink text-lg" />
             </div>
@@ -76,7 +78,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-14 text-center">
         <h2 className="h-section">{t('home.sponsorsTitle')}</h2>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((n) => <div key={n} className="h-20 rounded-xl border-2 border-dashed border-gold/60 flex items-center justify-center text-ink/70 text-sm">Sponsor {n}</div>)}
+          {[1, 2, 3, 4].map((n) => <div key={n} className="h-20 rounded-xl border-2 border-dashed border-gold/60 flex items-center justify-center text-ink/70 text-sm">{t('home.sponsorPlaceholder')}</div>)}
         </div>
         <p className="mt-6 text-ink/70">{t('home.sponsorsText')} <Link to="/get-involved#sponsor" className="font-semibold text-red underline">{t('home.sponsorsLink')}</Link></p>
       </section>

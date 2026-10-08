@@ -1,5 +1,7 @@
 # Test report (Thursday lab)
 
+This is the historical October 7 baseline report. For the October 8 comparison changes and current results, see [COMPARISON_TEST_REPORT.md](COMPARISON_TEST_REPORT.md). The baseline's test counts, bundle figures and placeholder-link expectations do not describe the updated build.
+
 **Project:** Mid-South Lunar New Year Festival website · **Date:** October 7, 2026 (updated for artwork and chatbot) · **Build:** `main` after the Tuesday lab review fixes
 **Team:** Alex Orr, Dee Dee Gan, Gabrielle Richardson, Wang Liao · MIS 7623, University of Memphis
 

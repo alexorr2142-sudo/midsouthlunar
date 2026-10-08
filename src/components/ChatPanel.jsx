@@ -7,7 +7,7 @@ import { HELLO, SUGGESTIONS } from '../lib/chatStrings'
 // bundle stays small (see ARCHITECTURE.md).
 const loadEngine = () => import('../lib/chat')
 const loadGemini = () => import('../lib/gemini')
-const useAi = Boolean(import.meta.env.VITE_GEMINI_API_KEY)
+const useAi = Boolean(import.meta.env.VITE_CHAT_API_URL)
 import Goat from './Goat'
 import Icon from './Icon'
 
@@ -15,8 +15,8 @@ import Icon from './Icon'
  * The chat panel body. Loaded lazily by ChatWidget the first time the visitor
  * opens it, so the engine, its data, and these strings stay out of the main
  * bundle. Built-in engine answers instantly in the visitor's language; when a
- * Gemini key is configured the model answers first and the engine is the
- * fallback.
+ * protected AI endpoint is configured it handles broader questions; verified
+ * venue answers always use website data.
  */
 export default function ChatPanel({ open, setOpen }) {
   const { t, lang } = useLang()
@@ -25,11 +25,16 @@ export default function ChatPanel({ open, setOpen }) {
   const [busy, setBusy] = useState(false)
   const listRef = useRef(null)
   const inputRef = useRef(null)
+  const requestRef = useRef(null)
+  const revision = useRef(0)
 
-  // Greet again in the new language when the site language changes and the
-  // conversation has not started yet.
+  // Start a fresh conversation when the site language changes.
   useEffect(() => {
-    setMessages((m) => (m.length === 1 && m[0].intent === 'greet' ? [{ role: 'bot', text: HELLO[lang], intent: 'greet' }] : m))
+    revision.current++
+    requestRef.current?.abort()
+    setMessages([{ role: 'bot', text: HELLO[lang], intent: 'greet' }])
+    setBusy(false)
+    setInput('')
   }, [lang])
 
   useEffect(() => {
@@ -41,31 +46,46 @@ export default function ChatPanel({ open, setOpen }) {
     const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
-  }, [open])
+  }, [open, setOpen])
 
   async function send(text) {
     const q = text.trim()
-    if (!q || busy) return
+    if (!q || q.length > 1200 || busy) return
+    const stamp = ++revision.current
+    const controller = new AbortController()
+    requestRef.current = controller
     setInput('')
     const history = messages
-    setMessages((m) => [...m, { role: 'user', text: q }])
+    setMessages(m => [...m.slice(-59), { role: 'user', text: q }])
     setBusy(true)
-    const { answer, detectLang } = await loadEngine()
-    const qLang = detectLang(q, lang)
-    let reply
-    if (useAi) {
-      try {
-        const { askGemini } = await loadGemini()
-        const txt = await askGemini(q, { lang: qLang, history })
-        reply = { role: 'bot', text: txt, intent: 'ai', source: 'ai' }
-      } catch { /* fall back */ }
+    let timer
+    try {
+      const { answer, detectLang } = await loadEngine()
+      const local = answer(q, { lang })
+      let reply = { role: 'bot', text: local.text, intent: local.intent, links: local.links, lang: local.lang, source: 'local' }
+      // Verified street addresses always come from event.venue, including in AI mode.
+      if (useAi && local.intent !== 'venue') {
+        timer = setTimeout(() => controller.abort(), 25000)
+        try {
+          const { askGemini } = await loadGemini()
+          const txt = await askGemini(q, { lang: detectLang(q, lang), history, signal: controller.signal })
+          reply = { role: 'bot', text: txt, intent: 'ai', source: 'ai', lang: detectLang(q, lang) }
+        } catch { reply.unavailable = true }
+      }
+      if (stamp === revision.current) setMessages(m => [...m.slice(-59), reply])
+    } catch {
+      if (stamp === revision.current) setMessages(m => [...m.slice(-59), { role: 'bot', text: t('chat.error'), intent: 'error' }])
+    } finally {
+      clearTimeout(timer)
+      if (stamp === revision.current) setBusy(false)
     }
-    if (!reply) {
-      const a = answer(q, { lang })
-      reply = { role: 'bot', text: a.text, intent: a.intent, links: a.links, source: 'local' }
-    }
-    setMessages((m) => [...m, reply])
-    setBusy(false)
+  }
+
+  useEffect(() => () => { revision.current++; requestRef.current?.abort() }, [])
+
+  function clear() {
+    revision.current++; requestRef.current?.abort()
+    setMessages([{ role: 'bot', text: HELLO[lang], intent: 'greet' }]); setInput(''); setBusy(false)
   }
 
   const suggestions = SUGGESTIONS[lang] ?? SUGGESTIONS.en
@@ -86,10 +106,11 @@ export default function ChatPanel({ open, setOpen }) {
             </button>
           </header>
 
-          <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto bg-cream bg-pattern-light px-3 py-3" data-testid="chat-messages">
+          <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto bg-cream bg-pattern-light px-3 py-3" data-testid="chat-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label={t('chat.title')}>
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div data-testid={`chat-${m.role}`} className={`max-w-[85%] whitespace-pre-line rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed shadow-sm ${m.role === 'user' ? 'rounded-br-md bg-red text-white' : 'rounded-bl-md bg-white text-ink ring-1 ring-red/10'}`}>
+                  {m.unavailable && <p className="mb-2 text-xs text-ink/70">{t('chat.unavailable')}</p>}
                   {m.text}
                   {m.links?.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-1.5">
@@ -102,19 +123,20 @@ export default function ChatPanel({ open, setOpen }) {
             {busy && <div className="flex justify-start"><div className="rounded-2xl rounded-bl-md bg-white px-3.5 py-2.5 text-sm text-ink/70 ring-1 ring-red/10" role="status">{t('chat.thinking')}</div></div>}
             {messages.length <= 1 && (
               <div className="flex flex-wrap gap-1.5 pt-1" data-testid="chat-suggestions">
-                {suggestions.map((s) => <button key={s} type="button" onClick={() => send(s)} className="chip bg-white hover:bg-gold-light/60">{s}</button>)}
+                {suggestions.map((s) => <button key={s} type="button" onClick={() => send(s)} disabled={busy} className="chip bg-white hover:bg-gold-light/60">{s}</button>)}
               </div>
             )}
           </div>
 
           <form className="flex items-center gap-2 border-t border-red/10 bg-white px-3 py-2" onSubmit={(e) => { e.preventDefault(); send(input) }}>
             <label htmlFor="chat-input" className="sr-only">{t('chat.placeholder')}</label>
-            <input id="chat-input" ref={inputRef} value={input} onChange={(e) => setInput(e.target.value)} placeholder={t('chat.placeholder')} autoComplete="off" data-testid="chat-input"
+            <input id="chat-input" ref={inputRef} value={input} onChange={(e) => setInput(e.target.value)} placeholder={t('chat.placeholder')} maxLength={1200} autoComplete="off" data-testid="chat-input"
               className="min-w-0 flex-1 rounded-full border border-red/30 px-4 py-2 text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/60" />
             <button type="submit" disabled={busy || !input.trim()} aria-label={t('chat.send')} data-testid="chat-send" className="btn-primary !p-2.5 disabled:opacity-40">
               <Icon name="send" className="h-5 w-5" />
             </button>
           </form>
+          {messages.length > 1 && <button type="button" onClick={clear} data-testid="chat-clear" className="border-t border-red/10 bg-white px-3 py-2 text-left text-xs font-semibold text-red underline">{t('chat.clear')}</button>}
           <p className="border-t border-red/10 bg-white px-3 py-1.5 text-[11px] leading-snug text-ink/70">{useAi ? t('chat.aiNote') : t('chat.localNote')}</p>
         </section>
       )}
