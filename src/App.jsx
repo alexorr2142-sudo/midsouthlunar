@@ -1,5 +1,5 @@
 import { BrowserRouter, HashRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense, useLayoutEffect } from 'react'
 import { LanguageProvider, useLang } from './i18n/LanguageContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -40,7 +40,7 @@ function NotFound() {
 /** Scroll to top on route change, or to the #hash target when present. */
 function ScrollManager() {
   const { pathname, hash } = useLocation()
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (hash) {
       const el = document.getElementById(hash.slice(1))
       if (el) { el.scrollIntoView({ block: 'start' }); return }
@@ -54,7 +54,6 @@ export default function App() {
   return (
     <LanguageProvider>
       <Router>
-        <ScrollManager />
         <Suspense fallback={<Loading />}>
         <Routes>
           <Route element={<Layout />}>
@@ -70,6 +69,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+        <ScrollManager />
         </Suspense>
       </Router>
     </LanguageProvider>

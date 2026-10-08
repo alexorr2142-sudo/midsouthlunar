@@ -14,6 +14,8 @@ describe('UT-7 language detection and reply language', () => {
     expect(detectLang('駐車場はどこですか？')).toBe('ja')
     expect(detectLang('dau xe o dau', 'vi')).toBe('vi') // no diacritics: follows the UI language
     expect(detectLang('漢字だけ', 'ja')).toBe('ja')
+    expect(detectLang('慶典地址在哪裡？')).toBe('zh-Hant')
+    expect(detectLang('ที่อยู่ของงานคืออะไร?')).toBe('th')
   })
 
   it('answers each suggested starter question in its own language with a real intent', () => {
@@ -28,7 +30,7 @@ describe('UT-7 language detection and reply language', () => {
   })
 
   it('has a greeting in every language', () => {
-    for (const lang of CHAT_LANGS) expect(HELLO[lang]).toMatch(/Yang Yang|羊羊|양양|ヤンヤン/)
+    for (const lang of CHAT_LANGS) expect(HELLO[lang]).toMatch(/Yang Yang|羊羊|양양|ヤンヤン|หยางหยาง/)
   })
 })
 
@@ -103,12 +105,52 @@ describe('UT-8 intents', () => {
   })
 })
 
-// Knowledge base completeness: every topic has keywords and an answer in all five languages.
+// Knowledge base completeness: every topic has keywords and an answer in all seven languages.
 describe('knowledge base shape', () => {
-  it('is complete in five languages', () => {
+  it('is complete in seven languages', () => {
     for (const t of knowledge.topics) for (const l of CHAT_LANGS) {
       expect(t.keywords[l]?.length, `${t.id}.keywords.${l}`).toBeGreaterThan(0)
       expect(t.answer[l]?.length, `${t.id}.answer.${l}`).toBeGreaterThan(40)
     }
+  })
+})
+
+describe('festival-address regressions', () => {
+  it.each([
+    'where is the address of the event',
+    'Where is the event?',
+    'What is the festival address?',
+    'Do you know where the festival is?',
+    'Where is the venue for the Friday event?',
+    'Where is the address of the event, not the Food Hall?',
+    '活动的地址在哪里？',
+    'イベントの住所はどこですか？',
+    '행사 주소는 어디인가요?',
+    'Địa chỉ của lễ hội ở đâu?',
+    'イベントはどこですか？',
+    '행사는 어디에서 열리나요?',
+    'Lễ hội diễn ra ở đâu?',
+    '慶典地址在哪裡？',
+    'ที่อยู่ของงานคืออะไร?',
+  ])('answers the event venue for %s', (q) => {
+    const a = answer(q)
+    expect(a.intent).toBe('venue')
+    expect(a.text).toContain('Agricenter')
+    expect(a.text).toContain('7777 Walnut Grove Rd, Memphis, TN 38120')
+    expect(a.text).not.toContain('Food Hall')
+    expect(a.links[0].to).toBe('/visit')
+  })
+  it('does not infer Friday from event, current time from know, or food from great', () => {
+    expect(answer('Do you know where the festival is?').intent).toBe('venue')
+    expect(mentionScore('great event', {en:"New Year's Eve dinner"})).toBe(0)
+    expect(answer('A great festival').intent).not.toBe('vendors')
+  })
+  it('keeps named booth and workshop lookups useful', () => {
+    expect(answer('Where can I get dumplings?').text).toContain('Golden Wok')
+    const workshop = answer('Where is the dumpling-making workshop?')
+    expect(workshop.intent).toBe('schedule')
+    expect(workshop.text).toContain('Dumpling')
+    expect(workshop.text).not.toContain('could not find')
+    expect(answer('Where is the lion dance?').text).toContain('Main Stage')
   })
 })

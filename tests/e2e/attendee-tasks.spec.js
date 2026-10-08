@@ -12,7 +12,7 @@ test.describe('IT-1 landing and navigation', () => {
     await expect(page.getByTestId('hero-venue')).toContainText('Agricenter')
     await expect(page.getByTestId('countdown')).toHaveAttribute('data-state', 'before')
     await expect(page.getByTestId('cd-days')).not.toHaveText('00')
-    await expect(page.getByRole('link', { name: 'Get Tickets' })).toHaveAttribute('href', /eventbrite/)
+    await expect(page.getByRole('link', { name: 'Plan your visit' })).toHaveAttribute('href', /visit/)
   })
 
   test('every page is reachable from the navigation', async ({ page, isMobile }) => {
@@ -81,7 +81,7 @@ test.describe('IT-2 schedule filters, vendor search, language persistence', () =
     await expect(page.getByRole('heading', { level: 1 })).toContainText('中南农历新年')
     await page.goto('/vendors')
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('商户')
-    await expect(page.locator('html')).toHaveAttribute('lang', 'zh-CN')
+    await expect(page.locator('html')).toHaveAttribute('lang', 'zh-Hans')
     await page.reload()
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('商户')
     await pickLang(page, 'vi')
@@ -97,7 +97,7 @@ test.describe('IT-2 schedule filters, vendor search, language persistence', () =
 
   test('get-involved links point to the volunteer and vendor forms', async ({ page }) => {
     await page.goto('/get-involved')
-    await expect(page.getByTestId('link-volunteer')).toHaveAttribute('href', /forms\.gle|docs\.google\.com\/forms/)
-    await expect(page.getByTestId('link-vendor')).toHaveAttribute('href', /forms\.gle|docs\.google\.com\/forms/)
+    await expect(page.getByTestId('pending-volunteer')).toBeVisible()
+    await expect(page.getByTestId('pending-vendor')).toBeVisible()
   })
 })

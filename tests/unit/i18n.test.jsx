@@ -1,17 +1,19 @@
-import { describe, it, expect, beforeEach } from 'vitest'
-import { render, screen, fireEvent, cleanup } from '@testing-library/react'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
+import { render, screen, fireEvent, cleanup, waitFor, act } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
 import { LanguageProvider, useLang, lookup, LANG_CODES } from '../../src/i18n/LanguageContext.jsx'
 import en from '../../src/i18n/en.json'
 import zh from '../../src/i18n/zh.json'
-import vi from '../../src/i18n/vi.json'
+import viDictionary from '../../src/i18n/vi.json'
 import ko from '../../src/i18n/ko.json'
 import ja from '../../src/i18n/ja.json'
+import zhHant from '../../src/i18n/zh-Hant.json'
+import th from '../../src/i18n/th.json'
 import event from '../../src/data/event.json'
 import schedule from '../../src/data/schedule.json'
 import vendors from '../../src/data/vendors.json'
 
-const DICTS = { zh, vi, ko, ja }
+const DICTS = { zh, 'zh-Hant': zhHant, th, vi: viDictionary, ko, ja }
 
 function Probe() {
   const { t, lang, toggle, pick, setLang } = useLang()
@@ -32,31 +34,49 @@ function Probe() {
 describe('UT-6 language toggle (FR-2)', () => {
   beforeEach(() => { cleanup(); window.localStorage.clear() })
 
-  it('starts in English, toggles to Chinese, and persists', () => {
+  it('starts in English, loads Chinese on selection, and persists', async () => {
     render(<LanguageProvider><Probe /></LanguageProvider>)
     expect(screen.getByTestId('title')).toHaveTextContent('Schedule')
     expect(screen.getByTestId('count')).toHaveTextContent('3 events')
     fireEvent.click(screen.getByText('toggle'))
-    expect(screen.getByTestId('lang')).toHaveTextContent('zh')
+    await waitFor(() => expect(screen.getByTestId('lang')).toHaveTextContent('zh'))
     expect(screen.getByTestId('title')).toHaveTextContent('活动日程')
     expect(screen.getByTestId('pick')).toHaveTextContent('主舞台')
-    expect(document.documentElement.lang).toBe('zh-CN')
+    expect(document.documentElement.lang).toBe('zh-Hans')
     expect(window.localStorage.getItem('msl-lang')).toBe('zh')
     fireEvent.click(screen.getByText('ko'))
-    expect(screen.getByTestId('title')).toHaveTextContent('일정')
+    await waitFor(() => expect(screen.getByTestId('title')).toHaveTextContent('일정'))
     expect(screen.getByTestId('count')).toHaveTextContent('행사 3개')
     expect(document.documentElement.lang).toBe('ko')
   })
 
-  it('cycles through all five languages and ignores unknown codes', () => {
+  it('cycles through all seven languages after each dictionary is ready', async () => {
     render(<LanguageProvider><Probe /></LanguageProvider>)
     const seen = []
     for (let i = 0; i < LANG_CODES.length; i++) {
       seen.push(screen.getByTestId('lang').textContent)
       fireEvent.click(screen.getByText('toggle'))
+      const next = LANG_CODES[(i + 1) % LANG_CODES.length]
+      await waitFor(() => expect(screen.getByTestId('lang').textContent).toBe(next))
     }
     expect(seen).toEqual(LANG_CODES)
     expect(screen.getByTestId('lang')).toHaveTextContent('en')
+  })
+
+  it('restores a saved non-English preference with matching translated copy', async () => {
+    window.localStorage.setItem('msl-lang', 'th')
+    render(<LanguageProvider><Probe /></LanguageProvider>)
+    await waitFor(() => expect(screen.getByTestId('lang').textContent).toBe('th'))
+    expect(screen.getByTestId('title')).toHaveTextContent(th.schedule.title)
+    expect(document.documentElement.lang).toBe('th')
+    expect(window.localStorage.getItem('msl-lang')).toBe('th')
+  })
+
+  it('explicit English overrides a stored preference', () => {
+    window.localStorage.setItem('msl-lang', 'ja')
+    render(<LanguageProvider initial="en"><Probe /></LanguageProvider>)
+    expect(screen.getByTestId('lang').textContent).toBe('en')
+    expect(window.localStorage.getItem('msl-lang')).toBe('en')
   })
 
   it.each(Object.keys(DICTS))('every English key has a %s value with the same shape (no raw keys can leak)', (code) => {
@@ -73,7 +93,7 @@ describe('UT-6 language toggle (FR-2)', () => {
     }
   })
 
-  it('every data label (event, schedule, vendors) exists in all five languages', () => {
+  it('every data label (event, schedule, vendors) exists in all seven languages', () => {
     const bad = []
     const check = (obj, where) => { for (const c of LANG_CODES) if (!obj?.[c]) bad.push(`${where}.${c}`) }
     check(event.name, 'event.name'); check(event.organizer, 'event.organizer'); check(event.zodiac, 'event.zodiac'); check(event.venue.name, 'event.venue.name')
@@ -82,5 +102,94 @@ describe('UT-6 language toggle (FR-2)', () => {
     schedule.items.forEach((it) => { check(it.title, `schedule.${it.id}.title`); check(it.description, `schedule.${it.id}.description`) })
     vendors.items.forEach((v) => { check(v.name, `vendor.${v.id}.name`); check(v.description, `vendor.${v.id}.description`) })
     expect(bad).toEqual([])
+  })
+})
+
+// Fresh modules let us hold individual locale imports without affecting the
+// real dictionary completeness checks above.
+describe('on-demand locale loading', () => {
+  beforeEach(() => {
+    cleanup()
+    window.localStorage.clear()
+    vi.resetModules()
+  })
+  afterEach(() => {
+    cleanup()
+    for (const code of ['th', 'zh', 'ko']) vi.doUnmock(`../../src/i18n/${code}.json`)
+    vi.resetModules()
+  })
+
+  async function harness(initial) {
+    const { LanguageProvider: AsyncProvider, useLang: useAsyncLang } = await import('../../src/i18n/LanguageContext.jsx')
+    function AsyncProbe() {
+      const { lang, t, setLang } = useAsyncLang()
+      return <>
+        <span data-testid="loaded-lang">{lang}</span>
+        <span data-testid="loaded-title">{t('schedule.title')}</span>
+        {['en', 'th', 'ko'].map((code) => <button key={code} onClick={() => setLang(code)}>load {code}</button>)}
+      </>
+    }
+    return render(<AsyncProvider initial={initial}><AsyncProbe /></AsyncProvider>)
+  }
+
+  it('keeps the English dictionary and stored choice intact until restoration is ready, then reuses its cache', async () => {
+    let release
+    const gate = new Promise((resolve) => { release = resolve })
+    vi.doMock('../../src/i18n/th.json', async () => { await gate; return { default: th } })
+    window.localStorage.setItem('msl-lang', 'th')
+    await harness()
+    expect(screen.getByTestId('loaded-lang').textContent).toBe('en')
+    expect(screen.getByTestId('loaded-title')).toHaveTextContent(en.schedule.title)
+    expect(document.documentElement.lang).toBe('en')
+    expect(window.localStorage.getItem('msl-lang')).toBe('th')
+
+    await act(async () => { release(); await import('../../src/i18n/th.json') })
+    await waitFor(() => expect(screen.getByTestId('loaded-lang').textContent).toBe('th'))
+    expect(screen.getByTestId('loaded-title')).toHaveTextContent(th.schedule.title)
+    expect(document.documentElement.lang).toBe('th')
+    fireEvent.click(screen.getByText('load en'))
+    fireEvent.click(screen.getByText('load th'))
+    // Cached selections commit synchronously; they need no second fetch.
+    expect(screen.getByTestId('loaded-lang').textContent).toBe('th')
+    expect(window.localStorage.getItem('msl-lang')).toBe('th')
+  })
+
+  it('ignores a slow earlier selection after another language finishes first', async () => {
+    let release
+    const gate = new Promise((resolve) => { release = resolve })
+    vi.doMock('../../src/i18n/th.json', async () => { await gate; return { default: th } })
+    await harness('en')
+    fireEvent.click(screen.getByText('load th'))
+    expect(screen.getByTestId('loaded-lang').textContent).toBe('en')
+    fireEvent.click(screen.getByText('load ko'))
+    await waitFor(() => expect(screen.getByTestId('loaded-lang').textContent).toBe('ko'))
+    await act(async () => { release(); await import('../../src/i18n/th.json') })
+    expect(screen.getByTestId('loaded-lang').textContent).toBe('ko')
+    expect(screen.getByTestId('loaded-title')).toHaveTextContent(ko.schedule.title)
+    expect(document.documentElement.lang).toBe('ko')
+    expect(window.localStorage.getItem('msl-lang')).toBe('ko')
+  })
+
+  it('allows English to cancel a pending restored preference', async () => {
+    let release
+    const gate = new Promise((resolve) => { release = resolve })
+    vi.doMock('../../src/i18n/th.json', async () => { await gate; return { default: th } })
+    window.localStorage.setItem('msl-lang', 'th')
+    await harness()
+    fireEvent.click(screen.getByText('load en'))
+    await act(async () => { release(); await import('../../src/i18n/th.json') })
+    expect(screen.getByTestId('loaded-lang').textContent).toBe('en')
+    expect(window.localStorage.getItem('msl-lang')).toBe('en')
+  })
+
+  it('retains the current readable language if a locale download fails', async () => {
+    vi.doMock('../../src/i18n/th.json', async () => { throw new Error('locale unavailable') })
+    await harness('en')
+    fireEvent.click(screen.getByText('load th'))
+    await act(async () => { await import('../../src/i18n/th.json').catch(() => {}) })
+    expect(screen.getByTestId('loaded-lang').textContent).toBe('en')
+    expect(screen.getByTestId('loaded-title')).toHaveTextContent(en.schedule.title)
+    expect(document.documentElement.lang).toBe('en')
+    expect(window.localStorage.getItem('msl-lang')).toBe('en')
   })
 })

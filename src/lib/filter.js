@@ -21,7 +21,7 @@ export function normalize(s) {
 
 /**
  * Filter vendors by free-text query and category.
- * The query matches against name and description in BOTH languages so a
+ * The query matches against name and description in every language so a
  * visitor on the English page can still find 金锅 by typing it, and vice versa.
  */
 export function filterVendors(items, { query = '', category = 'all' } = {}) {
@@ -29,7 +29,7 @@ export function filterVendors(items, { query = '', category = 'all' } = {}) {
   return items.filter((v) => {
     if (category !== 'all' && v.category !== category) return false
     if (!q) return true
-    const hay = [v.name?.en, v.name?.zh, v.description?.en, v.description?.zh, v.booth].map(normalize).join(' | ')
+    const hay = [...Object.values(v.name ?? {}), ...Object.values(v.description ?? {}), v.booth].map(normalize).join(' | ')
     return hay.includes(q)
   })
 }
