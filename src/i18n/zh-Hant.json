@@ -1,0 +1,225 @@
+{
+  "_meta": {
+    "status": "AI 翻譯草稿，待繁體中文使用者審閱"
+  },
+  "site": {
+    "name": "中南農曆新年",
+    "tagline": "歡慶新春，共享文化",
+    "org": "中南華人商會主辦"
+  },
+  "nav": {
+    "home": "首頁",
+    "schedule": "活動日程",
+    "vendors": "商戶",
+    "visit": "門票與交通",
+    "involved": "參與我們",
+    "about": "關於",
+    "menu": "選單",
+    "close": "關閉選單",
+    "skip": "跳至正文"
+  },
+  "lang": {
+    "switch": "English",
+    "label": "選擇語言"
+  },
+  "home": {
+    "dates": "2027年2月5日至6日",
+    "hours": "每日上午10點至晚上9點",
+    "venue": "孟菲斯 Agricenter 國際會展中心",
+    "tickets": "購買門票",
+    "schedule": "查看日程",
+    "calendar": "加入行事曆",
+    "preliminary": "初步安排，時間與商戶名單可能調整。",
+    "highlightsTitle": "兩天精彩慶典",
+    "highlights": [
+      {
+        "title": "舞龍舞獅",
+        "text": "以傳統表演開啟吉祥熱鬧的新年。"
+      },
+      {
+        "title": "美食區",
+        "text": "餃子、火鍋、糖葫蘆，以及年夜飯經典菜餚。"
+      },
+      {
+        "title": "文化市集",
+        "text": "剪紙、陶瓷、書法、燈籠與刺繡。"
+      },
+      {
+        "title": "親子園",
+        "text": "遊戲、手作、紅包，夜晚還有花燈步道。"
+      }
+    ],
+    "cultureTitle": "為何慶祝",
+    "cultureText": "農曆新年是許多亞洲文化中最重要的傳統節日。2027年迎來羊年，象徵和平、善良與創造力。本慶典將這些傳統帶給中南地區的每一個人。",
+    "cultureLink": "了解更多年俗",
+    "sponsorsTitle": "感謝贊助商",
+    "sponsorsText": "贊助商標誌將展示於此。有意贊助？",
+    "sponsorsLink": "成為贊助商",
+    "planVisit": "規劃參觀",
+    "sponsorPlaceholder": "贊助商即將公布"
+  },
+  "countdown": {
+    "until": "距慶典開幕還有",
+    "days": "天",
+    "hours": "小時",
+    "minutes": "分鐘",
+    "seconds": "秒",
+    "now": "慶典進行中！",
+    "nowText": "開放至晚上9點。看看現在有哪些活動。",
+    "between": "明天見！",
+    "betweenText": "第二天於2月6日上午10點開放。",
+    "after": "感謝孟菲斯！",
+    "afterText": "2027年慶典已圓滿結束。明年新春再見。"
+  },
+  "schedule": {
+    "title": "活動日程",
+    "intro": "兩天的演出、美食、文化與親子活動。可依日期、區域或類型篩選。",
+    "day": "日期",
+    "stage": "區域",
+    "type": "類型",
+    "all": "全部",
+    "results": "{count} 項活動",
+    "resultsOne": "1 項活動",
+    "empty": "沒有符合篩選條件的活動。",
+    "clear": "清除篩選",
+    "addItem": "加入行事曆"
+  },
+  "vendors": {
+    "title": "商戶",
+    "intro": "100多家在地商家與藝術家將參展。以下為初步名單。",
+    "search": "搜尋商戶",
+    "searchPlaceholder": "依名稱或商品搜尋",
+    "category": "類別",
+    "all": "全部",
+    "results": "{count} 家商戶",
+    "resultsOne": "1 家商戶",
+    "empty": "沒有符合搜尋條件的商戶。",
+    "clear": "清除搜尋",
+    "booth": "攤位"
+  },
+  "visit": {
+    "title": "門票與交通",
+    "ticketsTitle": "門票",
+    "ticketsText": "門票透過 Eventbrite 販售。票價即將公布。",
+    "ticketsButton": "在 Eventbrite 購票",
+    "mapTitle": "如何到達",
+    "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
+    "directions": "在 Google 地圖中開啟",
+    "parkingTitle": "停車與入口",
+    "parking": [
+      "Walnut Grove Road 旁的 Agricenter 主停車場可免費停車。",
+      "無障礙停車位與下客區位於主入口附近。",
+      "叫車服務上車點在北停車場，請依指示牌前往。"
+    ],
+    "accessTitle": "無障礙設施",
+    "access": [
+      "所有活動區域皆在同一樓層，可供輪椅通行。",
+      "每個展館皆設有無障礙洗手間。",
+      "歡迎服務犬。可在諮詢台申請使用安靜室。"
+    ],
+    "faqTitle": "常見問題",
+    "faq": [
+      {
+        "q": "開放時間是？",
+        "a": "2027年2月5日（週五）與2月6日（週六）上午10點至晚上9點。"
+      },
+      {
+        "q": "需要門票嗎？",
+        "a": "票價即將公布，將提供兒童票。"
+      },
+      {
+        "q": "慶典在室內嗎？",
+        "a": "大部分活動在 Agricenter 室內舉行。花燈步道在室外，請依二月天氣穿著保暖。"
+      },
+      {
+        "q": "可以用現金嗎？",
+        "a": "大多數商戶接受信用卡與行動支付，部分接受現金。現場設有 ATM。"
+      },
+      {
+        "q": "有兒童活動嗎？",
+        "a": "有。親子園全天提供遊戲、手作、臉部彩繪與紅包活動。"
+      },
+      {
+        "q": "天氣不好怎麼辦？",
+        "a": "慶典風雨無阻。如有變動，請關注本網站與社群媒體。"
+      }
+    ],
+    "ticketPending": "2027年購票連結即將公布。"
+  },
+  "involved": {
+    "title": "參與我們",
+    "vendorTitle": "成為商戶",
+    "vendorText": "歡迎美食攤位、手工藝與文化機構。申請即將開放。",
+    "vendorButton": "申請商戶",
+    "volunteerTitle": "志工",
+    "volunteerText": "協助布置、諮詢台、兒童活動與翻譯。歡迎學生參加。",
+    "volunteerButton": "報名志工",
+    "sponsorTitle": "贊助慶典",
+    "sponsorText": "觸及來自中南地區的兩萬名參與者。提供適合各種規模企業的贊助方案。",
+    "sponsorButton": "聯絡我們了解贊助",
+    "vendorPending": "商戶申請連結即將公布。",
+    "volunteerPending": "志工報名連結即將公布。"
+  },
+  "about": {
+    "title": "關於慶典",
+    "missionTitle": "我們的使命",
+    "mission": "中南農曆新年慶典透過演出、美食、市集與互動活動，向孟菲斯地區各種背景的居民展示農曆新年的歷史淵源與文化意義，促進不同文化背景市民之間的理解與友誼，展現孟菲斯華人社區的蓬勃風采。",
+    "orgTitle": "主辦方",
+    "org": "中南華人商會 (MCCC) 是服務大孟菲斯地區華人商界的非營利組織。商會支持華人企業發展，促進華人社區與更廣泛社會的交流。",
+    "cultureTitle": "農曆新年傳統",
+    "culture": [
+      {
+        "title": "年夜飯",
+        "text": "除夕夜全家團聚共享盛宴。餃子與魚寓意財富與年年有餘。"
+      },
+      {
+        "title": "紅與金",
+        "text": "紅色驅邪避災，金色象徵富貴。家家張貼春聯、掛起燈籠。"
+      },
+      {
+        "title": "紅包",
+        "text": "長輩給孩子壓歲錢，祝福來年平安。"
+      },
+      {
+        "title": "羊年",
+        "text": "2027年是羊年，象徵溫和、創造力與和平。"
+      },
+      {
+        "title": "元宵節",
+        "text": "正月十五賞花燈、猜燈謎、吃湯圓，為慶祝活動畫下句點。"
+      },
+      {
+        "title": "舞龍舞獅",
+        "text": "鑼鼓聲中舞動的龍獅帶來好運，驅走邪祟。"
+      }
+    ],
+    "contactTitle": "聯絡我們",
+    "contactText": "有關慶典、商戶或贊助的問題？",
+    "contactButton": "寄信給慶典團隊"
+  },
+  "footer": {
+    "rights": "中南華人商會",
+    "note": "本網站為孟菲斯大學 MIS 7623 課程學生專案。"
+  },
+  "notFound": {
+    "title": "找不到頁面",
+    "text": "該頁面不存在。",
+    "home": "返回首頁"
+  },
+  "chat": {
+    "title": "羊羊",
+    "subtitle": "慶典嚮導",
+    "open": "問問羊羊",
+    "close": "關閉聊天",
+    "placeholder": "詢問活動、商戶或年俗",
+    "send": "傳送",
+    "thinking": "思考中…",
+    "localNote": "回答來自本站日程、商戶名單與精選農曆新年指南，資料不會離開你的瀏覽器。",
+    "aiNote": "使用即時 AI 回答時，訊息會傳送給 AI 供應商。回答可能有誤，請核對網站資訊。",
+    "clear": "重新開始",
+    "you": "你",
+    "langs": "English · 简体中文 · 繁體中文 · 日本語 · 한국어 · ไทย · Tiếng Việt",
+    "unavailable": "即時 AI 暫時無法使用。這則回答採用本網站的本機知識。",
+    "error": "發生問題，請重新提問。"
+  }
+}

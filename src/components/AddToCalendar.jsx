@@ -28,7 +28,7 @@ export default function AddToCalendar({ calEvent, label, className = 'btn-outlin
       </button>
       {open && (
         <div role="menu" className="absolute z-30 mt-2 min-w-48 rounded-xl bg-white p-1 text-ink shadow-lg ring-1 ring-red/15">
-          <a role="menuitem" href={googleCalendarUrl(calEvent)} target="_blank" rel="noreferrer" className="block rounded-lg px-3 py-2 hover:bg-cream" onClick={() => setOpen(false)}>Google Calendar</a>
+          {(calEvent.occurrences ?? [calEvent]).map(record => <a key={record.uid} role="menuitem" href={googleCalendarUrl(record)} target="_blank" rel="noopener noreferrer" className="block rounded-lg px-3 py-2 hover:bg-cream" onClick={() => setOpen(false)}>Google Calendar{record.calendarLabel ? ` · ${record.calendarLabel}` : ''}</a>)}
           <button role="menuitem" type="button" className="block w-full text-left rounded-lg px-3 py-2 hover:bg-cream"
             onClick={() => { downloadIcs(`${calEvent.uid}.ics`, buildIcs(calEvent)); setOpen(false) }}>
             Apple / Outlook (.ics)

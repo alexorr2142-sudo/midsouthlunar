@@ -4,14 +4,18 @@
     "zh": "中南农历新年庆典",
     "vi": "Lễ hội Tết Trung Nam",
     "ko": "미드사우스 설날 축제",
-    "ja": "ミッドサウス旧正月祭"
+    "ja": "ミッドサウス旧正月祭",
+    "zh-Hant": "中南農曆新年慶典",
+    "th": "เทศกาลตรุษจีนมิดเซาท์"
   },
   "organizer": {
     "en": "Mid-South Chinese Chamber of Commerce (MCCC)",
     "zh": "中南华人商会 (MCCC)",
     "vi": "Phòng Thương mại Hoa kiều Trung Nam (MCCC)",
     "ko": "미드사우스 중국상공회의소(MCCC)",
-    "ja": "ミッドサウス中国商工会議所（MCCC）"
+    "ja": "ミッドサウス中国商工会議所（MCCC）",
+    "zh-Hant": "中南華人商會 (MCCC)",
+    "th": "หอการค้าจีนมิดเซาท์ (MCCC)"
   },
   "year": 2027,
   "zodiac": {
@@ -19,7 +23,9 @@
     "zh": "羊年",
     "vi": "Năm Mùi",
     "ko": "양의 해",
-    "ja": "未年"
+    "ja": "未年",
+    "zh-Hant": "羊年",
+    "th": "ปีมะแม"
   },
   "start": "2027-02-05T10:00:00-06:00",
   "end": "2027-02-06T21:00:00-06:00",
@@ -34,7 +40,9 @@
         "zh": "2月5日 周五（除夕）",
         "vi": "Thứ Sáu 5/2 (Giao thừa)",
         "ko": "2월 5일 금 (섣달그믐)",
-        "ja": "2月5日（金）大晦日"
+        "ja": "2月5日（金）大晦日",
+        "zh-Hant": "2月5日 週五（除夕）",
+        "th": "ศุกร์ 5 ก.พ. (คืนส่งท้ายปี)"
       }
     },
     {
@@ -47,7 +55,9 @@
         "zh": "2月6日 周六（大年初一）",
         "vi": "Thứ Bảy 6/2 (Mùng 1 Tết)",
         "ko": "2월 6일 토 (설날)",
-        "ja": "2月6日（土）元日"
+        "ja": "2月6日（土）元日",
+        "zh-Hant": "2月6日 週六（大年初一）",
+        "th": "เสาร์ 6 ก.พ. (วันขึ้นปีใหม่)"
       }
     }
   ],
@@ -58,15 +68,17 @@
       "zh": "Agricenter 国际会展中心",
       "vi": "Agricenter International",
       "ko": "Agricenter International",
-      "ja": "Agricenter International"
+      "ja": "Agricenter International",
+      "zh-Hant": "Agricenter 國際會展中心",
+      "th": "Agricenter International"
     },
     "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
     "mapQuery": "Agricenter International, 7777 Walnut Grove Rd, Memphis, TN 38120"
   },
   "links": {
-    "tickets": "https://www.eventbrite.com/",
-    "vendorForm": "https://forms.gle/",
-    "volunteerForm": "https://forms.gle/",
+    "tickets": "",
+    "vendorForm": "",
+    "volunteerForm": "",
     "sponsorEmail": "mailto:info@midsouthlunar.org",
     "contactEmail": "mailto:info@midsouthlunar.org"
   },
@@ -76,35 +88,45 @@
       "zh": "主舞台",
       "vi": "Sân khấu chính",
       "ko": "메인 무대",
-      "ja": "メインステージ"
+      "ja": "メインステージ",
+      "zh-Hant": "主舞台",
+      "th": "เวทีหลัก"
     },
     "pavilion": {
       "en": "Cultural Pavilion",
       "zh": "文化馆",
       "vi": "Nhà văn hóa",
       "ko": "문화관",
-      "ja": "文化パビリオン"
+      "ja": "文化パビリオン",
+      "zh-Hant": "文化館",
+      "th": "ศาลาวัฒนธรรม"
     },
     "food": {
       "en": "Food Hall",
       "zh": "美食区",
       "vi": "Khu ẩm thực",
       "ko": "푸드홀",
-      "ja": "フードホール"
+      "ja": "フードホール",
+      "zh-Hant": "美食區",
+      "th": "โซนอาหาร"
     },
     "garden": {
       "en": "Family Garden",
       "zh": "亲子园",
       "vi": "Vườn gia đình",
       "ko": "가족 정원",
-      "ja": "ファミリーガーデン"
+      "ja": "ファミリーガーデン",
+      "zh-Hant": "親子園",
+      "th": "สวนครอบครัว"
     },
     "market": {
       "en": "New Year Market",
       "zh": "年货市集",
       "vi": "Chợ Tết",
       "ko": "설 장터",
-      "ja": "正月マーケット"
+      "ja": "正月マーケット",
+      "zh-Hant": "年貨市集",
+      "th": "ตลาดปีใหม่"
     }
   },
   "types": {
@@ -113,28 +135,36 @@
       "zh": "演出",
       "vi": "Biểu diễn",
       "ko": "공연",
-      "ja": "公演"
+      "ja": "公演",
+      "zh-Hant": "演出",
+      "th": "การแสดง"
     },
     "food": {
       "en": "Food",
       "zh": "美食",
       "vi": "Ẩm thực",
       "ko": "음식",
-      "ja": "食"
+      "ja": "食",
+      "zh-Hant": "美食",
+      "th": "อาหาร"
     },
     "culture": {
       "en": "Culture",
       "zh": "文化",
       "vi": "Văn hóa",
       "ko": "문화",
-      "ja": "文化"
+      "ja": "文化",
+      "zh-Hant": "文化",
+      "th": "วัฒนธรรม"
     },
     "family": {
       "en": "Family",
       "zh": "亲子",
       "vi": "Gia đình",
       "ko": "가족",
-      "ja": "ファミリー"
+      "ja": "ファミリー",
+      "zh-Hant": "親子",
+      "th": "ครอบครัว"
     }
   },
   "vendorCategories": {
@@ -143,21 +173,27 @@
       "zh": "美食",
       "vi": "Ẩm thực",
       "ko": "음식",
-      "ja": "食"
+      "ja": "食",
+      "zh-Hant": "美食",
+      "th": "อาหาร"
     },
     "crafts": {
       "en": "Crafts",
       "zh": "手工艺",
       "vi": "Thủ công",
       "ko": "공예",
-      "ja": "工芸"
+      "ja": "工芸",
+      "zh-Hant": "手工藝",
+      "th": "งานหัตถกรรม"
     },
     "cultural": {
       "en": "Cultural",
       "zh": "文化",
       "vi": "Văn hóa",
       "ko": "문화",
-      "ja": "文化"
+      "ja": "文化",
+      "zh-Hant": "文化",
+      "th": "วัฒนธรรม"
     }
   }
 }

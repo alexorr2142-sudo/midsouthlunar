@@ -41,30 +41,17 @@ ${vend}
 LUNAR NEW YEAR FACTS:
 ${facts}`
 }
-
-const cache = {}
-
-/**
- * Ask Gemini. `history` is [{role:'user'|'bot', text}]. Resolves to the reply
- * text, or throws so the caller can fall back to the built-in engine.
- */
+export const aiEnabled = () => Boolean(chatEndpoint())
 export async function askGemini(question, { lang = 'en', history = [], signal } = {}) {
-  if (!GEMINI_KEY) throw new Error('no key')
-  cache[lang] ??= grounding(lang)
-  const system = `You are Yang Yang (羊羊), the friendly goat mascot and assistant for the Mid-South Lunar New Year Festival website in Memphis. Answer ONLY from the information below. If something is not covered, say you do not know and point to the relevant page (Schedule, Vendors, Tickets & Visit, Get Involved, About). Never invent events, vendors, prices, or dates. Be warm and brief (under 120 words unless listing schedule items). Reply in the same language the visitor writes in; if unclear, reply in ${LANG_NAMES[lang] || 'English'}. Use plain text with short lines, no markdown headings.\n\n${cache[lang]}`
-  const contents = [
-    ...history.slice(-6).map((m) => ({ role: m.role === 'bot' ? 'model' : 'user', parts: [{ text: m.text }] })),
-    { role: 'user', parts: [{ text: question }] },
-  ]
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`
-  const res = await fetch(url, {
-    method: 'POST', signal,
-    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
-    body: JSON.stringify({ system_instruction: { parts: [{ text: system }] }, contents, generationConfig: { temperature: 0.4, maxOutputTokens: 512 } }),
+  const endpoint = chatEndpoint()
+  if (!endpoint) throw new Error('Live chat is not configured')
+  const response = await fetch(endpoint, {
+    method: 'POST', signal, credentials: 'omit',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question, lang, history: history.filter(m => ['user', 'bot'].includes(m.role)).slice(-6).map(m => ({ role: m.role, text: m.text.slice(0, 2500) })) }),
   })
-  if (!res.ok) throw new Error(`gemini ${res.status}`)
-  const data = await res.json()
-  const text = data?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('').trim()
-  if (!text) throw new Error('empty')
-  return text
+  if (!response.ok) throw new Error('Live chat unavailable')
+  const data = await response.json()
+  if (typeof data.text !== 'string' || !data.text.trim() || data.text.length > 12000) throw new Error('Invalid chat answer')
+  return data.text
 }

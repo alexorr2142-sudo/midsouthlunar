@@ -8,18 +8,18 @@ Source: `architecture.mmd` (Mermaid, renders on GitHub). The pre-review version 
 
 ## Update: artwork and chatbot (October 7)
 
-Two additions after the labs. Both respect the no-backend rule.
+The artwork and default chatbot remain compatible with static hosting. The optional AI service described below is separate from GitHub Pages.
 
 - **Artwork is code.** The icon set, the goat mascot, and the background patterns are SVG inside React components and a CSS data URI, so there are no image files to host, license, or lose. The patterns cost about 6 kB of CSS.
-- **The chatbot runs in the browser.** `ChatWidget` is a small launcher in the main bundle; the panel, the intent engine, and the five-language knowledge base live in two lazy chunks (ChatPanel ~6 kB, chat ~70 kB) that load the first time someone opens the chat. Answers come from the same JSON data the pages use, so an edit to `schedule.json` updates the bot too. Optional AI mode: when a `VITE_GEMINI_API_KEY` is present at build time, `lib/gemini.js` asks Gemini first, grounded on the same data, and falls back to the engine on any error. Without the key, the Gemini module tree-shakes to a 0.2 kB stub.
+- **The local chatbot runs in the browser.** `ChatWidget` loads the panel and engine lazily. The seven-language knowledge base and website JSON supply local answers. Event-location questions read the canonical venue data before activity lookup. An optional public `VITE_CHAT_API_URL` points to a separate protected Node service with server-only credentials; failures fall back locally. Clearing or switching language aborts requests and suppresses stale responses. See `CHAT_SETUP.md` for the current service architecture.
 - **Bundle after the change:** main 328 kB raw / 107 kB gzip, inside the 350 / 110 budget. Lighthouse performance 98 to 99, accessibility 100.
 
 ## What the diagram shows
 
-- **GitHub does everything on the server side.** A push to `main` runs the unit tests, builds the site, and publishes `dist/` to GitHub Pages. There is no server of ours, no database, no keys, and no paid account, which is what the handoff rules (HO-1 to HO-9) require.
+- **GitHub hosts the static website.** A push to `main` runs the unit tests, builds the site, and publishes `dist/` to GitHub Pages. The website works without credentials, a database or an AI account. Optional live AI uses an independently hosted service and MCCC-controlled account; browser builds receive only its public endpoint URL.
 - **Everything else runs in the visitor's browser.** React renders the pages, the pure-logic modules do the countdown, filtering, and calendar work, and all content comes from JSON files that ship with the site.
 - **Content is data, not code.** `event.json`, `schedule.json`, `vendors.json`, `en.json`, and `zh.json` can be edited in GitHub's web editor by someone at MCCC without touching a component (HO-10, HO-11).
-- **External services are links only.** Eventbrite, Google Forms, Google Maps, and Google Calendar are reached by link, download, or keyless iframe. We hold nothing (NFR-5, NFR-6).
+- **Ticketing remains external.** Eventbrite, Google Forms, Google Maps and Google Calendar use links, downloads or a keyless iframe. The website processes no payments. Optional AI sends bounded chat context to the configured service/provider, with a visitor notice.
 
 ## What the review found
 

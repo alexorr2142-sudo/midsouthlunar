@@ -37,7 +37,7 @@ function Wordmark() {
 /**
  * Language switcher: a native <select> styled as a gold pill. A select works
  * with keyboard, screen readers, and phones without any custom menu code,
- * and scales to five languages where a toggle could not.
+ * and supports all seven site languages.
  */
 export function LangToggle({ className = '' }) {
   const { t, lang, setLang, langs } = useLang()
