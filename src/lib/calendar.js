@@ -19,26 +19,27 @@ export function icsEscape(s) {
   return String(s ?? '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n')
 }
 
-/** Build an .ics file body for one event. */
-export function buildIcs({ uid, title, description = '', location = '', start, end }) {
-  const lines = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//Mid-South Lunar New Year//Festival//EN',
-    'CALSCALE:GREGORIAN',
-    'METHOD:PUBLISH',
-    'BEGIN:VEVENT',
-    `UID:${uid}@midsouthlunar.org`,
-    `DTSTAMP:${toIcsUtc(new Date(0))}`,
-    `DTSTART:${toIcsUtc(start)}`,
-    `DTEND:${toIcsUtc(end)}`,
-    `SUMMARY:${icsEscape(title)}`,
-    `DESCRIPTION:${icsEscape(description)}`,
-    `LOCATION:${icsEscape(location)}`,
-    'END:VEVENT',
-    'END:VCALENDAR',
-  ]
-  return lines.join('\r\n') + '\r\n'
+/** Fold UTF-8 content lines at 75 octets without splitting a character. */
+export function foldIcsLine(line) {
+  const parts = []
+  let part = '', bytes = 0
+  for (const character of line) {
+    const size = new TextEncoder().encode(character).length
+    if (bytes + size > 75) { parts.push(part); part = ' '; bytes = 1 }
+    part += character; bytes += size
+  }
+  parts.push(part)
+  return parts.join('\r\n')
+}
+
+/** One file can contain each festival day's separate opening window. */
+export function buildIcs(calEvent, { now = new Date() } = {}) {
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Mid-South Lunar New Year//Festival//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH']
+  for (const {uid,title,description='',location='',start,end} of calEvent.occurrences ?? [calEvent]) {
+    lines.push('BEGIN:VEVENT', `UID:${icsEscape(uid)}@midsouthlunar.org`, `DTSTAMP:${toIcsUtc(now)}`, `DTSTART:${toIcsUtc(start)}`, `DTEND:${toIcsUtc(end)}`, `SUMMARY:${icsEscape(title)}`, `DESCRIPTION:${icsEscape(description)}`, `LOCATION:${icsEscape(location)}`, 'END:VEVENT')
+  }
+  lines.push('END:VCALENDAR')
+  return lines.map(foldIcsLine).join('\r\n') + '\r\n'
 }
 
 export function googleCalendarUrl({ title, description = '', location = '', start, end }) {
@@ -48,22 +49,23 @@ export function googleCalendarUrl({ title, description = '', location = '', star
     dates: `${toIcsUtc(start)}/${toIcsUtc(end)}`,
     details: description,
     location,
+    ctz: 'America/Chicago',
   })
   return `https://calendar.google.com/calendar/render?${p.toString()}`
 }
 
 /** Calendar details for the whole festival. */
 export function festivalCalendarEvent(event, lang = 'en') {
-  const first = event.days[0]
-  const last = event.days[event.days.length - 1]
-  return {
-    uid: `festival-${event.year}`,
+  const occurrences = event.days.map(day => ({
+    uid: `festival-${event.year}-${day.id}`,
     title: event.name[lang] ?? event.name.en,
     description: `${event.venue.name[lang] ?? event.venue.name.en}. midsouthlunar.org`,
     location: event.venue.address,
-    start: festivalDate(first.date, first.open, event.timezone),
-    end: festivalDate(last.date, last.close, event.timezone),
-  }
+    calendarLabel: day.label[lang] ?? day.label.en,
+    start: festivalDate(day.date, day.open, event.timezone),
+    end: festivalDate(day.date, day.close, event.timezone),
+  }))
+  return { ...occurrences[0], uid: `festival-${event.year}`, occurrences }
 }
 
 /** Calendar details for a single schedule item. */

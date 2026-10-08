@@ -3,15 +3,19 @@
  * Kept free of data imports so the main bundle stays small.
  */
 export const HELLO = {
-  en: "Hi! I'm Yang Yang, the festival goat. Ask me about the schedule, vendors, tickets, parking, or anything about Lunar New Year traditions. I understand English, 中文, Tiếng Việt, 한국어, and 日本語.",
-  zh: "你好！我是羊羊，庆典的小山羊。可以问我活动日程、商户、门票、停车，或者任何关于农历新年习俗的问题。我懂中文、English、Tiếng Việt、한국어和日本語。",
-  vi: "Xin chào! Mình là Yang Yang, chú dê của lễ hội. Hỏi mình về lịch trình, gian hàng, vé, bãi đậu xe hoặc bất cứ điều gì về phong tục Tết. Mình hiểu Tiếng Việt, English, 中文, 한국어 và 日本語.",
-  ko: "안녕하세요! 저는 축제의 양, 양양이에요. 일정, 참여 업체, 티켓, 주차, 그리고 설날 풍습에 대해 무엇이든 물어보세요. 한국어, English, 中文, Tiếng Việt, 日本語를 이해해요.",
-  ja: "こんにちは！祭りのひつじ、ヤンヤンです。スケジュール、出店、チケット、駐車場、旧正月の風習など何でも聞いてください。日本語、English、中文、Tiếng Việt、한국어がわかります。",
+  "zh-Hant": "你好！我是羊羊，慶典的小山羊。可以問我活動日程、商戶、門票、停車、慶典地址或農曆新年習俗。我支援 English、简体中文、繁體中文、日本語、한국어、ไทย 與 Tiếng Việt。",
+  "th": "สวัสดี! ฉันชื่อหยางหยาง แพะประจำเทศกาล ถามฉันเกี่ยวกับกำหนดการ ร้านค้า บัตร ที่จอดรถ ที่อยู่ของงาน หรือประเพณีปีใหม่จันทรคติได้ ฉันรองรับ English、简体中文、繁體中文、日本語、한국어、ไทย และ Tiếng Việt",
+  en: "Hi! I'm Yang Yang, the festival goat. Ask me about the schedule, vendors, tickets, parking, or anything about Lunar New Year traditions. I understand English, 简体中文, 繁體中文, 日本語, 한국어, ไทย, and Tiếng Việt.",
+  zh: "你好！我是羊羊，庆典的小山羊。可以问我活动日程、商户、门票、停车，或者任何关于农历新年习俗的问题。我懂简体中文、繁體中文、English、Tiếng Việt、한국어、ไทย和日本語。",
+  vi: "Xin chào! Mình là Yang Yang, chú dê của lễ hội. Hỏi mình về lịch trình, gian hàng, vé, bãi đậu xe hoặc bất cứ điều gì về phong tục Tết. Mình hiểu Tiếng Việt, English, 简体中文, 繁體中文, 한국어, ไทย và 日本語.",
+  ko: "안녕하세요! 저는 축제의 양, 양양이에요. 일정, 참여 업체, 티켓, 주차, 그리고 설날 풍습에 대해 무엇이든 물어보세요. 한국어, English, 简体中文, 繁體中文, Tiếng Việt, ไทย, 日本語를 이해해요.",
+  ja: "こんにちは！祭りのひつじ、ヤンヤンです。スケジュール、出店、チケット、駐車場、旧正月の風習など何でも聞いてください。日本語、English、简体中文、繁體中文、Tiếng Việt、ไทย、한국어がわかります。",
 }
 
 /** Suggested starter questions per language (shown as chips in the widget). */
 export const SUGGESTIONS = {
+  "zh-Hant": ["慶典地址在哪裡？","週六有什麼活動？","哪裡可以買餃子？","為什麼要發紅包？"],
+  "th": ["ที่อยู่ของงานคืออะไร?","วันเสาร์มีกิจกรรมอะไร?","ซื้อเกี๊ยวได้ที่ไหน?","ทำไมจึงให้อั่งเปา?"],
   en: ['What is on Saturday?', 'Where can I get dumplings?', 'Why are red envelopes given?', 'Where do I park?'],
   zh: ['周六有什么活动？', '哪里有饺子？', '为什么要发红包？', '在哪里停车？'],
   vi: ['Thứ Bảy có gì?', 'Mua sủi cảo ở đâu?', 'Tại sao lì xì?', 'Đậu xe ở đâu?'],

@@ -20,7 +20,7 @@
   },
   "lang": {
     "switch": "English",
-    "label": "切换为英文"
+    "label": "选择语言"
   },
   "home": {
     "dates": "2027年2月5日至6日",
@@ -54,7 +54,9 @@
     "cultureLink": "了解更多年俗",
     "sponsorsTitle": "感谢赞助商",
     "sponsorsText": "赞助商标志将展示于此。有意赞助？",
-    "sponsorsLink": "成为赞助商"
+    "sponsorsLink": "成为赞助商",
+    "planVisit": "计划游园",
+    "sponsorPlaceholder": "赞助商待公布"
   },
   "countdown": {
     "until": "距庆典开幕还有",
@@ -141,7 +143,8 @@
         "q": "天气不好怎么办？",
         "a": "庆典风雨无阻。如有变动，请关注本网站和社交媒体。"
       }
-    ]
+    ],
+    "ticketPending": "2027年售票链接将另行公布。"
   },
   "involved": {
     "title": "参与我们",
@@ -153,7 +156,9 @@
     "volunteerButton": "报名志愿者",
     "sponsorTitle": "赞助庆典",
     "sponsorText": "触达来自中南地区的两万名参与者。提供适合各种规模企业的赞助方案。",
-    "sponsorButton": "联系我们了解赞助"
+    "sponsorButton": "联系我们了解赞助",
+    "vendorPending": "商户申请链接即将公布。",
+    "volunteerPending": "志愿者报名链接即将公布。"
   },
   "about": {
     "title": "关于庆典",
@@ -210,9 +215,11 @@
     "send": "发送",
     "thinking": "思考中…",
     "localNote": "回答来自本站的日程、商户名单和精选的农历新年指南，数据不会离开你的浏览器。",
-    "aiNote": "回答由 Gemini 根据本站数据生成，可能有误。最新信息请查看日程和商户页面。",
+    "aiNote": "在线 AI 回答会将消息发送给 AI 服务提供商。回答可能有误，请核对网站信息。",
     "clear": "重新开始",
     "you": "你",
-    "langs": "中文 · English · Tiếng Việt · 한국어 · 日本語"
+    "langs": "English · 简体中文 · 繁體中文 · 日本語 · 한국어 · ไทย · Tiếng Việt",
+    "unavailable": "在线 AI 暂不可用，此回答来自网站本地信息。",
+    "error": "出了点问题，请重新提问。"
   }
 }

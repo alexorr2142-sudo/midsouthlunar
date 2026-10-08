@@ -44,6 +44,11 @@ describe('UT-4 filterVendors (FR-5)', () => {
     expect(filterVendors(vendors.items, { query: '饺子' }).map((v) => v.id)).toContain('v01')
   })
 
+  it.each(['zh-Hant', 'th', 'vi', 'ko', 'ja'])('searches localized vendor names in %s', lang => {
+    const vendor = vendors.items[0]
+    expect(filterVendors(vendors.items, {query:vendor.name[lang]}).map(v => v.id)).toContain(vendor.id)
+  })
+
   it('matches on description and booth number', () => {
     expect(filterVendors(vendors.items, { query: 'tanghulu' }).map((v) => v.id)).toEqual(['v06'])
     expect(filterVendors(vendors.items, { query: 'M4' }).map((v) => v.id)).toEqual(['v14'])

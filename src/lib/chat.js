@@ -4,8 +4,8 @@
  * answers from the site's own data (event, schedule, vendors, FAQ) and the
  * curated Lunar New Year knowledge base, in the language of the question.
  *
- * No network, no keys. When a Gemini key is configured, ChatWidget tries the
- * model first and falls back to this engine (see lib/gemini.js).
+ * No network, no keys. Optional AI uses a protected server and falls back
+ * to this engine; venue answers always use site data (see lib/gemini.js).
  *
  * answer(text, { lang, now }) -> { text, lang, intent, links: [{to,label}] }
  */
@@ -15,20 +15,30 @@ import vendors from '../data/vendors.json'
 import knowledge from '../data/knowledge.json'
 import { getEventState, festivalDate } from './countdown.js'
 import { normalize } from './filter.js'
+import extraLocales from './chatLocales.json'
+import chatLinkCopy from './chatLinkCopy.json'
+import { externalLink } from './links.js'
+import { HELLO } from './chatStrings.js'
 
-export const CHAT_LANGS = ['en', 'zh', 'vi', 'ko', 'ja']
+export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja']
 
 // ---------- language detection ----------
 const RE_HANGUL = /[가-힯ᄀ-ᇿ㄰-㆏]/
 const RE_KANA = /[぀-ヿ]/
 const RE_HAN = /[一-鿿]/
 const RE_VI = /[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹĂÂĐÊÔƠƯ]/
+const RE_THAI = /[\u0e00-\u0e7f]/
+const RE_TRADITIONAL = /[體慶農曆會門這裡學歡觀傳禮歷龍餃開關萬臺週麼發錢獅燈]/
 
 /** Script-based detection. Plain Latin text follows the UI language when that is Vietnamese, else English. */
 export function detectLang(text, uiLang = 'en') {
+  if (RE_THAI.test(text)) return 'th'
   if (RE_HANGUL.test(text)) return 'ko'
   if (RE_KANA.test(text)) return 'ja'
-  if (RE_HAN.test(text)) return uiLang === 'ja' ? 'ja' : 'zh'
+  if (RE_HAN.test(text)) {
+    if (uiLang === 'ja') return 'ja'
+    return uiLang === 'zh-Hant' || RE_TRADITIONAL.test(text) ? 'zh-Hant' : 'zh'
+  }
   if (RE_VI.test(text)) return 'vi'
   return uiLang === 'vi' ? 'vi' : 'en'
 }
@@ -157,6 +167,15 @@ const T = {
   },
 }
 
+for (const [code, locale] of Object.entries(extraLocales)) {
+  T[code] = { ...locale.engine }
+  for (const key of ['schedIntro', 'nowOpen', 'vendIntro']) {
+    T[code][key] = count => locale.engine[key].replace('{count}', String(count))
+  }
+}
+
+for (const lang of CHAT_LANGS) T[lang].hello = HELLO[lang]
+
 // ---------- intent keyword tables ----------
 const KW = {
   greet: { en: ['hello', 'hi ', 'hi!', 'hey', 'good morning', 'good afternoon', 'who are you', 'what can you do', 'help'], zh: ['你好', '您好', '嗨', '你是谁', '你能做什么', '帮助'], vi: ['xin chào', 'chào', 'bạn là ai', 'giúp'], ko: ['안녕', '누구', '도와', '뭘 할 수'], ja: ['こんにちは', 'こんばんは', 'はじめまして', 'あなたは誰', '何ができ', 'ヘルプ'] },
@@ -201,8 +220,24 @@ const CAT_KW = {
 
 const STOP = new Set(['the', 'and', 'for', 'with', 'what', 'where', 'when', 'which', 'there', 'this', 'that', 'about', 'from', 'have', 'does', 'will', 'can', 'any', 'are', 'you', 'your', 'show', 'tell', 'find', 'want', 'like', 'need', 'some', 'get', 'buy', 'sell', 'sells', 'workshop', 'festival', 'new', 'year', 'lunar', 'chinese', 'event', 'events'])
 
+for (const [code, locale] of Object.entries(extraLocales)) {
+  for (const [table, key] of [[KW, 'intentKeywords'], [DAY_KW, 'dayKeywords'], [STAGE_KW, 'stageKeywords'], [TYPE_KW, 'typeKeywords'], [CAT_KW, 'categoryKeywords']]) {
+    for (const [intent, keywords] of Object.entries(locale[key])) table[intent][code] = keywords
+  }
+}
+
 // ---------- helpers ----------
-function hasAny(q, list) { return list.some((k) => q.includes(k)) }
+export function hasKeyword(q, keyword) {
+  const k = normalize(keyword)
+  if (!k) return false
+  if (/^[\p{Script=Latin}\p{M}\d\s'’-]+$/u.test(k)) {
+    const escaped = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    return new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?:s|es|ing|ed)?(?![\\p{L}\\p{N}])`, 'u').test(q)
+  }
+  // CJK/Thai words and Korean stems attach to particles; keep substring matching.
+  return q.includes(k)
+}
+function hasAny(q, list) { return list.some((k) => hasKeyword(q, k)) }
 function anyLang(q, table) { return CHAT_LANGS.some((l) => hasAny(q, table[l] || [])) }
 function matchKey(q, table) {
   for (const [key, langs] of Object.entries(table)) if (anyLang(q, langs)) return key
@@ -215,7 +250,7 @@ export function mentionScore(q, textObj) {
   for (const lang of CHAT_LANGS) {
     const text = textObj?.[lang]
     if (!text) continue
-    if (lang === 'zh' || lang === 'ja' || lang === 'ko') {
+    if (['zh', 'zh-Hant', 'ja', 'ko'].includes(lang)) {
       // Hanzi/kanji, katakana, and hangul only: hiragana particles and verb
       // endings (は, が, ます) would otherwise match almost any sentence, and
       // Korean particles glue onto nouns (만두는), so 2-grams beat whole words.
@@ -224,7 +259,7 @@ export function mentionScore(q, textObj) {
       for (let i = 0; i + 2 <= t.length; i++) { const g = t.slice(i, i + 2); if (!seen.has(g) && q.includes(g)) { seen.add(g); score += 1 } }
     } else {
       for (const w of normalize(text).split(/[^\p{L}\p{N}]+/u)) {
-        if (w.length >= 3 && !STOP.has(w) && q.includes(w)) score += 1
+        if (w.length >= 3 && !STOP.has(w) && hasKeyword(q, w)) score += 1
       }
     }
   }
@@ -249,9 +284,10 @@ function findScheduleItems(q) {
   if (maxS >= 1) items = scored.filter((x) => x.s >= Math.max(1, maxS - 0.5)).map((x) => x.it)
   if (day) items = items.filter((it) => it.day === day)
   if (stage) items = items.filter((it) => it.stage === stage)
-  if (type) items = items.filter((it) => it.type === type)
+  // A named activity is more specific than broad category words in its title.
+  if (type && maxS < 1) items = items.filter((it) => it.type === type)
   const specific = maxS >= 1 || day || stage || type
-  return { items: items.slice().sort((a, b) => (a.day === b.day ? a.start.localeCompare(b.start) : a.day.localeCompare(b.day))), specific, filters: { day, stage, type } }
+  return { items: items.slice().sort((a, b) => (a.day === b.day ? a.start.localeCompare(b.start) : a.day.localeCompare(b.day))), specific, filters: { day, stage, type: maxS < 1 ? type : null } }
 }
 
 function findVendors(q) {
@@ -268,7 +304,7 @@ function knowledgeTopic(q) {
   let best = null, bestScore = 0
   for (const t of knowledge.topics) {
     let s = 0
-    for (const lang of CHAT_LANGS) for (const k of t.keywords[lang] || []) if (q.includes(k)) s += k.length >= 8 ? 3 : k.length >= 4 ? 2 : 1
+    for (const lang of CHAT_LANGS) for (const k of t.keywords[lang] || []) if (hasKeyword(q, k)) s += k.length >= 8 ? 3 : k.length >= 4 ? 2 : 1
     if (s > bestScore) { best = t; bestScore = s }
   }
   return bestScore > 0 ? best : null
@@ -280,8 +316,29 @@ export function answer(rawText, { lang: uiLang = 'en', now = new Date() } = {}) 
   const lang = detectLang(text, uiLang)
   const L = T[lang]
   const q = normalize(text)
-  const reply = (intent, body, links = []) => ({ text: body, lang, intent, links })
+  const reply = (intent, body, links = []) => ({ text: ['schedule', 'vendors'].includes(intent) ? chatLinkCopy[lang].preliminary + '\n' + body : body, lang, intent, links })
   const scheduleParams = (f) => { const p = new URLSearchParams(); if (f.day) p.set('day', f.day); if (f.stage) p.set('stage', f.stage); if (f.type) p.set('type', f.type); const s = p.toString(); return s ? `/schedule?${s}` : '/schedule' }
+
+  const topic = knowledgeTopic(q)
+  const sched = findScheduleItems(q)
+  const vend = findVendors(q)
+  const namesVendor = vend.specific && vend.items.length > 0 && vendorScoreMax(q, vend.items) >= 1
+  const namesEvent = sched.specific && sched.items.length > 0 && mentionScoreMax(q, sched.items) >= 1
+  const festivalReference = anyLang(q, {
+    en: ['festival', 'event', 'mccc', 'agricenter'], zh: ['庆典', '活动', '文化节'],
+    'zh-Hant': ['慶典', '活動', '文化節'], vi: ['lễ hội', 'sự kiện'], ko: ['축제', '행사'], ja: ['祭り', 'イベント'], th: ['เทศกาล', 'งาน'],
+  })
+  const addressReference = anyLang(q, {
+    en: ['address', 'venue', 'directions'], zh: ['地址', '会场'], 'zh-Hant': ['地址', '會場'],
+    vi: ['địa chỉ'], ko: ['주소', '행사장'], ja: ['住所', '会場'], th: ['ที่อยู่', 'สถานที่จัดงาน'],
+  })
+  const locationQuestion = anyLang(q, KW.location) || addressReference || /\bwhere\b/u.test(q) && festivalReference
+  const wholeFestivalLocation = locationQuestion && (
+    addressReference && festivalReference ||
+    festivalReference && !sched.filters.stage ||
+    addressReference && !namesVendor && !namesEvent && !sched.filters.stage
+  )
+  if (wholeFestivalLocation) return reply('venue', `${event.venue.name[lang] ?? event.venue.name.en}\n${event.venue.address}`, [{ to: '/visit', label: L.visit }])
 
   if (!q) return reply('greet', L.hello)
   if (q.length < 25 && anyLang(q, KW.greet)) return reply('greet', L.hello)
@@ -302,27 +359,22 @@ export function answer(rawText, { lang: uiLang = 'en', now = new Date() } = {}) 
   }
 
   // Knowledge topics win when the question is clearly about traditions.
-  const topic = knowledgeTopic(q)
-  const sched = findScheduleItems(q)
-  const vend = findVendors(q)
-  const wantsSchedule = anyLang(q, KW.schedule) || sched.filters.day || sched.filters.stage || (anyLang(q, KW.hours) && mentionScoreMax(q, sched.items) >= (['zh', 'ja', 'ko'].includes(lang) ? 1 : 2))
-  const wantsVendor = anyLang(q, KW.vendor) || vend.cat
+  const wantsSchedule = anyLang(q, KW.schedule) || sched.filters.day || sched.filters.stage || (anyLang(q, KW.hours) && mentionScoreMax(q, sched.items) >= (['zh', 'zh-Hant', 'ja', 'ko'].includes(lang) ? 1 : 2))
+  const wantsVendor = anyLang(q, KW.vendor) || vend.cat || namesVendor && anyLang(q, KW.tickets)
 
   // Direct FAQ-style intents.
   if (anyLang(q, KW.accessibility)) return reply('accessibility', L.accessibility, [{ to: '/visit', label: L.visit }])
-  if (anyLang(q, KW.volunteer)) return reply('volunteer', L.volunteer, [{ to: '/get-involved#volunteer', label: L.involved }])
+  if (anyLang(q, KW.volunteer)) return reply('volunteer', externalLink(event.links.volunteerForm, 'volunteerForm') ? L.volunteer : chatLinkCopy[lang].volunteer, [{ to: '/get-involved#volunteer', label: L.involved }])
   if (anyLang(q, KW.sponsor)) return reply('sponsor', L.sponsor, [{ to: '/get-involved#sponsor', label: L.involved }])
-  if (anyLang(q, KW.vendorApply)) return reply('vendorApply', L.vendorApply, [{ to: '/get-involved#vendor', label: L.involved }])
-  const namesVendor = vend.specific && vend.items.length > 0 && vendorScoreMax(q, vend.items) >= 1
-  const namesEvent = sched.specific && sched.items.length > 0 && mentionScoreMax(q, sched.items) >= 1
-  if (anyLang(q, KW.tickets) && !wantsSchedule && !namesVendor) return reply('tickets', L.tickets, [{ to: '/visit', label: L.visit }])
+  if (anyLang(q, KW.vendorApply)) return reply('vendorApply', externalLink(event.links.vendorForm, 'vendorForm') ? L.vendorApply : chatLinkCopy[lang].vendorApply, [{ to: '/get-involved#vendor', label: L.involved }])
+  if (anyLang(q, KW.tickets) && !wantsSchedule && !namesVendor) return reply('tickets', externalLink(event.links.tickets, 'tickets') ? L.tickets : chatLinkCopy[lang].tickets, [{ to: '/visit', label: L.visit }])
   if (anyLang(q, KW.weather)) return reply('weather', L.weather, [{ to: '/visit', label: L.visit }])
   if (anyLang(q, KW.payment)) return reply('payment', L.payment)
   if (anyLang(q, KW.location) && !wantsSchedule && !namesVendor && !namesEvent) return reply('location', L.location, [{ to: '/visit', label: L.visit }])
 
   // Specific schedule or vendor lookups beat general knowledge when the
   // query names an item, a day, an area, or a category.
-  if (sched.specific && (wantsSchedule || !topic || mentionScoreMax(q, sched.items) >= 3)) {
+  if (sched.specific && (!wantsVendor || wantsSchedule) && (wantsSchedule || !topic || locationQuestion && namesEvent || mentionScoreMax(q, sched.items) >= 3)) {
     if (!sched.items.length) return reply('schedule', L.schedNone, [{ to: '/schedule', label: L.more }])
     const top = sched.items.slice(0, 6)
     return reply('schedule', [L.schedIntro(sched.items.length), ...top.map((it) => scheduleLine(it, lang, L))].join('\n'), [{ to: scheduleParams(sched.filters), label: L.more }])

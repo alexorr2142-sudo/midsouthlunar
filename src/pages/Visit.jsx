@@ -1,9 +1,11 @@
 import { useLang } from '../i18n/LanguageContext'
 import event from '../data/event.json'
 import Icon from '../components/Icon'
+import { externalLink } from '../lib/links'
 
 export default function Visit() {
   const { t, pick } = useLang()
+  const tickets = externalLink(event.links.tickets, 'tickets')
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(event.venue.mapQuery)}&output=embed`
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.venue.mapQuery)}`
 
@@ -14,14 +16,14 @@ export default function Visit() {
       <section className="mt-6 card bg-red text-white" aria-labelledby="tickets">
         <h2 id="tickets" className="font-display text-2xl font-bold text-gold-light">{t('visit.ticketsTitle')}</h2>
         <p className="mt-2">{t('visit.ticketsText')}</p>
-        <a href={event.links.tickets} target="_blank" rel="noreferrer" className="btn-gold mt-4" data-testid="tickets-link">{t('visit.ticketsButton')}</a>
+        {tickets ? <a href={tickets} target="_blank" rel="noopener noreferrer" className="btn-gold mt-4" data-testid="tickets-link">{t('visit.ticketsButton')}</a> : <p className="mt-4 font-semibold text-gold-light" data-testid="tickets-pending">{t('visit.ticketPending')}</p>}
       </section>
 
       <section className="mt-8 grid gap-6 md:grid-cols-2" aria-labelledby="map">
         <div>
           <h2 id="map" className="font-display text-2xl font-bold text-red-dark">{t('visit.mapTitle')}</h2>
           <p className="mt-2 text-lg font-semibold">{pick(event.venue.name)}</p>
-          <p>{t('visit.address')}</p>
+          <p>{event.venue.address}</p>
           <a href={mapLink} target="_blank" rel="noreferrer" className="btn-primary mt-4">{t('visit.directions')}</a>
           <h3 className="mt-8 font-display text-xl font-bold text-red-dark">{t('visit.parkingTitle')}</h3>
           <ul className="mt-2 list-disc pl-5 space-y-1">{t('visit.parking').map((p) => <li key={p}>{p}</li>)}</ul>
