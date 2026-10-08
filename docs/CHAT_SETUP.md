@@ -8,7 +8,7 @@ Use Node.js 22.12 or newer. Copy `.env.example` to `.env` and set `GEMINI_API_KE
 
 Run `node --env-file=.env server/chat.mjs`. The default service is `http://127.0.0.1:8787`. `GET /api/chat/status` returns `{ "enabled": true }` only when a key exists; `POST /api/chat` accepts `{ question, lang, history }` and returns `{ text }`. History messages use `role: "user" | "bot"` and `text`. Configure the public frontend endpoint `VITE_CHAT_API_URL` to the service's `/api/chat` URL and restart/rebuild the website. This endpoint URL is public; credentials remain server-side.
 
-The default model is `gemini-2.5-flash`, preserving the existing site's provider/model choice. The [official model page](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash) currently limits its availability for new accounts. An MCCC account owner should verify account access and set `GEMINI_MODEL` to an available model before activation. Real provider access was not verified during development; tests use mocked responses and make no billed API requests.
+The default model is `gemini-3.1-flash-lite`, selected for a low-cost/free-tier starting point. Confirm availability and quota for the API key in Google AI Studio before launch. Real provider access is not exercised by automated tests; tests use mocked responses and make no billed API requests.
 
 ## Deploy the service
 
