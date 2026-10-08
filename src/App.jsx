@@ -10,6 +10,8 @@ const Schedule = lazy(() => import('./pages/Schedule'))
 const Vendors = lazy(() => import('./pages/Vendors'))
 const Visit = lazy(() => import('./pages/Visit'))
 const GetInvolved = lazy(() => import('./pages/GetInvolved'))
+const ApplicationForm = lazy(() => import('./pages/ApplicationForm'))
+const OrganizerDashboard = lazy(() => import('./pages/OrganizerDashboard'))
 const About = lazy(() => import('./pages/About'))
 const IconSheet = import.meta.env.DEV ? lazy(() => import('./dev/IconSheet')) : null
 
@@ -62,6 +64,8 @@ export default function App() {
             <Route path="visit" element={<Visit />} />
             <Route path="get-involved" element={<GetInvolved />} />
             <Route path="about" element={<About />} />
+            <Route path="apply/:type" element={<ApplicationForm />} />
+            <Route path="organizer-dashboard" element={<OrganizerDashboard />} />
             {IconSheet && <Route path="dev/icons" element={<IconSheet />} />}
             <Route path="*" element={<NotFound />} />
           </Route>
