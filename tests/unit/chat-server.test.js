@@ -37,7 +37,7 @@ describe('protected chat provider contract', () => {
     expect(result).toEqual({ text: 'A cultural answer.' })
     const [url, options] = provider.mock.calls[0]
     const body = JSON.parse(options.body)
-    expect(url).toMatch(/models\/gemini-2.5-flash:generateContent$/)
+    expect(url).toMatch(/models\/gemini-3.1-flash-lite:generateContent$/)
     expect(url).not.toContain('server-secret')
     expect(options.headers['x-goog-api-key']).toBe('server-secret')
     expect(options.body).not.toContain('server-secret')
