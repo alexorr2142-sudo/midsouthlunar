@@ -6,7 +6,7 @@
  * compiled into the public bundle, so it must be a key created for this
  * site only, restricted in Google AI Studio / Cloud Console to the site's
  * HTTP referrers (midsouthlunar.org and the github.io address). That limits
- * casual abuse; the free tier has no bill to run up either way.
+ * casual abuse; free-tier quotas and availability still apply.
  *
  * The model is grounded on the same data the built-in engine uses, so it
  * cannot invent events, vendors, or prices. If the call fails for any reason
@@ -18,7 +18,7 @@ import vendors from '../data/vendors.json'
 import knowledge from '../data/knowledge.json'
 
 export const GEMINI_KEY = import.meta.env.VITE_GEMINI_API_KEY || ''
-export const GEMINI_MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash'
+export const GEMINI_MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash-lite'
 export const aiEnabled = () => Boolean(GEMINI_KEY)
 
 const LANG_NAMES = { en: 'English', zh: 'Simplified Chinese', vi: 'Vietnamese', ko: 'Korean', ja: 'Japanese' }
