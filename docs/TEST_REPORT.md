@@ -1,6 +1,6 @@
 # Test report (Thursday lab)
 
-This is the historical October 7 baseline report. For the October 8 comparison changes and current results, see [COMPARISON_TEST_REPORT.md](COMPARISON_TEST_REPORT.md). The baseline's test counts, bundle figures and placeholder-link expectations do not describe the updated build.
+This is the historical October 7 baseline report. For the October 8 comparison changes and current results, see [COMPARISON_TEST_REPORT.md](COMPARISON_TEST_REPORT.md); for the October 9 check of whether Gemini is actually wired to Yang Yang (finding D-12 and the new Cloudflare Worker), see [CHAT_WIRING_REPORT.md](CHAT_WIRING_REPORT.md). The baseline's test counts, bundle figures and placeholder-link expectations do not describe the updated build.
 
 **Project:** Mid-South Lunar New Year Festival website · **Date:** October 7, 2026 (updated for artwork and chatbot) · **Build:** `main` after the Tuesday lab review fixes
 **Team:** Alex Orr, Dee Dee Gan, Gabrielle Richardson, Wang Liao · MIS 7623, University of Memphis
@@ -102,7 +102,7 @@ D-3 and D-4 passed the 90 threshold but violate NFR-3 (WCAG AA is a Must), so th
 ## 6. What was not tested, and why
 
 - **Real devices and real network.** All phone results are emulated. The peer team round (Section 7) is where real phones come in.
-- **Chatbot coverage.** The built-in engine answers what the keyword tables and 12 knowledge topics cover. Unusual phrasings fall back to a helpful default rather than a wrong answer. The optional Gemini mode is not tested here because it needs a key; the fallback path is.
+- **Chatbot coverage.** The built-in engine answers what the keyword tables and 12 knowledge topics cover. Unusual phrasings fall back to a helpful default rather than a wrong answer. The optional Gemini mode is not tested here because it needs a key; the fallback path is. (October 9 update: the whole chain up to Google is now verified with a stand-in provider and a dummy key, see CHAT_WIRING_REPORT.md; a real-key run still needs the festival account owner.)
 - **Translation accuracy.** Tests prove every string exists in all five languages, not that the Chinese, Vietnamese, Korean, or Japanese is good. Chinese review is Dee Dee or Wang; the other three need native readers the team has not yet found.
 - **External services.** Eventbrite and Google Forms links are placeholders until MCCC supplies real ones; tests check the link shape only.
 - **The GitHub Pages redirect (`404.html`).** Only testable on the live site. Verified after deploy, which found D-6.

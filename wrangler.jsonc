@@ -1,0 +1,18 @@
+{
+  // Cloudflare Worker that hosts the protected Yang Yang chat service
+  // (server/worker.mjs). Deployed by .github/workflows/chat-worker.yml.
+  // The public URL becomes the repo Variable CHAT_API_URL (…/api/chat).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "midsouthlunar-chat",
+  "main": "server/worker.mjs",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
+  "vars": {
+    // Public, non-secret settings. GEMINI_API_KEY is a Worker *secret*:
+    // set it with `wrangler secret put GEMINI_API_KEY` or let the workflow push it.
+    "GEMINI_MODEL": "gemini-3.1-flash-lite",
+    "ALLOWED_ORIGINS": "https://alexorr2142-sudo.github.io,https://midsouthlunar.org,https://www.midsouthlunar.org,http://localhost:5173,http://localhost:4173"
+  }
+}

@@ -18,6 +18,23 @@ This example service has a 20-second provider timeout, 24 KiB request-body limit
 
 Origin checking is a browser access boundary, not authentication: nonbrowser clients can spoof an Origin header. Rate/budget limits and provider-account spending controls are necessary for a public endpoint. Counters live in process memory, reset when the service restarts, and are per instance. Use one instance or shared host-managed quotas for a larger deployment. The service deliberately ignores spoofable forwarded-IP headers; behind a proxy, visitors may share the connection-IP allowance. Configure trusted host-level per-visitor limiting rather than accepting arbitrary `X-Forwarded-For` values. Keep the global cap and provider spending controls enabled.
 
+## Deploy on Cloudflare Workers (recommended, free tier)
+
+`server/worker.mjs` is the same service packaged for Cloudflare Workers, so no Node host or server bill is needed. It reuses `chat-service.mjs` and the origin/rate-limit policy in `policy.mjs`, and bundles the current `src/data/` and `src/i18n/` JSON at deploy time, which is why the `chat-worker` workflow redeploys whenever those folders change. Configuration lives in `wrangler.jsonc` (public variables `GEMINI_MODEL` and `ALLOWED_ORIGINS`); the key is a Worker *secret* and never appears in the repository.
+
+One-time setup, done by whoever owns the festival Google account so that nothing is tied to a team member (requirements HO-13):
+
+1. Create a free Cloudflare account with the festival Google account and note the **Account ID** (Workers & Pages overview, right-hand column).
+2. Create an API token from the **Edit Cloudflare Workers** template (My Profile → API Tokens).
+3. Create a Gemini API key in Google AI Studio with the same Google account.
+4. In the GitHub repository, Settings → Secrets and variables → Actions → **Secrets**, add `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` and `GEMINI_API_KEY`.
+5. Run the **Deploy Yang Yang chat service** workflow (Actions tab → Run workflow). Its summary prints the Worker URL, typically `https://midsouthlunar-chat.<account>.workers.dev`.
+6. Under **Variables**, add `CHAT_API_URL` = that URL plus `/api/chat`, then re-run **Build and deploy to GitHub Pages**. The chat panel's footer switches from the "built-in answers" note to the AI note once the new build is live.
+
+Until step 4 is done the workflow exits with a notice and the site stays in built-in mode; nothing breaks. To turn live mode off, delete the `CHAT_API_URL` variable and redeploy Pages. To rotate the key, replace the `GEMINI_API_KEY` secret and re-run the Worker workflow. Locally, `npm run chat:worker` runs the Worker in `wrangler dev` with the key read from a git-ignored `.dev.vars` file (`GEMINI_API_KEY=...`).
+
+The in-memory rate counters are per Worker isolate and reset when Cloudflare recycles it, so the hard spending limit must be set on the Google AI Studio side as well. The Worker reads the visitor IP from Cloudflare's own `cf-connecting-ip` header, which visitors cannot spoof.
+
 ## Grounding and privacy
 
 Server instructions include the current event, schedule, vendors, cultural guide and website/FAQ text. Festival answers must use those facts, preserve preliminary status and identify missing facts. For broader cultural questions the model may use general knowledge, distinguish legends from documented history, and identify uncertainty. The bot cannot buy tickets or accept payment details.

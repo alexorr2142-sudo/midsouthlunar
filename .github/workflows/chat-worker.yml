@@ -1,0 +1,78 @@
+name: Deploy Yang Yang chat service (Cloudflare Worker)
+
+# Deploys server/worker.mjs to Cloudflare Workers whenever the chat code or the
+# website data it is grounded on changes. Does nothing until the repository has
+# these secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN   token with the "Edit Cloudflare Workers" template
+#   CLOUDFLARE_ACCOUNT_ID  from the Cloudflare dashboard (Workers & Pages overview)
+#   GEMINI_API_KEY         Google AI Studio key; pushed to the Worker as a secret
+# Then set the repo Variable CHAT_API_URL to the Worker's /api/chat URL so the
+# GitHub Pages build turns on live mode.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - server/**
+      - src/data/**
+      - src/i18n/**
+      - wrangler.jsonc
+      - .github/workflows/chat-worker.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chat-worker
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:unit
+
+      - name: Check Cloudflare secrets
+        id: cf
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$TOKEN" ] && [ -n "$ACCOUNT" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set; skipping Worker deploy. Yang Yang stays in built-in mode."
+          fi
+
+      - name: Deploy Worker
+        if: steps.cf.outputs.configured == 'true'
+        id: deploy
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+          # Pushed to the Worker as an encrypted secret; never printed or built into the site.
+          secrets: |
+            GEMINI_API_KEY
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Smoke test
+        if: steps.cf.outputs.configured == 'true'
+        env:
+          URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          echo "Worker URL: $URL"
+          status=$(curl -sS "$URL/api/chat/status")
+          echo "status: $status"
+          [ "$status" = '{"enabled":true}' ] || { echo "::warning::Worker deployed but GEMINI_API_KEY is empty; live mode is off."; }
+          echo "Set repository Variable CHAT_API_URL=$URL/api/chat and re-run the Pages workflow." >> "$GITHUB_STEP_SUMMARY"

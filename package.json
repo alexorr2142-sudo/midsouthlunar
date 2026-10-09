@@ -15,7 +15,9 @@
     "test:perf": "node scripts/perf.mjs",
     "test:report": "vitest run --reporter=json --outputFile=test-results/unit.json; playwright test --reporter=json > test-results/e2e.json; node scripts/perf.mjs",
     "screenshots": "node scripts/screenshots.mjs",
-    "chat": "node --env-file-if-exists=.env server/chat.mjs"
+    "chat": "node --env-file-if-exists=.env server/chat.mjs",
+    "chat:worker": "wrangler dev",
+    "chat:deploy": "wrangler deploy"
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -36,6 +38,7 @@
     "oxlint": "^1.81.0",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.0",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.3",
+    "wrangler": "^4.149.0"
   }
 }

@@ -153,3 +153,17 @@ One structured prompt per module, following the Role / Context / Task / Constrai
 **Output:** src/lib/chat.js, src/lib/chatStrings.js, src/lib/gemini.js, src/data/knowledge.json (12 topics x 5 languages), src/components/ChatWidget.jsx + ChatPanel.jsx, chat strings in all five dictionaries, tests/unit/chat.test.js, tests/e2e/chat.spec.js, workflow secret wiring.
 
 **Result:** Works in all five languages; 38 unit and 20 integration tests pass. **Human review of the first version found four routing bugs**, each fixed with a test: (1) Chinese "为什么要发红包" went to the generic "what is Lunar New Year" topic because the keyword 为什么 (why) was too broad; (2) Vietnamese "Mua sủi cảo ở đâu" went to tickets because "mua" (buy) matched the tickets intent before the vendor was recognized; (3) Korean "만두는 어디서 사요" did not match the vendor 만두집 because Korean particles glue onto nouns, so matching moved to hangul 2-grams; (4) Japanese "土曜日は何がありますか" matched events whose descriptions ended in ます, so hiragana is now excluded from matching. One more: the Japanese word 今 ("now") inside 今年 ("this year") hijacked a zodiac question. All five are documented as D-7 to D-11 in the test report. Translations of the knowledge base remain pending native review.
+
+## Module 9: Is Gemini actually connected? Cloudflare Worker for the chat service (FR-13, HO-13)
+
+**Role:** You are verifying and completing the hosting of a protected chat service for a static site.
+
+**Context:** After the October 8 refactor the Gemini key lives on a server (`server/`) and the site only knows a public URL from the repo variable `CHAT_API_URL`. Draft 3 of the requirements forbids any server the team has to run, so nobody deployed one, and the README's "optional AI mode" could not be reached from the live site. The team decided (October 9) to allow a free, account-owned hosted function as the one exception, provided it is owned by the festival's accounts and documented for handoff.
+
+**Task:** Prove where the chain breaks without a key (download the deployed JavaScript, run the service with no key and with a dummy key, drive the real panel against the real handler with Google swapped for a stand-in); then package the same service for Cloudflare Workers with identical CORS, rate-limit and grounding behaviour, a workflow that deploys it from repository secrets and skips cleanly when they are missing, contract tests, and a step-by-step setup guide the festival can follow.
+
+**Constraints:** Never put the key in chat, the repo, or a `VITE_` variable; the student may not create the Cloudflare or Google accounts on the festival's behalf. Do not change the browser code or the Node service's behaviour; share code instead of copying it.
+
+**Output:** server/worker.mjs, server/policy.mjs (extracted from http.mjs, re-exported for compatibility), wrangler.jsonc, .github/workflows/chat-worker.yml, tests/unit/chat-worker.test.js (UT-10), docs/CHAT_WIRING_REPORT.md, updates to CHAT_SETUP.md, README.md, TEST_REPORT.md, ARCHITECTURE.md and requirements Draft 4 (HO-13).
+
+**Result:** Live site confirmed to have no AI path (D-12). Chain verified end to end on phone and desktop with a stand-in provider; the Node service and the Worker both reach Google and fail only on the invalid key. 111 unit tests pass. Activation is a six-step checklist for the account owner; the Worker workflow does nothing until the secrets exist.

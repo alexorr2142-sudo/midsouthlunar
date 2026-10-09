@@ -11,3 +11,5 @@ dist-preview
 .env
 .env.*
 !.env.example
+.dev.vars
+.wrangler/

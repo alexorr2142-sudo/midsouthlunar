@@ -14,6 +14,10 @@ The artwork and default chatbot remain compatible with static hosting. The optio
 - **The local chatbot runs in the browser.** `ChatWidget` loads the panel and engine lazily. The seven-language knowledge base and website JSON supply local answers. Event-location questions read the canonical venue data before activity lookup. An optional public `VITE_CHAT_API_URL` points to a separate protected Node service with server-only credentials; failures fall back locally. Clearing or switching language aborts requests and suppresses stale responses. See `CHAT_SETUP.md` for the current service architecture.
 - **Bundle after the change:** main 328 kB raw / 107 kB gzip, inside the 350 / 110 budget. Lighthouse performance 98 to 99, accessibility 100.
 
+## Update: chat service hosting (October 9)
+
+The October 8 refactor moved the Gemini call out of the browser into `server/` (key stays server-side, the site only knows a public URL). That left a gap: GitHub Pages cannot run the Node service, and Draft 3 forbids a server the team operates, so the live site had no AI mode at all. `server/worker.mjs` packages the same service for Cloudflare Workers (free tier, no server to run, owned by the festival's accounts); `server/policy.mjs` holds the origin allowlist and rate limiter shared by both entries. `.github/workflows/chat-worker.yml` redeploys the Worker when `server/`, `src/data/` or `src/i18n/` change, because the Worker bundles that JSON as its grounding. Nothing in the static site changed; it still reads `VITE_CHAT_API_URL` at build time.
+
 ## What the diagram shows
 
 - **GitHub hosts the static website.** A push to `main` runs the unit tests, builds the site, and publishes `dist/` to GitHub Pages. The website works without credentials, a database or an AI account. Optional live AI uses an independently hosted service and MCCC-controlled account; browser builds receive only its public endpoint URL.
