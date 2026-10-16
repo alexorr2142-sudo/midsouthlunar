@@ -21,7 +21,6 @@ const venueQuestions = {
   ko: '행사 주소는 어디인가요?',
   vi: 'Địa chỉ của lễ hội ở đâu?',
   th: 'ที่อยู่ของงานเทศกาลอยู่ที่ไหน?',
-  es: '¿Dónde está la dirección del festival?',
 }
 
 function LanguageControls() {

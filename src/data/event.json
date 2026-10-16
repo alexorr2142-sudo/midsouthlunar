@@ -6,8 +6,7 @@
     "ko": "미드사우스 설날 축제",
     "ja": "ミッドサウス旧正月祭",
     "zh-Hant": "中南農曆新年慶典",
-    "th": "เทศกาลตรุษจีนมิดเซาท์",
-    "es": "Festival del Año Nuevo Lunar del Medio Sur"
+    "th": "เทศกาลตรุษจีนมิดเซาท์"
   },
   "organizer": {
     "en": "Mid-South Chinese Chamber of Commerce (MCCC)",
@@ -16,8 +15,7 @@
     "ko": "미드사우스 중국상공회의소(MCCC)",
     "ja": "ミッドサウス中国商工会議所（MCCC）",
     "zh-Hant": "中南華人商會 (MCCC)",
-    "th": "หอการค้าจีนมิดเซาท์ (MCCC)",
-    "es": "Cámara de Comercio China del Medio Sur (MCCC)"
+    "th": "หอการค้าจีนมิดเซาท์ (MCCC)"
   },
   "year": 2027,
   "zodiac": {
@@ -27,8 +25,7 @@
     "ko": "양의 해",
     "ja": "未年",
     "zh-Hant": "羊年",
-    "th": "ปีมะแม",
-    "es": "Año de la Cabra"
+    "th": "ปีมะแม"
   },
   "start": "2027-02-05T10:00:00-06:00",
   "end": "2027-02-06T21:00:00-06:00",
@@ -45,8 +42,7 @@
         "ko": "2월 5일 금 (섣달그믐)",
         "ja": "2月5日（金）大晦日",
         "zh-Hant": "2月5日 週五（除夕）",
-        "th": "ศุกร์ 5 ก.พ. (คืนส่งท้ายปี)",
-        "es": "Vie. 5 de febrero (víspera de Año Nuevo)"
+        "th": "ศุกร์ 5 ก.พ. (คืนส่งท้ายปี)"
       }
     },
     {
@@ -61,8 +57,7 @@
         "ko": "2월 6일 토 (설날)",
         "ja": "2月6日（土）元日",
         "zh-Hant": "2月6日 週六（大年初一）",
-        "th": "เสาร์ 6 ก.พ. (วันขึ้นปีใหม่)",
-        "es": "Sáb. 6 de febrero (Año Nuevo)"
+        "th": "เสาร์ 6 ก.พ. (วันขึ้นปีใหม่)"
       }
     }
   ],
@@ -75,8 +70,7 @@
       "ko": "Agricenter International",
       "ja": "Agricenter International",
       "zh-Hant": "Agricenter 國際會展中心",
-      "th": "Agricenter International",
-      "es": "Agricenter International"
+      "th": "Agricenter International"
     },
     "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
     "mapQuery": "Agricenter International, 7777 Walnut Grove Rd, Memphis, TN 38120"
@@ -96,8 +90,7 @@
       "ko": "메인 무대",
       "ja": "メインステージ",
       "zh-Hant": "主舞台",
-      "th": "เวทีหลัก",
-      "es": "Escenario principal"
+      "th": "เวทีหลัก"
     },
     "pavilion": {
       "en": "Cultural Pavilion",
@@ -106,8 +99,7 @@
       "ko": "문화관",
       "ja": "文化パビリオン",
       "zh-Hant": "文化館",
-      "th": "ศาลาวัฒนธรรม",
-      "es": "Pabellón cultural"
+      "th": "ศาลาวัฒนธรรม"
     },
     "food": {
       "en": "Food Hall",
@@ -116,8 +108,7 @@
       "ko": "푸드홀",
       "ja": "フードホール",
       "zh-Hant": "美食區",
-      "th": "โซนอาหาร",
-      "es": "Zona gastronómica"
+      "th": "โซนอาหาร"
     },
     "garden": {
       "en": "Family Garden",
@@ -126,8 +117,7 @@
       "ko": "가족 정원",
       "ja": "ファミリーガーデン",
       "zh-Hant": "親子園",
-      "th": "สวนครอบครัว",
-      "es": "Jardín familiar"
+      "th": "สวนครอบครัว"
     },
     "market": {
       "en": "New Year Market",
@@ -136,8 +126,7 @@
       "ko": "설 장터",
       "ja": "正月マーケット",
       "zh-Hant": "年貨市集",
-      "th": "ตลาดปีใหม่",
-      "es": "Mercado de Año Nuevo"
+      "th": "ตลาดปีใหม่"
     }
   },
   "types": {
@@ -148,8 +137,7 @@
       "ko": "공연",
       "ja": "公演",
       "zh-Hant": "演出",
-      "th": "การแสดง",
-      "es": "Espectáculo"
+      "th": "การแสดง"
     },
     "food": {
       "en": "Food",
@@ -158,8 +146,7 @@
       "ko": "음식",
       "ja": "食",
       "zh-Hant": "美食",
-      "th": "อาหาร",
-      "es": "Gastronomía"
+      "th": "อาหาร"
     },
     "culture": {
       "en": "Culture",
@@ -168,8 +155,7 @@
       "ko": "문화",
       "ja": "文化",
       "zh-Hant": "文化",
-      "th": "วัฒนธรรม",
-      "es": "Cultura"
+      "th": "วัฒนธรรม"
     },
     "family": {
       "en": "Family",
@@ -178,8 +164,7 @@
       "ko": "가족",
       "ja": "ファミリー",
       "zh-Hant": "親子",
-      "th": "ครอบครัว",
-      "es": "Familia"
+      "th": "ครอบครัว"
     }
   },
   "vendorCategories": {
@@ -190,8 +175,7 @@
       "ko": "음식",
       "ja": "食",
       "zh-Hant": "美食",
-      "th": "อาหาร",
-      "es": "Comida"
+      "th": "อาหาร"
     },
     "crafts": {
       "en": "Crafts",
@@ -200,8 +184,7 @@
       "ko": "공예",
       "ja": "工芸",
       "zh-Hant": "手工藝",
-      "th": "งานหัตถกรรม",
-      "es": "Artesanías"
+      "th": "งานหัตถกรรม"
     },
     "cultural": {
       "en": "Cultural",
@@ -210,8 +193,7 @@
       "ko": "문화",
       "ja": "文化",
       "zh-Hant": "文化",
-      "th": "วัฒนธรรม",
-      "es": "Cultura"
+      "th": "วัฒนธรรม"
     }
   }
 }

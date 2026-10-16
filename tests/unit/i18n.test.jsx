@@ -9,12 +9,11 @@ import ko from '../../src/i18n/ko.json'
 import ja from '../../src/i18n/ja.json'
 import zhHant from '../../src/i18n/zh-Hant.json'
 import th from '../../src/i18n/th.json'
-import es from '../../src/i18n/es.json'
 import event from '../../src/data/event.json'
 import schedule from '../../src/data/schedule.json'
 import vendors from '../../src/data/vendors.json'
 
-const DICTS = { zh, 'zh-Hant': zhHant, th, vi: viDictionary, ko, ja, es }
+const DICTS = { zh, 'zh-Hant': zhHant, th, vi: viDictionary, ko, ja }
 
 function Probe() {
   const { t, lang, toggle, pick, setLang } = useLang()
@@ -51,7 +50,7 @@ describe('UT-6 language toggle (FR-2)', () => {
     expect(document.documentElement.lang).toBe('ko')
   })
 
-  it('cycles through all eight languages after each dictionary is ready', async () => {
+  it('cycles through all seven languages after each dictionary is ready', async () => {
     render(<LanguageProvider><Probe /></LanguageProvider>)
     const seen = []
     for (let i = 0; i < LANG_CODES.length; i++) {
@@ -94,7 +93,7 @@ describe('UT-6 language toggle (FR-2)', () => {
     }
   })
 
-  it('every data label (event, schedule, vendors) exists in all eight languages', () => {
+  it('every data label (event, schedule, vendors) exists in all seven languages', () => {
     const bad = []
     const check = (obj, where) => { for (const c of LANG_CODES) if (!obj?.[c]) bad.push(`${where}.${c}`) }
     check(event.name, 'event.name'); check(event.organizer, 'event.organizer'); check(event.zodiac, 'event.zodiac'); check(event.venue.name, 'event.venue.name')
