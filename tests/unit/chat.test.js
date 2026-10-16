@@ -8,6 +8,8 @@ import knowledge from '../../src/data/knowledge.json'
 describe('UT-7 language detection and reply language', () => {
   it('detects script', () => {
     expect(detectLang('Where do I park?')).toBe('en')
+    expect(detectLang('¿Dónde puedo estacionar?')).toBe('es')
+    expect(detectLang('¿Qué actividades hay el sábado?')).toBe('es')
     expect(detectLang('在哪里停车？')).toBe('zh')
     expect(detectLang('Đậu xe ở đâu?')).toBe('vi')
     expect(detectLang('주차는 어디에?')).toBe('ko')
@@ -36,6 +38,17 @@ describe('UT-7 language detection and reply language', () => {
 
 // Test case UT-8 (FR-13): intents route to the right source of truth.
 describe('UT-8 intents', () => {
+  it('Spanish questions use Spanish content and route to the correct intent', () => {
+    expect(answer('¿Dónde está el festival?').intent).toBe('venue')
+    expect(answer('¿Qué actividades hay el sábado?').lang).toBe('es')
+    const tickets = answer('¿Cuánto cuestan las entradas?')
+    expect(tickets.lang).toBe('es')
+    expect(tickets.intent).toBe('tickets')
+    const tradition = answer('¿Por qué se regalan sobres rojos?')
+    expect(tradition.lang).toBe('es')
+    expect(tradition.intent).toBe('topic:red-envelope')
+  })
+
   it('schedule questions list matching events with links', () => {
     const a = answer('What is on Saturday on the main stage?')
     expect(a.intent).toBe('schedule')
@@ -105,9 +118,9 @@ describe('UT-8 intents', () => {
   })
 })
 
-// Knowledge base completeness: every topic has keywords and an answer in all seven languages.
+// Knowledge base completeness: every topic has keywords and an answer in all eight languages.
 describe('knowledge base shape', () => {
-  it('is complete in seven languages', () => {
+  it('is complete in eight languages', () => {
     for (const t of knowledge.topics) for (const l of CHAT_LANGS) {
       expect(t.keywords[l]?.length, `${t.id}.keywords.${l}`).toBeGreaterThan(0)
       expect(t.answer[l]?.length, `${t.id}.answer.${l}`).toBeGreaterThan(40)
