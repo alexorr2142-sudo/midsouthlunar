@@ -15,7 +15,8 @@
         "ko": "개막식과 용춤",
         "ja": "開会式と龍舞",
         "zh-Hant": "開幕式與舞龍表演",
-        "th": "พิธีเปิดและการเชิดมังกร"
+        "th": "พิธีเปิดและการเชิดมังกร",
+        "es": "Ceremonia de apertura y danza del dragón"
       },
       "description": {
         "en": "Welcome from MCCC and the City of Memphis, followed by a dragon dance to open the festival.",
@@ -24,7 +25,8 @@
         "ko": "MCCC와 멤피스시의 환영 인사에 이어 용춤으로 축제를 엽니다.",
         "ja": "MCCCとメンフィス市の挨拶に続き、龍舞で祭りが開幕します。",
         "zh-Hant": "中南華人商會與孟菲斯市政府致詞，隨後以舞龍表演揭開慶典序幕。",
-        "th": "กล่าวต้อนรับโดย MCCC และเมืองเมมฟิส ตามด้วยการเชิดมังกรเปิดเทศกาล"
+        "th": "กล่าวต้อนรับโดย MCCC และเมืองเมมฟิส ตามด้วยการเชิดมังกรเปิดเทศกาล",
+        "es": "Bienvenida de MCCC y de la ciudad de Memphis, seguida de una danza del dragón para inaugurar el festival."
       }
     },
     {
@@ -41,7 +43,8 @@
         "ko": "사자춤",
         "ja": "獅子舞",
         "zh-Hant": "舞獅表演",
-        "th": "การเชิดสิงโต"
+        "th": "การเชิดสิงโต",
+        "es": "Danza del león"
       },
       "description": {
         "en": "A traditional folk performance, lively and festive, suitable for all ages.",
@@ -50,7 +53,8 @@
         "ko": "흥겹고 경사스러운 전통 민속 공연. 모든 연령에 적합합니다.",
         "ja": "伝統的な民俗芸能。にぎやかで、あらゆる年代が楽しめます。",
         "zh-Hant": "傳統民俗表演，熱鬧喜慶，老少咸宜。",
-        "th": "การแสดงพื้นบ้านแบบดั้งเดิมที่สนุกและคึกคัก เหมาะสำหรับทุกวัย"
+        "th": "การแสดงพื้นบ้านแบบดั้งเดิมที่สนุกและคึกคัก เหมาะสำหรับทุกวัย",
+        "es": "Espectáculo folclórico tradicional, festivo y animado, para todas las edades."
       }
     },
     {
@@ -67,7 +71,8 @@
         "ko": "서예와 중국화 시연",
         "ja": "書道と水墨画の実演",
         "zh-Hant": "書法與國畫現場創作",
-        "th": "สาธิตพู่กันจีนและภาพวาดจีน"
+        "th": "สาธิตพู่กันจีนและภาพวาดจีน",
+        "es": "Demostración de caligrafía y pintura china"
       },
       "description": {
         "en": "Watch artists create spring couplets and ink paintings live, and take one home.",
@@ -76,7 +81,8 @@
         "ko": "작가들이 춘련과 수묵화를 즉석에서 그립니다. 작품을 가져가세요.",
         "ja": "春聯や水墨画の制作を間近で見て、一枚持ち帰れます。",
         "zh-Hant": "現場觀看藝術家書寫春聯、創作水墨畫，並可帶走作品。",
-        "th": "ชมศิลปินเขียนคำอวยพรคู่และวาดภาพหมึกสด ๆ พร้อมนำผลงานกลับบ้าน"
+        "th": "ชมศิลปินเขียนคำอวยพรคู่และวาดภาพหมึกสด ๆ พร้อมนำผลงานกลับบ้าน",
+        "es": "Observa a artistas crear versos de primavera y pinturas a tinta; podrás llevarte una obra."
       }
     },
     {
@@ -93,7 +99,8 @@
         "ko": "만두 빚기 워크숍",
         "ja": "餃子づくり教室",
         "zh-Hant": "包餃子工作坊",
-        "th": "เวิร์กช็อปทำเกี๊ยว"
+        "th": "เวิร์กช็อปทำเกี๊ยว",
+        "es": "Taller de elaboración de empanadillas"
       },
       "description": {
         "en": "Hands-on session where you fold, fill, and taste your own dumplings.",
@@ -102,7 +109,8 @@
         "ko": "직접 빚고 속을 채우고 맛보는 체험.",
         "ja": "自分で包んで、具を詰めて、味わう体験。",
         "zh-Hant": "親手摺皮、包餡、品嚐自己包的餃子。",
-        "th": "ลงมือพับแป้ง ใส่ไส้ และชิมเกี๊ยวที่ทำเอง"
+        "th": "ลงมือพับแป้ง ใส่ไส้ และชิมเกี๊ยวที่ทำเอง",
+        "es": "Aprende a doblar, rellenar y probar tus propias empanadillas."
       }
     },
     {
@@ -119,7 +127,8 @@
         "ko": "전통 놀이: 고리 던지기, 팽이, 등불 수수께끼",
         "ja": "伝統遊び：輪投げ、こま、灯謎",
         "zh-Hant": "傳統遊戲：套圈、陀螺、猜燈謎",
-        "th": "เกมพื้นบ้าน: โยนห่วง ลูกข่าง และปริศนาโคมไฟ"
+        "th": "เกมพื้นบ้าน: โยนห่วง ลูกข่าง และปริศนาโคมไฟ",
+        "es": "Juegos tradicionales: lanzamiento de aros, trompos y acertijos de faroles"
       },
       "description": {
         "en": "Drop-in games for kids and adults. Win small prizes.",
@@ -128,7 +137,8 @@
         "ko": "어린이와 어른 모두 자유롭게 참여. 작은 상품이 있습니다.",
         "ja": "子どもも大人も自由参加。小さな景品あり。",
         "zh-Hant": "隨到隨玩的親子遊戲，可贏取小禮物。",
-        "th": "เด็กและผู้ใหญ่ร่วมเล่นได้โดยไม่ต้องลงทะเบียนล่วงหน้า มีของรางวัลเล็ก ๆ"
+        "th": "เด็กและผู้ใหญ่ร่วมเล่นได้โดยไม่ต้องลงทะเบียนล่วงหน้า มีของรางวัลเล็ก ๆ",
+        "es": "Juegos para niños y adultos. Gana pequeños premios."
       }
     },
     {
@@ -145,7 +155,8 @@
         "ko": "중국 고전무용과 민속무용",
         "ja": "中国古典舞踊と民族舞踊",
         "zh-Hant": "中國古典舞與民族舞",
-        "th": "นาฏศิลป์จีนคลาสสิกและการเต้นพื้นบ้าน"
+        "th": "นาฏศิลป์จีนคลาสสิกและการเต้นพื้นบ้าน",
+        "es": "Danza clásica y folclórica china"
       },
       "description": {
         "en": "Performances by local dance schools.",
@@ -154,7 +165,8 @@
         "ko": "지역 무용 학교의 공연.",
         "ja": "地元のダンススクールによる公演。",
         "zh-Hant": "由在地舞蹈學校獻演。",
-        "th": "การแสดงจากโรงเรียนสอนเต้นในท้องถิ่น"
+        "th": "การแสดงจากโรงเรียนสอนเต้นในท้องถิ่น",
+        "es": "Actuaciones de escuelas de danza locales."
       }
     },
     {
@@ -171,7 +183,8 @@
         "ko": "다도 시연",
         "ja": "茶芸",
         "zh-Hant": "茶藝表演",
-        "th": "สาธิตพิธีชงชา"
+        "th": "สาธิตพิธีชงชา",
+        "es": "Ceremonia del té"
       },
       "description": {
         "en": "An introduction to Chinese tea culture with tastings.",
@@ -180,7 +193,8 @@
         "ko": "시음과 함께 중국 차 문화를 소개합니다.",
         "ja": "試飲つきで中国茶文化を紹介します。",
         "zh-Hant": "介紹中國茶文化並提供品茗。",
-        "th": "แนะนำวัฒนธรรมชาจีนพร้อมชิมชา"
+        "th": "แนะนำวัฒนธรรมชาจีนพร้อมชิมชา",
+        "es": "Conoce la cultura china del té y participa en una degustación."
       }
     },
     {
@@ -197,7 +211,8 @@
         "ko": "무술 시범",
         "ja": "武術演武",
         "zh-Hant": "武術表演",
-        "th": "การแสดงศิลปะการต่อสู้"
+        "th": "การแสดงศิลปะการต่อสู้",
+        "es": "Exhibición de artes marciales"
       },
       "description": {
         "en": "Traditional Chinese martial arts from Memphis-area schools.",
@@ -206,7 +221,8 @@
         "ko": "멤피스 지역 도장의 전통 중국 무술.",
         "ja": "メンフィス地域の道場による伝統中国武術。",
         "zh-Hant": "孟菲斯地區武館展示傳統中國武術。",
-        "th": "ศิลปะการต่อสู้จีนแบบดั้งเดิมจากสำนักในพื้นที่เมมฟิส"
+        "th": "ศิลปะการต่อสู้จีนแบบดั้งเดิมจากสำนักในพื้นที่เมมฟิส",
+        "es": "Escuelas del área de Memphis presentan artes marciales tradicionales chinas."
       }
     },
     {
@@ -223,7 +239,8 @@
         "ko": "어린이 만들기: 새해 카드와 종이접기",
         "ja": "子ども工作：年賀カードと折り紙",
         "zh-Hant": "兒童手作區：新年賀卡與摺紙",
-        "th": "งานประดิษฐ์สำหรับเด็ก: การ์ดปีใหม่และพับกระดาษ"
+        "th": "งานประดิษฐ์สำหรับเด็ก: การ์ดปีใหม่และพับกระดาษ",
+        "es": "Manualidades infantiles: tarjetas de Año Nuevo y origami"
       },
       "description": {
         "en": "Make a card, fold a paper goat, and string a fairy light.",
@@ -232,7 +249,8 @@
         "ko": "카드를 만들고 종이 양을 접고 꼬마전구를 꿰어 보세요.",
         "ja": "カードを作り、紙の羊を折り、小さなライトを飾ります。",
         "zh-Hant": "製作賀卡、摺紙羊，並串起小彩燈。",
-        "th": "ทำการ์ด พับแพะกระดาษ และร้อยไฟประดับ"
+        "th": "ทำการ์ด พับแพะกระดาษ และร้อยไฟประดับ",
+        "es": "Crea una tarjeta, dobla una cabra de papel y elabora una guirnalda de luces."
       }
     },
     {
@@ -249,7 +267,8 @@
         "ko": "라이브 쿠킹: 섣달그믐 대표 요리",
         "ja": "ライブクッキング：年越し料理の定番",
         "zh-Hant": "現場烹飪：年夜飯經典菜餚",
-        "th": "สาธิตทำอาหาร: เมนูมื้อรวมญาติคืนส่งท้ายปี"
+        "th": "สาธิตทำอาหาร: เมนูมื้อรวมญาติคืนส่งท้ายปี",
+        "es": "Cocina en vivo: clásicos de la cena de Año Nuevo"
       },
       "description": {
         "en": "Local chefs cook famous reunion dinner dishes and explain their meaning.",
@@ -258,7 +277,8 @@
         "ko": "지역 셰프가 유명한 명절 요리를 만들며 그 의미를 설명합니다.",
         "ja": "地元のシェフが団らんの名物料理を作り、その意味を解説します。",
         "zh-Hant": "在地廚師現場烹製年夜飯名菜，並講解其寓意。",
-        "th": "เชฟท้องถิ่นทำเมนูมื้อรวมญาติยอดนิยมพร้อมอธิบายความหมาย"
+        "th": "เชฟท้องถิ่นทำเมนูมื้อรวมญาติยอดนิยมพร้อมอธิบายความหมาย",
+        "es": "Chefs locales preparan platos tradicionales de la cena familiar y explican su significado."
       }
     },
     {
@@ -275,7 +295,8 @@
         "ko": "경극 발췌 공연",
         "ja": "京劇の名場面",
         "zh-Hant": "京劇選段",
-        "th": "การแสดงงิ้วปักกิ่งบางตอน"
+        "th": "การแสดงงิ้วปักกิ่งบางตอน",
+        "es": "Fragmentos de ópera de Pekín"
       },
       "description": {
         "en": "Experience the charm of this quintessential Chinese art form.",
@@ -284,7 +305,8 @@
         "ko": "중국 대표 예술의 매력을 느껴 보세요.",
         "ja": "中国を代表する芸術の魅力を体感。",
         "zh-Hant": "領略中國經典藝術京劇的魅力。",
-        "th": "สัมผัสเสน่ห์ของศิลปะการแสดงจีนอันโดดเด่น"
+        "th": "สัมผัสเสน่ห์ของศิลปะการแสดงจีนอันโดดเด่น",
+        "es": "Descubre el encanto de esta emblemática tradición artística china."
       }
     },
     {
@@ -301,7 +323,8 @@
         "ko": "한푸 패션쇼",
         "ja": "漢服ファッションショー",
         "zh-Hant": "漢服秀",
-        "th": "แฟชั่นโชว์ฮั่นฝู"
+        "th": "แฟชั่นโชว์ฮั่นฝู",
+        "es": "Desfile de moda hanfu"
       },
       "description": {
         "en": "Traditional Chinese clothing through the dynasties.",
@@ -310,7 +333,8 @@
         "ko": "왕조별 중국 전통 의상.",
         "ja": "王朝ごとの中国伝統衣装。",
         "zh-Hant": "展示歷朝歷代的傳統中國服飾。",
-        "th": "เครื่องแต่งกายจีนแบบดั้งเดิมจากหลายราชวงศ์"
+        "th": "เครื่องแต่งกายจีนแบบดั้งเดิมจากหลายราชวงศ์",
+        "es": "Un recorrido por la vestimenta tradicional china de diferentes dinastías."
       }
     },
     {
@@ -327,7 +351,8 @@
         "ko": "등불 전시와 등불 만들기",
         "ja": "提灯の展示と提灯づくり",
         "zh-Hant": "花燈展示與製作",
-        "th": "จัดแสดงและประดิษฐ์โคมไฟ"
+        "th": "จัดแสดงและประดิษฐ์โคมไฟ",
+        "es": "Exposición y elaboración de faroles"
       },
       "description": {
         "en": "Walk the lantern path and make your own lantern to take home.",
@@ -336,7 +361,8 @@
         "ko": "등불 길을 걷고 직접 등불을 만들어 가져가세요.",
         "ja": "提灯の小道を歩き、自分の提灯を作って持ち帰れます。",
         "zh-Hant": "漫步花燈步道，親手製作花燈帶回家。",
-        "th": "เดินชมทางโคมไฟและทำโคมไฟของตนเองกลับบ้าน"
+        "th": "เดินชมทางโคมไฟและทำโคมไฟของตนเองกลับบ้าน",
+        "es": "Pasea entre los faroles y crea uno para llevar a casa."
       }
     },
     {
@@ -353,7 +379,8 @@
         "ko": "설날 사자춤과 덕담",
         "ja": "元日の獅子舞と新年の祝福",
         "zh-Hant": "大年初一舞獅與祝福",
-        "th": "เชิดสิงโตและอวยพรวันขึ้นปีใหม่"
+        "th": "เชิดสิงโตและอวยพรวันขึ้นปีใหม่",
+        "es": "Danza del león y bendiciones de Año Nuevo"
       },
       "description": {
         "en": "Lion dance and a New Year blessing from community elders.",
@@ -362,7 +389,8 @@
         "ko": "사자춤과 지역 어르신들의 새해 덕담.",
         "ja": "獅子舞と地域の長老からの新年の祝福。",
         "zh-Hant": "舞獅表演與社區長者的新年祝福。",
-        "th": "การเชิดสิงโตและคำอวยพรปีใหม่จากผู้ใหญ่ในชุมชน"
+        "th": "การเชิดสิงโตและคำอวยพรปีใหม่จากผู้ใหญ่ในชุมชน",
+        "es": "Danza del león y buenos deseos de las personas mayores de la comunidad."
       }
     },
     {
@@ -379,7 +407,8 @@
         "ko": "세뱃돈 봉투 덕담 부스",
         "ja": "お年玉袋の祝福ブース",
         "zh-Hant": "紅包祝福站",
-        "th": "จุดรับอั่งเปาและคำอวยพร"
+        "th": "จุดรับอั่งเปาและคำอวยพร",
+        "es": "Puesto de bendiciones con sobres rojos"
       },
       "description": {
         "en": "Receive a New Year blessing and a lucky red envelope (while supplies last).",
@@ -388,7 +417,8 @@
         "ko": "새해 덕담과 행운의 붉은 봉투를 받으세요(소진 시 종료).",
         "ja": "新年の祝福と幸運の赤い袋を受け取れます（なくなり次第終了）。",
         "zh-Hant": "領取新年祝福與幸運紅包（數量有限）。",
-        "th": "รับคำอวยพรปีใหม่และอั่งเปามงคล (จนกว่าของจะหมด)"
+        "th": "รับคำอวยพรปีใหม่และอั่งเปามงคล (จนกว่าของจะหมด)",
+        "es": "Recibe una bendición de Año Nuevo y un sobre rojo de la suerte (hasta agotar existencias)."
       }
     },
     {
@@ -405,7 +435,8 @@
         "ko": "전지공예 워크숍",
         "ja": "切り紙教室",
         "zh-Hant": "剪紙工作坊",
-        "th": "เวิร์กช็อปตัดกระดาษ"
+        "th": "เวิร์กช็อปตัดกระดาษ",
+        "es": "Taller de recortes de papel"
       },
       "description": {
         "en": "Learn to cut the character for luck and a goat for the new year.",
@@ -414,7 +445,8 @@
         "ko": "복(福) 자와 새해 양 모양 오리기를 배웁니다.",
         "ja": "「福」の字と新年の羊の切り方を学びます。",
         "zh-Hant": "學習剪「福」字與新年羊。",
-        "th": "เรียนตัดตัวอักษรจีนที่หมายถึงโชคดีและรูปแพะรับปีใหม่"
+        "th": "เรียนตัดตัวอักษรจีนที่หมายถึงโชคดีและรูปแพะรับปีใหม่",
+        "es": "Aprende a recortar el carácter de la buena fortuna y una cabra para el año nuevo."
       }
     },
     {
@@ -431,7 +463,8 @@
         "ko": "중국계 청소년 재능 무대",
         "ja": "中国系ユースのタレントショー",
         "zh-Hant": "華裔青少年才藝展示",
-        "th": "การแสดงความสามารถเยาวชนอเมริกันเชื้อสายจีน"
+        "th": "การแสดงความสามารถเยาวชนอเมริกันเชื้อสายจีน",
+        "es": "Muestra de talentos de jóvenes chinoestadounidenses"
       },
       "description": {
         "en": "Singing, instrumental music, and dance by Memphis-area students.",
@@ -440,7 +473,8 @@
         "ko": "멤피스 지역 학생들의 노래, 연주, 춤.",
         "ja": "メンフィス地域の学生による歌、演奏、ダンス。",
         "zh-Hant": "孟菲斯地區學生的歌唱、器樂與舞蹈表演。",
-        "th": "ร้องเพลง เล่นดนตรี และเต้นโดยนักเรียนในพื้นที่เมมฟิส"
+        "th": "ร้องเพลง เล่นดนตรี และเต้นโดยนักเรียนในพื้นที่เมมฟิส",
+        "es": "Canto, música instrumental y danza de estudiantes del área de Memphis."
       }
     },
     {
@@ -457,7 +491,8 @@
         "ko": "설 떡과 디저트 시식",
         "ja": "正月菓子とスイーツの試食",
         "zh-Hant": "年味糕點與甜品品嚐",
-        "th": "ชิมขนมและของหวานรับปีใหม่"
+        "th": "ชิมขนมและของหวานรับปีใหม่",
+        "es": "Degustación de pasteles y postres de Año Nuevo"
       },
       "description": {
         "en": "Glutinous rice balls, rice cakes, candied hawthorn, and more.",
@@ -466,7 +501,8 @@
         "ko": "찹쌀 경단, 떡, 탕후루 등.",
         "ja": "白玉団子、年糕、糖葫蘆など。",
         "zh-Hant": "湯圓、年糕、糖葫蘆等傳統小吃。",
-        "th": "บัวลอยไส้หวาน ขนมเข่ง ถังหูลู่ และขนมอื่น ๆ"
+        "th": "บัวลอยไส้หวาน ขนมเข่ง ถังหูลู่ และขนมอื่น ๆ",
+        "es": "Bolitas de arroz glutinoso, pasteles de arroz, espino confitado y mucho más."
       }
     },
     {
@@ -483,7 +519,8 @@
         "ko": "설날 풍습 이야기",
         "ja": "旧正月の風習トーク",
         "zh-Hant": "新年習俗講座",
-        "th": "บรรยายประเพณีปีใหม่ตามปฏิทินจันทรคติ"
+        "th": "บรรยายประเพณีปีใหม่ตามปฏิทินจันทรคติ",
+        "es": "Charla sobre las costumbres del Año Nuevo Lunar"
       },
       "description": {
         "en": "Stories behind the customs, with the pictorial exhibition.",
@@ -492,7 +529,8 @@
         "ko": "사진 전시와 함께 풍습에 담긴 이야기를 들려줍니다.",
         "ja": "写真展とともに風習の由来を語ります。",
         "zh-Hant": "結合圖片展講述年俗背後的故事。",
-        "th": "เรื่องราวเบื้องหลังประเพณี พร้อมนิทรรศการภาพ"
+        "th": "เรื่องราวเบื้องหลังประเพณี พร้อมนิทรรศการภาพ",
+        "es": "Historias sobre el origen de las costumbres, acompañadas de una exposición ilustrada."
       }
     },
     {
@@ -509,7 +547,8 @@
         "ko": "민속무용 메들리",
         "ja": "民族舞踊メドレー",
         "zh-Hant": "民族舞聯演",
-        "th": "ชุดการแสดงระบำพื้นบ้าน"
+        "th": "ชุดการแสดงระบำพื้นบ้าน",
+        "es": "Popurrí de danzas folclóricas"
       },
       "description": {
         "en": "Dances from several regions of China.",
@@ -518,7 +557,8 @@
         "ko": "중국 여러 지역의 춤.",
         "ja": "中国各地の踊り。",
         "zh-Hant": "中國多個地區的民族舞蹈。",
-        "th": "การเต้นจากหลายภูมิภาคของจีน"
+        "th": "การเต้นจากหลายภูมิภาคของจีน",
+        "es": "Danzas de distintas regiones de China."
       }
     },
     {
@@ -535,7 +575,8 @@
         "ko": "포토존과 의상 대여",
         "ja": "フォトスポットと衣装レンタル",
         "zh-Hant": "拍照景點與服飾租借",
-        "th": "จุดถ่ายภาพและเช่าชุด"
+        "th": "จุดถ่ายภาพและเช่าชุด",
+        "es": "Espacio fotográfico y alquiler de trajes"
       },
       "description": {
         "en": "New Year installation art and traditional costume rental for photos.",
@@ -544,7 +585,8 @@
         "ko": "새해 설치 미술과 전통 의상 대여 촬영.",
         "ja": "正月のインスタレーションと伝統衣装のレンタル撮影。",
         "zh-Hant": "新年藝術裝置與傳統服飾租借，供拍照留念。",
-        "th": "งานศิลปะจัดวางรับปีใหม่และบริการเช่าชุดดั้งเดิมเพื่อถ่ายภาพ"
+        "th": "งานศิลปะจัดวางรับปีใหม่และบริการเช่าชุดดั้งเดิมเพื่อถ่ายภาพ",
+        "es": "Instalación artística de Año Nuevo y alquiler de vestimenta tradicional para fotografías."
       }
     },
     {
@@ -561,7 +603,8 @@
         "ko": "무술 시범",
         "ja": "武術演武",
         "zh-Hant": "武術表演",
-        "th": "การแสดงศิลปะการต่อสู้"
+        "th": "การแสดงศิลปะการต่อสู้",
+        "es": "Exhibición de artes marciales"
       },
       "description": {
         "en": "Traditional Chinese martial arts from Memphis-area schools.",
@@ -570,7 +613,8 @@
         "ko": "멤피스 지역 도장의 전통 중국 무술.",
         "ja": "メンフィス地域の道場による伝統中国武術。",
         "zh-Hant": "孟菲斯地區武館展示傳統中國武術。",
-        "th": "ศิลปะการต่อสู้จีนแบบดั้งเดิมจากสำนักในพื้นที่เมมฟิส"
+        "th": "ศิลปะการต่อสู้จีนแบบดั้งเดิมจากสำนักในพื้นที่เมมฟิส",
+        "es": "Escuelas del área de Memphis presentan artes marciales tradicionales chinas."
       }
     },
     {
@@ -587,7 +631,8 @@
         "ko": "만두 빚기 워크숍",
         "ja": "餃子づくり教室",
         "zh-Hant": "包餃子工作坊",
-        "th": "เวิร์กช็อปทำเกี๊ยว"
+        "th": "เวิร์กช็อปทำเกี๊ยว",
+        "es": "Taller de elaboración de empanadillas"
       },
       "description": {
         "en": "Hands-on session where you fold, fill, and taste your own dumplings.",
@@ -596,7 +641,8 @@
         "ko": "직접 빚고 속을 채우고 맛보는 체험.",
         "ja": "自分で包んで、具を詰めて、味わう体験。",
         "zh-Hant": "親手摺皮、包餡、品嚐自己包的餃子。",
-        "th": "ลงมือพับแป้ง ใส่ไส้ และชิมเกี๊ยวที่ทำเอง"
+        "th": "ลงมือพับแป้ง ใส่ไส้ และชิมเกี๊ยวที่ทำเอง",
+        "es": "Aprende a doblar, rellenar y probar tus propias empanadillas."
       }
     },
     {
@@ -613,7 +659,8 @@
         "ko": "폐막 갈라: 용춤과 커뮤니티 합창",
         "ja": "閉幕ガラ：龍舞とコミュニティ合唱",
         "zh-Hant": "閉幕晚會：舞龍與社區合唱",
-        "th": "งานส่งท้าย: เชิดมังกรและคณะประสานเสียงชุมชน"
+        "th": "งานส่งท้าย: เชิดมังกรและคณะประสานเสียงชุมชน",
+        "es": "Gala de clausura: danza del dragón y coro comunitario"
       },
       "description": {
         "en": "The festival closes with a dragon dance and a chorus of New Year songs.",
@@ -622,7 +669,8 @@
         "ko": "용춤과 새해 노래 합창으로 축제를 마무리합니다.",
         "ja": "龍舞と新年の歌の合唱で祭りを締めくくります。",
         "zh-Hant": "以舞龍表演與新年歌曲合唱，為慶典畫下句點。",
-        "th": "ปิดเทศกาลด้วยการเชิดมังกรและร้องเพลงปีใหม่ร่วมกัน"
+        "th": "ปิดเทศกาลด้วยการเชิดมังกรและร้องเพลงปีใหม่ร่วมกัน",
+        "es": "El festival termina con una danza del dragón y un coro de canciones de Año Nuevo."
       }
     }
   ]
