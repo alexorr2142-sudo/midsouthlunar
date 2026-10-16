@@ -27,6 +27,7 @@ const RE_HANGUL = /[가-힯ᄀ-ᇿ㄰-㆏]/
 const RE_KANA = /[぀-ヿ]/
 const RE_HAN = /[一-鿿]/
 const RE_VI = /[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹĂÂĐÊÔƠƯ]/
+const RE_SPANISH = /[¿¡]|\b(?:dónde|donde|qué|que|cuándo|cuando|por qué|cómo|cómo llegar|estacionar|estacionamiento|entradas|empanadillas|sábado|viernes|sobres rojos|año nuevo|actividades|festival del|voluntarios|expositores|boleto|boletos|patrocinio)\b/iu
 const RE_THAI = /[\u0e00-\u0e7f]/
 const RE_TRADITIONAL = /[體慶農曆會門這裡學歡觀傳禮歷龍餃開關萬臺週麼發錢獅燈]/
 
@@ -40,6 +41,7 @@ export function detectLang(text, uiLang = 'en') {
     return uiLang === 'zh-Hant' || RE_TRADITIONAL.test(text) ? 'zh-Hant' : 'zh'
   }
   if (RE_VI.test(text)) return 'vi'
+  if (RE_SPANISH.test(text)) return 'es'
   return ['vi', 'es'].includes(uiLang) ? uiLang : 'en'
 }
 
