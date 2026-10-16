@@ -20,7 +20,7 @@ import chatLinkCopy from './chatLinkCopy.json'
 import { externalLink } from './links.js'
 import { HELLO } from './chatStrings.js'
 
-export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja']
+export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja', 'es']
 
 // ---------- language detection ----------
 const RE_HANGUL = /[가-힯ᄀ-ᇿ㄰-㆏]/
@@ -40,7 +40,7 @@ export function detectLang(text, uiLang = 'en') {
     return uiLang === 'zh-Hant' || RE_TRADITIONAL.test(text) ? 'zh-Hant' : 'zh'
   }
   if (RE_VI.test(text)) return 'vi'
-  return uiLang === 'vi' ? 'vi' : 'en'
+  return ['vi', 'es'].includes(uiLang) ? uiLang : 'en'
 }
 
 // ---------- small i18n for the engine's own sentences ----------
@@ -325,11 +325,11 @@ export function answer(rawText, { lang: uiLang = 'en', now = new Date() } = {}) 
   const namesVendor = vend.specific && vend.items.length > 0 && vendorScoreMax(q, vend.items) >= 1
   const namesEvent = sched.specific && sched.items.length > 0 && mentionScoreMax(q, sched.items) >= 1
   const festivalReference = anyLang(q, {
-    en: ['festival', 'event', 'mccc', 'agricenter'], zh: ['庆典', '活动', '文化节'],
+    es: ['festival', 'evento', 'mccc', 'agricenter'], en: ['festival', 'event', 'mccc', 'agricenter'], zh: ['庆典', '活动', '文化节'],
     'zh-Hant': ['慶典', '活動', '文化節'], vi: ['lễ hội', 'sự kiện'], ko: ['축제', '행사'], ja: ['祭り', 'イベント'], th: ['เทศกาล', 'งาน'],
   })
   const addressReference = anyLang(q, {
-    en: ['address', 'venue', 'directions'], zh: ['地址', '会场'], 'zh-Hant': ['地址', '會場'],
+    es: ['dirección', 'ubicación', 'recinto'], en: ['address', 'venue', 'directions'], zh: ['地址', '会场'], 'zh-Hant': ['地址', '會場'],
     vi: ['địa chỉ'], ko: ['주소', '행사장'], ja: ['住所', '会場'], th: ['ที่อยู่', 'สถานที่จัดงาน'],
   })
   const locationQuestion = anyLang(q, KW.location) || addressReference || /\bwhere\b/u.test(q) && festivalReference
