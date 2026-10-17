@@ -7,7 +7,8 @@
     "ja": "ミッドサウス旧正月祭",
     "zh-Hant": "中南農曆新年慶典",
     "th": "เทศกาลตรุษจีนมิดเซาท์",
-    "es": "Festival del Año Nuevo Lunar del Medio Sur"
+    "es": "Festival del Año Nuevo Lunar del Medio Sur",
+    "hi": "मिड-साउथ चंद्र नववर्ष उत्सव"
   },
   "organizer": {
     "en": "Mid-South Chinese Chamber of Commerce (MCCC)",
@@ -17,7 +18,8 @@
     "ja": "ミッドサウス中国商工会議所（MCCC）",
     "zh-Hant": "中南華人商會 (MCCC)",
     "th": "หอการค้าจีนมิดเซาท์ (MCCC)",
-    "es": "Cámara de Comercio China del Medio Sur (MCCC)"
+    "es": "Cámara de Comercio China del Medio Sur (MCCC)",
+    "hi": "मिड-साउथ चीनी चैंबर ऑफ कॉमर्स (MCCC)"
   },
   "year": 2027,
   "zodiac": {
@@ -28,7 +30,8 @@
     "ja": "未年",
     "zh-Hant": "羊年",
     "th": "ปีมะแม",
-    "es": "Año de la Cabra"
+    "es": "Año de la Cabra",
+    "hi": "बकरी का वर्ष"
   },
   "start": "2027-02-05T10:00:00-06:00",
   "end": "2027-02-06T21:00:00-06:00",
@@ -46,7 +49,8 @@
         "ja": "2月5日（金）大晦日",
         "zh-Hant": "2月5日 週五（除夕）",
         "th": "ศุกร์ 5 ก.พ. (คืนส่งท้ายปี)",
-        "es": "Vie. 5 de febrero (víspera de Año Nuevo)"
+        "es": "Vie. 5 de febrero (víspera de Año Nuevo)",
+        "hi": "शुक्रवार, 5 फ़रवरी (नववर्ष की पूर्वसंध्या)"
       }
     },
     {
@@ -62,7 +66,8 @@
         "ja": "2月6日（土）元日",
         "zh-Hant": "2月6日 週六（大年初一）",
         "th": "เสาร์ 6 ก.พ. (วันขึ้นปีใหม่)",
-        "es": "Sáb. 6 de febrero (Año Nuevo)"
+        "es": "Sáb. 6 de febrero (Año Nuevo)",
+        "hi": "शनिवार, 6 फ़रवरी (नववर्ष का दिन)"
       }
     }
   ],
@@ -76,7 +81,8 @@
       "ja": "Agricenter International",
       "zh-Hant": "Agricenter 國際會展中心",
       "th": "Agricenter International",
-      "es": "Agricenter International"
+      "es": "Agricenter International",
+      "hi": "एग्रीसेंटर इंटरनेशनल"
     },
     "address": "7777 Walnut Grove Rd, Memphis, TN 38120",
     "mapQuery": "Agricenter International, 7777 Walnut Grove Rd, Memphis, TN 38120"
@@ -97,7 +103,8 @@
       "ja": "メインステージ",
       "zh-Hant": "主舞台",
       "th": "เวทีหลัก",
-      "es": "Escenario principal"
+      "es": "Escenario principal",
+      "hi": "मुख्य मंच"
     },
     "pavilion": {
       "en": "Cultural Pavilion",
@@ -107,7 +114,8 @@
       "ja": "文化パビリオン",
       "zh-Hant": "文化館",
       "th": "ศาลาวัฒนธรรม",
-      "es": "Pabellón cultural"
+      "es": "Pabellón cultural",
+      "hi": "सांस्कृतिक मंडप"
     },
     "food": {
       "en": "Food Hall",
@@ -117,7 +125,8 @@
       "ja": "フードホール",
       "zh-Hant": "美食區",
       "th": "โซนอาหาร",
-      "es": "Zona gastronómica"
+      "es": "Zona gastronómica",
+      "hi": "खाद्य क्षेत्र"
     },
     "garden": {
       "en": "Family Garden",
@@ -127,7 +136,8 @@
       "ja": "ファミリーガーデン",
       "zh-Hant": "親子園",
       "th": "สวนครอบครัว",
-      "es": "Jardín familiar"
+      "es": "Jardín familiar",
+      "hi": "पारिवारिक उद्यान"
     },
     "market": {
       "en": "New Year Market",
@@ -137,7 +147,8 @@
       "ja": "正月マーケット",
       "zh-Hant": "年貨市集",
       "th": "ตลาดปีใหม่",
-      "es": "Mercado de Año Nuevo"
+      "es": "Mercado de Año Nuevo",
+      "hi": "नववर्ष बाज़ार"
     }
   },
   "types": {
@@ -149,7 +160,8 @@
       "ja": "公演",
       "zh-Hant": "演出",
       "th": "การแสดง",
-      "es": "Espectáculo"
+      "es": "Espectáculo",
+      "hi": "प्रस्तुति"
     },
     "food": {
       "en": "Food",
@@ -159,7 +171,8 @@
       "ja": "食",
       "zh-Hant": "美食",
       "th": "อาหาร",
-      "es": "Gastronomía"
+      "es": "Gastronomía",
+      "hi": "भोजन"
     },
     "culture": {
       "en": "Culture",
@@ -169,7 +182,8 @@
       "ja": "文化",
       "zh-Hant": "文化",
       "th": "วัฒนธรรม",
-      "es": "Cultura"
+      "es": "Cultura",
+      "hi": "संस्कृति"
     },
     "family": {
       "en": "Family",
@@ -179,7 +193,8 @@
       "ja": "ファミリー",
       "zh-Hant": "親子",
       "th": "ครอบครัว",
-      "es": "Familia"
+      "es": "Familia",
+      "hi": "परिवार"
     }
   },
   "vendorCategories": {
@@ -191,7 +206,8 @@
       "ja": "食",
       "zh-Hant": "美食",
       "th": "อาหาร",
-      "es": "Comida"
+      "es": "Comida",
+      "hi": "भोजन"
     },
     "crafts": {
       "en": "Crafts",
@@ -201,7 +217,8 @@
       "ja": "工芸",
       "zh-Hant": "手工藝",
       "th": "งานหัตถกรรม",
-      "es": "Artesanías"
+      "es": "Artesanías",
+      "hi": "हस्तशिल्प"
     },
     "cultural": {
       "en": "Cultural",
@@ -211,7 +228,8 @@
       "ja": "文化",
       "zh-Hant": "文化",
       "th": "วัฒนธรรม",
-      "es": "Cultura"
+      "es": "Cultura",
+      "hi": "सांस्कृतिक"
     }
   }
 }
