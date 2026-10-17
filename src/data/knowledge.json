@@ -77,6 +77,14 @@
           "fiesta de primavera",
           "origen del año nuevo",
           "por qué se celebra"
+        ],
+        "hi": [
+          "चंद्र नववर्ष",
+          "चीनी नया साल",
+          "चंद्र नया साल",
+          "वसंत उत्सव",
+          "नववर्ष क्या है",
+          "यह त्योहार क्या है"
         ]
       },
       "answer": {
@@ -87,7 +95,8 @@
         "ja": "旧正月は太陰太陽暦の1月1日で、たいてい1月下旬から2月中旬にあたります。中国、ベトナム、韓国など多くのアジア文化圏で最も大切な祝日で、家族が集まり、先祖を敬い、古い年の厄を払って福を迎えます。2027年は2月6日が旧正月で、未年が始まります。",
         "zh-Hant": "農曆新年（春節）是陰陽合曆正月的第一個新月，通常在1月下旬至2月中旬之間。這是華人、越南人、韓國人及許多亞洲文化中的重要節日，人們團聚、祭祖、辭舊迎新，祈求來年好運。2027年農曆新年是2月6日，羊年由此開始。",
         "th": "ปีใหม่ตามปฏิทินจันทรคติเริ่มเมื่อจันทร์ดับครั้งแรกของปีในปฏิทินจันทรสุริยคติ โดยทั่วไปอยู่ระหว่างปลายเดือนมกราคมถึงกลางเดือนกุมภาพันธ์ เป็นวันสำคัญมากในวัฒนธรรมจีน เวียดนาม เกาหลี และวัฒนธรรมเอเชียอื่น ๆ ครอบครัวกลับมาพบกัน ระลึกถึงบรรพบุรุษ ปัดเป่าโชคร้ายของปีเก่า และต้อนรับสิริมงคล ในปี 2027 วันขึ้นปีใหม่ตรงกับวันที่ 6 กุมภาพันธ์ ซึ่งเริ่มต้นปีมะแม",
-        "es": "El Año Nuevo Lunar comienza con la primera luna nueva del calendario lunisolar, generalmente entre finales de enero y mediados de febrero. Es una celebración importante en las culturas china, vietnamita, coreana y otras culturas asiáticas. Las familias se reúnen, honran a sus antepasados y reciben el nuevo año con buenos deseos. En 2027 cae el 6 de febrero y comienza el Año de la Cabra."
+        "es": "El Año Nuevo Lunar comienza con la primera luna nueva del calendario lunisolar, generalmente entre finales de enero y mediados de febrero. Es una celebración importante en las culturas china, vietnamita, coreana y otras culturas asiáticas. Las familias se reúnen, honran a sus antepasados y reciben el nuevo año con buenos deseos. En 2027 cae el 6 de febrero y comienza el Año de la Cabra.",
+        "hi": "चंद्र नववर्ष चंद्र-सौर कैलेंडर की पहली अमावस्या से शुरू होता है, आम तौर पर जनवरी के अंत और फ़रवरी के मध्य के बीच। यह चीन, वियतनाम, कोरिया और अन्य एशियाई संस्कृतियों का महत्वपूर्ण त्योहार है। परिवार मिलते हैं, पूर्वजों का सम्मान करते हैं और आने वाले वर्ष के लिए शुभकामनाएँ देते हैं। वर्ष 2027 में यह 6 फ़रवरी को है और बकरी का वर्ष शुरू होगा।"
       }
     },
     {
@@ -183,6 +192,14 @@
           "qué signo",
           "cabra de fuego",
           "signo zodiacal"
+        ],
+        "hi": [
+          "बकरी का वर्ष",
+          "राशिचक्र",
+          "बकरी राशि",
+          "कौन सा पशु",
+          "मेरी राशि",
+          "चीनी राशि"
         ]
       },
       "answer": {
@@ -193,7 +210,8 @@
         "ja": "2027年は未年（ひつじ年）で、十二支の8番目です。未年は1955、1967、1979、1991、2003、2015、2027年。未年生まれは穏やかで創造的、優しく芸術的と言われます。2027年は火の未年で、温かさと活力が加わります。ラッキーカラーは赤、緑、紫、ラッキーナンバーは2と7。相性が良いのは卯、午、亥です。",
         "zh-Hant": "2027年是羊年，羊在十二生肖中排第八。羊年包括1955、1967、1979、1991、2003、2015與2027年。傳統生肖說法認為屬羊的人溫和、有創造力、善良且富有藝術氣質。2027年是火羊年，象徵更添熱情與活力。依這類傳統說法，幸運色是紅、綠、紫，幸運數字是2與7，羊與兔、馬、豬最合得來。",
         "th": "ปี 2027 เป็นปีมะแม หรือปีแพะ ซึ่งในบางภาษาเรียกปีแกะ เป็นนักษัตรลำดับที่แปดจากสิบสองนักษัตร ปีมะแมได้แก่ 1955, 1967, 1979, 1991, 2003, 2015 และ 2027 ตามความเชื่อ ผู้เกิดปีมะแมมีความอ่อนโยน ความคิดสร้างสรรค์ ความเมตตา และความสามารถทางศิลปะ ปี 2027 เป็นปีแพะธาตุไฟ ซึ่งสื่อถึงความอบอุ่นและพลัง ตามความเชื่อดังกล่าว สีมงคลคือแดง เขียว และม่วง เลขมงคลคือ 2 และ 7 และนักษัตรที่เข้ากันได้ดีที่สุดคือกระต่าย ม้า และหมู",
-        "es": "El 2027 es el Año de la Cabra, también llamada Oveja o Carnero, el octavo animal del zodiaco chino. Otros años de la Cabra incluyen 1955, 1967, 1979, 1991, 2003 y 2015. Según la tradición, las personas nacidas bajo este signo son amables, creativas y artísticas. El 2027 es el año de la Cabra de Fuego."
+        "es": "El 2027 es el Año de la Cabra, también llamada Oveja o Carnero, el octavo animal del zodiaco chino. Otros años de la Cabra incluyen 1955, 1967, 1979, 1991, 2003 y 2015. Según la tradición, las personas nacidas bajo este signo son amables, creativas y artísticas. El 2027 es el año de la Cabra de Fuego.",
+        "hi": "वर्ष 2027 चीनी राशिचक्र में बकरी का वर्ष है, जिसे भेड़ या मेढ़ा भी कहते हैं। बकरी बारह पशु प्रतीकों में आठवाँ है। 1955, 1967, 1979, 1991, 2003 और 2015 भी बकरी के वर्ष थे। परंपरा के अनुसार बकरी के वर्ष में जन्मे लोग सौम्य, दयालु, रचनात्मक और कलाप्रिय माने जाते हैं। 2027 अग्नि-बकरी का वर्ष है।"
       }
     },
     {
@@ -253,6 +271,14 @@
           "hongbao",
           "dinero de la suerte",
           "lì xì"
+        ],
+        "hi": [
+          "लाल लिफ़ाफ़े",
+          "लाल लिफाफे",
+          "लाल लिफ़ाफ़ा",
+          "होंगबाओ",
+          "भाग्यशाली धन",
+          "लाल लिफाफा क्यों"
         ]
       },
       "answer": {
@@ -263,7 +289,8 @@
         "ja": "赤い袋（紅包、お年玉）は年長者から子どもへ、既婚者から未婚の親族へ贈るお金です。金額より赤い紙が大切で、赤は厄を払うとされます。偶数が好まれ、8は縁起が良く、4は「死」と音が似るため避けます。祭りでは土曜日にファミリーガーデンのお年玉袋ブースで幸運の袋を配ります（なくなり次第終了）。",
         "zh-Hant": "紅包在普通話稱 hongbao，越南語稱 lì xì，韓語的新年贈禮錢稱 sebaetdon。長輩將錢送給孩子，已婚者也會送給未婚晚輩。紅色象徵驅走厄運，紅紙的寓意比金額更重要。有些習俗偏好雙數，認為8吉利，並因4與「死」諧音而避開。在本慶典中，親子園的紅包祝福站於週六發放幸運紅包，數量有限。",
         "th": "ซองเงินสีแดงเรียกหงเปาในภาษาจีนกลางและ lì xì ในภาษาเวียดนาม ส่วนเงินปีใหม่ในภาษาเกาหลีเรียก sebaetdon ผู้ใหญ่ให้แก่เด็ก และคู่สมรสให้แก่ญาติรุ่นน้องที่ยังไม่แต่งงาน ความหมายของกระดาษสีแดงสำคัญกว่าจำนวนเงิน เพราะเชื่อว่าช่วยขับไล่โชคร้าย มักนิยมจำนวนคู่ เลข 8 ถือว่ามงคล ส่วนเลข 4 มักหลีกเลี่ยงเพราะเสียงคล้ายคำว่าตายในภาษาจีน ในงานนี้ จุดรับอั่งเปาและคำอวยพรที่สวนครอบครัวแจกซองมงคลในวันเสาร์จนกว่าของจะหมด",
-        "es": "Los sobres rojos, llamados hongbao en chino y lì xì en vietnamita, contienen dinero que los mayores regalan a los niños y otros familiares como buenos deseos. El color rojo simboliza la suerte. El número ocho se considera afortunado, mientras que se suele evitar el cuatro. En el festival habrá un puesto de bendiciones con sobres rojos el sábado en el Jardín Familiar, hasta agotar existencias."
+        "es": "Los sobres rojos, llamados hongbao en chino y lì xì en vietnamita, contienen dinero que los mayores regalan a los niños y otros familiares como buenos deseos. El color rojo simboliza la suerte. El número ocho se considera afortunado, mientras que se suele evitar el cuatro. En el festival habrá un puesto de bendiciones con sobres rojos el sábado en el Jardín Familiar, hasta agotar existencias.",
+        "hi": "लाल लिफ़ाफ़ों को मंदारिन में होंगबाओ और वियतनामी में ली-सी कहते हैं। इनमें बड़े-बुज़ुर्ग बच्चों को धन देकर नए वर्ष की शुभकामनाएँ देते हैं। लाल रंग सौभाग्य का प्रतीक है। आठ अंक शुभ माना जाता है, जबकि चार से बचने की परंपरा है। उत्सव में शनिवार को पारिवारिक उद्यान में लाल लिफ़ाफ़ा आशीर्वाद केंद्र होगा, जब तक सामग्री उपलब्ध रहे।"
       }
     },
     {
@@ -360,6 +387,14 @@
           "pastel de arroz",
           "cena familiar",
           "qué comida"
+        ],
+        "hi": [
+          "नववर्ष का खाना",
+          "पारंपरिक भोजन",
+          "डम्पलिंग",
+          "क्या खाते हैं",
+          "नववर्ष भोज",
+          "मिठाई"
         ]
       },
       "answer": {
@@ -370,7 +405,8 @@
         "ja": "大晦日の団らんの食事は一年で最も大切な食事です。多くの料理に縁起が込められています。餃子は金の延べ棒の形（富）、魚一尾は「余る」（豊かさ）、長い麺は長寿、年糕（餅）は年々高く、白玉団子は家族の団らんを表します。ベトナムではバインチュン、韓国ではトックッを食べて一つ年を取ります。祭りのフードホールでは餃子づくり教室と正月菓子の試食があります。",
         "zh-Hant": "除夕年夜飯是一年中最重要的一餐。許多菜餚帶有吉祥寓意：餃子形似金元寶，象徵財富；整魚取「魚」與「餘」諧音，寓意年年有餘；長麵象徵長壽；年糕寓意年年高；湯圓象徵闔家團圓。越南的 bánh chưng 是包有豬肉與綠豆的糯米粽；韓國人吃年糕湯 tteokguk，傳統上象徵長一歲。本慶典的美食區有包餃子工作坊與新年糕點品嚐。",
         "th": "มื้อรวมญาติในคืนส่งท้ายปีเป็นมื้อสำคัญที่สุดของปี หลายเมนูมีความหมายมงคล เกี๊ยวมีรูปเหมือนทองแท่งสื่อถึงความมั่งคั่ง ปลาทั้งตัวสื่อถึงมีเหลือกินเหลือใช้ เพราะคำว่าปลาในภาษาจีนเสียงคล้ายคำว่าเหลือ เส้นบะหมี่ยาวสื่อถึงอายุยืน ขนมเข่งหรือนิ่นเกาสื่อถึงก้าวหน้าขึ้นทุกปี และบัวลอยไส้หวานสื่อถึงครอบครัวพร้อมหน้า ในเวียดนามนิยม bánh chưng ซึ่งเป็นข้าวเหนียวห่อไส้หมูและถั่วเขียว ส่วนเกาหลีรับประทานซุปเค้กข้าว tteokguk ซึ่งตามประเพณีสื่อถึงอายุเพิ่มหนึ่งปี โซนอาหารของงานมีเวิร์กช็อปทำเกี๊ยวและชิมขนมปีใหม่",
-        "es": "La cena familiar de la víspera es uno de los momentos más importantes del Año Nuevo Lunar. Las empanadillas representan riqueza; el pescado, abundancia; los fideos largos, longevidad; los pasteles de arroz, prosperidad; y las bolitas dulces de arroz, unión familiar. En Vietnam se comen bánh chưng y bánh tét, y en Corea es tradicional la sopa tteokguk. El festival tendrá talleres de empanadillas y degustaciones."
+        "es": "La cena familiar de la víspera es uno de los momentos más importantes del Año Nuevo Lunar. Las empanadillas representan riqueza; el pescado, abundancia; los fideos largos, longevidad; los pasteles de arroz, prosperidad; y las bolitas dulces de arroz, unión familiar. En Vietnam se comen bánh chưng y bánh tét, y en Corea es tradicional la sopa tteokguk. El festival tendrá talleres de empanadillas y degustaciones.",
+        "hi": "नववर्ष की पूर्वसंध्या पर परिवार का सामूहिक भोज बहुत महत्वपूर्ण है। डम्पलिंग समृद्धि, मछली प्रचुरता, लंबे नूडल्स लंबी आयु, चावल के केक उन्नति और मीठे चावल के गोले पारिवारिक एकता के प्रतीक हैं। वियतनाम में बान चुंग और कोरिया में त्तोकगुक विशेष व्यंजन हैं। उत्सव में डम्पलिंग बनाने की कार्यशाला और नववर्ष की मिठाइयाँ चखने का अवसर मिलेगा।"
       }
     },
     {
@@ -476,6 +512,14 @@
           "faroles",
           "buena suerte",
           "decorar"
+        ],
+        "hi": [
+          "लाल रंग",
+          "सजावट",
+          "लालटेन",
+          "सौभाग्य",
+          "सुनहरा रंग",
+          "नववर्ष सजावट"
         ]
       },
       "answer": {
@@ -486,7 +530,8 @@
         "ja": "伝説の怪物「年（ニェン）」が赤、大きな音、火を恐れたことから、赤が至る所に使われます。金色は富の象徴。玄関の両側に赤い春聯を飾り、「福」の字を貼ります。「逆さ」と「来る」の音が同じなので逆さに貼ることも。提灯は福の道を照らします。習慣としては、大晦日前に大掃除をしますが元日には掃かず（福を掃き出さないため）、年初は散髪や物を壊すことを避け、借金を返し、新しい服を着ます。",
         "zh-Hant": "依傳說，怪獸「年」害怕紅色、巨響與火光，因此春節處處可見紅色。金色象徵財富。家門兩側張貼寫有祝福的春聯，也貼「福」字；福字常倒貼，取「福到」的諧音寓意。燈籠為好運照亮道路。常見習俗包括除夕前大掃除，但初一不掃地，以免掃走好運；頭幾天避免理髮或打破物品；年前還清債務，並穿新衣。",
         "th": "ตามตำนาน สัตว์ร้ายเหนียนกลัวสีแดง เสียงดัง และไฟ จึงมีสีแดงอยู่ทั่วงานตรุษจีน สีทองหมายถึงความมั่งคั่ง บ้านเรือนติดคำอวยพรคู่สองข้างประตูและติดอักษร 福 (ฝู แปลว่าโชคดี) บางครั้งกลับหัว เพราะคำว่ากลับหัวพ้องเสียงกับคำว่ามาถึง จึงสื่อถึงโชคมาถึง โคมไฟส่องทางให้สิริมงคล ประเพณีที่พบบ่อยคือทำความสะอาดบ้านก่อนคืนส่งท้ายปี แต่ไม่กวาดบ้านในวันขึ้นปีใหม่เพราะเชื่อว่าจะกวาดโชคทิ้ง หลีกเลี่ยงการตัดผมหรือทำของแตกในวันแรก ๆ ชำระหนี้ก่อนปีใหม่ และสวมเสื้อผ้าใหม่",
-        "es": "El rojo se usa para atraer buena suerte y alejar la mala fortuna; el dorado simboliza prosperidad. Las familias decoran sus casas con versos de buenos deseos, el carácter 福 (fortuna) y faroles. Algunas costumbres incluyen limpiar antes de Año Nuevo, vestir ropa nueva y evitar barrer la buena suerte el primer día."
+        "es": "El rojo se usa para atraer buena suerte y alejar la mala fortuna; el dorado simboliza prosperidad. Las familias decoran sus casas con versos de buenos deseos, el carácter 福 (fortuna) y faroles. Algunas costumbres incluyen limpiar antes de Año Nuevo, vestir ropa nueva y evitar barrer la buena suerte el primer día.",
+        "hi": "लाल रंग सौभाग्य और बुरी शक्तियों से सुरक्षा का प्रतीक है, जबकि सुनहरा रंग समृद्धि दर्शाता है। घरों में लाल शुभकामना-पत्र, सौभाग्य का चीनी अक्षर 福 और लालटेन लगाए जाते हैं। कुछ परंपराओं में वर्ष शुरू होने से पहले घर साफ़ करना, नए कपड़े पहनना और पहले दिन झाड़ू न लगाना शामिल है ताकि शुभ भाग्य बना रहे।"
       }
     },
     {
@@ -560,6 +605,13 @@
           "baile del dragón",
           "tambores",
           "petardos"
+        ],
+        "hi": [
+          "शेर नृत्य",
+          "ड्रैगन नृत्य",
+          "शेर का नाच",
+          "ड्रैगन का नाच",
+          "ढोल"
         ]
       },
       "answer": {
@@ -570,7 +622,8 @@
         "ja": "獅子舞と龍舞は福を呼び、邪気を払います。獅子は二人で舞い、門前に吊るしたレタスを「食べて」福を授けます。龍はチーム全員が棒で支え、宝珠を追います。太鼓、銅鑼、爆竹はすべて、音と赤を恐れた怪物「年」の伝説に由来します。祭りでは金曜午前10時の開会式が龍舞で始まり、獅子舞は両日、土曜夜の閉幕ガラは龍舞で締めくくります。",
         "zh-Hant": "舞獅與舞龍寓意帶來好運、驅走邪祟。獅子通常由兩人舞動，會「採青」，吃掛在門口的生菜以討吉利；龍由整隊人用竿撐起舞動，追逐象徵智慧的寶珠。鑼鼓與鞭炮也讓人聯想到「年獸」怕聲響與紅色的傳說。本慶典週五上午10點的開幕式以舞龍開場，兩天都有舞獅，週六晚的閉幕晚會以舞龍結束。",
         "th": "การเชิดสิงโตและมังกรสื่อถึงนำโชคดีและขับไล่สิ่งชั่วร้าย สิงโตมักเชิดโดยผู้แสดงสองคนและกินผักกาดที่แขวนหน้าประตูเพื่อความเป็นมงคล มังกรใช้ผู้แสดงทั้งทีมถือไม้เชิดตามลูกแก้วแห่งปัญญา กลอง ฆ้อง และประทัดเชื่อมโยงกับตำนานเหนียนที่กลัวเสียงดังและสีแดง ในงานนี้ พิธีเปิดวันศุกร์เวลา 10:00 น. เริ่มด้วยเชิดมังกร มีเชิดสิงโตทั้งสองวัน และงานส่งท้ายเย็นวันเสาร์จบด้วยเชิดมังกร",
-        "es": "Las danzas del león y del dragón atraen la buena fortuna y alejan los malos espíritus. Dos artistas manejan el disfraz del león; el dragón es llevado por un grupo de bailarines con varas. Los tambores y petardos recuerdan la leyenda de Nian. Durante el festival habrá danzas del león ambos días y danzas del dragón en la apertura y la clausura."
+        "es": "Las danzas del león y del dragón atraen la buena fortuna y alejan los malos espíritus. Dos artistas manejan el disfraz del león; el dragón es llevado por un grupo de bailarines con varas. Los tambores y petardos recuerdan la leyenda de Nian. Durante el festival habrá danzas del león ambos días y danzas del dragón en la apertura y la clausura.",
+        "hi": "शेर और ड्रैगन नृत्य सौभाग्य लाने तथा बुरी आत्माओं को भगाने की परंपरा से जुड़े हैं। शेर की वेशभूषा में दो नर्तक होते हैं और लंबे ड्रैगन को कई लोग डंडों से संचालित करते हैं। ढोल तथा पटाखे निआन नामक पौराणिक जीव की कथा से जुड़े हैं। मेम्फिस उत्सव में दोनों दिन शेर नृत्य और उद्घाटन तथा समापन पर ड्रैगन नृत्य होगा।"
       }
     },
     {
@@ -648,6 +701,13 @@
           "festival de los faroles",
           "cuándo termina",
           "víspera de año nuevo"
+        ],
+        "hi": [
+          "पंद्रह दिन",
+          "15 दिन",
+          "कितने दिन",
+          "कब समाप्त",
+          "लालटेन उत्सव"
         ]
       },
       "answer": {
@@ -658,7 +718,8 @@
         "ja": "伝統的に祝いは15日間続きます。大晦日（団らんの食事、夜更かしして年を守る）と元日（年長者を訪ね、お年玉）で始まり、2日は妻の実家へ、5日は財神を迎え、7日は皆の誕生日、15日は元宵節で提灯の下を歩き、灯謎を解き、白玉団子を食べます。2027年は大晦日が2月5日、元日が2月6日、元宵節が2月20日です。",
         "zh-Hant": "傳統春節慶祝延續十五天，從除夕的年夜飯與守歲，到初一的拜年與紅包。常見習俗有初二回娘家、初五迎財神、初七慶「人日」，及正月十五元宵節賞燈、猜燈謎、吃湯圓。2027年除夕是2月5日，初一是2月6日，元宵節是2月20日。",
         "th": "ตามประเพณีการฉลองกินเวลาสิบห้าวัน เริ่มจากคืนส่งท้ายปีที่ครอบครัวรับประทานอาหารร่วมกันและอยู่ดึกเพื่อเฝ้าปี ตามด้วยวันขึ้นปีใหม่ที่ไปเยี่ยมผู้ใหญ่และให้อั่งเปา วันที่สองนิยมเยี่ยมครอบครัวฝ่ายภรรยา วันที่ห้าต้อนรับเทพเจ้าแห่งความมั่งคั่ง วันที่เจ็ดถือเป็นวันเกิดของทุกคน และวันที่สิบห้าเป็นเทศกาลโคมไฟ เดินชมโคม ตอบปริศนา และกินบัวลอยไส้หวาน ในปี 2027 คืนส่งท้ายปีตรงกับ 5 กุมภาพันธ์ วันขึ้นปีใหม่คือ 6 กุมภาพันธ์ และเทศกาลโคมไฟคือ 20 กุมภาพันธ์",
-        "es": "Tradicionalmente, la celebración del Año Nuevo Lunar dura quince días. Empieza con la cena de reunión de la víspera y continúa con visitas familiares y sobres rojos. El decimoquinto día se celebra el Festival de los Faroles con acertijos y bolitas de arroz dulce. En 2027, la víspera cae el 5 de febrero, Año Nuevo el 6 de febrero y el Festival de los Faroles el 20 de febrero."
+        "es": "Tradicionalmente, la celebración del Año Nuevo Lunar dura quince días. Empieza con la cena de reunión de la víspera y continúa con visitas familiares y sobres rojos. El decimoquinto día se celebra el Festival de los Faroles con acertijos y bolitas de arroz dulce. En 2027, la víspera cae el 5 de febrero, Año Nuevo el 6 de febrero y el Festival de los Faroles el 20 de febrero.",
+        "hi": "परंपरागत रूप से चंद्र नववर्ष का उत्सव पंद्रह दिन चलता है। इसकी शुरुआत नववर्ष की पूर्वसंध्या के पारिवारिक भोज से होती है। नए वर्ष में लोग रिश्तेदारों से मिलते हैं और बच्चों को लाल लिफ़ाफ़े देते हैं। पंद्रहवें दिन लालटेन उत्सव मनाया जाता है। 2027 में पूर्वसंध्या 5 फ़रवरी, नववर्ष 6 फ़रवरी और लालटेन उत्सव 20 फ़रवरी को है।"
       }
     },
     {
@@ -726,6 +787,12 @@
           "año nuevo vietnamita",
           "cómo celebra vietnam",
           "bánh chưng"
+        ],
+        "hi": [
+          "वियतनाम",
+          "तेत",
+          "वियतनामी नववर्ष",
+          "वियतनाम में नववर्ष"
         ]
       },
       "answer": {
@@ -736,7 +803,8 @@
         "ja": "ベトナムではこの祝日をテト（Tết Nguyên Đán）と呼びます。家々は掃除をして金柑の木、北部では桃の花、南部では黄色いアプリコットの花を飾ります。一週間前に台所の神を天へ送り、バナナの葉で包んだもち米のケーキ、バインチュンやバインテットを作り、新年最初の来客（ソンダット）が家族の運を決めると信じられています。子どもは赤い袋のリーシーをもらい、「チュック・ムン・ナム・モイ」と挨拶します。",
         "zh-Hant": "在越南，節日稱 Tết Nguyên Đán，簡稱 Tết。家家打掃，並以金桔樹、北方的桃花及南方的黃梅花裝飾。節前一週送灶神上天，用葉子包 bánh chưng 與 bánh tét 糯米粽；新年第一位訪客 xông đất 被認為會影響全家一年的運氣。孩子收到 lì xì 紅包，人們互道「Chúc mừng năm mới」。",
         "th": "ในเวียดนามเทศกาลนี้เรียก Tết Nguyên Đán หรือเรียกสั้น ๆ ว่าเต๊ต ครอบครัวทำความสะอาดและประดับต้นส้มจี๊ด ดอกท้อในภาคเหนือ และดอกไม้สีเหลืองในภาคใต้ ส่งเทพเจ้าเตาขึ้นสวรรค์หนึ่งสัปดาห์ก่อนเทศกาล และห่อข้าวเหนียว bánh chưng และ bánh tét ด้วยใบไม้ เชื่อว่าผู้มาเยือนคนแรกของปีหรือ xông đất มีอิทธิพลต่อโชคของครอบครัว เด็ก ๆ ได้อั่งเปา lì xì และผู้คนทักทายว่า Chúc mừng năm mới",
-        "es": "En Vietnam, el Año Nuevo Lunar se conoce como Tết. Las familias decoran sus hogares con flores de durazno o albaricoque, preparan pasteles de arroz como bánh chưng y bánh tét, visitan a sus familiares y dan sobres rojos llamados lì xì a los niños. El saludo habitual es «Chúc mừng năm mới»."
+        "es": "En Vietnam, el Año Nuevo Lunar se conoce como Tết. Las familias decoran sus hogares con flores de durazno o albaricoque, preparan pasteles de arroz como bánh chưng y bánh tét, visitan a sus familiares y dan sobres rojos llamados lì xì a los niños. El saludo habitual es «Chúc mừng năm mới».",
+        "hi": "वियतनाम में चंद्र नववर्ष को तेत (Tết) कहा जाता है। परिवार आड़ू या ख़ुबानी के फूलों से घर सजाते हैं, बान चुंग और बान तेत जैसे चावल के केक बनाते हैं, रिश्तेदारों से मिलते हैं और बच्चों को लाल लिफ़ाफ़े देते हैं जिन्हें ली-सी कहते हैं। लोकप्रिय शुभकामना है: चुक मुंग नाम मोई।"
       }
     },
     {
@@ -802,6 +870,12 @@
           "año nuevo coreano",
           "cómo celebra corea",
           "tteokguk"
+        ],
+        "hi": [
+          "कोरिया",
+          "सोल्लाल",
+          "कोरियाई नववर्ष",
+          "कोरिया में नववर्ष"
         ]
       },
       "answer": {
@@ -812,7 +886,8 @@
         "ja": "韓国ではソルラルを3日間祝います。家族は故郷へ帰り、祖先への祭祀「茶礼」を行い、韓服を着た子どもが年長者に深いお辞儀「セベ」をして、祝福とお年玉「セベットン」をもらいます。皆がトックッ（餅のスープ）を食べ、それで一つ年を取るとされます。家族でユンノリ（木の棒を使う盤上遊戯）をしたり凧を揚げたりします。挨拶は「セヘ ボク マニ パドゥセヨ」（新年に福をたくさん受けてください）。",
         "zh-Hant": "韓國的 Seollal（설날）慶祝三天。家人返鄉，擺上食物祭祖，稱為茶禮 charye。孩子穿韓服向長輩行歲拜 sebae，獲得祝福與壓歲錢 sebaetdon。大家吃年糕湯 tteokguk，傳統上象徵長一歲。家人會玩用四支木棒擲出的柶戲 yut nori，也會放風箏。問候語「새해 복 많이 받으세요」意為「新年多多納福」。",
         "th": "เกาหลีฉลองซอลลัลหรือ Seollal ตลอดสามวัน ครอบครัวกลับบ้านเกิดและทำพิธีไหว้บรรพบุรุษ charye ด้วยโต๊ะอาหาร เด็ก ๆ สวมฮันบกและคำนับผู้ใหญ่แบบ sebae เพื่อรับคำอวยพรและเงินปีใหม่ sebaetdon ทุกคนกินซุปเค้กข้าว tteokguk ซึ่งตามประเพณีสื่อถึงอายุเพิ่มหนึ่งปี ครอบครัวเล่นเกมกระดาน yut nori ด้วยไม้สี่แท่งและเล่นว่าว คำอวยพร Saehae bok mani badeuseyo หมายถึงขอให้ได้รับโชคมากมายในปีใหม่",
-        "es": "En Corea, el Año Nuevo Lunar se llama Seollal y se celebra durante tres días. Las familias honran a sus antepasados, los niños hacen una reverencia a sus mayores y reciben bendiciones y dinero. Se come sopa de pastel de arroz, tteokguk, y se practican juegos tradicionales como yut nori. El saludo es «Saehae bok mani badeuseyo»."
+        "es": "En Corea, el Año Nuevo Lunar se llama Seollal y se celebra durante tres días. Las familias honran a sus antepasados, los niños hacen una reverencia a sus mayores y reciben bendiciones y dinero. Se come sopa de pastel de arroz, tteokguk, y se practican juegos tradicionales como yut nori. El saludo es «Saehae bok mani badeuseyo».",
+        "hi": "कोरिया में चंद्र नववर्ष को सोल्लाल कहते हैं और इसे तीन दिनों तक मनाया जाता है। परिवार पूर्वजों को सम्मान देते हैं। बच्चे बड़ों को गहरा प्रणाम करते हैं और आशीर्वाद तथा धन पाते हैं। लोग चावल के केक का सूप त्तोकगुक खाते हैं तथा युत नोरी जैसे खेल खेलते हैं। शुभकामना है: सैहे बोक मानी बादेसेयो।"
       }
     },
     {
@@ -900,6 +975,13 @@
           "tíbet",
           "singapur",
           "quién celebra"
+        ],
+        "hi": [
+          "जापान",
+          "मंगोलिया",
+          "तिब्बत",
+          "दूसरे देश",
+          "कौन मनाता है"
         ]
       },
       "answer": {
@@ -910,7 +992,8 @@
         "ja": "日本は1873年に太陽暦へ移行したため、多くの地域で1月1日にお正月を祝い、門松、おせち、初詣が行われます。旧正月は沖縄や横浜・長崎の中華街で今も祝われ、ランタンフェスティバルが開かれます。モンゴルはツァガーンサル、チベットはロサルを祝い、シンガポール、マレーシア、インドネシア、フィリピン、そしてメンフィスを含む世界中の中国系コミュニティが旧正月を祝います。祭りはどの伝統の方も歓迎します。",
         "zh-Hant": "日本於1873年改用陽曆，多數地區在1月1日慶祝正月 Oshōgatsu，擺門松、吃御節料理並到神社參拜。沖繩及橫濱、長崎等地的中華街仍有農曆新年活動與燈會。蒙古慶祝白月節 Tsagaan Sar，西藏慶祝 Losar；新加坡、馬來西亞、印尼、菲律賓及包括孟菲斯在內的全球華人社區也慶祝農曆新年。本慶典歡迎來自各種傳統背景的朋友。",
         "th": "ญี่ปุ่นเปลี่ยนมาใช้ปฏิทินสุริยคติในปี 1873 คนส่วนใหญ่จึงฉลองปีใหม่หรือ Oshōgatsu วันที่ 1 มกราคม ด้วยของประดับคาโดมัตสึ อาหารโอเซจิ และไปศาลเจ้า แต่โอกินาวะและย่านไชน่าทาวน์อย่างโยโกฮามะและนางาซากิยังมีกิจกรรมตามปีใหม่จันทรคติและงานโคมไฟ มองโกเลียฉลอง Tsagaan Sar หรือพระจันทร์ขาว ทิเบตฉลอง Losar ส่วนสิงคโปร์ มาเลเซีย อินโดนีเซีย ฟิลิปปินส์ และชุมชนชาวจีนทั่วโลก รวมถึงเมมฟิส ก็ฉลองตามปฏิทินจันทรคติ งานนี้ยินดีต้อนรับทุกคนจากทุกประเพณี",
-        "es": "La mayor parte de Japón celebra el Año Nuevo el 1 de enero, aunque la fecha lunar se observa en Okinawa y en barrios chinos. Mongolia celebra Tsagaan Sar y el Tíbet celebra Losar. También se festeja en Singapur, Malasia, Indonesia, Filipinas y comunidades de todo el mundo, incluida Memphis. Nuestro festival recibe a personas de todas estas tradiciones."
+        "es": "La mayor parte de Japón celebra el Año Nuevo el 1 de enero, aunque la fecha lunar se observa en Okinawa y en barrios chinos. Mongolia celebra Tsagaan Sar y el Tíbet celebra Losar. También se festeja en Singapur, Malasia, Indonesia, Filipinas y comunidades de todo el mundo, incluida Memphis. Nuestro festival recibe a personas de todas estas tradiciones.",
+        "hi": "जापान का अधिकांश भाग 1 जनवरी को नववर्ष मनाता है, लेकिन ओकिनावा और कुछ चाइनाटाउन में चंद्र तारीख़ पर भी समारोह होते हैं। मंगोलिया में त्सागान सार तथा तिब्बत में लोसार मनाया जाता है। सिंगापुर, मलेशिया, इंडोनेशिया, फ़िलीपींस और मेम्फिस सहित दुनियाभर के समुदाय भी चंद्र नववर्ष का स्वागत करते हैं। इस उत्सव में सभी का स्वागत है।"
       }
     },
     {
@@ -1008,6 +1091,12 @@
           "saludo de año nuevo",
           "saludos",
           "felicitación"
+        ],
+        "hi": [
+          "नववर्ष की शुभकामनाएँ",
+          "नया साल मुबारक",
+          "शुभकामना कैसे दें",
+          "नववर्ष का अभिवादन"
         ]
       },
       "answer": {
@@ -1018,7 +1107,8 @@
         "ja": "各言語の新年の挨拶：\n• 中国語（普通話）：新年快乐 シンニェン クァイラ、恭喜发财 ゴンシー ファーツァイ（「金運に恵まれますように」）\n• 広東語：恭喜發財 ゴンヘイ ファッチョイ\n• ベトナム語：Chúc mừng năm mới チュック ムン ナム モイ\n• 韓国語：새해 복 많이 받으세요 セヘ ボク マニ パドゥセヨ\n• 日本語：明けましておめでとうございます\n• 英語：Happy Lunar New Year!\n祭りで出店の方に声をかけてみてください。きっと笑顔が返ってきます。",
         "zh-Hant": "各種語言的新年問候：\n• 普通話：新年快樂 Xīnnián kuàilè／恭喜發財 Gōngxǐ fācái（祝你興旺）\n• 粵語：恭喜發財 Gung hei fat choi\n• 越南語：Chúc mừng năm mới\n• 韓語：새해 복 많이 받으세요 Saehae bok mani badeuseyo\n• 日語：明けましておめでとうございます Akemashite omedetō gozaimasu\n在慶典上對攤主說一句，傳遞新年祝福。",
         "th": "คำอวยพรปีใหม่หลายภาษา:\n• จีนกลาง: 新年快乐 Xīnnián kuàilè (สวัสดีปีใหม่) หรือ 恭喜发财 Gōngxǐ fācái (ขอให้มั่งคั่ง)\n• กวางตุ้ง: 恭喜發財 Gung hei fat choi\n• เวียดนาม: Chúc mừng năm mới\n• เกาหลี: 새해 복 많이 받으세요 Saehae bok mani badeuseyo\n• ญี่ปุ่น: 明けましておめでとうございます Akemashite omedetō gozaimasu\nลองกล่าวคำอวยพรกับผู้ขายในงานเพื่อแบ่งปันความสุขปีใหม่",
-        "es": "Algunos saludos de Año Nuevo Lunar son:\n• Mandarín: 新年快乐 (Xīnnián kuàilè)\n• Cantonés: 恭喜發財 (Gung hei fat choi)\n• Vietnamita: Chúc mừng năm mới\n• Coreano: 새해 복 많이 받으세요 (Saehae bok mani badeuseyo)\n• Japonés: 明けましておめでとうございます (Akemashite omedetō gozaimasu)\n¡Prueba uno al visitar a los expositores del festival!"
+        "es": "Algunos saludos de Año Nuevo Lunar son:\n• Mandarín: 新年快乐 (Xīnnián kuàilè)\n• Cantonés: 恭喜發財 (Gung hei fat choi)\n• Vietnamita: Chúc mừng năm mới\n• Coreano: 새해 복 많이 받으세요 (Saehae bok mani badeuseyo)\n• Japonés: 明けましておめでとうございます (Akemashite omedetō gozaimasu)\n¡Prueba uno al visitar a los expositores del festival!",
+        "hi": "चंद्र नववर्ष पर अलग-अलग भाषाओं में शुभकामनाएँ दी जाती हैं:\n• मंदारिन: 新年快乐 (शिनन्येन क्वाइले)\n• कैंटोनीज़: 恭喜發財 (गुंग हेई फ़ात चोई)\n• वियतनामी: Chúc mừng năm mới\n• कोरियाई: 새해 복 많이 받으세요\n• जापानी: 明けましておめでとうございます\nउत्सव में किसी विक्रेता को इन शब्दों में नववर्ष की शुभकामना देकर देखें!"
       }
     },
     {
@@ -1087,6 +1177,13 @@
           "animales del zodiaco",
           "mi signo",
           "cuál es mi animal"
+        ],
+        "hi": [
+          "बारह पशु",
+          "12 जानवर",
+          "चीनी राशिचक्र के पशु",
+          "मेरा पशु",
+          "मेरा राशि चिन्ह"
         ]
       },
       "answer": {
@@ -1097,7 +1194,8 @@
         "ja": "十二支の順番は、子（ねずみ）、丑（うし）、寅（とら）、卯（うさぎ）、辰（たつ）、巳（へび）、午（うま）、未（ひつじ）、申（さる）、酉（とり）、戌（いぬ）、亥（いのしし）。生まれ年で探すと、2020・2008年は子、2021・2009年は丑、2022・2010年は寅、2023・2011年は卯、2024・2012年は辰、2025・2013年は巳、2026・2014年は午、2027・2015年は未、2016・2004年は申、2017・2005年は酉、2018・2006年は戌、2019・2007年は亥。1月か2月初めの生まれなら、その年の旧正月より前かどうかを確かめてください。前なら一つ前の干支です。ベトナムでは卯の代わりに猫です。",
         "zh-Hant": "十二生肖依序為：鼠、牛、虎、兔、龍、蛇、馬、羊、猴、雞、狗、豬。可依出生年查找：2020與2008屬鼠；2021與2009屬牛；2022與2010屬虎；2023與2011屬兔；2024與2012屬龍；2025與2013屬蛇；2026與2014屬馬；2027與2015屬羊；2016與2004屬猴；2017與2005屬雞；2018與2006屬狗；2019與2007屬豬。若在1月或2月初出生，須確認生日是否早於當年農曆新年；若是，便屬上一個生肖。越南以貓代替兔。",
         "th": "สิบสองนักษัตรหมุนเวียนตามลำดับ หนู วัว เสือ กระต่าย มังกร งู ม้า แพะ ลิง ไก่ สุนัข และหมู หาปีของตนเองได้จากปีเกิด: 2020 และ 2008 ปีหนู; 2021 และ 2009 ปีวัว; 2022 และ 2010 ปีเสือ; 2023 และ 2011 ปีกระต่าย; 2024 และ 2012 ปีมังกร; 2025 และ 2013 ปีงู; 2026 และ 2014 ปีม้า; 2027 และ 2015 ปีแพะ; 2016 และ 2004 ปีลิง; 2017 และ 2005 ปีไก่; 2018 และ 2006 ปีสุนัข; 2019 และ 2007 ปีหมู หากเกิดในเดือนมกราคมหรือต้นกุมภาพันธ์ ให้ตรวจสอบว่าวันเกิดอยู่ก่อนวันขึ้นปีใหม่จันทรคติของปีนั้นหรือไม่ ถ้าอยู่ก่อนจะเป็นนักษัตรของปีก่อนหน้า ในเวียดนามใช้แมวแทนกระต่าย",
-        "es": "Los doce animales del zodiaco chino son, en orden: Rata, Buey, Tigre, Conejo, Dragón, Serpiente, Caballo, Cabra, Mono, Gallo, Perro y Cerdo. Cada año corresponde a un animal. Si naciste en enero o a principios de febrero, consulta la fecha exacta del Año Nuevo Lunar de tu año de nacimiento: podrías pertenecer al signo anterior. En el zodiaco vietnamita, el Gato sustituye al Conejo."
+        "es": "Los doce animales del zodiaco chino son, en orden: Rata, Buey, Tigre, Conejo, Dragón, Serpiente, Caballo, Cabra, Mono, Gallo, Perro y Cerdo. Cada año corresponde a un animal. Si naciste en enero o a principios de febrero, consulta la fecha exacta del Año Nuevo Lunar de tu año de nacimiento: podrías pertenecer al signo anterior. En el zodiaco vietnamita, el Gato sustituye al Conejo.",
+        "hi": "चीनी राशिचक्र के बारह पशु इस क्रम में हैं: चूहा, बैल, बाघ, खरगोश, ड्रैगन, साँप, घोड़ा, बकरी, बंदर, मुर्गा, कुत्ता और सूअर। प्रत्येक वर्ष का एक पशु प्रतीक होता है। यदि आपका जन्म जनवरी या फ़रवरी की शुरुआत में हुआ है, तो अपने जन्म वर्ष के चंद्र नववर्ष की तारीख़ देखें; आपका प्रतीक पिछले वर्ष का हो सकता है। वियतनामी राशिचक्र में खरगोश के स्थान पर बिल्ली होती है।"
       }
     },
     {
@@ -1157,6 +1255,12 @@
           "acertijos de faroles",
           "hacer un farol",
           "paseo de faroles"
+        ],
+        "hi": [
+          "लालटेन उत्सव",
+          "लालटेन बनाना",
+          "लालटेन की पहेलियाँ",
+          "लालटेन सैर"
         ]
       },
       "answer": {
@@ -1167,7 +1271,8 @@
         "ja": "提灯は15日目の夜、その年最初の満月に祝いを締めくくります。家族は赤い提灯の列の下を歩き、紙札に書かれたなぞなぞを解き、家族の円満を表す丸い白玉団子を食べます。提灯はもともとさまよう魂を家へ導き、冬のあとの光の帰還を告げるものでした。祭りでは金曜夜7時半からファミリーガーデンで提灯の展示と提灯づくりがあり、作って持ち帰れます。マーケットの「提灯横丁」では絹と紙の提灯を販売しています。",
         "zh-Hant": "正月十五元宵節是新年第一個月圓之夜，為節慶畫下句點。家人在紅燈籠下漫步，解開紙籤上的燈謎，吃象徵闔家團圓的甜湯圓。傳統解說中，燈籠為遊魂指引歸途，也象徵冬去春來、光明回歸。本慶典的花燈展示與製作於週五晚7:30在親子園開始，可製作花燈帶回家。市集的「燈籠巷」販售絲綢與紙燈籠。",
         "th": "โคมไฟส่งท้ายเทศกาลในคืนที่สิบห้า ซึ่งเป็นคืนพระจันทร์เต็มดวงแรกของปี ครอบครัวเดินใต้แถวโคมแดง แก้ปริศนาบนป้ายกระดาษ และกินบัวลอยไส้หวานทรงกลมซึ่งหมายถึงครอบครัวพร้อมหน้า ตามเรื่องเล่า โคมไฟช่วยนำดวงวิญญาณกลับบ้านและสื่อถึงแสงที่กลับมาหลังฤดูหนาว ในงานนี้ กิจกรรมจัดแสดงและประดิษฐ์โคมไฟเริ่มเย็นวันศุกร์เวลา 19:30 น. ที่สวนครอบครัว คุณสามารถทำโคมกลับบ้านได้ ร้าน Lantern Lane ในตลาดขายโคมไฟผ้าไหมและกระดาษ",
-        "es": "El Festival de los Faroles se celebra la decimoquinta noche del Año Nuevo Lunar, durante la primera luna llena del año. Las familias pasean entre faroles iluminados, resuelven acertijos y comen bolitas dulces de arroz que simbolizan la unión. En el festival de Memphis habrá exposición y elaboración de faroles el viernes por la noche en el Jardín Familiar."
+        "es": "El Festival de los Faroles se celebra la decimoquinta noche del Año Nuevo Lunar, durante la primera luna llena del año. Las familias pasean entre faroles iluminados, resuelven acertijos y comen bolitas dulces de arroz que simbolizan la unión. En el festival de Memphis habrá exposición y elaboración de faroles el viernes por la noche en el Jardín Familiar.",
+        "hi": "लालटेन उत्सव चंद्र नववर्ष की पंद्रहवीं रात, वर्ष की पहली पूर्णिमा पर मनाया जाता है। परिवार लालटेनों के नीचे टहलते हैं, उनसे जुड़ी पहेलियाँ हल करते हैं और मीठे चावल के गोले खाते हैं जो पारिवारिक एकता का प्रतीक हैं। मेम्फिस उत्सव में शुक्रवार शाम पारिवारिक उद्यान में लालटेन प्रदर्शनी और लालटेन बनाने की गतिविधि होगी।"
       }
     }
   ]
