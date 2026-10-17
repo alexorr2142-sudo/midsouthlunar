@@ -8,6 +8,7 @@ import knowledge from '../../src/data/knowledge.json'
 describe('UT-7 language detection and reply language', () => {
   it('detects script', () => {
     expect(detectLang('Where do I park?')).toBe('en')
+    expect(detectLang('उत्सव कहाँ है?')).toBe('hi')
     expect(detectLang('¿Dónde puedo estacionar?')).toBe('es')
     expect(detectLang('¿Qué actividades hay el sábado?')).toBe('es')
     expect(detectLang('在哪里停车？')).toBe('zh')
@@ -118,9 +119,9 @@ describe('UT-8 intents', () => {
   })
 })
 
-// Knowledge base completeness: every topic has keywords and an answer in all eight languages.
+// Knowledge base completeness: every topic has keywords and an answer in all nine languages.
 describe('knowledge base shape', () => {
-  it('is complete in eight languages', () => {
+  it('is complete in nine languages', () => {
     for (const t of knowledge.topics) for (const l of CHAT_LANGS) {
       expect(t.keywords[l]?.length, `${t.id}.keywords.${l}`).toBeGreaterThan(0)
       expect(t.answer[l]?.length, `${t.id}.answer.${l}`).toBeGreaterThan(40)
