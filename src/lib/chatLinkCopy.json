@@ -46,5 +46,11 @@
     "volunteer": "Ayuda con el montaje, los puestos de información, las actividades infantiles y la traducción. Los estudiantes son bienvenidos.\nEl enlace de inscripción se anunciará pronto.",
     "vendorApply": "Se invita a puestos de comida, artesanos y organizaciones culturales. Las solicitudes abrirán pronto.\nEl enlace para solicitar un puesto se anunciará próximamente.",
     "preliminary": "Programa preliminar. Los horarios y expositores pueden cambiar."
+  },
+  "hi": {
+    "tickets": "टिकट Eventbrite से मिलेंगे। कीमतें और लिंक जल्द आएँगे।",
+    "volunteer": "स्वयंसेवक पंजीकरण जल्द शुरू होगा।",
+    "vendorApply": "विक्रेता आवेदन जल्द शुरू होंगे।",
+    "preliminary": "यह प्रारंभिक कार्यक्रम है। समय और विक्रेता बदल सकते हैं।"
   }
 }

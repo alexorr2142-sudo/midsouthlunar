@@ -11,6 +11,7 @@ export const LANGS = [
   { code: 'ko', label: '한국어', htmlLang: 'ko' },
   { code: 'ja', label: '日本語', htmlLang: 'ja' },
   { code: 'es', label: 'Español', htmlLang: 'es' },
+  { code: 'hi', label: 'हिन्दी', htmlLang: 'hi' },
 ]
 export const LANG_CODES = LANGS.map((l) => l.code)
 
@@ -25,6 +26,7 @@ const LOADERS = {
   ko: () => import('./ko.json'),
   ja: () => import('./ja.json'),
   es: () => import('./es.json'),
+  hi: () => import('./hi.json'),
 }
 const DICTIONARIES = new Map([['en', en]])
 const LOADING = new Map()

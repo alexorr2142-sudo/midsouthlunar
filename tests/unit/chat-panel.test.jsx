@@ -22,6 +22,7 @@ const venueQuestions = {
   vi: 'Địa chỉ của lễ hội ở đâu?',
   th: 'ที่อยู่ของงานเทศกาลอยู่ที่ไหน?',
   es: '¿Dónde está la dirección del festival?',
+  hi: 'उत्सव का पता कहाँ है?',
 }
 
 function LanguageControls() {

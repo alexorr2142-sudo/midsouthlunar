@@ -20,7 +20,7 @@ import chatLinkCopy from './chatLinkCopy.json'
 import { externalLink } from './links.js'
 import { HELLO } from './chatStrings.js'
 
-export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja', 'es']
+export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja', 'es', 'hi']
 
 // ---------- language detection ----------
 const RE_HANGUL = /[가-힯ᄀ-ᇿ㄰-㆏]/
@@ -28,11 +28,13 @@ const RE_KANA = /[぀-ヿ]/
 const RE_HAN = /[一-鿿]/
 const RE_VI = /[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹĂÂĐÊÔƠƯ]/
 const RE_SPANISH = /[¿¡]|\b(?:dónde|donde|qué|que|cuándo|cuando|por qué|cómo|cómo llegar|estacionar|estacionamiento|entradas|empanadillas|sábado|viernes|sobres rojos|año nuevo|actividades|festival del|voluntarios|expositores|boleto|boletos|patrocinio)\b/iu
+const RE_DEVANAGARI = /[\u0900-\u097f]/
 const RE_THAI = /[\u0e00-\u0e7f]/
 const RE_TRADITIONAL = /[體慶農曆會門這裡學歡觀傳禮歷龍餃開關萬臺週麼發錢獅燈]/
 
 /** Script-based detection. Plain Latin text follows the UI language when that is Vietnamese, else English. */
 export function detectLang(text, uiLang = 'en') {
+  if (RE_DEVANAGARI.test(text)) return 'hi'
   if (RE_THAI.test(text)) return 'th'
   if (RE_HANGUL.test(text)) return 'ko'
   if (RE_KANA.test(text)) return 'ja'
@@ -327,11 +329,11 @@ export function answer(rawText, { lang: uiLang = 'en', now = new Date() } = {}) 
   const namesVendor = vend.specific && vend.items.length > 0 && vendorScoreMax(q, vend.items) >= 1
   const namesEvent = sched.specific && sched.items.length > 0 && mentionScoreMax(q, sched.items) >= 1
   const festivalReference = anyLang(q, {
-    es: ['festival', 'evento', 'mccc', 'agricenter'], en: ['festival', 'event', 'mccc', 'agricenter'], zh: ['庆典', '活动', '文化节'],
+    hi: ['उत्सव', 'कार्यक्रम', 'एग्रीसेंटर'], es: ['festival', 'evento', 'mccc', 'agricenter'], en: ['festival', 'event', 'mccc', 'agricenter'], zh: ['庆典', '活动', '文化节'],
     'zh-Hant': ['慶典', '活動', '文化節'], vi: ['lễ hội', 'sự kiện'], ko: ['축제', '행사'], ja: ['祭り', 'イベント'], th: ['เทศกาล', 'งาน'],
   })
   const addressReference = anyLang(q, {
-    es: ['dirección', 'ubicación', 'recinto'], en: ['address', 'venue', 'directions'], zh: ['地址', '会场'], 'zh-Hant': ['地址', '會場'],
+    hi: ['पता', 'स्थान', 'आयोजन स्थल'], es: ['dirección', 'ubicación', 'recinto'], en: ['address', 'venue', 'directions'], zh: ['地址', '会场'], 'zh-Hant': ['地址', '會場'],
     vi: ['địa chỉ'], ko: ['주소', '행사장'], ja: ['住所', '会場'], th: ['ที่อยู่', 'สถานที่จัดงาน'],
   })
   const locationQuestion = anyLang(q, KW.location) || addressReference || /\bwhere\b/u.test(q) && festivalReference
