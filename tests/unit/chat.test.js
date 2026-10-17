@@ -33,7 +33,7 @@ describe('UT-7 language detection and reply language', () => {
   })
 
   it('has a greeting in every language', () => {
-    for (const lang of CHAT_LANGS) expect(HELLO[lang]).toMatch(/Yang Yang|羊羊|양양|ヤンヤン|หยางหยาง/)
+    for (const lang of CHAT_LANGS) expect(HELLO[lang]).toMatch(/Yang Yang|羊羊|양양|ヤンヤン|หยางหยาง|यांग यांग/)
   })
 })
 
