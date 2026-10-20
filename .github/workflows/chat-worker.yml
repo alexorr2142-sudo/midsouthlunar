@@ -72,6 +72,20 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Probe Gemini (status code and error message only, never the key)
+        if: steps.cf.outputs.configured == 'true'
+        env:
+          KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          MODEL=$(node -e "const j=require('fs').readFileSync('wrangler.jsonc','utf8');console.log(/\"GEMINI_MODEL\":\s*\"([^\"]+)\"/.exec(j)[1])")
+          echo "model: $MODEL"
+          code=$(curl -sS -o /tmp/gen.json -w '%{http_code}' -X POST "https://generativelanguage.googleapis.com/v1beta/models/$MODEL:generateContent" -H "x-goog-api-key: $KEY" -H 'Content-Type: application/json' -d '{"contents":[{"role":"user","parts":[{"text":"Say hi in one word."}]}]}')
+          echo "generateContent HTTP $code"
+          node -e "const j=JSON.parse(require('fs').readFileSync('/tmp/gen.json','utf8'));console.log(j.error?('error: '+j.error.status+' '+j.error.message.slice(0,300)):('ok: '+JSON.stringify(j.candidates?.[0]?.content?.parts?.[0]?.text)))"
+          code=$(curl -sS -o /tmp/models.json -w '%{http_code}' "https://generativelanguage.googleapis.com/v1beta/models?pageSize=100" -H "x-goog-api-key: $KEY")
+          echo "models list HTTP $code"
+          node -e "const j=JSON.parse(require('fs').readFileSync('/tmp/models.json','utf8'));console.log(j.error?('error: '+j.error.status+' '+j.error.message.slice(0,300)):(j.models||[]).map(m=>m.name.replace('models/','')).filter(n=>/flash/.test(n)).join(', '))"
+
       - name: Smoke test
         if: steps.cf.outputs.configured == 'true'
         env:
