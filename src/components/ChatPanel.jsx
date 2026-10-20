@@ -65,7 +65,7 @@ export default function ChatPanel({ open, setOpen }) {
       let reply = { role: 'bot', text: local.text, intent: local.intent, links: local.links, lang: local.lang, source: 'local' }
       // Verified street addresses always come from event.venue, including in AI mode.
       if (useAi && local.intent !== 'venue') {
-        timer = setTimeout(() => controller.abort(), 25000)
+        timer = setTimeout(() => controller.abort(), 50000)
         try {
           const { askGemini } = await loadGemini()
           const txt = await askGemini(q, { lang: detectLang(q, lang), history, signal: controller.signal })
