@@ -43,4 +43,4 @@ In live mode, the question, bounded recent history and website context are sent 
 
 ## Verification
 
-Run `npm run test:unit` and `npm run build`. The server contract tests cover canonical venue/FAQ grounding, all seven request languages, payload bounds/roles, server-only credential transport, absent keys, provider failure/malformed output, timeout/abort, exact-origin CORS, body limits and rate/concurrency reservations. Before public activation, perform an account-owner-controlled live check for a festival question, a broader cultural question, outage fallback and account usage. No real API key is required for the automated suite.
+Run `npm run test:unit` and `npm run build`. The server contract tests cover canonical venue/FAQ grounding, all nine request languages, payload bounds/roles, server-only credential transport, absent keys, provider failure/malformed output, timeout/abort, exact-origin CORS, body limits and rate/concurrency reservations. Before public activation, perform an account-owner-controlled live check for a festival question, a broader cultural question, outage fallback and account usage. No real API key is required for the automated suite.

@@ -8,7 +8,7 @@ Built as the group project for MIS 7623 (AI-Assisted Application Development for
 
 ## What it is
 
-A static website in seven languages (English, 简体中文, 繁體中文, 日本語, 한국어, ไทย, Tiếng Việt) with six pages: Home, Schedule, Vendors, Tickets & Visit, Get Involved, and About. English is the default; language choice persists. There is no database, sign-in, or analytics. Local chatbot mode needs no server. An optional protected AI service supports broader cultural questions. See `docs/requirements` for the original requirements and `docs/COMPARISON_REVIEW.md` for the comparison improvements.
+A static website in nine languages (English, 简体中文, 繁體中文, 日本語, 한국어, ไทย, Tiếng Việt, Español, हिन्दी) with six pages: Home, Schedule, Vendors, Tickets & Visit, Get Involved, and About. English is the default; language choice persists. There is no database, sign-in, or analytics. Local chatbot mode needs no server. An optional protected AI service supports broader cultural questions. See `docs/requirements` for the original requirements and `docs/COMPARISON_REVIEW.md` for the comparison improvements.
 
 The confirmed 2027 Eventbrite listing and Google Forms URLs have not been supplied. Their fields are blank and the UI shows a pending message. Add specific event/form URLs in `event.json` when available; generic homepages are deliberately rejected.
 
@@ -42,15 +42,15 @@ npm test           # unit + integration tests
 | Thai text | `src/i18n/th.json` |
 | Vietnamese, Korean, Japanese text | `src/i18n/vi.json`, `ko.json`, `ja.json` |
 
-Every item in the data files has `en`, `zh`, `zh-Hant`, `th`, `vi`, `ko`, and `ja` values. The unit tests fail if a language is missing, so run `npm run test:unit` after editing. Changes merged into `main` trigger deployment. Translations are drafts pending native-speaker review.
+Every item in the data files has `en`, `zh`, `zh-Hant`, `th`, `vi`, `ko`, `ja`, `es`, and `hi` values. The unit tests fail if a language is missing, so run `npm run test:unit` after editing. Changes merged into `main` trigger deployment. Translations are drafts pending native-speaker review.
 
 The schedule and vendor lists are currently **preliminary demo data** drawn from the MCCC festival application. They will be replaced when MCCC provides the real lineup.
 
 ## Chatbot: Yang Yang (羊羊)
 
-The goat button in the corner opens a chat about the schedule, vendors, tickets, parking, accessibility and Lunar New Year traditions in all seven languages. Event-address questions always read `event.venue.name` and `event.venue.address`, including in AI mode; an activity's Food Hall is not the festival's street address.
+The goat button in the corner opens a chat about the schedule, vendors, tickets, parking, accessibility and Lunar New Year traditions in all nine languages. Event-address questions always read `event.venue.name` and `event.venue.address`, including in AI mode; an activity's Food Hall is not the festival's street address.
 
-**Built-in mode (default).** A local intent engine (`src/lib/chat.js`) uses the website's JSON data and curated knowledge (`src/data/knowledge.json`). Chat messages stay in the browser. It answers supported topics and gives a helpful fallback for other questions. Edit knowledge like other content; the tests check all seven languages.
+**Built-in mode (default).** A local intent engine (`src/lib/chat.js`) uses the website's JSON data and curated knowledge (`src/data/knowledge.json`). Chat messages stay in the browser. It answers supported topics and gives a helpful fallback for other questions. Edit knowledge like other content; the tests check all nine languages.
 
 **Optional AI mode (Gemini free tier).** The static website calls a separately hosted protected chat service; the browser only ever learns the service's public URL, never the Gemini key. The service ships in two interchangeable forms: `server/chat.mjs` for any Node host, and `server/worker.mjs` for Cloudflare Workers (free tier, no server to run). The Cloudflare path is the one the project uses: add the `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` and `GEMINI_API_KEY` repository secrets, run the **Deploy Yang Yang chat service** workflow, then set the repository Variable `CHAT_API_URL` to the Worker's `/api/chat` URL and redeploy Pages. Step-by-step instructions, including the handoff rule that the Cloudflare and Google accounts belong to the festival, are in [docs/CHAT_SETUP.md](docs/CHAT_SETUP.md).
 

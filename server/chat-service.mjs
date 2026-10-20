@@ -1,7 +1,8 @@
 import { readFileSync } from 'node:fs'
 
-export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja']
-const LANG_NAMES = { en: 'English', zh: 'Simplified Chinese', 'zh-Hant': 'Traditional Chinese', th: 'Thai', vi: 'Vietnamese', ko: 'Korean', ja: 'Japanese' }
+// Must match the site's language list (src/i18n/LanguageContext.jsx) and src/lib/chat.js CHAT_LANGS.
+export const CHAT_LANGS = ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja', 'es', 'hi']
+const LANG_NAMES = { en: 'English', zh: 'Simplified Chinese', 'zh-Hant': 'Traditional Chinese', th: 'Thai', vi: 'Vietnamese', ko: 'Korean', ja: 'Japanese', es: 'Spanish', hi: 'Hindi' }
 
 export class ChatError extends Error {
   constructor(status, code) { super(code); this.status = status; this.code = code }

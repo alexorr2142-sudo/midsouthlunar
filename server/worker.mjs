@@ -28,8 +28,10 @@ import th from '../src/i18n/th.json' with { type: 'json' }
 import vi from '../src/i18n/vi.json' with { type: 'json' }
 import ko from '../src/i18n/ko.json' with { type: 'json' }
 import ja from '../src/i18n/ja.json' with { type: 'json' }
+import es from '../src/i18n/es.json' with { type: 'json' }
+import hi from '../src/i18n/hi.json' with { type: 'json' }
 
-const DICTIONARIES = { en, zh, 'zh-Hant': zhHant, th, vi, ko, ja }
+const DICTIONARIES = { en, zh, 'zh-Hant': zhHant, th, vi, ko, ja, es, hi }
 const BODY_LIMIT = 24 * 1024
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', Vary: 'Origin' }
 

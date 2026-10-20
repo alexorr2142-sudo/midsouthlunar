@@ -22,7 +22,24 @@ function call(handler, { method = 'POST', path = '/api/chat', origin = SITE, bod
 // contract as the Node server, keeps the key server-side, and is grounded on
 // the same website JSON the Node server reads from disk.
 describe('UT-10 Yang Yang Cloudflare Worker', () => {
-  it('bundles the same grounding the Node server reads from disk, for all seven languages', () => {
+  it('accepts every site language the browser can send (server list matches the site list)', async () => {
+    const { CHAT_LANGS: serverLangs } = await import('../../server/chat-service.mjs')
+    const { CHAT_LANGS: clientLangs } = await import('../../src/lib/chat.js')
+    const { LANG_CODES } = await import('../../src/i18n/LanguageContext.jsx')
+    expect([...serverLangs].sort()).toEqual([...LANG_CODES].sort())
+    expect([...clientLangs].sort()).toEqual([...LANG_CODES].sort())
+    const fetchImpl = vi.fn(async () => geminiReply('Respuesta.'))
+    const handler = createWorkerHandler({ fetchImpl })
+    for (const lang of ['es', 'hi']) {
+      const res = await call(handler, { body: JSON.stringify({ ...question, lang }) })
+      expect(res.status, `lang ${lang}`).toBe(200)
+    }
+    const spanishPrompt = JSON.parse(fetchImpl.mock.calls[0][1].body).systemInstruction.parts[0].text
+    expect(spanishPrompt).toMatch(/Reply in Spanish/)
+    expect(spanishPrompt).toContain(JSON.stringify(bundledGrounding('es').websiteText.schedule.title))
+  })
+
+  it('bundles the same grounding the Node server reads from disk, for all nine languages', () => {
     const fromDisk = websiteGrounding('ko')
     const bundled = bundledGrounding('ko')
     expect(bundled.event).toEqual(fromDisk.event)
@@ -30,7 +47,7 @@ describe('UT-10 Yang Yang Cloudflare Worker', () => {
     expect(bundled.vendors).toEqual(fromDisk.vendors)
     expect(bundled.knowledge).toEqual(fromDisk.knowledge)
     expect(bundled.websiteText).toEqual(fromDisk.websiteText)
-    for (const lang of ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja']) expect(bundledGrounding(lang).websiteText.schedule.title).toBe(websiteGrounding(lang).websiteText.schedule.title)
+    for (const lang of ['en', 'zh', 'zh-Hant', 'th', 'vi', 'ko', 'ja', 'es', 'hi']) expect(bundledGrounding(lang).websiteText.schedule.title).toBe(websiteGrounding(lang).websiteText.schedule.title)
     expect(bundledGrounding('xx').websiteText).toBe(bundledGrounding('en').websiteText)
   })
 
