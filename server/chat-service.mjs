@@ -85,7 +85,11 @@ export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', m
     try {
       const request = (async () => {
         let response
-        for (const [index, name] of models.entries()) {
+        // Two passes over the model list: Google's "high demand" 503s are often
+        // gone a second later. Anything other than 429/503 is final at once.
+        const attempts = [...models, null, ...models]
+        for (const [index, name] of attempts.entries()) {
+          if (name === null) { await new Promise((r) => setTimeout(r, 1500)); continue }
           response = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(name)}:generateContent`, {
             method: 'POST', signal: controller.signal,
             headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
@@ -97,7 +101,7 @@ export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', m
             }),
           })
           // Overloaded or rate-limited model: try the next one. Anything else is final.
-          if (response.ok || ![429, 503].includes(response.status) || index === models.length - 1) break
+          if (response.ok || ![429, 503].includes(response.status) || index === attempts.length - 1) break
         }
         if (!response.ok) throw new ChatError(502, 'provider_unavailable')
         const data = await response.json()

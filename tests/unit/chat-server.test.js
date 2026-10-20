@@ -95,6 +95,12 @@ describe('protected chat provider contract', () => {
     await expect(service.ask(question)).resolves.toEqual({ text: 'Fallback answer.' })
     expect(calls).toEqual(['gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-2.5-flash-lite'])
 
+    // Second pass: every model is overloaded on the first pass, the primary recovers on the second.
+    let pass = 0
+    const flaky = async (url) => { pass++; return pass <= 3 ? { ok: false, status: 503 } : answerResponse('Recovered.') }
+    await expect(serviceWith(flaky, { fallbackModels: 'gemini-3.5-flash-lite,gemini-2.5-flash-lite' }).ask(question)).resolves.toEqual({ text: 'Recovered.' })
+    expect(pass).toBe(4)
+
     const strict = []
     const forbidden = async (url) => { strict.push(url); return { ok: false, status: 403 } }
     await expect(serviceWith(forbidden, { fallbackModels: 'gemini-2.5-flash-lite' }).ask(question)).rejects.toMatchObject({ status: 502 })
@@ -102,7 +108,7 @@ describe('protected chat provider contract', () => {
 
     const allDown = []
     await expect(serviceWith(async (url) => { allDown.push(url); return { ok: false, status: 503 } }, { fallbackModels: 'gemini-2.5-flash-lite' }).ask(question)).rejects.toMatchObject({ status: 502, code: 'provider_unavailable' })
-    expect(allDown).toHaveLength(2)
+    expect(allDown).toHaveLength(4) // two passes over primary + one fallback
     expect(() => serviceWith(provider, { fallbackModels: 'bad name!' })).toThrow('Invalid GEMINI_MODEL')
   })
 
