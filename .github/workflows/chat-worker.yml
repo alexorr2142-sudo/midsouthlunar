@@ -82,6 +82,21 @@ jobs:
           code=$(curl -sS -o /tmp/gen.json -w '%{http_code}' -X POST "https://generativelanguage.googleapis.com/v1beta/models/$MODEL:generateContent" -H "x-goog-api-key: $KEY" -H 'Content-Type: application/json' -d '{"contents":[{"role":"user","parts":[{"text":"Say hi in one word."}]}]}')
           echo "generateContent HTTP $code"
           node -e "const j=JSON.parse(require('fs').readFileSync('/tmp/gen.json','utf8'));console.log(j.error?('error: '+j.error.status+' '+j.error.message.slice(0,300)):('ok: '+JSON.stringify(j.candidates?.[0]?.content?.parts?.[0]?.text)))"
+          # Time each candidate model with a realistic grounded prompt (same size as the service sends).
+          node -e "
+            const fs=require('fs');const j=fs.readFileSync('wrangler.jsonc','utf8');
+            const primary=/\"GEMINI_MODEL\":\s*\"([^\"]+)\"/.exec(j)[1];const fb=(/\"GEMINI_FALLBACK_MODELS\":\s*\"([^\"]+)\"/.exec(j)||[])[1]||'';
+            fs.writeFileSync('/tmp/models.txt',[primary,...fb.split(',').map(s=>s.trim()).filter(Boolean)].join('\n'))"
+          GROUND=$(node -e "import('./server/chat-service.mjs').then(({websiteGrounding,trimGrounding})=>process.stdout.write(JSON.stringify(trimGrounding(websiteGrounding('en'),'en'))))")
+          node -e "const g=process.argv[1];require('fs').writeFileSync('/tmp/req.json',JSON.stringify({systemInstruction:{parts:[{text:'You are Yang Yang. Answer briefly from this JSON: '+g}]},contents:[{role:'user',parts:[{text:'What is the legend of Nian?'}]}],generationConfig:{temperature:0.3,maxOutputTokens:1024}}))" "$GROUND"
+          echo "request bytes: $(wc -c < /tmp/req.json)"
+          while read -r m; do
+            start=$(date +%s.%N)
+            code=$(curl -sS -m 60 -o /tmp/m.json -w '%{http_code}' -X POST "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent" -H "x-goog-api-key: $KEY" -H 'Content-Type: application/json' --data-binary @/tmp/req.json)
+            secs=$(echo "$(date +%s.%N) - $start" | bc)
+            msg=$(node -e "const j=JSON.parse(require('fs').readFileSync('/tmp/m.json','utf8'));console.log(j.error?('error '+j.error.status):('ok, '+(j.usageMetadata?.promptTokenCount||'?')+' prompt tokens, '+(j.usageMetadata?.thoughtsTokenCount||0)+' thinking tokens, '+String(j.candidates?.[0]?.content?.parts?.map(p=>p.text).join('')||'').length+' chars'))" 2>/dev/null || echo unparsable)
+            echo "timing: $m HTTP $code ${secs}s $msg"
+          done < /tmp/models.txt
           code=$(curl -sS -o /tmp/models.json -w '%{http_code}' "https://generativelanguage.googleapis.com/v1beta/models?pageSize=100" -H "x-goog-api-key: $KEY")
           echo "models list HTTP $code"
           node -e "const j=JSON.parse(require('fs').readFileSync('/tmp/models.json','utf8'));console.log(j.error?('error: '+j.error.status+' '+j.error.message.slice(0,300)):(j.models||[]).map(m=>m.name.replace('models/','')).filter(n=>/flash/.test(n)).join(', '))"
