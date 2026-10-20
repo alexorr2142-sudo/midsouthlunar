@@ -1,7 +1,7 @@
 // @vitest-environment node
 import { describe, expect, it, vi } from 'vitest'
 import { Readable } from 'node:stream'
-import { ChatError, createChatService, validatePayload, websiteGrounding } from '../../server/chat-service.mjs'
+import { ChatError, createChatService, validatePayload, websiteGrounding, trimGrounding } from '../../server/chat-service.mjs'
 import { allowedOrigins, createChatHandler, createLimiter } from '../../server/http.mjs'
 
 const answerResponse = (text = 'A cultural answer.') => ({ ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text }] } }] }) })
@@ -63,6 +63,23 @@ describe('protected chat provider contract', () => {
     expect(service.enabled).toBe(false)
     await expect(service.ask(question)).rejects.toMatchObject({ status: 503, code: 'chat_unavailable' })
     expect(provider).not.toHaveBeenCalled()
+  })
+
+  it('trims the prompt grounding to English plus the visitor language and keeps the venue address', async () => {
+    const full = websiteGrounding('ko')
+    const trimmed = trimGrounding(full, 'ko')
+    expect(JSON.stringify(trimmed).length).toBeLessThan(JSON.stringify(full).length / 2)
+    expect(trimmed.event.venue.address).toBe(full.event.venue.address)
+    expect(Object.keys(trimmed.schedule.items[0].title).sort()).toEqual(['en', 'ko'])
+    expect(trimmed.knowledge.topics[0].answer.ko).toBe(full.knowledge.topics[0].answer.ko)
+    expect(trimmed.knowledge.topics[0].keywords).toBeUndefined()
+    expect(trimmed.websiteText).toBe(full.websiteText)
+    expect(trimmed.englishWebsiteText).toBe(full.englishWebsiteText)
+    expect(trimGrounding(websiteGrounding('en'), 'en').englishWebsiteText).toBeUndefined()
+    const calls = []
+    await serviceWith(async (url, init) => { calls.push(init.body); return answerResponse() }).ask({ ...question, lang: 'ko' })
+    expect(calls[0]).not.toContain('"ja":')
+    expect(calls[0]).toContain(full.event.venue.address)
   })
 
   it('falls back to the next model when the primary is overloaded or rate limited, but not on other errors', async () => {
