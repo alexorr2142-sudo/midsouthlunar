@@ -44,12 +44,14 @@ describe('UT-6 language toggle (FR-2)', () => {
     await waitFor(() => expect(screen.getByTestId('lang')).toHaveTextContent('zh'))
     expect(screen.getByTestId('title')).toHaveTextContent('活动日程')
     expect(screen.getByTestId('pick')).toHaveTextContent('主舞台')
-    expect(document.documentElement.lang).toBe('zh-Hans')
+    await waitFor(() => expect(document.documentElement.lang).toBe('zh-Hans'))
     expect(window.localStorage.getItem('msl-lang')).toBe('zh')
     fireEvent.click(screen.getByText('ko'))
     await waitFor(() => expect(screen.getByTestId('title')).toHaveTextContent('일정'))
     expect(screen.getByTestId('count')).toHaveTextContent('행사 3개')
-    expect(document.documentElement.lang).toBe('ko')
+    // The <html lang> attribute is set in a passive effect, which can flush a
+    // tick after the dictionary render that waitFor above resolved on.
+    await waitFor(() => expect(document.documentElement.lang).toBe('ko'))
   })
 
   it('cycles through all nine languages after each dictionary is ready', async () => {
