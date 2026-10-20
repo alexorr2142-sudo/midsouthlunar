@@ -35,7 +35,10 @@ jobs:
       - name: Build
         env:
           # Public URL of the protected chat backend; never compile an API key.
-          VITE_CHAT_API_URL: ${{ vars.CHAT_API_URL }}
+          # The repo Variable CHAT_API_URL overrides the default below (the festival's
+          # Cloudflare Worker, deployed by chat-worker.yml). Set it to a blank string
+          # to force built-in mode.
+          VITE_CHAT_API_URL: ${{ vars.CHAT_API_URL || 'https://midsouthlunar-chat.midsouthlunar.workers.dev/api/chat' }}
         run: |
           if [ -f public/CNAME ]; then export BASE_PATH=/; else export BASE_PATH=/midsouthlunar/; fi
           echo "BASE_PATH=$BASE_PATH"

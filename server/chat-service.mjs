@@ -33,8 +33,20 @@ export function websiteGrounding(lang = 'en') {
   return { event, schedule, vendors, knowledge, websiteText: translated, englishWebsiteText: english }
 }
 
-export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', model = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite', fetchImpl = globalThis.fetch, timeoutMs = 20_000, getGrounding = websiteGrounding } = {}) {
-  if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,80}$/.test(model)) throw new Error('Invalid GEMINI_MODEL')
+const MODEL_RE = /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,80}$/
+export const DEFAULT_MODEL = 'gemini-3.1-flash-lite'
+// Sibling free-tier models tried in order when the primary answers 429/503
+// (rate limited or "high demand"). Same prompt, same guardrails; only the name changes.
+export const DEFAULT_FALLBACK_MODELS = 'gemini-3.5-flash-lite,gemini-2.5-flash-lite'
+
+export function modelList(primary, fallbacks) {
+  const names = [primary, ...String(fallbacks ?? '').split(',').map((s) => s.trim()).filter(Boolean)]
+  for (const name of names) if (!MODEL_RE.test(name)) throw new Error('Invalid GEMINI_MODEL')
+  return [...new Set(names)]
+}
+
+export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', model = process.env.GEMINI_MODEL || DEFAULT_MODEL, fallbackModels = process.env.GEMINI_FALLBACK_MODELS ?? DEFAULT_FALLBACK_MODELS, fetchImpl = globalThis.fetch, timeoutMs = 20_000, getGrounding = websiteGrounding } = {}) {
+  const models = modelList(model, fallbackModels)
   const enabled = Boolean(apiKey.trim())
   const ask = async (raw) => {
     const { question, lang, history } = validatePayload(raw)
@@ -45,16 +57,21 @@ export function createChatService({ apiKey = process.env.GEMINI_API_KEY || '', m
     let timer
     try {
       const request = (async () => {
-        const response = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
-          method: 'POST', signal: controller.signal,
-          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-          body: JSON.stringify({
-            systemInstruction: { parts: [{ text: instructions }] },
-            contents: [...history.map((m) => ({ role: m.role === 'bot' ? 'model' : 'user', parts: [{ text: m.text }] })), { role: 'user', parts: [{ text: question }] }],
-            generationConfig: { temperature: 0.3, maxOutputTokens: 1024, ...(/^gemini-2\.5-flash(?:-|$)/.test(model) ? { thinkingConfig: { thinkingBudget: 0 } } : {}) },
-            store: false,
-          }),
-        })
+        let response
+        for (const [index, name] of models.entries()) {
+          response = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(name)}:generateContent`, {
+            method: 'POST', signal: controller.signal,
+            headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+            body: JSON.stringify({
+              systemInstruction: { parts: [{ text: instructions }] },
+              contents: [...history.map((m) => ({ role: m.role === 'bot' ? 'model' : 'user', parts: [{ text: m.text }] })), { role: 'user', parts: [{ text: question }] }],
+              generationConfig: { temperature: 0.3, maxOutputTokens: 1024, ...(/^gemini-2\.5-flash(?:-|$)/.test(name) ? { thinkingConfig: { thinkingBudget: 0 } } : {}) },
+              store: false,
+            }),
+          })
+          // Overloaded or rate-limited model: try the next one. Anything else is final.
+          if (response.ok || ![429, 503].includes(response.status) || index === models.length - 1) break
+        }
         if (!response.ok) throw new ChatError(502, 'provider_unavailable')
         const data = await response.json()
         const parts = data?.candidates?.[0]?.content?.parts

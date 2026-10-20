@@ -65,6 +65,30 @@ describe('protected chat provider contract', () => {
     expect(provider).not.toHaveBeenCalled()
   })
 
+  it('falls back to the next model when the primary is overloaded or rate limited, but not on other errors', async () => {
+    const calls = []
+    const provider = async (url) => {
+      const name = decodeURIComponent(url.split('/models/')[1].split(':')[0])
+      calls.push(name)
+      if (name === 'gemini-3.1-flash-lite') return { ok: false, status: 503 }
+      if (name === 'gemini-3.5-flash-lite') return { ok: false, status: 429 }
+      return answerResponse('Fallback answer.')
+    }
+    const service = serviceWith(provider, { model: 'gemini-3.1-flash-lite', fallbackModels: 'gemini-3.5-flash-lite, gemini-2.5-flash-lite' })
+    await expect(service.ask(question)).resolves.toEqual({ text: 'Fallback answer.' })
+    expect(calls).toEqual(['gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-2.5-flash-lite'])
+
+    const strict = []
+    const forbidden = async (url) => { strict.push(url); return { ok: false, status: 403 } }
+    await expect(serviceWith(forbidden, { fallbackModels: 'gemini-2.5-flash-lite' }).ask(question)).rejects.toMatchObject({ status: 502 })
+    expect(strict).toHaveLength(1)
+
+    const allDown = []
+    await expect(serviceWith(async (url) => { allDown.push(url); return { ok: false, status: 503 } }, { fallbackModels: 'gemini-2.5-flash-lite' }).ask(question)).rejects.toMatchObject({ status: 502, code: 'provider_unavailable' })
+    expect(allDown).toHaveLength(2)
+    expect(() => serviceWith(provider, { fallbackModels: 'bad name!' })).toThrow('Invalid GEMINI_MODEL')
+  })
+
   it('handles upstream failure/malformed output without exposing details', async () => {
     for (const provider of [async () => ({ ok: false, status: 403 }), async () => ({ ok: true, json: async () => ({}) }), async () => { throw new Error('server-secret private upstream detail') }]) {
       await expect(serviceWith(provider).ask(question)).rejects.toMatchObject({ status: 502 })

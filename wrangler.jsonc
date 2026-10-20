@@ -13,6 +13,8 @@
     // Public, non-secret settings. GEMINI_API_KEY is a Worker *secret*:
     // set it with `wrangler secret put GEMINI_API_KEY` or let the workflow push it.
     "GEMINI_MODEL": "gemini-3.1-flash-lite",
+    // Tried in order when the primary model answers 429/503 (rate limited or overloaded).
+    "GEMINI_FALLBACK_MODELS": "gemini-3.5-flash-lite,gemini-2.5-flash-lite",
     "ALLOWED_ORIGINS": "https://alexorr2142-sudo.github.io,https://midsouthlunar.org,https://www.midsouthlunar.org,http://localhost:5173,http://localhost:4173"
   }
 }

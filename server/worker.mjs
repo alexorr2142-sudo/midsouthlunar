@@ -13,6 +13,7 @@
  * Secrets / variables (set in the Cloudflare dashboard or via wrangler):
  *   GEMINI_API_KEY   secret, required for live answers
  *   GEMINI_MODEL     optional, default gemini-3.1-flash-lite
+ *   GEMINI_FALLBACK_MODELS  optional, comma-separated models tried on 429/503
  *   ALLOWED_ORIGINS  comma-separated exact website origins
  */
 import { ChatError, createChatService } from './chat-service.mjs'
@@ -58,7 +59,7 @@ export function createWorkerHandler({ limiter = createLimiter(), fetchImpl } = {
       if (!['/api/chat', '/api/chat/status'].includes(path)) return reply(404, { error: 'not_found' })
       const origins = allowedOrigins(env.ALLOWED_ORIGINS)
       if (origin && !origins.has(origin)) throw new ChatError(403, 'origin_not_allowed')
-      const service = createChatService({ apiKey: env.GEMINI_API_KEY || '', model: env.GEMINI_MODEL || undefined, getGrounding: bundledGrounding, ...(fetchImpl ? { fetchImpl } : {}) })
+      const service = createChatService({ apiKey: env.GEMINI_API_KEY || '', model: env.GEMINI_MODEL || undefined, fallbackModels: env.GEMINI_FALLBACK_MODELS ?? undefined, getGrounding: bundledGrounding, ...(fetchImpl ? { fetchImpl } : {}) })
       if (request.method === 'OPTIONS') {
         if (!origin) throw new ChatError(403, 'origin_required')
         return reply(204, null, { 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '600' })
